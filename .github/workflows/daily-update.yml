@@ -2,14 +2,14 @@ name: Daily Sweepstakes Update
 
 on:
   schedule:
-    - cron: '0 10 * * *'   # 10:00 UTC daily
+    - cron: '0 10 * * *'
   workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # Required for push
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -25,20 +25,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 lxml jinja2
 
-      - name: Run scraper and rebuild
+      - name: Run scraper
         run: python scraper_simple.py
 
-      - name: Commit and push if changed
+      - name: Force timestamp update (so it always commits)
+        run: |
+          echo "Last updated: $(date -u)" >> data.json
+          echo "<!-- Last updated: $(date -u) -->" >> index.html
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          if git diff --quiet; then
-            echo "No changes to commit"
-          else
-            git add index.html data.json
-            git commit -m "Daily update: $(date -u +'%Y-%m-%d %H:%M UTC')"
-            git push
-          fi
+          git add index.html data.json
+          git commit -m "Daily update: $(date -u +'%Y-%m-%d %H:%M UTC')" || echo "No changes to commit"
+          git push || echo "Push failed - check permissions"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
