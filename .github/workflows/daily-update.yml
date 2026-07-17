@@ -1,0 +1,47 @@
+name: Daily Sweepstakes Update
+
+on:
+  schedule:
+    # Runs every day at 10:00 UTC (6:00 AM Eastern)
+    - cron: '0 10 * * *'
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml jinja2
+
+      - name: Run scraper and rebuild index.html
+        run: |
+          python scraper_simple.py
+          # If you later improve scraper_v2.py to work reliably, switch to:
+          # python scraper_v2.py
+
+      - name: Commit and push changes (if any)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add index.html data.json || true
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Daily update: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
