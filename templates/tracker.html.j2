@@ -25,6 +25,7 @@
       transform: rotate(-4deg);
       box-shadow: 3px 3px 0 #7f1d1d;
       line-height: 1;
+      cursor: help;
     }
 
     /* Score pills */
@@ -38,12 +39,18 @@
       font-weight: 700;
       font-size: 0.9rem;
       border: 2px solid transparent;
+      cursor: help;
     }
-    .score-low    { background: #dcfce7; color: #166534; border-color: #86efac; } /* 1-2 */
-    .score-midlow { background: #dbeafe; color: #1e40af; border-color: #93c5fd; } /* 3-4 */
-    .score-mid    { background: #fef3c7; color: #92400e; border-color: #fcd34d; } /* 5-6 */
-    .score-high   { background: #ffedd5; color: #9a3412; border-color: #fdba74; } /* 7-8 */
-    .score-danger { background: #fee2e2; color: #991b1b; border-color: #fca5a5; } /* 9-10 */
+    .score-low    { background: #dcfce7; color: #166534; border-color: #86efac; }
+    .score-midlow { background: #dbeafe; color: #1e40af; border-color: #93c5fd; }
+    .score-mid    { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+    .score-high   { background: #ffedd5; color: #9a3412; border-color: #fdba74; }
+    .score-danger { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+
+    /* Simple tooltip enhancement */
+    [title] {
+      position: relative;
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 min-h-screen">
@@ -90,17 +97,20 @@
     <!-- ScamFactor Header -->
     <div class="bg-white rounded-xl shadow-sm border p-5 mb-6">
       <h2 class="font-bold text-teal-800 mb-3 flex flex-wrap items-center gap-4">
-        <span class="scamfactor-badge">SCAMFACTOR</span>
+        <span class="scamfactor-badge" 
+              title="ScamFactor is our proprietary score (1–10). Lower is better. It measures transparency, fulfillment history, entry gotchas, realistic win odds, and marketing aggressiveness.">
+          SCAMFACTOR
+        </span>
         <span class="text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full font-normal">
           Higher = more red flags, hidden fees, aggressive spam
         </span>
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-5 gap-2 text-xs">
-        <div class="bg-teal-50 p-2 rounded">30% Transparency & Winner Proof</div>
-        <div class="bg-teal-50 p-2 rounded">25% Fulfillment & Complaints</div>
-        <div class="bg-teal-50 p-2 rounded">20% Entry Model & Gotchas</div>
-        <div class="bg-teal-50 p-2 rounded">15% Win Opportunity Realism</div>
-        <div class="bg-teal-50 p-2 rounded">10% Marketing Aggressiveness</div>
+        <div class="bg-teal-50 p-2 rounded" title="Do they clearly show winners and official rules?">30% Transparency & Winner Proof</div>
+        <div class="bg-teal-50 p-2 rounded" title="How often do people report receiving prizes vs complaints?">25% Fulfillment & Complaints</div>
+        <div class="bg-teal-50 p-2 rounded" title="Are there hidden requirements, paid entries, or hard-to-find free methods?">20% Entry Model & Gotchas</div>
+        <div class="bg-teal-50 p-2 rounded" title="How realistic is it to actually win something meaningful?">15% Win Opportunity Realism</div>
+        <div class="bg-teal-50 p-2 rounded" title="How aggressive is the email/SMS marketing after signing up?">10% Marketing Aggressiveness</div>
       </div>
     </div>
 
@@ -109,9 +119,9 @@
       <table class="w-full text-sm">
         <thead>
           <tr>
-            <th class="px-3 py-3 text-left">#</th>
+            <th class="px-3 py-3 text-left" title="Overall ranking based on ScamFactor">#</th>
             <th class="px-3 py-3 text-left">Site</th>
-            <th class="px-3 py-3 text-center">ScamFactor</th>
+            <th class="px-3 py-3 text-center" title="Lower score = more legitimate and better chance of a real win">ScamFactor</th>
             <th class="px-3 py-3 text-left">Prizes (examples)</th>
             <th class="px-3 py-3 text-left">Draw Frequency</th>
             <th class="px-3 py-3 text-left">Unsubscribe</th>
@@ -127,15 +137,15 @@
             <td class="px-3 py-3 text-center">
               {% set score = s.score|float %}
               {% if score <= 2 %}
-                <span class="score-pill score-low">{{ s.score }}</span>
+                <span class="score-pill score-low" title="Excellent – Low risk, transparent, realistic chances">{{ s.score }}</span>
               {% elif score <= 4 %}
-                <span class="score-pill score-midlow">{{ s.score }}</span>
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">{{ s.score }}</span>
               {% elif score <= 6 %}
-                <span class="score-pill score-mid">{{ s.score }}</span>
+                <span class="score-pill score-mid" title="Average – Some red flags or aggressive marketing">{{ s.score }}</span>
               {% elif score <= 8 %}
-                <span class="score-pill score-high">{{ s.score }}</span>
+                <span class="score-pill score-high" title="Caution – Higher risk of spam or poor fulfillment">{{ s.score }}</span>
               {% else %}
-                <span class="score-pill score-danger">{{ s.score }}</span>
+                <span class="score-pill score-danger" title="High Risk – Significant red flags or deceptive practices">{{ s.score }}</span>
               {% endif %}
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">{{ s.prizes }}</td>
