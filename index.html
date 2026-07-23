@@ -10,21 +10,14 @@
     th { position:sticky; top:0; background:#134e4a; color:white; z-index:10; }
     tr:nth-child(even) { background:#f0fdfa; }
 
-    /* ScamFactor logo style */
+    /* Distressed ScamFactor stamp */
     .scamfactor-badge {
-      display: inline-block;
-      background: #dc2626;
-      color: white;
-      font-family: Impact, "Arial Black", sans-serif;
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: -1px;
-      padding: 6px 16px;
-      border: 4px solid #991b1b;
-      border-radius: 6px;
-      transform: rotate(-4deg);
-      box-shadow: 3px 3px 0 #7f1d1d;
-      line-height: 1;
+      display: block;
+      width: clamp(12rem, 28vw, 18rem);
+      height: auto;
+      transform: rotate(-3deg);
+      transform-origin: center;
+      filter: drop-shadow(0 2px 1px rgb(127 29 29 / 0.12));
       cursor: help;
     }
 
@@ -97,10 +90,13 @@
     <!-- ScamFactor Header -->
     <div class="bg-white rounded-xl shadow-sm border p-5 mb-6">
       <h2 class="font-bold text-teal-800 mb-3 flex flex-wrap items-center gap-4">
-        <span class="scamfactor-badge" 
-              title="ScamFactor is our proprietary score (1–10). Lower is better. It measures transparency, fulfillment history, entry gotchas, realistic win odds, and marketing aggressiveness.">
-          SCAMFACTOR
-        </span>
+        <img src="assets/scamfactor-stamp.png"
+             alt="ScamFactor"
+             class="scamfactor-badge"
+             width="1774"
+             height="887"
+             title="ScamFactor is our proprietary score (1-10). Lower is better."
+             loading="eager">
         <span class="text-xs bg-red-100 text-red-700 px-3 py-1 rounded-full font-normal">
           Higher = more red flags, hidden fees, aggressive spam
         </span>
