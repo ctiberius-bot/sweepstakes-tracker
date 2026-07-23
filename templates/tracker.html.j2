@@ -13,12 +13,19 @@
     /* Distressed ScamFactor stamp */
     .scamfactor-badge {
       display: block;
-      width: clamp(12rem, 28vw, 18rem);
+      width: clamp(8rem, 18vw, 11rem);
       height: auto;
       transform: rotate(-3deg);
       transform-origin: center;
       filter: drop-shadow(0 2px 1px rgb(127 29 29 / 0.12));
       cursor: help;
+    }
+    .scamfactor-column-badge {
+      display: block;
+      width: 5.5rem;
+      height: auto;
+      margin-inline: auto;
+      transform: rotate(-3deg);
     }
 
     /* Score pills */
@@ -88,8 +95,8 @@
     </div>
 
     <!-- ScamFactor Header -->
-    <div class="bg-white rounded-xl shadow-sm border p-5 mb-6">
-      <h2 class="font-bold text-teal-800 mb-3 flex flex-wrap items-center gap-4">
+    <div class="bg-white rounded-xl shadow-sm border p-4 mb-6">
+      <h2 class="font-bold text-teal-800 mb-2 flex flex-wrap items-center gap-3">
         <img src="assets/scamfactor-stamp.png"
              alt="ScamFactor"
              class="scamfactor-badge"
@@ -117,7 +124,13 @@
           <tr>
             <th class="px-3 py-3 text-left" title="Overall ranking based on ScamFactor">#</th>
             <th class="px-3 py-3 text-left">Site</th>
-            <th class="px-3 py-3 text-center" title="Lower score = more legitimate and better chance of a real win">ScamFactor</th>
+            <th class="px-3 py-2 text-center" title="Lower score = more legitimate and better chance of a real win">
+              <img src="assets/scamfactor-stamp.png"
+                   alt="ScamFactor"
+                   class="scamfactor-column-badge"
+                   width="1774"
+                   height="887">
+            </th>
             <th class="px-3 py-3 text-left">Prizes (examples)</th>
             <th class="px-3 py-3 text-left">Draw Frequency</th>
             <th class="px-3 py-3 text-left">Unsubscribe</th>
