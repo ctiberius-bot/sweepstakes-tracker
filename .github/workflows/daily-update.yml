@@ -23,15 +23,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 lxml jinja2
+          pip install jinja2
 
       - name: Run scraper
         run: python scraper_simple.py
-
-      - name: Force timestamp update (so it always commits)
-        run: |
-          echo "Last updated: $(date -u)" >> data.json
-          echo "<!-- Last updated: $(date -u) -->" >> index.html
 
       - name: Commit and push
         run: |
@@ -40,6 +35,6 @@ jobs:
           
           git add index.html data.json
           git commit -m "Daily update: $(date -u +'%Y-%m-%d %H:%M UTC')" || echo "No changes to commit"
-          git push || echo "Push failed - check permissions"
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
