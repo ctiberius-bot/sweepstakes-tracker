@@ -2,12 +2,12 @@
 """
 Simplified Sweepstakes Tracker Rebuilder
 ========================================
-Loads sites from data.json and generates a clean index.html
-using the Jinja2 template. No internet required.
+Loads sites from data.json, updates the last_updated timestamp,
+and generates a clean index.html using the Jinja2 template.
 """
 
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -17,26 +17,7 @@ OUTPUT_HTML = BASE / "index.html"
 DATA_FILE = BASE / "data.json"
 
 
-def score_class(score: float) -> str:
-    """Return CSS class based on ScamFactor score."""
-    try:
-        s = float(score)
-    except (TypeError, ValueError):
-        return "score-5"
-    if s <= 2:
-        return "score-1"
-    elif s <= 4:
-        return "score-3"
-    elif s <= 6:
-        return "score-5"
-    elif s <= 8:
-        return "score-7"
-    else:
-        return "score-9"
-
-
 def main():
-    # Load data
     if not DATA_FILE.exists():
         raise FileNotFoundError(f"Missing {DATA_FILE}")
 
@@ -47,31 +28,27 @@ def main():
     if not sites:
         raise ValueError("No sites found in data.json")
 
-    # Prefer the date from data.json if present, otherwise use today
-    last_updated = data.get("last_updated")
-    if last_updated:
-        try:
-            # Handle ISO format
-            dt = datetime.fromisoformat(last_updated.replace("Z", "+00:00"))
-            last_updated_str = dt.strftime("%B %d, %Y")
-        except Exception:
-            last_updated_str = datetime.now().strftime("%B %d, %Y")
-    else:
-        last_updated_str = datetime.now().strftime("%B %d, %Y")
+    # Always update the timestamp to now (UTC)
+    now = datetime.now(timezone.utc)
+    data["last_updated"] = now.isoformat().replace("+00:00", "Z")
+    last_updated_str = now.strftime("%B %d, %Y")
+
+    # Write the updated data.json back (clean)
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write("\n")
 
     # Setup Jinja
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATE_DIR)),
         autoescape=select_autoescape(["html", "xml"])
     )
-    env.globals["score_class"] = score_class
 
     template = env.get_template("tracker.html.j2")
 
     html = template.render(
         sites=sites,
-        last_updated=last_updated_str,
-        themes=[]  # template supports themes but we don't have them yet
+        last_updated=last_updated_str
     )
 
     OUTPUT_HTML.write_text(html, encoding="utf-8")
