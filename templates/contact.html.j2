@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact SafeTracker: Sweepstakes</title>
+  <meta name="description" content="Send SafeTracker a correction, primary-source evidence, site suggestion, or privacy question through our protected contact form.">
+  <meta name="robots" content="index,follow,max-snippet:-1">
+  <link rel="canonical" href="https://sweeps.safetrackerhub.com/contact">
+  <link rel="icon" type="image/png" href="assets/safetracker-icon.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"ContactPage","@id":"https://sweeps.safetrackerhub.com/contact#page","url":"https://sweeps.safetrackerhub.com/contact","name":"Contact SafeTracker: Sweepstakes","dateModified":"{{ last_updated_iso }}","isPartOf":{"@id":"https://sweeps.safetrackerhub.com/#website"}},
+      {"@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"SafeTracker: Sweepstakes","item":"https://sweeps.safetrackerhub.com/"},
+        {"@type":"ListItem","position":2,"name":"Contact","item":"https://sweeps.safetrackerhub.com/contact"}
+      ]}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header review-site-header">
+    <div class="review-shell review-masthead">
+      <a class="review-brand" href="/">← SafeTracker: Sweepstakes</a>
+      <span>Protected contact</span>
+    </div>
+  </header>
+  <main class="review-shell review-main contact-page">
+    <nav class="review-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Contact</span></nav>
+    <div class="contact-layout">
+      <section>
+        <p class="section-kicker">We read the evidence</p>
+        <h1 class="section-title">Contact SafeTracker</h1>
+        <p class="type-intro">Report an outdated profile, submit a primary source, suggest a site for review, or ask a privacy question. The receiving email address stays private and is never included in this page.</p>
+        <div class="contact-standards">
+          <h2>What helps us act quickly</h2>
+          <ul>
+            <li>Link to the official rules, winner report, privacy page, or operator notice.</li>
+            <li>Name the SafeTracker profile or record that needs attention.</li>
+            <li>Explain exactly what changed or appears incorrect.</li>
+          </ul>
+          <p>Do not send passwords, payment details, government IDs, or other sensitive personal information.</p>
+        </div>
+      </section>
+
+      <section class="contact-card" aria-labelledby="contact-form-title">
+        <h2 id="contact-form-title">Send a message</h2>
+        <form id="contact-form" action="/api/contact" method="post">
+          <div class="contact-field">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" maxlength="100" autocomplete="name" required>
+          </div>
+          <div class="contact-field">
+            <label for="contact-email">Email for a reply</label>
+            <input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" required>
+            <span class="field-note">Used only to respond to this message.</span>
+          </div>
+          <div class="contact-field">
+            <label for="contact-topic">What is this about?</label>
+            <select id="contact-topic" name="topic" required>
+              <option value="">Choose one</option>
+              <option value="correction">Correction or updated evidence</option>
+              <option value="site-suggestion">Site suggestion</option>
+              <option value="winner-report">Winner report</option>
+              <option value="privacy">Privacy question</option>
+              <option value="business">Business or sponsorship</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="contact-field">
+            <label for="contact-url">Relevant public link <span>(optional)</span></label>
+            <input id="contact-url" name="source_url" type="url" maxlength="500" inputmode="url" placeholder="https://">
+          </div>
+          <div class="contact-field">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" minlength="20" maxlength="5000" rows="8" required></textarea>
+            <span class="field-note">20–5,000 characters.</span>
+          </div>
+
+          <div class="contact-trap" aria-hidden="true">
+            <label for="company-url">Company website</label>
+            <input id="company-url" name="company_url" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <input id="form-started-at" name="form_started_at" type="hidden">
+          <div id="turnstile-widget" class="turnstile-shell" aria-label="Human verification"></div>
+          <p id="contact-status" class="contact-status" role="status" aria-live="polite">Loading secure verification…</p>
+          <button id="contact-submit" class="review-primary-action contact-submit" type="submit" disabled>Send message</button>
+          <p class="contact-privacy">Protected by Cloudflare Turnstile. Submissions are rate-limited and sent privately to SafeTracker.</p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="review-shell footer-bottom"><span>SafeTracker: Sweepstakes · Never send sensitive information through this form.</span><span class="site-version">v1.1</span></div>
+  </footer>
+  <script src="assets/contact.js"></script>
+</body>
+</html>

@@ -22,6 +22,7 @@
             <a href="active-sweepstakes.html">Active Sweepstakes</a>
             <a href="winners.html">Winners</a>
             <a href="methodology.html">How we score</a>
+            <a href="contact.html">Contact</a>
             <a href="#editor-picks">Editor picks</a>
             <a class="nav-disclosure" href="#disclosure">Affiliate disclosure</a>
           </nav>
@@ -160,7 +161,7 @@
           <div class="footer-grid">
             <div><div class="footer-title">SafeTracker: Sweepstakes</div><p class="footer-copy">Plain-English safety rankings and source-linked winner reports for sweepstakes, giveaway, and rewards sites.</p></div>
             <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="active-sweepstakes.html">Active Sweepstakes</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
-            <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="methodology.html">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a></div></div>
+            <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="methodology.html">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a><a href="contact.html">Protected contact</a></div></div>
             <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links and featured placements may be paid. Sponsored positions will be labeled. ScamFactor scores summarize the risk signals shown in each review.</p></div>
           </div>
           <div class="footer-bottom"><span>Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</span><span class="site-version">SafeTracker: Sweepstakes v1.1</span></div>

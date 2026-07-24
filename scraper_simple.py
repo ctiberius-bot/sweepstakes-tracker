@@ -106,6 +106,7 @@ def main():
     winners_template = env.get_template("winners.html.j2")
     active_sweepstakes_template = env.get_template("active-sweepstakes.html.j2")
     methodology_template = env.get_template("methodology.html.j2")
+    contact_template = env.get_template("contact.html.j2")
 
     html = template.render(
         sites=sites,
@@ -158,6 +159,14 @@ def main():
         clean_generated_html(methodology_html),
         encoding="utf-8",
     )
+    contact_html = contact_template.render(
+        last_updated=last_updated_str,
+        last_updated_iso=now.date().isoformat(),
+    )
+    (BASE / "contact.html").write_text(
+        clean_generated_html(contact_html),
+        encoding="utf-8",
+    )
     REVIEWS_DIR.mkdir(exist_ok=True)
     for site in sites:
         review_html = review_template.render(
@@ -174,6 +183,7 @@ def main():
         f"{SITE_ORIGIN}/winners",
         f"{SITE_ORIGIN}/site-types",
         f"{SITE_ORIGIN}/methodology",
+        f"{SITE_ORIGIN}/contact",
         f"{SITE_ORIGIN}/sponsorships",
         *[f"{SITE_ORIGIN}/reviews/{site['slug']}" for site in sites],
     ]
