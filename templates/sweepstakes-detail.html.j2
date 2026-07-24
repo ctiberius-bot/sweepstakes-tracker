@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ promotion.prize }} Enter by {{ promotion.deadline_label }}. Eligibility, entry frequency, official rules, and source details.">
+  <title>{{ promotion.title }} | SafeTracker</title>
+  <link rel="canonical" href="https://sweeps.safetrackerhub.com/sweepstakes/{{ promotion.slug }}">
+  <link rel="icon" type="image/png" href="../assets/safetracker-icon.png">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script type="application/ld+json">{{ structured_data|tojson }}</script>
+</head>
+<body>
+  <header class="site-header review-site-header"><div class="review-shell review-masthead"><a class="review-brand" href="../active-sweepstakes.html">← Active sweepstakes</a><a href="../index.html">Site tracker</a></div></header>
+  <main class="review-shell promotion-page">
+    <section class="promotion-hero">
+      <div>
+        <p class="section-kicker">{{ promotion.category }} · {{ promotion.sponsor }}</p>
+        <h1>{{ promotion.title }}</h1>
+        <p class="promotion-lede">{{ promotion.prize }}</p>
+        <div class="promotion-actions">
+          <a class="enter-action" href="{{ promotion.entry_url }}" target="_blank" rel="noopener nofollow" data-track="sweepstakes_entry_click" data-site="{{ promotion.sponsor }}" data-placement="{{ promotion.slug }}">{{ promotion.entry_label|default('View entry details') }}</a>
+          <a class="detail-action" href="{{ promotion.rules_url }}" target="_blank" rel="noopener nofollow">{{ promotion.rules_label|default('Review rules and eligibility') }}</a>
+        </div>
+      </div>
+      <aside class="deadline-card"><span>Entry deadline</span><strong>{{ promotion.deadline_label }}</strong><small>{{ promotion.closes_time|default('See official rules for closing time') }}</small></aside>
+    </section>
+    <section class="promotion-fact-grid">
+      <div><span>Approximate value</span><strong>{{ promotion.value_label }}</strong></div>
+      <div><span>Entry frequency</span><strong>{{ promotion.entry_frequency }}</strong></div>
+      <div><span>Eligibility</span><strong>{{ promotion.eligibility }}</strong></div>
+      <div><span>Number of winners</span><strong>{{ promotion.winners }}</strong></div>
+    </section>
+    <section class="promotion-copy">
+      <div><p class="section-kicker">Prize inventory</p><h2>What is being awarded</h2><p>{{ promotion.prize_details }}</p></div>
+      <aside><h2>Before entering</h2><ul><li>Confirm your state, age, and other eligibility in the official rules.</li><li>Check the permitted number of entries.</li><li>Never pay a fee to enter or receive a legitimate prize.</li><li>Expect the organizer—not SafeTracker—to contact verified winners.</li></ul></aside>
+    </section>
+    <section class="source-panel"><h2>Verification record</h2><dl><div><dt>Organizer</dt><dd>{{ promotion.sponsor }}</dd></div><div><dt>Listing source</dt><dd><a href="{{ promotion.source_url }}" target="_blank" rel="noopener nofollow">{{ promotion.source_name }}</a></dd></div><div><dt>Last checked</dt><dd>{{ promotion.last_verified }}</dd></div></dl></section>
+  </main>
+  <script src="../assets/monetization.js" defer></script>
+</body>
+</html>

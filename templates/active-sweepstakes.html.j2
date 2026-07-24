@@ -3,41 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Search current individual sweepstakes separately from SafeTracker platform safety rankings.">
-  <title>Active Sweepstakes | SafeTracker: Sweepstakes</title>
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://sweeps.safetrackerhub.com/active-sweepstakes">
+  <meta name="description" content="{{ meta_description|default('Find verified active sweepstakes by deadline, prize category, eligibility, and entry frequency.') }}">
+  <title>{{ page_title|default('Active Sweepstakes Ending Soon') }} | SafeTracker</title>
+  <link rel="canonical" href="{{ canonical_url|default('https://sweeps.safetrackerhub.com/active-sweepstakes') }}">
   <link rel="icon" type="image/png" href="assets/safetracker-icon.png">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">{{ structured_data|tojson }}</script>
 </head>
 <body>
   <header class="site-header review-site-header">
     <div class="review-shell review-masthead">
       <a class="review-brand" href="index.html">← SafeTracker: Sweepstakes</a>
-      <span>v1.2 inventory framework</span>
+      <nav class="mini-nav"><a href="index.html">Site tracker</a><a href="winners.html">Winners</a></nav>
     </div>
   </header>
-  <main class="review-shell winners-page">
-    <section class="inventory-hero">
-      <p class="section-kicker">Individual promotions</p>
-      <h1>Active sweepstakes</h1>
-      <p class="winners-intro">This inventory is deliberately separate from the platform rankings. It will hold current individual promotions with official rules, eligibility, prize, entry frequency, and closing dates.</p>
+  <main class="review-shell active-page">
+    <section class="active-hero">
+      <div>
+        <p class="section-kicker">Verified promotion inventory</p>
+        <h1>{{ heading|default('Active sweepstakes') }}</h1>
+        <p>{{ introduction|default('Current promotions with deadlines, eligibility, entry limits, rules, and entry links. Always confirm the organizer’s rules before entering.') }}</p>
+      </div>
+      <div class="active-stats" aria-label="Inventory summary">
+        <div><strong>{{ promotions|length }}</strong><span>open listings</span></div>
+        <div><strong>{{ ending_soon_count }}</strong><span>ending in 7 days</span></div>
+        <div><strong>{{ daily_count }}</strong><span>daily entry</span></div>
+      </div>
     </section>
-    <section class="inventory-controls" aria-label="Active sweepstakes search">
-      <label class="search-wrap"><span>Search promotions</span><input class="control" type="search" placeholder="Prize, sponsor, or promotion…" disabled></label>
-      <label class="search-wrap"><span>Eligibility</span><select class="control" disabled><option>All eligibility</option></select></label>
-      <label class="search-wrap"><span>Entry frequency</span><select class="control" disabled><option>All frequencies</option></select></label>
-      <label class="search-wrap"><span>Closing date</span><select class="control" disabled><option>All closing dates</option></select></label>
+
+    <aside class="active-alert">
+      <strong>Never pay to enter or claim a prize.</strong>
+      <span>SafeTracker links to the promotion organizer. We do not administer these sweepstakes.</span>
+    </aside>
+    <nav class="sweep-quicklinks" aria-label="Popular sweepstakes lists">
+      <a href="active-sweepstakes.html">All active</a>
+      <a href="sweepstakes-ending-soon.html">Ending soon</a>
+      <a href="daily-entry-sweepstakes.html">Daily entry</a>
+      <a href="cash-sweepstakes.html">Cash & gift cards</a>
+      <a href="travel-sweepstakes.html">Travel</a>
+      <a href="vehicle-sweepstakes.html">Vehicles</a>
+    </nav>
+
+    <section class="sweep-controls" aria-label="Filter active sweepstakes">
+      <label class="sweep-search"><span>Search</span><input id="sweep-search" type="search" placeholder="Prize, sponsor, or promotion"></label>
+      <label><span>Prize type</span><select id="sweep-category"><option value="">All prize types</option>{% for category in categories %}<option>{{ category }}</option>{% endfor %}</select></label>
+      <label><span>Entry</span><select id="sweep-frequency"><option value="">All frequencies</option>{% for frequency in frequencies %}<option>{{ frequency }}</option>{% endfor %}</select></label>
+      <label><span>Deadline</span><select id="sweep-deadline"><option value="">Any deadline</option><option value="3">Next 3 days</option><option value="7">Next 7 days</option><option value="31">Next 30 days</option></select></label>
     </section>
-    <section class="empty-winners">
-      <h2>Inventory framework ready</h2>
-      <p>The v1.2 schema and page are in place. Source adapters and historical imports will be added iteratively so individual promotions never get mixed into the platform safety rankings.</p>
+
+    <div class="sweep-toolbar">
+      <p><strong id="sweep-count">{{ promotions|length }}</strong> verified promotions</p>
+      <div>
+        <button class="view-filter is-active" type="button" data-view="all">All</button>
+        <button class="view-filter" type="button" data-view="saved">Saved</button>
+        <button class="view-filter" type="button" data-view="entered">Entered</button>
+      </div>
+    </div>
+
+    <section class="sweep-grid" id="sweep-grid">
+      {% for promotion in promotions %}
+      <article class="sweep-card" data-sweep-id="{{ promotion.slug }}" data-search="{{ promotion.title }} {{ promotion.sponsor }} {{ promotion.prize }}" data-category="{{ promotion.category }}" data-frequency="{{ promotion.entry_frequency }}" data-closes="{{ promotion.closes }}">
+        <div class="sweep-card-top">
+          <span class="prize-category">{{ promotion.category }}</span>
+          <time datetime="{{ promotion.closes }}">{{ promotion.deadline_label }}</time>
+        </div>
+        <h2><a href="sweepstakes/{{ promotion.slug }}.html">{{ promotion.title }}</a></h2>
+        <p class="sweep-sponsor">{{ promotion.sponsor }}</p>
+        <p class="sweep-prize">{{ promotion.prize }}</p>
+        <dl class="sweep-facts">
+          <div><dt>Value</dt><dd>{{ promotion.value_label }}</dd></div>
+          <div><dt>Entry</dt><dd>{{ promotion.entry_frequency }}</dd></div>
+          <div><dt>Eligibility</dt><dd>{{ promotion.eligibility_short }}</dd></div>
+        </dl>
+        <div class="sweep-actions">
+          <a class="enter-action" href="{{ promotion.entry_url }}" target="_blank" rel="noopener nofollow" data-track="sweepstakes_entry_click" data-site="{{ promotion.sponsor }}" data-placement="{{ promotion.slug }}">{{ promotion.entry_label|default('View entry details') }}</a>
+          <a class="detail-action" href="sweepstakes/{{ promotion.slug }}.html">Details</a>
+        </div>
+        <div class="sweep-personal">
+          <button type="button" data-save="{{ promotion.slug }}" aria-pressed="false">☆ Save</button>
+          <button type="button" data-entered="{{ promotion.slug }}" aria-pressed="false">○ Mark entered</button>
+        </div>
+      </article>
+      {% endfor %}
     </section>
-    <section class="schema-preview">
-      <h2>Fields prepared for each promotion</h2>
-      <p>Promotion · sponsor/operator · prize · approximate value · eligibility · geography · entry frequency · opens · closes · drawing date · official rules · source · last verified.</p>
+    <section id="sweep-empty" class="sweep-empty" hidden>
+      <h2>No matching promotions</h2><p>Try removing a filter or checking the complete inventory.</p>
     </section>
+    <p class="inventory-footnote">Listings verified {{ last_updated }}. Deadlines use the organizer’s stated time zone when available. “Verified” means the listing and source were checked—not that SafeTracker guarantees fulfillment.</p>
   </main>
+  <script src="assets/monetization.js" defer></script>
+  <script src="assets/active-sweepstakes.js" defer></script>
 </body>
 </html>

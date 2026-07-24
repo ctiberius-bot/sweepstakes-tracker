@@ -8,7 +8,7 @@ and generates a clean index.html using the Jinja2 template.
 
 import json
 import re
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -19,6 +19,7 @@ OUTPUT_HTML = BASE / "index.html"
 DATA_FILE = BASE / "data.json"
 MONETIZATION_FILE = BASE / "data" / "monetization.json"
 REVIEWS_DIR = BASE / "reviews"
+SWEEPSTAKES_DIR = BASE / "sweepstakes"
 WINNERS_FILE = BASE / "data" / "winners.json"
 ACTIVE_SWEEPS_FILE = BASE / "data" / "active_sweepstakes.json"
 SITE_ORIGIN = "https://sweeps.safetrackerhub.com"
@@ -345,6 +346,7 @@ def main():
     site_types_template = env.get_template("site-types.html.j2")
     winners_template = env.get_template("winners.html.j2")
     active_sweepstakes_template = env.get_template("active-sweepstakes.html.j2")
+    sweepstakes_detail_template = env.get_template("sweepstakes-detail.html.j2")
     methodology_template = env.get_template("methodology.html.j2")
     contact_template = env.get_template("contact.html.j2")
 
@@ -383,14 +385,115 @@ def main():
         encoding="utf-8",
     )
     active_sweeps_data = json.loads(ACTIVE_SWEEPS_FILE.read_text(encoding="utf-8")) if ACTIVE_SWEEPS_FILE.exists() else {"promotions": []}
+    active_promotions = active_sweeps_data.get("promotions", [])
+    today = now.date()
+    for promotion in active_promotions:
+        close_date = date.fromisoformat(promotion["closes"])
+        days_left = (close_date - today).days
+        promotion["days_left"] = days_left
+        promotion["deadline_label"] = (
+            "Ends today" if days_left == 0 else
+            "Ends tomorrow" if days_left == 1 else
+            f"Ends in {days_left} days" if days_left > 1 else
+            "Closed"
+        )
+        value = promotion.get("value")
+        promotion["value_label"] = f"${value:,.0f}" if value else "See prize details"
+    active_promotions = sorted(
+        [promotion for promotion in active_promotions if promotion["days_left"] >= 0],
+        key=lambda item: (item["closes"], -(item.get("value") or 0)),
+    )
+    categories = sorted({promotion["category"] for promotion in active_promotions})
+    frequencies = sorted({promotion["entry_frequency"] for promotion in active_promotions})
+    list_schema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Active sweepstakes",
+        "numberOfItems": len(active_promotions),
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": position,
+                "url": f"{SITE_ORIGIN}/sweepstakes/{promotion['slug']}",
+                "name": promotion["title"],
+            }
+            for position, promotion in enumerate(active_promotions, start=1)
+        ],
+    }
     active_sweeps_html = active_sweepstakes_template.render(
-        promotions=active_sweeps_data.get("promotions", []),
+        promotions=active_promotions,
+        categories=categories,
+        frequencies=frequencies,
+        ending_soon_count=sum(1 for promotion in active_promotions if promotion["days_left"] <= 7),
+        daily_count=sum(1 for promotion in active_promotions if promotion["entry_frequency"] == "Daily"),
+        structured_data=list_schema,
         last_updated=last_updated_str,
     )
     (BASE / "active-sweepstakes.html").write_text(
         clean_generated_html(active_sweeps_html),
         encoding="utf-8",
     )
+    collection_pages = [
+        ("sweepstakes-ending-soon.html", "Sweepstakes ending soon", "Sweepstakes Ending Soon", "Verified promotions closing within the next seven days, ordered by deadline.", "Find verified sweepstakes ending within seven days.", lambda p: p["days_left"] <= 7),
+        ("daily-entry-sweepstakes.html", "Daily-entry sweepstakes", "Daily-Entry Sweepstakes", "Promotions that permit another entry each day. Confirm reset times in the organizer’s rules.", "Browse active daily-entry sweepstakes.", lambda p: p["entry_frequency"] == "Daily"),
+        ("cash-sweepstakes.html", "Cash and gift-card sweepstakes", "Cash and Gift-Card Sweepstakes", "Current promotions where the advertised prize includes cash, prepaid cards, or gift cards.", "Browse verified cash and gift-card sweepstakes.", lambda p: p["category"] == "Cash & gift cards"),
+        ("travel-sweepstakes.html", "Travel sweepstakes", "Travel Sweepstakes and Trip Giveaways", "Current trip and experience promotions with advertised package values and eligibility details.", "Browse current travel sweepstakes and trip giveaways.", lambda p: p["category"] in {"Travel", "Experiences"}),
+        ("vehicle-sweepstakes.html", "Vehicle sweepstakes", "Vehicle Sweepstakes and Giveaways", "Current vehicle and high-value equipment promotions.", "Browse active vehicle sweepstakes and giveaways.", lambda p: p["category"] in {"Vehicles", "Home & outdoors"}),
+    ]
+    for filename, heading, page_title, introduction, meta_description, predicate in collection_pages:
+        subset = [promotion for promotion in active_promotions if predicate(promotion)]
+        collection_schema = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": heading,
+            "numberOfItems": len(subset),
+            "itemListElement": [
+                {"@type": "ListItem", "position": position, "url": f"{SITE_ORIGIN}/sweepstakes/{promotion['slug']}", "name": promotion["title"]}
+                for position, promotion in enumerate(subset, start=1)
+            ],
+        }
+        collection_html = active_sweepstakes_template.render(
+            promotions=subset,
+            categories=sorted({promotion["category"] for promotion in subset}),
+            frequencies=sorted({promotion["entry_frequency"] for promotion in subset}),
+            ending_soon_count=sum(1 for promotion in subset if promotion["days_left"] <= 7),
+            daily_count=sum(1 for promotion in subset if promotion["entry_frequency"] == "Daily"),
+            structured_data=collection_schema,
+            canonical_url=f"{SITE_ORIGIN}/{filename.removesuffix('.html')}",
+            heading=heading,
+            page_title=page_title,
+            introduction=introduction,
+            meta_description=meta_description,
+            last_updated=last_updated_str,
+        )
+        (BASE / filename).write_text(clean_generated_html(collection_html), encoding="utf-8")
+    SWEEPSTAKES_DIR.mkdir(exist_ok=True)
+    active_slugs = {promotion["slug"] for promotion in active_promotions}
+    for existing in SWEEPSTAKES_DIR.glob("*.html"):
+        if existing.stem not in active_slugs:
+            existing.unlink()
+    for promotion in active_promotions:
+        promotion_schema = {
+            "@context": "https://schema.org",
+            "@type": "Event",
+            "name": promotion["title"],
+            "description": promotion["prize"],
+            "endDate": promotion["closes"],
+            "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "location": {"@type": "VirtualLocation", "url": promotion["entry_url"]},
+            "organizer": {"@type": "Organization", "name": promotion["sponsor"]},
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "url": promotion["entry_url"]},
+        }
+        detail_html = sweepstakes_detail_template.render(
+            promotion=promotion,
+            structured_data=promotion_schema,
+            last_updated=last_updated_str,
+        )
+        (SWEEPSTAKES_DIR / f"{promotion['slug']}.html").write_text(
+            clean_generated_html(detail_html),
+            encoding="utf-8",
+        )
     methodology_html = methodology_template.render(
         last_updated=last_updated_str,
         last_updated_iso=now.date().isoformat(),
@@ -421,11 +524,14 @@ def main():
     sitemap_urls = [
         f"{SITE_ORIGIN}/",
         f"{SITE_ORIGIN}/winners",
+        f"{SITE_ORIGIN}/active-sweepstakes",
+        *[f"{SITE_ORIGIN}/{filename.removesuffix('.html')}" for filename, *_ in collection_pages],
         f"{SITE_ORIGIN}/site-types",
         f"{SITE_ORIGIN}/methodology",
         f"{SITE_ORIGIN}/contact",
         f"{SITE_ORIGIN}/sponsorships",
         *[f"{SITE_ORIGIN}/reviews/{site['slug']}" for site in sites],
+        *[f"{SITE_ORIGIN}/sweepstakes/{promotion['slug']}" for promotion in active_promotions],
     ]
     sitemap = [
         '<?xml version="1.0" encoding="UTF-8"?>',

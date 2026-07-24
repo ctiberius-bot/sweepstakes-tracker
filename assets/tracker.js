@@ -18,6 +18,7 @@
             <div><div class="brand-name">SafeTracker: <em>Sweepstakes</em></div><div class="brand-network">Safety rankings & winner reports</div></div>
           </div>
           <nav class="main-nav" aria-label="Primary navigation">
+            <a href="active-sweepstakes.html">Active sweepstakes</a>
             <a href="#rankings">Rankings</a>
             <a href="winners.html">Winners</a>
             <a href="methodology.html">How we score</a>
@@ -46,6 +47,10 @@
       <div class="trust-item"><span class="trust-label">Last reviewed</span><span class="trust-value">${updated}</span></div>`;
     main.prepend(trust);
     trust.insertAdjacentHTML("afterend", `
+      <a class="active-launch-strip" href="active-sweepstakes.html" data-track="active_inventory_open" data-placement="homepage_strip">
+        <span><strong>Now tracking individual promotions</strong> · Browse current prizes by deadline, category, and entry frequency.</span>
+        <b>See active sweepstakes →</b>
+      </a>
       <aside class="newsletter-strip" aria-label="Daily winners email">
         <span><strong>Daily winners</strong> · Source-linked reports when there is something new.</span>
         <form action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post" data-track-form="newsletter_signup">
@@ -157,7 +162,7 @@
         <div class="max-w-7xl mx-auto px-4">
           <div class="footer-grid">
             <div><div class="footer-title">SafeTracker: Sweepstakes</div><p class="footer-copy">Plain-English safety rankings and source-linked winner reports for sweepstakes, giveaway, and rewards sites.</p></div>
-            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
+            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="active-sweepstakes.html">Active sweepstakes</a><a href="#rankings">Rankings</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
             <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="methodology.html">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a><a href="contact.html">Protected contact</a></div></div>
             <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links may earn commissions and featured visibility may be purchased. Paid placements are labeled. ScamFactor scores remain visible and summarize the risk signals shown in each profile.</p></div>
           </div>
