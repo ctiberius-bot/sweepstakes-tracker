@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="New sweepstakes winner reports gathered from original sweepstakes sites and communities.">
-  <title>Daily Sweepstakes Winners | SafeTrackerHub Sweepstakes</title>
+  <title>Winner Archive | SafeTracker: Sweepstakes</title>
   <link rel="canonical" href="https://sweeps.safetrackerhub.com/winners.html">
   <link rel="icon" type="image/png" href="assets/scamfactor-stamp.png">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,16 +14,16 @@
 <body>
   <header class="site-header review-site-header">
     <div class="review-shell review-masthead">
-      <a class="review-brand" href="index.html">← SafeTrackerHub Sweepstakes</a>
-      <span>Source-linked winner reports</span>
+      <a class="review-brand" href="index.html">← SafeTracker: Sweepstakes</a>
+      <span>Searchable historical archive · v1.1</span>
     </div>
   </header>
   <main class="review-shell winners-page">
     <section class="winners-hero">
       <div>
         <p class="section-kicker">Reported by monitored sources</p>
-        <h1>Daily sweepstakes winners</h1>
-        <p class="winners-intro">A running list of newly published winner reports from the sweepstakes sites and communities we monitor. Every item links to its original report.</p>
+        <h1>Winner archive</h1>
+        <p class="winners-intro">A searchable, persistent history of published winner reports. Every record carries its source and distinguishes community reports from operator announcements.</p>
       </div>
       <aside class="newsletter-card">
         <h2>Get new reports by email</h2>
@@ -40,12 +40,23 @@
         </form>
       </aside>
     </section>
+    <section class="winner-search-panel" aria-label="Search winner archive">
+      <label class="search-wrap"><span>Search the archive</span><input id="winner-search" class="control" type="search" placeholder="Winner, prize, promotion, operator, or source…"></label>
+      <p id="winner-results-count" class="results-count" aria-live="polite">{{ winners|length }} report{% if winners|length != 1 %}s{% endif %}</p>
+    </section>
     {% if winners %}
-    <section class="winner-list" aria-label="Winner reports">
+    <section id="winner-list" class="winner-list" aria-label="Winner reports">
       {% for winner in winners %}
-      <article class="winner-card">
+      <article class="winner-card" data-winner-search="{{ [winner.title, winner.winner_name, winner.privacy_label, winner.promotion_name, winner.prize, winner.operator, winner.source_name, winner.author]|join(' ')|lower }}">
         <h2>{{ winner.title }}</h2>
-        <p class="winner-meta">Reported by {{ winner.source_name }}{% if winner.author %} · {{ winner.author }}{% endif %} · {{ winner.published_display }}</p>
+        <p class="winner-meta">{{ winner.source_type|replace('_', ' ')|title }} · {{ winner.source_name }}{% if winner.author %} · {{ winner.author }}{% endif %} · {{ winner.published_display }}</p>
+        {% if winner.prize or winner.operator or winner.drawing_date %}
+        <dl class="winner-facts">
+          {% if winner.prize %}<div><dt>Prize</dt><dd>{{ winner.prize }}</dd></div>{% endif %}
+          {% if winner.operator %}<div><dt>Operator</dt><dd>{{ winner.operator }}</dd></div>{% endif %}
+          {% if winner.drawing_date %}<div><dt>Drawing date</dt><dd>{{ winner.drawing_date }}</dd></div>{% endif %}
+        </dl>
+        {% endif %}
         <a class="winner-source" href="{{ winner.url }}" target="_blank" rel="noopener">View original report →</a>
       </article>
       {% endfor %}
@@ -58,5 +69,24 @@
     {% endif %}
     <p class="source-note"><strong>Safety note:</strong> A winner report is not a request for payment. Legitimate prizes never require gift cards, wire transfers, or “processing fees.”</p>
   </main>
+  <script>
+    (() => {
+      const search = document.querySelector("#winner-search");
+      const cards = Array.from(document.querySelectorAll(".winner-card"));
+      const count = document.querySelector("#winner-results-count");
+      if (!search || !count) return;
+      const update = () => {
+        const query = search.value.trim().toLowerCase();
+        let shown = 0;
+        cards.forEach((card) => {
+          const visible = !query || card.dataset.winnerSearch.includes(query);
+          card.hidden = !visible;
+          if (visible) shown += 1;
+        });
+        count.textContent = `${shown} report${shown === 1 ? "" : "s"}`;
+      };
+      search.addEventListener("input", update);
+    })();
+  </script>
 </body>
 </html>

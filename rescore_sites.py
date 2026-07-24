@@ -22,7 +22,7 @@ WEIGHTS = {
 def check_site(url):
     if not url or url == "#":
         return "not_applicable"
-    request = Request(url, headers={"User-Agent": "SafeTrackerHub weekly site check/1.0"})
+    request = Request(url, headers={"User-Agent": "SafeTracker weekly site check/1.1"})
     try:
         with urlopen(request, timeout=20, context=ssl.create_default_context()) as response:
             return "reachable" if response.status < 400 else f"http_{response.status}"

@@ -33,6 +33,6 @@ jobs:
         run: |
           git config user.name "SafeTrackerHub Bot"
           git config user.email "winners@safetrackerhub.com"
-          git add data/winners.json data/winner_state.json winners.html data.json index.html reviews sponsorships.html site-types.html
+          git add data/winners.sqlite data/winners.json data/winner_state.json winners.html active-sweepstakes.html data.json index.html sitemap.xml reviews sponsorships.html site-types.html
           git diff --cached --quiet || git commit -m "Update daily winner reports"
           git push

@@ -1,4 +1,4 @@
-# SafeTrackerHub Sweepstakes
+# SafeTracker: Sweepstakes
 
 **Sweepstakes safety rankings and source-linked winner reports.**
 
@@ -26,8 +26,12 @@ criterion values are updated when new evidence is verified. Always double-check
 the official rules on each site before entering.
 
 Winner reports are gathered daily from the feeds in `data/winner_sources.json`.
-New reports are archived on `winners.html` and sent through Buttondown only when
-the daily run finds something new.
+SQLite is the canonical historical archive (`data/winners.sqlite`); a generated
+JSON export powers the searchable `winners.html` page. New reports are sent
+through Buttondown only when the daily run finds something new.
+
+Version 1.1 also includes the separate Active Sweepstakes inventory framework.
+Individual promotions will live there rather than in the platform rankings.
 
 ---
 

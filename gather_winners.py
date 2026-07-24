@@ -9,12 +9,12 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from winner_db import connect, export_json, upsert_reports
 
 BASE = Path(__file__).parent
 SOURCES_FILE = BASE / "data" / "winner_sources.json"
-WINNERS_FILE = BASE / "data" / "winners.json"
 STATE_FILE = BASE / "data" / "winner_state.json"
-USER_AGENT = "SafeTrackerHub-WinnerMonitor/1.0 (+https://sweeps.safetrackerhub.com/)"
+USER_AGENT = "SafeTracker-WinnerMonitor/1.1 (+https://sweeps.safetrackerhub.com/)"
 
 
 def read_json(path, default):
@@ -58,6 +58,8 @@ def fetch_rss(source):
             "published_display": published.strftime("%B %d, %Y").replace(" 0", " "),
             "source_id": source["id"],
             "source_name": source["name"],
+            "source_type": "community_report",
+            "verification_level": "source_reported",
         })
     return reports
 
@@ -68,7 +70,6 @@ def main():
     args = parser.parse_args()
     sources = read_json(SOURCES_FILE, {"sources": []})["sources"]
     state = read_json(STATE_FILE, {"seen": [], "sent": []})
-    existing = read_json(WINNERS_FILE, {"winners": []}).get("winners", [])
     seen = set(state.get("seen", []))
     fetched = []
     for source in sources:
@@ -77,13 +78,23 @@ def main():
     fetched.sort(key=lambda report: report["published_at"], reverse=True)
     new_reports = [report for report in fetched if report["id"] not in seen]
     state["seen"] = list(dict.fromkeys([report["id"] for report in fetched] + list(seen)))[:2000]
-    if not args.seed_only and new_reports:
-        merged = {report["id"]: report for report in new_reports + existing}
-        winners = sorted(merged.values(), key=lambda report: report["published_at"], reverse=True)[:500]
-        write_json(WINNERS_FILE, {
-            "updated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-            "winners": winners,
-        })
+    with connect() as database:
+        upsert_reports(database, fetched)
+        if args.seed_only:
+            seeded_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+            database.executemany(
+                "UPDATE winner_reports SET sent_at = COALESCE(sent_at, ?) WHERE id = ?",
+                [(seeded_at, report["id"]) for report in fetched],
+            )
+            database.commit()
+        sent_ids = set(state.get("sent", []))
+        if sent_ids:
+            database.executemany(
+                "UPDATE winner_reports SET sent_at = COALESCE(sent_at, ?) WHERE id = ?",
+                [(datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"), report_id) for report_id in sent_ids],
+            )
+            database.commit()
+        export_json(database)
     write_json(STATE_FILE, state)
     print(json.dumps({
         "new_count": 0 if args.seed_only else len(new_reports),

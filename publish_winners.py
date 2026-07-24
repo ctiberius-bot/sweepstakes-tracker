@@ -1,29 +1,18 @@
 #!/usr/bin/env python3
 """Send unsent winner reports as one Buttondown daily edition."""
 
-import json
 import os
 import urllib.request
 from datetime import datetime, timezone
-from pathlib import Path
-
-BASE = Path(__file__).parent
-WINNERS_FILE = BASE / "data" / "winners.json"
-STATE_FILE = BASE / "data" / "winner_state.json"
-
-
-def write_json(path, value):
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+from winner_db import connect, mark_sent, unsent_reports
 
 
 def main():
     token = os.environ.get("BUTTONDOWN_API_KEY")
     if not token:
         raise SystemExit("BUTTONDOWN_API_KEY is required when new reports exist.")
-    winners = json.loads(WINNERS_FILE.read_text(encoding="utf-8")).get("winners", [])
-    state = json.loads(STATE_FILE.read_text(encoding="utf-8"))
-    sent = set(state.get("sent", []))
-    pending = [winner for winner in winners if winner["id"] not in sent]
+    database = connect()
+    pending = unsent_reports(database)
     if not pending:
         print("No new winner reports; skipping email.")
         return
@@ -37,8 +26,8 @@ def main():
     for winner in pending:
         byline = f" — reported by {winner['author']}" if winner.get("author") else ""
         lines.extend([
-            f"## [{winner['title']}]({winner['url']})",
-            f"{winner['source_name']}{byline} · {winner['published_display']}",
+            f"## [{winner['raw_title']}]({winner['source_url']})",
+            f"{winner['source_name']}{byline} · {winner['reported_at'][:10]}",
             "",
         ])
     lines.extend([
@@ -46,7 +35,7 @@ def main():
         "",
         "[Browse all winner reports](https://sweeps.safetrackerhub.com/winners.html) · [View the safety rankings](https://sweeps.safetrackerhub.com/)",
         "",
-        "— SafeTrackerHub Sweepstakes",
+        "— SafeTracker: Sweepstakes",
     ])
     payload = json.dumps({
         "subject": f"Daily Sweepstakes Winners — {today}",
@@ -62,13 +51,13 @@ def main():
         headers={
             "Authorization": f"Token {token}",
             "Content-Type": "application/json",
-            "User-Agent": "SafeTrackerHub-WinnerMonitor/1.0",
+            "User-Agent": "SafeTracker-WinnerMonitor/1.1",
         },
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         response.read()
-    state["sent"] = list(dict.fromkeys([winner["id"] for winner in pending] + list(sent)))[:2000]
-    write_json(STATE_FILE, state)
+    mark_sent(database, [winner["id"] for winner in pending])
+    database.close()
     print(f"Queued {len(pending)} winner reports for Buttondown.")
 
 

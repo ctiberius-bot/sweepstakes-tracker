@@ -30,7 +30,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json index.html winners.html sitemap.xml reviews sponsorships.html site-types.html
+          git add data.json index.html winners.html active-sweepstakes.html sitemap.xml reviews sponsorships.html site-types.html
           git commit -m "Weekly ScamFactor rescore: $(date -u +'%Y-%m-%d')" || exit 0
           git push
         env:

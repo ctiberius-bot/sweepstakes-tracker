@@ -14,11 +14,12 @@
       <div class="max-w-7xl mx-auto px-4">
         <div class="masthead">
           <div class="brand-lockup">
-            <span class="brand-mark" aria-hidden="true">✓</span>
-            <div><div class="brand-name">SafeTrackerHub Sweepstakes</div><div class="brand-network">Safety rankings & winner reports</div></div>
+            <span class="brand-mark" aria-hidden="true"><span>ST</span></span>
+            <div><div class="brand-name">SafeTracker: <em>Sweepstakes</em></div><div class="brand-network">Safety rankings & winner reports</div></div>
           </div>
           <nav class="main-nav" aria-label="Primary navigation">
             <a href="#rankings">Rankings</a>
+            <a href="active-sweepstakes.html">Active Sweepstakes</a>
             <a href="winners.html">Winners</a>
             <a href="#methodology">How we score</a>
             <a href="#editor-picks">Editor picks</a>
@@ -27,23 +28,9 @@
         </div>
         <div class="hero">
           <div>
-            <p class="eyebrow">Sweepstakes tracker</p>
+            <p class="eyebrow">SafeTracker: Sweepstakes</p>
             <h1>Find real sweepstakes. Spot the red flags.</h1>
             <p class="hero-copy">Compare sweepstakes and rewards sites by transparency, fulfillment history, entry traps, realistic win opportunity, and marketing pressure.</p>
-            <form class="newsletter-form newsletter-form-hero" action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post">
-              <div class="newsletter-copy">
-                <strong>Get the daily winners report</strong>
-                <span>New winner reports with links to the original sources. No empty emails.</span>
-              </div>
-              <div class="newsletter-fields">
-                <label class="sr-only" for="hero-newsletter-email">Email address</label>
-                <input id="hero-newsletter-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
-                <input type="hidden" name="embed" value="1">
-                <input type="hidden" name="tag" value="daily-winners">
-                <button type="submit">Send me the winners</button>
-              </div>
-              <span class="newsletter-privacy">Free. Unsubscribe anytime.</span>
-            </form>
           </div>
           <div class="hero-meta"><strong>${rowCount} sites reviewed</strong>ScamFactor-rated for fast comparison. Lower scores mean fewer red flags.</div>
         </div>
@@ -60,6 +47,17 @@
       <div class="trust-item"><span class="trust-label">Safety rule</span><span class="trust-value">Never pay to claim</span></div>
       <div class="trust-item"><span class="trust-label">Last reviewed</span><span class="trust-value">${updated}</span></div>`;
     main.prepend(trust);
+    trust.insertAdjacentHTML("afterend", `
+      <aside class="newsletter-strip" aria-label="Daily winners email">
+        <span><strong>Daily winners</strong> · Source-linked reports when there is something new.</span>
+        <form action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post">
+          <label class="sr-only" for="strip-newsletter-email">Email address</label>
+          <input id="strip-newsletter-email" type="email" name="email" autocomplete="email" placeholder="Email address" required>
+          <input type="hidden" name="embed" value="1">
+          <input type="hidden" name="tag" value="daily-winners">
+          <button type="submit">Subscribe</button>
+        </form>
+      </aside>`);
 
     const safety = Array.from(main.children).find((element) => element.textContent.includes("Never pay to claim a prize"));
     if (safety) safety.className = "safety-note";
@@ -160,12 +158,12 @@
       <footer id="disclosure" class="site-footer">
         <div class="max-w-7xl mx-auto px-4">
           <div class="footer-grid">
-            <div><div class="footer-title">SafeTrackerHub Sweepstakes</div><p class="footer-copy">Plain-English safety rankings and source-linked winner reports for sweepstakes, giveaway, and rewards sites.</p></div>
-            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="#methodology">Methodology</a></div></div>
+            <div><div class="footer-title">SafeTracker: Sweepstakes</div><p class="footer-copy">Plain-English safety rankings and source-linked winner reports for sweepstakes, giveaway, and rewards sites.</p></div>
+            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="active-sweepstakes.html">Active Sweepstakes</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="#methodology">Methodology</a></div></div>
             <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="#methodology">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a></div></div>
             <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links and featured placements may be paid. Sponsored positions will be labeled. ScamFactor scores summarize the risk signals shown in each review.</p></div>
           </div>
-          <div class="footer-bottom">Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</div>
+          <div class="footer-bottom"><span>Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</span><span class="site-version">SafeTracker: Sweepstakes v1.1</span></div>
         </div>
       </footer>`);
   }
