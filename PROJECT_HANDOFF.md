@@ -1,6 +1,6 @@
 # SafeTrackerHub Sweepstakes Tracker — Project Handoff
 
-Last updated: July 23, 2026
+Last updated: July 24, 2026
 
 ## Start here
 
@@ -8,7 +8,8 @@ Last updated: July 23, 2026
 - GitHub: https://github.com/ctiberius-bot/sweepstakes-tracker
 - Production branch: `main`
 - Hosting: Cloudflare Pages, automatically deployed from GitHub
-- Latest production redesign commit before this handoff: `4b4607e`
+- Current production release: v1.2
+- Current production commit: `786b2f7` (`Release v1.2 profiles and daily refresh`)
 
 This file is the durable context for continuing the project from another computer or ChatGPT/Codex client. Read it before making changes.
 
@@ -100,6 +101,54 @@ Scores are editorial estimates based on available evidence and should be revisit
 
 Generated HTML files are committed because Cloudflare Pages serves the static repository output.
 
+## Version 1.2 profile system
+
+Version 1.2 expanded every one of the 29 site-detail pages into a consistent, inventory-style profile. Each generated profile now includes:
+
+- Known prizes or rewards, with entry links where a verified public URL is available.
+- Listing status, entry frequency, and login requirements.
+- Last publicly reported win and next drawing information where publicly verifiable.
+- Last-verified and source-freshness information.
+- Pros, cons, risk signals, main concerns, and marketing/data-practice notes.
+- A dedicated unsubscribe section targeted by the simple Unsubscribe link in the main table.
+- Consistent site-type imagery and ScamFactor presentation.
+
+The source data remains in `data.json`; `templates/review.html.j2` controls the common detail-page layout. Do not hand-edit individual generated pages as the next rebuild will replace those edits.
+
+## Automated refresh and rebuild
+
+Two GitHub Actions workflows maintain the generated site:
+
+- `.github/workflows/daily-profile-refresh.yml` runs daily at 12:45 UTC. It checks every public profile source, updates freshness metadata and supported structured prize details, rebuilds every detail page across every tracked site, validates the generated output, and commits changes to `main`.
+- `.github/workflows/weekly-rescore.yml` performs the same all-profile refresh before the weekly ScamFactor rescore and full rebuild.
+- `.github/workflows/daily-winners.yml` gathers and publishes the separate daily winner report.
+
+Supporting scripts:
+
+- `refresh_site_details.py` checks all profile sources. It preserves curated facts when a page is protected or unavailable rather than inventing replacements.
+- `validate_generated.py` verifies that all 29 expected profile pages exist and contain the required v1.2 sections.
+- `scraper_simple.py` rebuilds the homepage, supporting pages, and all site profiles.
+
+The automation never stores personal login credentials in the repository. Public pages are refreshed automatically; protected or login-only facts remain curated until a secure credential strategy is deliberately implemented.
+
+On July 24, 2026, scheduled run #3 of Daily Winner Reports was cancelled after 15 minutes because GitHub could not assign a hosted runner. GitHub reported an internal server error and "The job was not acquired by Runner of type hosted even after multiple attempts." The two preceding manual runs succeeded, so this was a transient GitHub infrastructure failure rather than a workflow-code failure.
+
+## Monetization system
+
+The approved launch monetization package includes:
+
+- A public sponsorship rate card at `/sponsorships` with $149 seven-day, $399 monthly, $699 category, and $1,250 homepage packages.
+- A founding-partner offer of 50% off the first month for the first three partners.
+- A protected sponsorship inquiry form using the existing contact delivery and Turnstile configuration.
+- Affiliate-ready outbound URLs configured through `data/monetization.json`; blank values safely fall back to official non-affiliate links.
+- First-party events for page views, outbound clicks, sponsor interest, package selection, sponsor leads, and newsletter submissions.
+- Existing Buttondown newsletter capture for the daily/weekly winner audience.
+- Commercial disclosures stating that visibility may be purchased while the displayed ScamFactor score remains visible.
+- `MONETIZATION_PLAYBOOK.md` for operating instructions.
+- `OUTREACH_PREVIEW.md` containing approved draft language and a wave-based inventory covering all 29 operators.
+
+Payment remains an inquiry/invoice workflow until the LLC, payment platform, legal business name, cancellation terms, and payment links are ready. No outreach was sent as part of the website release.
+
 ## Rebuilding the site
 
 After changing `data.json` or a Jinja template, run:
@@ -164,6 +213,9 @@ Do not push partially generated output or template changes without their corresp
 23. Type pills were restored as visual badges.
 24. The unsubscribe column was widened and long content was forced to wrap.
 25. The finished redesign, all 29 profiles, sponsorship page, assets, generator changes, and generated output were committed and pushed to production.
+26. Version 1.2 expanded all 29 detail pages into richer inventory profiles with known-prize, freshness, drawing, concern, marketing, and unsubscribe information.
+27. A daily all-site profile refresh and rebuild pipeline was added, together with weekly integration and generated-page validation.
+28. Version 1.2 was committed as `786b2f7`, pushed to `main`, and handed off for automatic Cloudflare Pages deployment.
 
 ## Known verified unsubscribe/privacy links
 
@@ -209,4 +261,3 @@ When continuing this project:
 5. Preserve the approved design decisions above unless the user explicitly changes direction.
 6. Preview locally before pushing.
 7. Do not push to production until the user approves the preview, unless the user directly requests an immediate production change.
-

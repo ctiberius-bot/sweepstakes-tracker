@@ -39,7 +39,7 @@
         {% else %}
         <span class="site-mark site-mark-large" style="--site-mark-hue: {{ site.mark_hue }}" aria-hidden="true">
           <span class="site-mark-fallback">{{ site.initials }}</span>
-          {% if site.link and site.link != "#" %}
+          {% if site.outbound_url and site.outbound_url != "#" %}
             <img class="site-mark-image" src="{{ site.favicon_url }}" alt="" width="48" height="48" onerror="this.remove()">
           {% endif %}
         </span>
@@ -105,7 +105,7 @@
             </li>
             {% endfor %}
           </ul>
-          {% if site.link and site.link != "#" %}<a class="browse-prizes-link" href="{{ site.link }}" target="_blank" rel="noopener sponsored">Browse current prizes on the official site →</a>{% endif %}
+          {% if site.outbound_url and site.outbound_url != "#" %}<a class="browse-prizes-link" href="{{ site.outbound_url }}" target="_blank" rel="noopener{% if site.is_affiliate %} sponsored{% endif %}" data-track="outbound_click" data-site="{{ site.slug }}" data-placement="prize_inventory">Browse current prizes on the official site →</a>{% endif %}
           <p class="inventory-caveat">Prize availability, entry limits, winner reports, and drawing dates change. “Not publicly stated” means we did not find a reliable public value; it does not mean no drawing is scheduled. Some operators may reveal additional prizes or timing only after sign-in.</p>
         </section>
 
@@ -175,7 +175,7 @@
         <section class="review-section">
           <h2>Source and verification links</h2>
           <div class="source-list">
-            {% if site.link and site.link != "#" %}<a href="{{ site.link }}" target="_blank" rel="noopener">Official website</a>{% endif %}
+            {% if site.outbound_url and site.outbound_url != "#" %}<a href="{{ site.outbound_url }}" target="_blank" rel="noopener{% if site.is_affiliate %} sponsored{% endif %}" data-track="outbound_click" data-site="{{ site.slug }}" data-placement="sources">Official website</a>{% endif %}
             {% if site.scrape_url %}<a href="{{ site.scrape_url }}" target="_blank" rel="noopener">Page checked for tracker data</a>{% endif %}
             {% if site.unsubscribe_url %}<a href="{{ site.unsubscribe_url }}" target="_blank" rel="noopener">Email unsubscribe page</a>{% endif %}
             {% if site.privacy_opt_out_url %}<a href="{{ site.privacy_opt_out_url }}" target="_blank" rel="noopener">Privacy-rights request</a>{% endif %}
@@ -188,7 +188,7 @@
       <aside class="review-sidebar">
         <div class="review-sidebar-card">
           <h2>Visit or compare</h2>
-          {% if site.link and site.link != "#" %}<a class="review-primary-action" href="{{ site.link }}" target="_blank" rel="noopener sponsored">Visit official site →</a>{% endif %}
+          {% if site.outbound_url and site.outbound_url != "#" %}<a class="review-primary-action" href="{{ site.outbound_url }}" target="_blank" rel="noopener{% if site.is_affiliate %} sponsored{% endif %}" data-track="outbound_click" data-site="{{ site.slug }}" data-placement="profile_cta">Visit official site →</a>{% endif %}
           <a class="review-secondary-action" href="../index.html#rankings">Compare all sites</a>
           <p>Links or featured placement may be sponsored. The displayed score remains visible regardless of placement.</p>
         </div>
@@ -199,5 +199,6 @@
   <footer class="site-footer">
     <div class="review-shell footer-bottom"><span>SafeTracker: Sweepstakes · Verify official rules before entering · Never pay to claim a prize.</span><span class="site-version">v1.2</span></div>
   </footer>
+  <script src="../assets/monetization.js"></script>
 </body>
 </html>

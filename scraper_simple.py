@@ -17,6 +17,7 @@ BASE = Path(__file__).parent
 TEMPLATE_DIR = BASE / "templates"
 OUTPUT_HTML = BASE / "index.html"
 DATA_FILE = BASE / "data.json"
+MONETIZATION_FILE = BASE / "data" / "monetization.json"
 REVIEWS_DIR = BASE / "reviews"
 WINNERS_FILE = BASE / "data" / "winners.json"
 ACTIVE_SWEEPS_FILE = BASE / "data" / "active_sweepstakes.json"
@@ -285,12 +286,19 @@ def main():
     sites = data.get("sites", [])
     if not sites:
         raise ValueError("No sites found in data.json")
+    monetization = json.loads(MONETIZATION_FILE.read_text(encoding="utf-8")) if MONETIZATION_FILE.exists() else {}
+    affiliate_links = monetization.get("affiliate_links", {})
     sites.sort(key=lambda site: (float(site["score"]), site["name"].casefold()))
     for site in sites:
         site["slug"] = site.get("slug") or slugify(site["name"])
+        if affiliate_links.get(site["slug"]):
+            site["affiliate_url"] = affiliate_links[site["slug"]]
         site["initials"] = site_initials(site["name"])
         site["mark_hue"] = sum(ord(char) for char in site["name"]) % 360
         site["favicon_url"] = favicon_url(site.get("link"))
+        site["outbound_url"] = site.get("affiliate_url") or site.get("link")
+        site["is_affiliate"] = bool(site.get("affiliate_url"))
+        site["placement_tier"] = site.get("placement_tier", "standard")
         site["logo_asset"] = (
             "assets/logos/mondosweeps.png"
             if site["slug"] == "mondosweeps"
@@ -347,7 +355,7 @@ def main():
     )
 
     OUTPUT_HTML.write_text(clean_generated_html(html), encoding="utf-8")
-    sponsorship_html = sponsorship_template.render(last_updated=last_updated_str)
+    sponsorship_html = sponsorship_template.render(last_updated=last_updated_str, monetization=monetization)
     (BASE / "sponsorships.html").write_text(
         clean_generated_html(sponsorship_html),
         encoding="utf-8",

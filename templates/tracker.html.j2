@@ -208,8 +208,8 @@
             </td>
             <td class="px-3 py-3 text-xs text-red-700">{{ s.redFlags }}</td>
             <td class="px-3 py-3 text-center">
-              {% if s.link and s.link != "#" %}
-                <a href="{{ s.link }}" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+              {% if s.outbound_url and s.outbound_url != "#" %}
+                <a href="{{ s.outbound_url }}" target="_blank" rel="noopener{% if s.is_affiliate %} sponsored{% endif %}" class="text-teal-600 hover:underline font-medium" data-track="outbound_click" data-site="{{ s.slug }}" data-placement="inventory">Visit</a>
               {% else %}
                 <span class="text-slate-400">—</span>
               {% endif %}
@@ -222,9 +222,10 @@
 
     <footer class="text-center text-xs text-slate-500 py-6 border-t">
       Data last refreshed {{ last_updated }}. Always verify official rules on each site.<br>
-      Some links may be affiliate links. Rankings are never paid. · SafeTracker: Sweepstakes v1.2
+      Some links may be affiliate links, and featured visibility may be purchased. Paid placements are labeled; ScamFactor scores remain visible. · SafeTracker: Sweepstakes v1.2
     </footer>
   </main>
   <script src="assets/tracker.js"></script>
+  <script src="assets/monetization.js"></script>
 </body>
 </html>

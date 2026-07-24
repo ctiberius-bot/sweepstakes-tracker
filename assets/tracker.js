@@ -40,7 +40,7 @@
     trust.className = "trust-grid";
     trust.setAttribute("aria-label", "Editorial standards");
     trust.innerHTML = `
-      <a class="trust-item trust-link" href="sponsorships.html"><span class="trust-label">Featured placement</span><span class="trust-value">Sponsorships available →</span></a>
+      <a class="trust-item trust-link" href="sponsorships.html" data-track="sponsor_interest" data-placement="trust_strip"><span class="trust-label">Featured placement</span><span class="trust-value">Sponsorships available →</span></a>
       <div class="trust-item"><span class="trust-label">Scoring</span><span class="trust-value">Five published criteria</span></div>
       <div class="trust-item"><span class="trust-label">Safety rule</span><span class="trust-value">Never pay to claim</span></div>
       <div class="trust-item"><span class="trust-label">Last reviewed</span><span class="trust-value">${updated}</span></div>`;
@@ -48,7 +48,7 @@
     trust.insertAdjacentHTML("afterend", `
       <aside class="newsletter-strip" aria-label="Daily winners email">
         <span><strong>Daily winners</strong> · Source-linked reports when there is something new.</span>
-        <form action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post">
+        <form action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post" data-track-form="newsletter_signup">
           <label class="sr-only" for="strip-newsletter-email">Email address</label>
           <input id="strip-newsletter-email" type="email" name="email" autocomplete="email" placeholder="Email address" required>
           <input type="hidden" name="embed" value="1">
@@ -68,11 +68,11 @@
       picks.innerHTML = `
         <p class="section-kicker"><a class="sponsorship-link" href="sponsorships.html">Featured placements →</a></p>
         <h2 class="section-title">Three options for three different goals</h2>
-        <p class="section-intro">Partners may pay for featured placement. Paid positions will be clearly labeled, and every listed site still displays its score. <a class="sponsorship-link" href="sponsorships.html">See sponsorship options →</a></p>
+        <p class="section-intro">Partners may pay for featured placement. Paid positions will be clearly labeled, and every listed site still displays its score. <a class="sponsorship-link" href="sponsorships.html" data-track="sponsor_interest" data-placement="featured_intro">See sponsorship options →</a></p>
         <div class="pick-grid">
-          <a class="pick-card" href="https://www.swagbucks.com/" target="_blank" rel="noopener sponsored"><span class="pick-label">Best for steady rewards</span><span class="pick-name">Swagbucks</span><span class="pick-reason">A long-running rewards platform with more realistic earning opportunities than jackpot-only sites.</span><span class="pick-action">View official site →</span></a>
-          <a class="pick-card" href="https://www.mondosweeps.com/" target="_blank" rel="noopener sponsored"><span class="pick-label">Best daily cash chance</span><span class="pick-name">Mondosweeps</span><span class="pick-reason">Daily drawings with a guaranteed $25 winner, balanced against heavier promotional email volume.</span><span class="pick-action">View official site →</span></a>
-          <a class="pick-card" href="https://www.pch.com/" target="_blank" rel="noopener sponsored"><span class="pick-label">Best established name</span><span class="pick-name">Publishers Clearing House</span><span class="pick-reason">The most recognizable big-prize operator here—plus a frequent target for impersonation scams.</span><span class="pick-action">View official site →</span></a>
+          <a class="pick-card" href="https://www.swagbucks.com/" target="_blank" rel="noopener sponsored" data-track="outbound_click" data-site="swagbucks" data-placement="featured_card"><span class="pick-label">Best for steady rewards</span><span class="pick-name">Swagbucks</span><span class="pick-reason">A long-running rewards platform with more realistic earning opportunities than jackpot-only sites.</span><span class="pick-action">View official site →</span></a>
+          <a class="pick-card" href="https://www.mondosweeps.com/" target="_blank" rel="noopener sponsored" data-track="outbound_click" data-site="mondosweeps" data-placement="featured_card"><span class="pick-label">Best daily cash chance</span><span class="pick-name">Mondosweeps</span><span class="pick-reason">Daily drawings with a guaranteed $25 winner, balanced against heavier promotional email volume.</span><span class="pick-action">View official site →</span></a>
+          <a class="pick-card" href="https://www.pch.com/" target="_blank" rel="noopener sponsored" data-track="outbound_click" data-site="publishers-clearing-house-pch" data-placement="featured_card"><span class="pick-label">Best established name</span><span class="pick-name">Publishers Clearing House</span><span class="pick-reason">The most recognizable big-prize operator here—plus a frequent target for impersonation scams.</span><span class="pick-action">View official site →</span></a>
         </div>`;
       ctaGrid.replaceWith(picks);
     }
@@ -159,7 +159,7 @@
             <div><div class="footer-title">SafeTracker: Sweepstakes</div><p class="footer-copy">Plain-English safety rankings and source-linked winner reports for sweepstakes, giveaway, and rewards sites.</p></div>
             <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
             <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="methodology.html">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a><a href="contact.html">Protected contact</a></div></div>
-            <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links and featured placements may be paid. Sponsored positions will be labeled. ScamFactor scores summarize the risk signals shown in each review.</p></div>
+            <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links may earn commissions and featured visibility may be purchased. Paid placements are labeled. ScamFactor scores remain visible and summarize the risk signals shown in each profile.</p></div>
           </div>
           <div class="footer-bottom"><span>Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</span><span class="site-version">SafeTracker: Sweepstakes v1.2</span></div>
         </div>

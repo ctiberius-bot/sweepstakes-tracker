@@ -1,0 +1,30 @@
+{
+  "currency": "USD",
+  "packages": [
+    {"id": "featured-week", "name": "Featured site — 7 days", "price": 149},
+    {"id": "featured-month", "name": "Featured site — monthly", "price": 399},
+    {"id": "category-month", "name": "Category sponsor", "price": 699},
+    {"id": "takeover-month", "name": "Homepage takeover", "price": 1250}
+  ],
+  "founding_offer": {
+    "discount_percent": 50,
+    "limit": 3,
+    "applies_to": "first month"
+  },
+  "affiliate_links": {
+    "publishers-clearing-house-pch": "",
+    "swagbucks": "",
+    "inboxdollars": "",
+    "mondosweeps": "",
+    "prizegrab": "",
+    "prizeloot": "",
+    "winloot-globalizer": "",
+    "pinchme": ""
+  },
+  "placements": {
+    "homepage_featured_cards": ["swagbucks", "mondosweeps", "publishers-clearing-house-pch"],
+    "homepage_takeover": null,
+    "category_sponsors": {}
+  },
+  "notes": "Paste approved affiliate tracking URLs into affiliate_links. Empty values fall back to the official site. Paid placements must be visibly labeled."
+}
