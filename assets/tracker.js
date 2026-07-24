@@ -161,7 +161,7 @@
             <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="methodology.html">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a><a href="contact.html">Protected contact</a></div></div>
             <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links and featured placements may be paid. Sponsored positions will be labeled. ScamFactor scores summarize the risk signals shown in each review.</p></div>
           </div>
-          <div class="footer-bottom"><span>Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</span><span class="site-version">SafeTracker: Sweepstakes v1.1</span></div>
+          <div class="footer-bottom"><span>Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</span><span class="site-version">SafeTracker: Sweepstakes v1.2</span></div>
         </div>
       </footer>`);
   }
