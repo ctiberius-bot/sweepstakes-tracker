@@ -513,3 +513,20 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
+.seo-guide {
+  margin: 3rem 0;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid #cbd5e1;
+  border-radius: 1.25rem;
+  background: #fff;
+}
+.seo-guide h2 { margin: .35rem 0 1rem; color: #134e4a; font-size: clamp(1.5rem, 3vw, 2.15rem); }
+.seo-guide-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; color: #334155; line-height: 1.75; }
+.seo-guide-links { display: flex; flex-wrap: wrap; gap: .7rem 1.25rem; margin-top: 1.25rem; }
+.seo-guide-links a { color: #0f766e; font-weight: 750; }
+.methodology-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 2rem 0; }
+.methodology-grid .type-card:first-child { grid-column: 1 / -1; }
+@media (max-width: 720px) {
+  .seo-guide-columns, .methodology-grid { grid-template-columns: 1fr; }
+  .methodology-grid .type-card:first-child { grid-column: auto; }
+}

@@ -105,10 +105,12 @@ def main():
     site_types_template = env.get_template("site-types.html.j2")
     winners_template = env.get_template("winners.html.j2")
     active_sweepstakes_template = env.get_template("active-sweepstakes.html.j2")
+    methodology_template = env.get_template("methodology.html.j2")
 
     html = template.render(
         sites=sites,
-        last_updated=last_updated_str
+        last_updated=last_updated_str,
+        last_updated_iso=now.date().isoformat(),
     )
 
     OUTPUT_HTML.write_text(clean_generated_html(html), encoding="utf-8")
@@ -148,20 +150,32 @@ def main():
         clean_generated_html(active_sweeps_html),
         encoding="utf-8",
     )
+    methodology_html = methodology_template.render(
+        last_updated=last_updated_str,
+        last_updated_iso=now.date().isoformat(),
+    )
+    (BASE / "methodology.html").write_text(
+        clean_generated_html(methodology_html),
+        encoding="utf-8",
+    )
     REVIEWS_DIR.mkdir(exist_ok=True)
     for site in sites:
-        review_html = review_template.render(site=site, last_updated=last_updated_str)
+        review_html = review_template.render(
+            site=site,
+            last_updated=last_updated_str,
+            last_updated_iso=now.date().isoformat(),
+        )
         (REVIEWS_DIR / f"{site['slug']}.html").write_text(
             clean_generated_html(review_html),
             encoding="utf-8",
         )
     sitemap_urls = [
         f"{SITE_ORIGIN}/",
-        f"{SITE_ORIGIN}/winners.html",
-        f"{SITE_ORIGIN}/active-sweepstakes.html",
-        f"{SITE_ORIGIN}/site-types.html",
-        f"{SITE_ORIGIN}/sponsorships.html",
-        *[f"{SITE_ORIGIN}/reviews/{site['slug']}.html" for site in sites],
+        f"{SITE_ORIGIN}/winners",
+        f"{SITE_ORIGIN}/site-types",
+        f"{SITE_ORIGIN}/methodology",
+        f"{SITE_ORIGIN}/sponsorships",
+        *[f"{SITE_ORIGIN}/reviews/{site['slug']}" for site in sites],
     ]
     sitemap = [
         '<?xml version="1.0" encoding="UTF-8"?>',
