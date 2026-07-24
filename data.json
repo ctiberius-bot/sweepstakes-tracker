@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-24T04:09:02.476913Z",
+  "last_updated": "2026-07-24T16:17:40.405648Z",
   "sites": [
     {
       "rank": 1,
@@ -27,7 +27,63 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "PC",
       "mark_hue": 254,
-      "favicon_url": "https://www.pch.com/favicon.ico"
+      "favicon_url": "https://www.pch.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$1M cash + Cadillac Escalade (major current)"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "many cash, cars, vacations"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 2.0,
+          "assessment": "strong"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 2.0,
+          "assessment": "strong"
+        },
+        {
+          "label": "Entry model",
+          "score": 2.0,
+          "assessment": "strong"
+        },
+        {
+          "label": "Win realism",
+          "score": 2.0,
+          "assessment": "strong"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 2.0,
+          "assessment": "strong"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.pch.com/",
+        "status": "protected",
+        "http_status": 429,
+        "changed": false,
+        "error": "HTTP 429"
+      },
+      "entry_requirements": "An account or email registration may be required for individual promotions.",
+      "winner_evidence": "Established operators should provide official winner announcements or fulfillment records.",
+      "marketing_intensity": "Promotional mail and email can be frequent even when entry is free.",
+      "data_practices": "Review both the operator's account terms and the rules for the specific promotion."
     },
     {
       "rank": 2,
@@ -56,7 +112,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "SW",
       "mark_hue": 218,
-      "favicon_url": "https://www.swagbucks.com/favicon.ico"
+      "favicon_url": "https://www.swagbucks.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Ongoing raffles for cash/gift cards (hundreds of millions paid historically)"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 2.0,
+          "assessment": "strong"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 2.0,
+          "assessment": "strong"
+        },
+        {
+          "label": "Entry model",
+          "score": 2.0,
+          "assessment": "strong"
+        },
+        {
+          "label": "Win realism",
+          "score": 2.0,
+          "assessment": "strong"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 2.0,
+          "assessment": "strong"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.swagbucks.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.swagbucks.com/",
+        "content_hash": "77fe2a9c251f8a261413c70834677eed044023765bb133aaae1a418cc48e1c95",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "A member account is required for personalized offers, rewards, and member-only promotions.",
+      "winner_evidence": "Separate ordinary rewards redemptions from sweepstakes winner evidence and verify each promotion's rules.",
+      "marketing_intensity": "Offer email, app notifications, and task reminders can be frequent.",
+      "data_practices": "Profiles, surveys, shopping activity, and offer interactions can create a substantial behavioral-data record."
     },
     {
       "rank": 3,
@@ -82,7 +190,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "CG",
       "mark_hue": 86,
-      "favicon_url": "https://www.contestgirl.com/favicon.ico"
+      "favicon_url": "https://www.contestgirl.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "More than 1,500 listed U.S. and Canadian sweepstakes spanning cash, travel, merchandise, and instant wins"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.contestgirl.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.contestgirl.com/",
+        "content_hash": "9e45502824bc0f5a8e63e24cdd79dcb2664cb5ebd07244bdd3a1c70fff2246c4",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 4,
@@ -109,7 +269,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "SA",
       "mark_hue": 306,
-      "favicon_url": "https://www.sweepsadvantage.com/favicon.ico"
+      "favicon_url": "https://www.sweepsadvantage.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Directory covering cash, trips, vehicles, gift cards, instant wins, local contests, and daily-entry promotions"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 2.5,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.sweepsadvantage.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.sweepsadvantage.com/",
+        "content_hash": "bba7927c7205f6e806deb915e9044487e5eba73d1807aad524b546ed50c467e7",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 5,
@@ -136,7 +348,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "IN",
       "mark_hue": 153,
-      "favicon_url": "https://www.inboxdollars.com/favicon.ico"
+      "favicon_url": "https://www.inboxdollars.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Cash & gift cards via activities + occasional sweepstakes/raffles"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.inboxdollars.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.inboxdollars.com/",
+        "content_hash": "92b9376eededf1dccb8001c20ac37ede79c8d3f17c222e5ed8b835e38ab4af90",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "A member account is required for personalized offers, rewards, and member-only promotions.",
+      "winner_evidence": "Separate ordinary rewards redemptions from sweepstakes winner evidence and verify each promotion's rules.",
+      "marketing_intensity": "Offer email, app notifications, and task reminders can be frequent.",
+      "data_practices": "Profiles, surveys, shopping activity, and offer interactions can create a substantial behavioral-data record."
     },
     {
       "rank": 6,
@@ -152,6 +416,7 @@
       "affiliate_note": "Check if they have partner program (often network-driven)",
       "scrape_url": "https://www.mondosweeps.com/",
       "slug": "mondosweeps",
+      "browser_refresh": true,
       "score_inputs": {
         "transparency": 3.0,
         "fulfillment": 3.0,
@@ -163,7 +428,144 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "MO",
       "mark_hue": 92,
-      "favicon_url": "https://www.mondosweeps.com/favicon.ico"
+      "favicon_url": "https://www.mondosweeps.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "No recent public winner located for this specific prize.",
+          "next_drawing": "Not clearly stated on the public prize page.",
+          "status": "Known when last verified",
+          "label": "$1,548,705 lump sum",
+          "entry_url": "https://www.mondosweeps.com/Sweepstakes/5000000-Cash-Sweepstakes",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "No recent public winner located for this specific prize.",
+          "next_drawing": "Promotion closes October 23, 2026; the public rules excerpt does not state the drawing date.",
+          "status": "Known when last verified",
+          "label": "$500,000 Dream Home",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "No recent public winner located for this specific prize.",
+          "next_drawing": "Not clearly stated on the public prize page.",
+          "status": "Known when last verified",
+          "label": "$300,000 cash",
+          "entry_url": "https://www.mondosweeps.com/Sweepstakes/300000-Cash-Sweepstakes",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "No recent public winner located for this specific prize.",
+          "next_drawing": "Not clearly stated on the public prize page.",
+          "status": "Known when last verified",
+          "label": "$125,000 cash",
+          "entry_url": "https://www.mondosweeps.com/Sweepstakes/125000-Cash-Sweepstakes",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "No recent public winner located for this specific prize.",
+          "next_drawing": "Not clearly stated on the public prize page.",
+          "status": "Known when last verified",
+          "label": "$88,888 Dream Car",
+          "entry_url": "https://www.mondosweeps.com/Sweepstakes/88888-Dream-Car",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "No recent public winner located for this specific prize.",
+          "next_drawing": "Not clearly stated on the public prize page.",
+          "status": "Known when last verified",
+          "label": "$33,333 Dream Vacation",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "No recent public winner located for this specific prize.",
+          "next_drawing": "Not clearly stated on the public prize page.",
+          "status": "Known when last verified",
+          "label": "$10,000 Super Home Theater",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "November 11, 2025",
+          "next_drawing": "Not clearly stated on the public prize page.",
+          "status": "Known when last verified",
+          "label": "$1,000 Amazon Gift Card",
+          "entry_url": "https://www.mondosweeps.com/Sweepstakes/sweepstakes-1000-Amazon-G",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "July 7, 2026",
+          "next_drawing": "Not clearly stated on the public prize page.",
+          "status": "Known when last verified",
+          "label": "$750 Visa Gift Card",
+          "entry_url": "https://www.mondosweeps.com/Sweepstakes/mondosweeps-750-Visa-Gift",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "July 8, 2026",
+          "next_drawing": "Not clearly stated on the public prize page.",
+          "status": "Known when last verified",
+          "label": "$100 cash",
+          "entry_frequency": "Up to 3 entries daily"
+        },
+        {
+          "login_required": "No account login shown on the public entry form; a valid email is required.",
+          "last_won": "July 21, 2026",
+          "next_drawing": "Daily at midnight Eastern Time",
+          "status": "Known when last verified",
+          "label": "$25 Daily Cash",
+          "entry_url": "https://www.mondosweeps.com/Sweepstakes/Daily-Cash-Prize-Giveaway",
+          "entry_frequency": "Up to 5 entries daily"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "assets/logos/mondosweeps.png",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.mondosweeps.com/",
+        "status": "protected",
+        "http_status": 403,
+        "changed": false,
+        "error": "HTTP 403"
+      },
+      "entry_requirements": "Most drawings accept an email address and permit repeated daily entries; confirm each promotion's limit.",
+      "winner_evidence": "Look for dated winner names or initials on the operator's winners page and in promotion-specific rules.",
+      "marketing_intensity": "Daily-entry operators commonly send frequent reminders and promotional messages.",
+      "data_practices": "Entry data is used by the operator and may also be governed by promotion-specific terms."
     },
     {
       "rank": 7,
@@ -189,7 +591,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "ON",
       "mark_hue": 30,
-      "favicon_url": "https://online-sweepstakes.com/favicon.ico"
+      "favicon_url": "https://online-sweepstakes.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Daily listings for cash, cars, travel, electronics, gift cards, and brand giveaways"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://online-sweepstakes.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://online-sweepstakes.com/",
+        "content_hash": "e70ac991c4fbd8a798f94bff69e388653f90b73e5f7bd72edc35ecb35e6ef642",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 8,
@@ -215,7 +669,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "SW",
       "mark_hue": 337,
-      "favicon_url": "https://www.sweepstake.com/favicon.ico"
+      "favicon_url": "https://www.sweepstake.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Hundreds of cash, travel, gift-card, merchandise, and instant-win promotions from outside sponsors"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.sweepstake.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.sweepstake.com/",
+        "content_hash": "5a70d381f35895ad378a1490974dac4c7778f5b5d017e3dd1f802c33d0ba0a1e",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 9,
@@ -241,7 +747,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "SW",
       "mark_hue": 64,
-      "favicon_url": "https://www.sweepstoday.com/favicon.ico"
+      "favicon_url": "https://www.sweepstoday.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Curated free sweepstakes, giveaways, and contests linking to official sponsor pages"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.sweepstoday.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.sweepstoday.com/",
+        "content_hash": "65cf7522b05bbaf94ffbffbf413970364fe7a9748d10612075625c79bad3eaa8",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 10,
@@ -267,7 +825,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "IL",
       "mark_hue": 198,
-      "favicon_url": "https://ilft.com/favicon.ico"
+      "favicon_url": "https://ilft.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Free samples, coupons, product-testing opportunities, giveaways, and limited-time brand offers"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://ilft.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://ilft.com/",
+        "content_hash": "85d23ce8e1e953d36262dd81a0a298338204520c0616acb59922540a4223758f",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
+      "winner_evidence": "Sample fulfillment is campaign-based rather than a conventional drawing; confirm shipment or selection terms.",
+      "marketing_intensity": "Product offers, surveys, and campaign notices may be frequent.",
+      "data_practices": "Demographic and product-preference data may be shared with participating brands under campaign terms."
     },
     {
       "rank": 11,
@@ -293,7 +903,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "IL",
       "mark_hue": 47,
-      "favicon_url": "https://ilovegiveaways.com/favicon.ico"
+      "favicon_url": "https://ilovegiveaways.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Daily sweepstakes, giveaways, instant-win games, cash, travel, and merchandise"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://ilovegiveaways.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://ilovegiveaways.com/",
+        "content_hash": "bb4e6f8bd8a7e518081a1e7c1da0e4caecf60f53bbb4329c1ce584bbe75a2f6c",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 12,
@@ -319,7 +981,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "MD",
       "mark_hue": 74,
-      "favicon_url": "https://www.instagram.com/favicon.ico"
+      "favicon_url": "https://www.instagram.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Brand-partnered cash, cars, merchandise (real user reports e.g. SodaStream)"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.instagram.com/milliondollarmedia/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.instagram.com/milliondollarmedia/",
+        "content_hash": "2c39a7dce0aefc7b1d761c9311becaa0005d28503d9c57aaf974aa5c0c814a1b",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "Requirements vary; verify the official site and promotion rules before providing information.",
+      "winner_evidence": "Use operator-owned rules and dated winner evidence whenever available.",
+      "marketing_intensity": "Not independently measured; use a dedicated sweepstakes email address.",
+      "data_practices": "Review the operator and sponsor privacy terms before submitting personal information."
     },
     {
       "rank": 13,
@@ -346,7 +1060,80 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "PR",
       "mark_hue": 214,
-      "favicon_url": "https://prizegrab.com/favicon.ico"
+      "favicon_url": "https://prizegrab.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$10k cash examples"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$300 Shell GC"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$25 Dunkin' GC"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "other gift cards & merchandise"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://prizegrab.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://prizegrab.com/",
+        "content_hash": "417e17d835e81ccdc4f6a82e875ff0019f649f66526ccf1ea2d4ea6ecf1248c9",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "Most drawings accept an email address and permit repeated daily entries; confirm each promotion's limit.",
+      "winner_evidence": "Look for dated winner names or initials on the operator's winners page and in promotion-specific rules.",
+      "marketing_intensity": "Daily-entry operators commonly send frequent reminders and promotional messages.",
+      "data_practices": "Entry data is used by the operator and may also be governed by promotion-specific terms."
     },
     {
       "rank": 14,
@@ -372,7 +1159,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "SW",
       "mark_hue": 168,
-      "favicon_url": "https://www.sweepfeed.com/favicon.ico"
+      "favicon_url": "https://www.sweepfeed.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Aggregated high-value sweepstakes with category, expiration, and legitimacy signals"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.sweepfeed.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.sweepfeed.com/",
+        "content_hash": "ccf90a2f4b41fc00c2cfda87ae7abab57e72d31d1dc18cea112d248528469c4f",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 15,
@@ -398,7 +1237,70 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "WI",
       "mark_hue": 233,
-      "favicon_url": "https://www.winstakes.com/favicon.ico"
+      "favicon_url": "https://www.winstakes.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Up to ~$1,542,625 lump sum cash"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$25 Daily Cash"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$50, $100, $750, $1,000 cash examples"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 3.5,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.winstakes.com/",
+        "status": "protected",
+        "http_status": 403,
+        "changed": false,
+        "error": "HTTP 403"
+      },
+      "entry_requirements": "Most drawings accept an email address and permit repeated daily entries; confirm each promotion's limit.",
+      "winner_evidence": "Look for dated winner names or initials on the operator's winners page and in promotion-specific rules.",
+      "marketing_intensity": "Daily-entry operators commonly send frequent reminders and promotional messages.",
+      "data_practices": "Entry data is used by the operator and may also be governed by promotion-specific terms."
     },
     {
       "rank": 16,
@@ -424,7 +1326,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "ES",
       "mark_hue": 12,
-      "favicon_url": "https://esweeps.com/favicon.ico"
+      "favicon_url": "https://esweeps.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Cash, vacations, instant wins, freebies, and daily-entry promotions"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://esweeps.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://esweeps.com/",
+        "content_hash": "3cb87d6ce35f35c6d2e2112404ff241d2079ce5288b381af177a156bd87c13a9",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 17,
@@ -450,7 +1404,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "LO",
       "mark_hue": 101,
-      "favicon_url": "https://localfreebie.com/favicon.ico"
+      "favicon_url": "https://localfreebie.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "State-targeted sweepstakes, free samples, consumer rewards, and local offers"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://localfreebie.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://localfreebie.com/",
+        "content_hash": "1af938b692784f901ab5a2783c38c8181b94ac8f9815a1438c1b49a7ed540cb3",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "Listings are usually public, but eligibility and entry requirements depend on location and sponsor.",
+      "winner_evidence": "Verify fulfillment with the local sponsor named in each listing.",
+      "marketing_intensity": "Newsletter volume is typically moderate; outside sponsors vary.",
+      "data_practices": "Local sponsors control the information submitted on their own entry forms."
     },
     {
       "rank": 18,
@@ -476,7 +1482,80 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "RE",
       "mark_hue": 317,
-      "favicon_url": "https://www.retirewhiz.com/favicon.ico"
+      "favicon_url": "https://www.retirewhiz.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$250 cash"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$5M Retirement Sweepstakes"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$33k giveaway"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "~$125k motorhome"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.retirewhiz.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.retirewhiz.com/",
+        "content_hash": "c2908f6f5d918ce5b9b0dc0e3ab99cf0e00593806ec6db1a3805d440fd64a73a",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "Email registration or a site account may be required; eligibility can be tailored to the site's audience.",
+      "winner_evidence": "Look for dated winner announcements and promotion-specific official rules.",
+      "marketing_intensity": "Expect audience-targeted promotional email and partner offers.",
+      "data_practices": "Review whether information is shared with brands serving the site's niche audience."
     },
     {
       "rank": 19,
@@ -502,7 +1581,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "RG",
       "mark_hue": 42,
-      "favicon_url": "https://www.therobinapp.com/favicon.ico"
+      "favicon_url": "https://www.therobinapp.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Discovery and tracking for daily-entry sweepstakes from outside sponsors"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.therobinapp.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.therobinapp.com/",
+        "content_hash": "934a6c8ce209784c84efb1bc236519c19feb66623f4444d57c9eb042a38fbd10",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "An app account is usually required. Device permissions, notifications, and sponsor-specific entry terms may also apply.",
+      "winner_evidence": "Verify winners through the app operator and the sponsor named in each promotion.",
+      "marketing_intensity": "App notifications and promotional email may be frequent.",
+      "data_practices": "The app adds an account and device-data layer in addition to each promotion sponsor."
     },
     {
       "rank": 20,
@@ -528,7 +1659,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "WI",
       "mark_hue": 112,
-      "favicon_url": "https://www.winprizesonline.com/favicon.ico"
+      "favicon_url": "https://www.winprizesonline.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Cash, cars, vacations, gift cards, instant wins, and daily-entry sweepstakes"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Entry model",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Win realism",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 4.0,
+          "assessment": "generally favorable"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.winprizesonline.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.winprizesonline.com/",
+        "content_hash": "db2aaced8b564fc63d55e602259c8bb0c52800fa4f2b57af19d4999a58009044",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 21,
@@ -554,7 +1737,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "SS",
       "mark_hue": 125,
-      "favicon_url": "https://sweetiesweepstakes.com/favicon.ico"
+      "favicon_url": "https://sweetiesweepstakes.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Public sweepstakes listings plus local, quick-ending, and member-only listings through a paid companion service"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 4.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 4.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Entry model",
+          "score": 4.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Win realism",
+          "score": 4.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 4.5,
+          "assessment": "mixed"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://sweetiesweepstakes.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://sweetiesweepstakes.com/",
+        "content_hash": "a267a98c3e61acea15095addc01e802880d9ec22f9ef90cd9c67f7bac09c441c",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
+      "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
+      "marketing_intensity": "Directory newsletters are optional, while marketing varies widely at linked sponsors.",
+      "data_practices": "Opening an outside listing moves the visitor to that sponsor's privacy and data-sharing terms."
     },
     {
       "rank": 22,
@@ -580,7 +1815,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "LF",
       "mark_hue": 55,
-      "favicon_url": "https://theluckfoundry.com/favicon.ico"
+      "favicon_url": "https://theluckfoundry.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Sweepstakes aggregation, entry tracking, reminders, daily routines, and prize-value sorting"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 4.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 4.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Entry model",
+          "score": 4.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Win realism",
+          "score": 4.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 4.5,
+          "assessment": "mixed"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://theluckfoundry.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://theluckfoundry.com/",
+        "content_hash": "c5746ea03de22976eb41f45ac7a08b92496949868d0d92ff4255b932e1e3a49d",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "Basic listings may be public; saved searches, alerts, or early listings can require an account or paid membership.",
+      "winner_evidence": "The directory usually does not fulfill prizes; verify with each outside sponsor.",
+      "marketing_intensity": "Account notices and membership promotions may supplement normal newsletters.",
+      "data_practices": "Directory account data is separate from information submitted to outside sponsors."
     },
     {
       "rank": 23,
@@ -606,7 +1893,73 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "BL",
       "mark_hue": 316,
-      "favicon_url": "https://blissxo.com/favicon.ico"
+      "favicon_url": "https://blissxo.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$125k instant win"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$80k+ in cash prizes"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "free samples & deals focus"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 5.0,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 5.0,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Entry model",
+          "score": 5.0,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Win realism",
+          "score": 5.0,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 5.0,
+          "assessment": "mixed"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://blissxo.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://blissxo.com/",
+        "content_hash": "9e20cca0143b856b51d897f10a7e5b36da5a857167f7352f2e381fb0c8985041",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
+      "winner_evidence": "Sample fulfillment is campaign-based rather than a conventional drawing; confirm shipment or selection terms.",
+      "marketing_intensity": "Product offers, surveys, and campaign notices may be frequent.",
+      "data_practices": "Demographic and product-preference data may be shared with participating brands under campaign terms."
     },
     {
       "rank": 24,
@@ -632,7 +1985,59 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "PI",
       "mark_hue": 36,
-      "favicon_url": "https://www.pinchme.com/favicon.ico"
+      "favicon_url": "https://www.pinchme.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Free product samples / full-size items (build box of 4 via quizzes + coins for free shipping)"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 5.0,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 5.0,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Entry model",
+          "score": 5.0,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Win realism",
+          "score": 5.0,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 5.0,
+          "assessment": "mixed"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.pinchme.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://www.pinchme.com/",
+        "content_hash": "c79c542aea8f604f41d504953f3dd24a84f1e4e500d2061c4890216431203bcc",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
+      "winner_evidence": "Sample fulfillment is campaign-based rather than a conventional drawing; confirm shipment or selection terms.",
+      "marketing_intensity": "Product offers, surveys, and campaign notices may be frequent.",
+      "data_practices": "Demographic and product-preference data may be shared with participating brands under campaign terms."
     },
     {
       "rank": 25,
@@ -659,7 +2064,70 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "PR",
       "mark_hue": 11,
-      "favicon_url": "https://www.prizecraze.com/favicon.ico"
+      "favicon_url": "https://www.prizecraze.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$25 Daily Cash (guaranteed one winner/day)"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "bigger cash jackpots"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Craze Coins for extra entries"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Entry model",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Win realism",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 5.5,
+          "assessment": "mixed"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.prizecraze.com/",
+        "status": "protected",
+        "http_status": 403,
+        "changed": false,
+        "error": "HTTP 403"
+      },
+      "entry_requirements": "A valid email is normally required, with repeated entries or network accounts used for some promotions.",
+      "winner_evidence": "Prefer dated operator winner reports and prize-specific rules; large jackpot proof may be less frequent.",
+      "marketing_intensity": "Expect high-volume promotional email across related network brands.",
+      "data_practices": "Information may be used across an affiliated marketing network; review opt-out and privacy-rights pages."
     },
     {
       "rank": 26,
@@ -686,7 +2154,84 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "PR",
       "mark_hue": 248,
-      "favicon_url": "https://www.prizeloot.com/favicon.ico"
+      "favicon_url": "https://www.prizeloot.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$499,999 cash"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$77,777.77"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$3,333 cash (multiple recent named winners)"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$200/$100/$20 Daily Cash"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "iPad, 50\" TV, drone, Stanley tumbler"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Entry model",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Win realism",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 5.5,
+          "assessment": "mixed"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.prizeloot.com/",
+        "status": "protected",
+        "http_status": 403,
+        "changed": false,
+        "error": "HTTP 403"
+      },
+      "entry_requirements": "A valid email is normally required, with repeated entries or network accounts used for some promotions.",
+      "winner_evidence": "Prefer dated operator winner reports and prize-specific rules; large jackpot proof may be less frequent.",
+      "marketing_intensity": "Expect high-volume promotional email across related network brands.",
+      "data_practices": "Information may be used across an affiliated marketing network; review opt-out and privacy-rights pages."
     },
     {
       "rank": 27,
@@ -713,7 +2258,77 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "WI",
       "mark_hue": 96,
-      "favicon_url": "https://www.winloot.com/favicon.ico"
+      "favicon_url": "https://www.winloot.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$5M / $1M / $100k+ cash"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$250 Daily Cash (guaranteed)"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "$5k instant wins"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "many small cash/GCs/electronics"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Entry model",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Win realism",
+          "score": 5.5,
+          "assessment": "mixed"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 5.5,
+          "assessment": "mixed"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://www.winloot.com/",
+        "status": "protected",
+        "http_status": 403,
+        "changed": false,
+        "error": "HTTP 403"
+      },
+      "entry_requirements": "A valid email is normally required, with repeated entries or network accounts used for some promotions.",
+      "winner_evidence": "Prefer dated operator winner reports and prize-specific rules; large jackpot proof may be less frequent.",
+      "marketing_intensity": "Expect high-volume promotional email across related network brands.",
+      "data_practices": "Information may be used across an affiliated marketing network; review opt-out and privacy-rights pages."
     },
     {
       "rank": 28,
@@ -739,7 +2354,66 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "DG",
       "mark_hue": 19,
-      "favicon_url": "https://dailygoodiebox.com/favicon.ico"
+      "favicon_url": "https://dailygoodiebox.com/favicon.ico",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Free samples / full-size products in 'goodie boxes' (not guaranteed"
+        },
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "based on brand campaigns & availability)"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 8.5,
+          "assessment": "high concern"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 8.5,
+          "assessment": "high concern"
+        },
+        {
+          "label": "Entry model",
+          "score": 8.5,
+          "assessment": "high concern"
+        },
+        {
+          "label": "Win realism",
+          "score": 8.5,
+          "assessment": "high concern"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 8.5,
+          "assessment": "high concern"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "https://dailygoodiebox.com/",
+        "status": "reachable",
+        "http_status": 200,
+        "final_url": "https://dailygoodiebox.com/",
+        "content_hash": "c1a8883e0651ca27272513774e858275e10444cc89a1ed3666cdee1d0b2f9aa5",
+        "changed": true,
+        "last_success": "2026-07-24T16:15:35.362872Z",
+        "error": null
+      },
+      "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
+      "winner_evidence": "Sample fulfillment is campaign-based rather than a conventional drawing; confirm shipment or selection terms.",
+      "marketing_intensity": "Product offers, surveys, and campaign notices may be frequent.",
+      "data_practices": "Demographic and product-preference data may be shared with participating brands under campaign terms."
     },
     {
       "rank": 29,
@@ -765,9 +2439,57 @@
       "last_scored": "2026-07-24T01:54:32.632810Z",
       "initials": "SE",
       "mark_hue": 256,
-      "favicon_url": ""
+      "favicon_url": "",
+      "prize_items": [
+        {
+          "login_required": "Check the official entry page; login requirements are not yet recorded.",
+          "last_won": "No prize-specific public winner date recorded.",
+          "next_drawing": "Not yet recorded; verify the current official rules.",
+          "status": "Known when last verified",
+          "label": "Promised big gift cards (e.g. $750) via quizzes — user reports often low/no payout"
+        }
+      ],
+      "risk_signals": [
+        {
+          "label": "Transparency",
+          "score": 9.0,
+          "assessment": "high concern"
+        },
+        {
+          "label": "Fulfillment evidence",
+          "score": 9.0,
+          "assessment": "high concern"
+        },
+        {
+          "label": "Entry model",
+          "score": 9.0,
+          "assessment": "high concern"
+        },
+        {
+          "label": "Win realism",
+          "score": 9.0,
+          "assessment": "high concern"
+        },
+        {
+          "label": "Marketing pressure",
+          "score": 9.0,
+          "assessment": "high concern"
+        }
+      ],
+      "logo_asset": "",
+      "profile_refresh": {
+        "checked_at": "2026-07-24T16:15:35.362872Z",
+        "source_url": "#",
+        "status": "not_applicable",
+        "changed": false
+      },
+      "entry_requirements": "Email and personal details may be requested before the advertised reward path is fully disclosed.",
+      "winner_evidence": "Do not treat an advertised reward as fulfilled without clear rules and attributable winner evidence.",
+      "marketing_intensity": "Marketing and follow-up from partners can be intensive.",
+      "data_practices": "Information may be shared with advertisers or lead buyers; read consent language before submitting."
     }
   ],
   "live_snippets": {},
-  "last_rescored": "2026-07-24T01:54:32.632810Z"
+  "last_rescored": "2026-07-24T01:54:32.632810Z",
+  "last_profile_refresh": "2026-07-24T16:15:35.362872Z"
 }

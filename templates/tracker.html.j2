@@ -60,11 +60,11 @@
       border: 2px solid transparent;
       cursor: help;
     }
-    .score-low    { background: #dcfce7; color: #166534; border-color: #86efac; }
-    .score-midlow { background: #dbeafe; color: #1e40af; border-color: #93c5fd; }
-    .score-mid    { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
-    .score-high   { background: #ffedd5; color: #9a3412; border-color: #fdba74; }
-    .score-danger { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+    .score-low    { background: #e5f4ea; color: #1f6f3d; border-color: #70bf87; }
+    .score-midlow { background: #eef4d8; color: #596b13; border-color: #aec657; }
+    .score-mid    { background: #fff4cf; color: #785d00; border-color: #d6b62f; }
+    .score-high   { background: #ffead8; color: #914910; border-color: #e48a2b; }
+    .score-danger { background: #fbe2df; color: #8b2d25; border-color: #d44b3e; }
 
     /* Simple tooltip enhancement */
     [title] {
@@ -97,19 +97,25 @@
       Real sweepstakes are free. Use a burner email.
     </div>
 
-    <section class="seo-guide" aria-labelledby="safe-sweepstakes-guide">
-      <p class="section-kicker">Use the rankings wisely</p>
-      <h2 id="safe-sweepstakes-guide">How to find legitimate sweepstakes—and avoid prize scams</h2>
-      <div class="seo-guide-columns">
-        <p>A legitimate sweepstakes clearly identifies its sponsor, provides official rules, explains eligibility and entry limits, and never requires a winner to pay a fee to receive a prize. SafeTracker compares platforms and directories using those signals, along with winner evidence, fulfillment complaints, entry friction, realistic opportunity, and marketing pressure.</p>
-        <p>The ScamFactor score runs from 1 to 10, with lower scores indicating fewer concerns. It is a comparison tool, not a promise that every promotion on a platform is safe. Check each promotion’s official rules, use a dedicated email address, and be cautious when a form requests sensitive information before you have been verified as a winner.</p>
+    <details class="seo-guide seo-guide-disclosure" open>
+      <summary aria-labelledby="safe-sweepstakes-guide">
+        <span>
+          <span class="section-kicker">Use the rankings wisely</span>
+          <strong id="safe-sweepstakes-guide">How to find legitimate sweepstakes—and avoid prize scams</strong>
+        </span>
+      </summary>
+      <div class="seo-guide-body">
+        <div class="seo-guide-columns">
+          <p>A legitimate sweepstakes clearly identifies its sponsor, provides official rules, explains eligibility and entry limits, and never requires a winner to pay a fee to receive a prize. SafeTracker compares platforms and directories using those signals, along with winner evidence, fulfillment complaints, entry friction, realistic opportunity, and marketing pressure.</p>
+          <p>The ScamFactor score runs from 1 to 10, with lower scores indicating fewer concerns. It is a comparison tool, not a promise that every promotion on a platform is safe. Check each promotion’s official rules, use a dedicated email address, and be cautious when a form requests sensitive information before you have been verified as a winner.</p>
+        </div>
+        <div class="seo-guide-links">
+          <a href="methodology.html">Read our complete scoring methodology →</a>
+          <a href="site-types.html">Understand each type of sweepstakes site →</a>
+          <a href="winners.html">Search reported sweepstakes winners →</a>
+        </div>
       </div>
-      <div class="seo-guide-links">
-        <a href="methodology.html">Read our complete scoring methodology →</a>
-        <a href="site-types.html">Understand each type of sweepstakes site →</a>
-        <a href="winners.html">Search reported sweepstakes winners →</a>
-      </div>
-    </section>
+    </details>
 
     <!-- Top CTAs -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -198,16 +204,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">{{ s.prizes }}</td>
             <td class="px-3 py-3 text-xs">{{ s.draw }}</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>{{ s.unsub }}</span>
-              {% if s.unsubscribe_url -%}
-                <a class="unsubscribe-action" href="{{ s.unsubscribe_url }}" target="_blank" rel="noopener">{{ s.unsubscribe_label|default('Unsubscribe') }} →</a>
-              {%- endif %}
-              {% if s.privacy_opt_out_url -%}
-                <a class="unsubscribe-action secondary" href="{{ s.privacy_opt_out_url }}" target="_blank" rel="noopener">Privacy opt-out →</a>
-              {%- endif %}
-              {% if s.unsubscribe_help_url -%}
-                <a class="unsubscribe-action secondary" href="{{ s.unsubscribe_help_url }}" target="_blank" rel="noopener">Official instructions →</a>
-              {%- endif %}
+              <a class="unsubscribe-detail-link" href="reviews/{{ s.slug }}.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">{{ s.redFlags }}</td>
             <td class="px-3 py-3 text-center">
@@ -225,7 +222,7 @@
 
     <footer class="text-center text-xs text-slate-500 py-6 border-t">
       Data last refreshed {{ last_updated }}. Always verify official rules on each site.<br>
-      Some links may be affiliate links. Rankings are never paid. · SafeTracker: Sweepstakes v1.1
+      Some links may be affiliate links. Rankings are never paid. · SafeTracker: Sweepstakes v1.2
     </footer>
   </main>
   <script src="assets/tracker.js"></script>

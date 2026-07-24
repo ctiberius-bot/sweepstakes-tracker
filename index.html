@@ -60,11 +60,11 @@
       border: 2px solid transparent;
       cursor: help;
     }
-    .score-low    { background: #dcfce7; color: #166534; border-color: #86efac; }
-    .score-midlow { background: #dbeafe; color: #1e40af; border-color: #93c5fd; }
-    .score-mid    { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
-    .score-high   { background: #ffedd5; color: #9a3412; border-color: #fdba74; }
-    .score-danger { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+    .score-low    { background: #e5f4ea; color: #1f6f3d; border-color: #70bf87; }
+    .score-midlow { background: #eef4d8; color: #596b13; border-color: #aec657; }
+    .score-mid    { background: #fff4cf; color: #785d00; border-color: #d6b62f; }
+    .score-high   { background: #ffead8; color: #914910; border-color: #e48a2b; }
+    .score-danger { background: #fbe2df; color: #8b2d25; border-color: #d44b3e; }
 
     /* Simple tooltip enhancement */
     [title] {
@@ -97,19 +97,25 @@
       Real sweepstakes are free. Use a burner email.
     </div>
 
-    <section class="seo-guide" aria-labelledby="safe-sweepstakes-guide">
-      <p class="section-kicker">Use the rankings wisely</p>
-      <h2 id="safe-sweepstakes-guide">How to find legitimate sweepstakes—and avoid prize scams</h2>
-      <div class="seo-guide-columns">
-        <p>A legitimate sweepstakes clearly identifies its sponsor, provides official rules, explains eligibility and entry limits, and never requires a winner to pay a fee to receive a prize. SafeTracker compares platforms and directories using those signals, along with winner evidence, fulfillment complaints, entry friction, realistic opportunity, and marketing pressure.</p>
-        <p>The ScamFactor score runs from 1 to 10, with lower scores indicating fewer concerns. It is a comparison tool, not a promise that every promotion on a platform is safe. Check each promotion’s official rules, use a dedicated email address, and be cautious when a form requests sensitive information before you have been verified as a winner.</p>
+    <details class="seo-guide seo-guide-disclosure" open>
+      <summary aria-labelledby="safe-sweepstakes-guide">
+        <span>
+          <span class="section-kicker">Use the rankings wisely</span>
+          <strong id="safe-sweepstakes-guide">How to find legitimate sweepstakes—and avoid prize scams</strong>
+        </span>
+      </summary>
+      <div class="seo-guide-body">
+        <div class="seo-guide-columns">
+          <p>A legitimate sweepstakes clearly identifies its sponsor, provides official rules, explains eligibility and entry limits, and never requires a winner to pay a fee to receive a prize. SafeTracker compares platforms and directories using those signals, along with winner evidence, fulfillment complaints, entry friction, realistic opportunity, and marketing pressure.</p>
+          <p>The ScamFactor score runs from 1 to 10, with lower scores indicating fewer concerns. It is a comparison tool, not a promise that every promotion on a platform is safe. Check each promotion’s official rules, use a dedicated email address, and be cautious when a form requests sensitive information before you have been verified as a winner.</p>
+        </div>
+        <div class="seo-guide-links">
+          <a href="methodology.html">Read our complete scoring methodology →</a>
+          <a href="site-types.html">Understand each type of sweepstakes site →</a>
+          <a href="winners.html">Search reported sweepstakes winners →</a>
+        </div>
       </div>
-      <div class="seo-guide-links">
-        <a href="methodology.html">Read our complete scoring methodology →</a>
-        <a href="site-types.html">Understand each type of sweepstakes site →</a>
-        <a href="winners.html">Search reported sweepstakes winners →</a>
-      </div>
-    </section>
+    </details>
 
     <!-- Top CTAs -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -190,10 +196,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">$1M cash + Cadillac Escalade (major current); many cash, cars, vacations</td>
             <td class="px-3 py-3 text-xs">Variable by promotion; major winners often in-person Prize Patrol</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email footer unsubscribe link or contact PCH support</span>
-              <a class="unsubscribe-action" href="https://accounts.pch.com/unsub" target="_blank" rel="noopener">Unsubscribe →</a>
-              <a class="unsubscribe-action secondary" href="https://accounts.pch.com/do-not-sell" target="_blank" rel="noopener">Privacy opt-out →</a>
-
+              <a class="unsubscribe-detail-link" href="reviews/publishers-clearing-house-pch.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Heavy impersonator scams (phone/texts asking for fees to claim). Real PCH never asks for money.</td>
             <td class="px-3 py-3 text-center">
@@ -219,10 +222,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Ongoing raffles for cash/gift cards (hundreds of millions paid historically)</td>
             <td class="px-3 py-3 text-xs">Ongoing raffles + daily earning opportunities via tasks</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Account settings → Notifications, or email unsubscribe links</span>
-              <a class="unsubscribe-action" href="https://www.swagbucks.com/account/settings" target="_blank" rel="noopener">Manage email settings →</a>
-
-              <a class="unsubscribe-action secondary" href="https://help.swagbucks.com/hc/en-us/articles/205640064-How-do-I-get-off-your-mailing-list" target="_blank" rel="noopener">Official instructions →</a>
+              <a class="unsubscribe-detail-link" href="reviews/swagbucks.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Time-intensive for modest earnings; survey disqualifications common</td>
             <td class="px-3 py-3 text-center">
@@ -248,10 +248,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">More than 1,500 listed U.S. and Canadian sweepstakes spanning cash, travel, merchandise, and instant wins</td>
             <td class="px-3 py-3 text-xs">Listings updated daily; filters include entry frequency, value, location, and expiration</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Newsletter unsubscribe; account controls for saved contests</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/contest-girl.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Older interface and community-submitted comments; eligibility differs between U.S. and Canadian listings</td>
             <td class="px-3 py-3 text-center">
@@ -277,10 +274,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Directory covering cash, trips, vehicles, gift cards, instant wins, local contests, and daily-entry promotions</td>
             <td class="px-3 py-3 text-xs">New third-party sweepstakes added daily; frequency varies by sponsor</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Newsletter unsubscribe link and account notification preferences</span>
-
-
-              <a class="unsubscribe-action secondary" href="https://www.sweepsadvantage.com/privacy.htm" target="_blank" rel="noopener">Official instructions →</a>
+              <a class="unsubscribe-detail-link" href="reviews/sweepstakes-advantage.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Large listing volume requires users to review each outside sponsor's rules and privacy terms</td>
             <td class="px-3 py-3 text-center">
@@ -306,10 +300,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Cash & gift cards via activities + occasional sweepstakes/raffles</td>
             <td class="px-3 py-3 text-xs">Ongoing tasks + variable raffles</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Account settings or email footer unsubscribe</span>
-
-
-              <a class="unsubscribe-action secondary" href="https://help.inboxdollars.com/hc/en-us/articles/360044697811-PaidEmails-On-Mobile-App" target="_blank" rel="noopener">Official instructions →</a>
+              <a class="unsubscribe-detail-link" href="reviews/inboxdollars.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Modest payouts relative to time invested</td>
             <td class="px-3 py-3 text-center">
@@ -335,10 +326,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">$1,548,705 lump sum; $500k Dream Home; $300k/$125k cash; $88k Dream Car; $25 Daily Cash (guaranteed one winner/day); $100 cash; $750/$1k GCs</td>
             <td class="px-3 py-3 text-xs">Daily drawings (entries by midnight ET; winners notified next day)</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email footer unsubscribe link or account preferences</span>
-
-              <a class="unsubscribe-action secondary" href="https://www.mondosweeps.com/Site/PrivacyRightsRequest" target="_blank" rel="noopener">Privacy opt-out →</a>
-
+              <a class="unsubscribe-detail-link" href="reviews/mondosweeps.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Aggressive daily marketing emails; big jackpots still long shots</td>
             <td class="px-3 py-3 text-center">
@@ -364,10 +352,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Daily listings for cash, cars, travel, electronics, gift cards, and brand giveaways</td>
             <td class="px-3 py-3 text-xs">New listings and expired-link cleanup advertised daily</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Newsletter unsubscribe and community account settings</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/online-sweepstakes-com.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Users still leave the site to enter; sponsor quality, tracking, and opt-ins vary by listing</td>
             <td class="px-3 py-3 text-center">
@@ -393,10 +378,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Hundreds of cash, travel, gift-card, merchandise, and instant-win promotions from outside sponsors</td>
             <td class="px-3 py-3 text-xs">Human-reviewed listings added frequently; each promotion has its own schedule</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email newsletter unsubscribe link</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/sweepstake-com.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Directory links lead to third parties with different data collection and marketing practices</td>
             <td class="px-3 py-3 text-center">
@@ -422,10 +404,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Curated free sweepstakes, giveaways, and contests linking to official sponsor pages</td>
             <td class="px-3 py-3 text-xs">Active listings reviewed and refreshed regularly</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email footer unsubscribe link</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/sweepstoday.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">A directory cannot control the privacy or fulfillment practices of every outside sponsor</td>
             <td class="px-3 py-3 text-center">
@@ -451,10 +430,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Free samples, coupons, product-testing opportunities, giveaways, and limited-time brand offers</td>
             <td class="px-3 py-3 text-xs">Fresh offers posted daily; many are first-come samples rather than drawings</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Newsletter unsubscribe link</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/i-love-free-things-ilft.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Offer availability disappears quickly; outside brand forms may collect marketing data</td>
             <td class="px-3 py-3 text-center">
@@ -480,10 +456,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Daily sweepstakes, giveaways, instant-win games, cash, travel, and merchandise</td>
             <td class="px-3 py-3 text-xs">Hundreds of active listings with new promotions added daily</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Newsletter unsubscribe and account preferences</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/i-love-giveaways.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Broad directory volume means users must verify rules, eligibility, and sponsor consent language</td>
             <td class="px-3 py-3 text-center">
@@ -509,10 +482,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Brand-partnered cash, cars, merchandise (real user reports e.g. SodaStream)</td>
             <td class="px-3 py-3 text-xs">Varies by partnered campaign</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Varies by specific promotion / email</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/million-dollar-media.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Depends entirely on the partner brand; some campaigns feel sales-driven</td>
             <td class="px-3 py-3 text-center">
@@ -538,10 +508,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">$10k cash examples; $300 Shell GC; $25 Dunkin' GC; other gift cards & merchandise</td>
             <td class="px-3 py-3 text-xs">Daily winners guaranteed; ongoing promotions</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Dedicated page: prizegrab.com/unsubscribe (or email footer)</span>
-              <a class="unsubscribe-action" href="https://prizegrab.com/unsubscribe" target="_blank" rel="noopener">Unsubscribe →</a>
-
-
+              <a class="unsubscribe-detail-link" href="reviews/prizegrab.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Data selling / spam calls after signup common complaint</td>
             <td class="px-3 py-3 text-center">
@@ -567,10 +534,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Aggregated high-value sweepstakes with category, expiration, and legitimacy signals</td>
             <td class="px-3 py-3 text-xs">Automated discovery across dozens of sources with frequent updates</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Account settings or email unsubscribe</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/sweepfeed.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Newer service; automated scoring and listing claims still require checking the official rules</td>
             <td class="px-3 py-3 text-center">
@@ -596,10 +560,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Up to ~$1,542,625 lump sum cash; $25 Daily Cash; $50, $100, $750, $1,000 cash examples</td>
             <td class="px-3 py-3 text-xs">Daily ($25 Daily Cash guaranteed); some weekly</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email footer or dedicated unsubscribe page</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/winstakes.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Similar spam volume to Mondosweeps</td>
             <td class="px-3 py-3 text-center">
@@ -625,10 +586,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Cash, vacations, instant wins, freebies, and daily-entry promotions</td>
             <td class="px-3 py-3 text-xs">Directory updated with ongoing third-party promotions</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Newsletter footer or contact request</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/esweeps.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Promotes entry-helper software; users should avoid automation that violates individual sweepstakes rules</td>
             <td class="px-3 py-3 text-center">
@@ -654,10 +612,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">State-targeted sweepstakes, free samples, consumer rewards, and local offers</td>
             <td class="px-3 py-3 text-xs">Listings organized by state and advertised as checked daily</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Newsletter unsubscribe or contact request</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/localfreebie.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Newer directory with limited independent history; local availability and sponsor terms vary</td>
             <td class="px-3 py-3 text-center">
@@ -683,10 +638,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">$250 cash; $5M Retirement Sweepstakes; $33k giveaway; ~$125k motorhome</td>
             <td class="px-3 py-3 text-xs">Daily or periodic (check specific rules for end dates)</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email preferences or contact support</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/retirewhiz.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Retirement-niche marketing emails can be persistent</td>
             <td class="px-3 py-3 text-center">
@@ -712,10 +664,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Discovery and tracking for daily-entry sweepstakes from outside sponsors</td>
             <td class="px-3 py-3 text-xs">Continuously updated app-based feed; schedules vary by promotion</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>App account and notification settings</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/robin-giveaways.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">App requires an account and adds another data layer between entrants and outside sponsors</td>
             <td class="px-3 py-3 text-center">
@@ -741,10 +690,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Cash, cars, vacations, gift cards, instant wins, and daily-entry sweepstakes</td>
             <td class="px-3 py-3 text-xs">New directory listings added throughout the year</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Newsletter unsubscribe link</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/winprizesonline.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Newer directory with limited independent track record; every sponsor's official rules should be checked</td>
             <td class="px-3 py-3 text-center">
@@ -770,10 +716,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Public sweepstakes listings plus local, quick-ending, and member-only listings through a paid companion service</td>
             <td class="px-3 py-3 text-xs">Public listings updated regularly; premium local and early-access listings vary</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email unsubscribe; paid Secret Sweeps membership managed through account/support</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/sweetie-sweepstakes.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Optional private membership costs about $50 per year; paying for access does not guarantee wins</td>
             <td class="px-3 py-3 text-center">
@@ -799,10 +742,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Sweepstakes aggregation, entry tracking, reminders, daily routines, and prize-value sorting</td>
             <td class="px-3 py-3 text-xs">Listings refresh regularly; individual drawing schedules vary</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Account settings and email unsubscribe</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/the-luck-foundry.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Premium features may cost money; paid convenience does not improve the underlying odds</td>
             <td class="px-3 py-3 text-center">
@@ -828,10 +768,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">$125k instant win; $80k+ in cash prizes; free samples & deals focus</td>
             <td class="px-3 py-3 text-xs">Instant win + periodic drawings</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email preferences / footer link</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/blissxo.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Spam association noted; freebie marketing intensity</td>
             <td class="px-3 py-3 text-center">
@@ -857,10 +794,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Free product samples / full-size items (build box of 4 via quizzes + coins for free shipping)</td>
             <td class="px-3 py-3 text-xs">Ongoing daily samples; qualification-based (not pure chance)</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Account settings or email unsubscribe</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/pinchme-free-samples.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Low-quality samples for many users; qualification frustration; site glitches reported</td>
             <td class="px-3 py-3 text-center">
@@ -886,10 +820,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">$25 Daily Cash (guaranteed one winner/day); bigger cash jackpots; Craze Coins for extra entries</td>
             <td class="px-3 py-3 text-xs">Daily drawings; one $25 guaranteed daily</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email footer or account preferences</span>
-
-              <a class="unsubscribe-action secondary" href="https://www.prizecraze.com/Site/ConsumerOptOutPrefRequest" target="_blank" rel="noopener">Privacy opt-out →</a>
-
+              <a class="unsubscribe-detail-link" href="reviews/prizecraze-globalizer.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Network marketing volume; typical Globalizer spam</td>
             <td class="px-3 py-3 text-center">
@@ -915,10 +846,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">$499,999 cash; $77,777.77; $3,333 cash (multiple recent named winners); $200/$100/$20 Daily Cash; iPad, 50" TV, drone, Stanley tumbler</td>
             <td class="px-3 py-3 text-xs">Daily entries & daily drawings/awards (resets midnight ET)</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email footer unsubscribe link</span>
-
-              <a class="unsubscribe-action secondary" href="https://www.prizeloot.com/i/pages/consumer-opt-out" target="_blank" rel="noopener">Privacy opt-out →</a>
-
+              <a class="unsubscribe-detail-link" href="reviews/prizeloot.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Globalizer-style marketing volume; inconsistent big prize independent proof</td>
             <td class="px-3 py-3 text-center">
@@ -944,10 +872,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">$5M / $1M / $100k+ cash; $250 Daily Cash (guaranteed); $5k instant wins; many small cash/GCs/electronics</td>
             <td class="px-3 py-3 text-xs">Daily + instant wins (multiple entries/day possible)</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Dedicated: sweepstakes.winloot.com/winloot-unsubscribe or email footer</span>
-              <a class="unsubscribe-action" href="https://sweepstakes.winloot.com/winloot-unsubscribe" target="_blank" rel="noopener">Unsubscribe →</a>
-
-
+              <a class="unsubscribe-detail-link" href="reviews/winloot-globalizer.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Highest complaint volume in network (non-payment claims + spam); mixed fulfillment reports</td>
             <td class="px-3 py-3 text-center">
@@ -973,10 +898,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Free samples / full-size products in 'goodie boxes' (not guaranteed; based on brand campaigns & availability)</td>
             <td class="px-3 py-3 text-xs">Ongoing campaigns; receipt not guaranteed</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Contact admin@dailygoodiebox.com or cancel account via site</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/daily-goodie-box.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Many users report never receiving anything; impersonator messages; some similar 'box' reports of unexpected charges</td>
             <td class="px-3 py-3 text-center">
@@ -1002,10 +924,7 @@
             <td class="px-3 py-3 text-xs max-w-xs">Promised big gift cards (e.g. $750) via quizzes — user reports often low/no payout</td>
             <td class="px-3 py-3 text-xs">Funnel / quiz-based</td>
             <td class="px-3 py-3 text-xs text-teal-700">
-              <span>Email unsubscribe if reachable</span>
-
-
-
+              <a class="unsubscribe-detail-link" href="reviews/selectrewards.html#unsubscribe">Unsubscribe info →</a>
             </td>
             <td class="px-3 py-3 text-xs text-red-700">Deceptive marketing; frequent reports of little to no real payout</td>
             <td class="px-3 py-3 text-center">
@@ -1021,7 +940,7 @@
 
     <footer class="text-center text-xs text-slate-500 py-6 border-t">
       Data last refreshed July 24, 2026. Always verify official rules on each site.<br>
-      Some links may be affiliate links. Rankings are never paid. · SafeTracker: Sweepstakes v1.1
+      Some links may be affiliate links. Rankings are never paid. · SafeTracker: Sweepstakes v1.2
     </footer>
   </main>
   <script src="assets/tracker.js"></script>

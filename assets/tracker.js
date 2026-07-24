@@ -19,21 +19,18 @@
           </div>
           <nav class="main-nav" aria-label="Primary navigation">
             <a href="#rankings">Rankings</a>
-            <a href="active-sweepstakes.html">Active Sweepstakes</a>
             <a href="winners.html">Winners</a>
             <a href="methodology.html">How we score</a>
             <a href="contact.html">Contact</a>
-            <a href="#editor-picks">Editor picks</a>
-            <a class="nav-disclosure" href="#disclosure">Affiliate disclosure</a>
+            <a class="nav-disclosure" href="sponsorships.html">Advertise</a>
           </nav>
         </div>
         <div class="hero">
           <div>
-            <p class="eyebrow">SafeTracker: Sweepstakes</p>
             <h1>Find real sweepstakes. Spot the red flags.</h1>
-            <p class="hero-copy">Compare sweepstakes and rewards sites by transparency, fulfillment history, entry traps, realistic win opportunity, and marketing pressure.</p>
+            <p class="hero-copy">Compare ${rowCount} sweepstakes and rewards sites at a glance.</p>
           </div>
-          <div class="hero-meta"><strong>${rowCount} sites reviewed</strong>ScamFactor-rated for fast comparison. Lower scores mean fewer red flags.</div>
+          <div class="hero-meta"><strong>${rowCount} sites tracked</strong>Lower ScamFactor is better.</div>
         </div>
       </div>`;
 
@@ -160,7 +157,7 @@
         <div class="max-w-7xl mx-auto px-4">
           <div class="footer-grid">
             <div><div class="footer-title">SafeTracker: Sweepstakes</div><p class="footer-copy">Plain-English safety rankings and source-linked winner reports for sweepstakes, giveaway, and rewards sites.</p></div>
-            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="active-sweepstakes.html">Active Sweepstakes</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
+            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
             <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="methodology.html">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a><a href="contact.html">Protected contact</a></div></div>
             <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links and featured placements may be paid. Sponsored positions will be labeled. ScamFactor scores summarize the risk signals shown in each review.</p></div>
           </div>

@@ -1,4 +1,22 @@
-# Weekly ScamFactor Rescoring
+# Automated profile updates and ScamFactor rescoring
+
+## Daily profile refresh
+
+The tracker checks every public profile source daily at 12:45 UTC. The refresh
+records source availability, redirects, content changes, and the last successful
+check. Supported structured adapters update verified prize and winner details;
+the MondoSweeps adapter currently rebuilds its complete public prize inventory.
+
+If a site blocks automated requests or requires a member login, the job preserves
+the last curated facts and labels the source status instead of guessing. Research
+account credentials are never stored in this repository or GitHub Actions.
+
+The generator then rebuilds all detail pages, the homepage, sitemap, and supporting
+pages, even when only one source changed. Cloudflare Pages publishes the commit.
+
+Run it manually from **Actions → Daily site profile refresh → Run workflow**.
+
+## Weekly ScamFactor rescoring
 
 The tracker is refreshed automatically by GitHub Actions every Monday at
 10:15 UTC. The workflow can also be run manually from the repository's Actions
@@ -7,12 +25,13 @@ tab.
 ## How it works
 
 1. `.github/workflows/weekly-rescore.yml` starts the scheduled job.
-2. `rescore_sites.py --check-live` checks each official site, recomputes the
+2. `refresh_site_details.py` refreshes public profile evidence and known prizes.
+3. `rescore_sites.py --check-live` checks each official site, recomputes the
    weighted ScamFactor score, sorts from lowest to highest, and assigns ranks.
-3. `scraper_simple.py` regenerates the homepage, site profiles, and sponsorship
+4. `scraper_simple.py` regenerates the homepage, every site profile, and sponsorship
    page from the updated data.
-4. The workflow commits the source data and all generated pages.
-5. Cloudflare Pages detects the commit and publishes it.
+5. The workflow commits the source data and all generated pages.
+6. Cloudflare Pages detects the commit and publishes it.
 
 ## Scoring inputs
 

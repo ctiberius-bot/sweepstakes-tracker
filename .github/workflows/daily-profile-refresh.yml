@@ -1,16 +1,16 @@
-name: Weekly ScamFactor Rescore
+name: Daily site profile refresh
 
 on:
   schedule:
-    - cron: "15 10 * * 1"
+    - cron: "45 12 * * *"
   workflow_dispatch:
 
 concurrency:
-  group: weekly-scamfactor-rescore
+  group: daily-site-profile-refresh
   cancel-in-progress: false
 
 jobs:
-  rescore:
+  refresh:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -24,18 +24,17 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Install public-page browser
         run: python -m playwright install --with-deps chromium
-      - name: Rescore, rerank, and rebuild
+      - name: Refresh public profile sources and rebuild every page
         run: |
           python refresh_site_details.py
-          python rescore_sites.py --check-live
           python scraper_simple.py
           python validate_generated.py
-      - name: Commit refreshed tracker
+      - name: Commit refreshed profiles
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json index.html winners.html active-sweepstakes.html sitemap.xml reviews sponsorships.html site-types.html contact.html methodology.html
-          git commit -m "Weekly ScamFactor rescore: $(date -u +'%Y-%m-%d')" || exit 0
+          git commit -m "Daily profile refresh: $(date -u +'%Y-%m-%d')" || exit 0
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
