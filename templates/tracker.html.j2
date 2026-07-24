@@ -6,6 +6,7 @@
   <title>SweepSafe – Legit Sweepstakes Tracker</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/site.css">
   <style>
     th { position:sticky; top:0; background:#134e4a; color:white; z-index:10; }
     tr:nth-child(even) { background:#f0fdfa; }
@@ -124,6 +125,7 @@
           <tr>
             <th class="px-3 py-3 text-left" title="Overall ranking based on ScamFactor">#</th>
             <th class="px-3 py-3 text-left">Site</th>
+            <th class="px-3 py-3 text-left">Type</th>
             <th class="px-3 py-2 text-center" title="Lower score = more legitimate and better chance of a real win">
               <img src="assets/scamfactor-stamp.png"
                    alt="ScamFactor"
@@ -140,9 +142,13 @@
         </thead>
         <tbody>
           {% for s in sites %}
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="{{ s.theme|default('other') }}"
+              data-verified="{{ last_updated }}"
+              data-review-url="reviews/{{ s.slug }}.html">
             <td class="px-3 py-3 font-semibold text-slate-500">{{ s.rank }}</td>
             <td class="px-3 py-3 font-medium">{{ s.name }}</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">{{ s.theme|default('other')|replace('-', ' ')|title }}</span></td>
             <td class="px-3 py-3 text-center">
               {% set score = s.score|float %}
               {% if score <= 2 %}
@@ -159,7 +165,15 @@
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">{{ s.prizes }}</td>
             <td class="px-3 py-3 text-xs">{{ s.draw }}</td>
-            <td class="px-3 py-3 text-xs text-teal-700">{{ s.unsub }}</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>{{ s.unsub }}</span>
+              {% if s.unsubscribe_url -%}
+                <a class="unsubscribe-action" href="{{ s.unsubscribe_url }}" target="_blank" rel="noopener">Unsubscribe →</a>
+              {%- endif %}
+              {% if s.privacy_opt_out_url -%}
+                <a class="unsubscribe-action secondary" href="{{ s.privacy_opt_out_url }}" target="_blank" rel="noopener">Privacy opt-out →</a>
+              {%- endif %}
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">{{ s.redFlags }}</td>
             <td class="px-3 py-3 text-center">
               {% if s.link and s.link != "#" %}
@@ -179,5 +193,6 @@
       Some links may be affiliate links. Rankings are never paid.
     </footer>
   </main>
+  <script src="assets/tracker.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
   <title>SweepSafe – Legit Sweepstakes Tracker</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/site.css">
   <style>
     th { position:sticky; top:0; background:#134e4a; color:white; z-index:10; }
     tr:nth-child(even) { background:#f0fdfa; }
@@ -124,6 +125,7 @@
           <tr>
             <th class="px-3 py-3 text-left" title="Overall ranking based on ScamFactor">#</th>
             <th class="px-3 py-3 text-left">Site</th>
+            <th class="px-3 py-3 text-left">Type</th>
             <th class="px-3 py-2 text-center" title="Lower score = more legitimate and better chance of a real win">
               <img src="assets/scamfactor-stamp.png"
                    alt="ScamFactor"
@@ -139,307 +141,819 @@
           </tr>
         </thead>
         <tbody>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="legacy"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/publishers-clearing-house-pch.html">
             <td class="px-3 py-3 font-semibold text-slate-500">1</td>
             <td class="px-3 py-3 font-medium">Publishers Clearing House (PCH)</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Legacy</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-low" title="Excellent – Low risk, transparent, realistic chances">2</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">$1M cash + Cadillac Escalade (major current); many cash, cars, vacations</td>
             <td class="px-3 py-3 text-xs">Variable by promotion; major winners often in-person Prize Patrol</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Email footer unsubscribe link or contact PCH support</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email footer unsubscribe link or contact PCH support</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Heavy impersonator scams (phone/texts asking for fees to claim). Real PCH never asks for money.</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.pch.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="rewards"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/swagbucks.html">
             <td class="px-3 py-3 font-semibold text-slate-500">2</td>
             <td class="px-3 py-3 font-medium">Swagbucks</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Rewards</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-low" title="Excellent – Low risk, transparent, realistic chances">2</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">Ongoing raffles for cash/gift cards (hundreds of millions paid historically)</td>
             <td class="px-3 py-3 text-xs">Ongoing raffles + daily earning opportunities via tasks</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Account settings → Notifications, or email unsubscribe links</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Account settings → Notifications, or email unsubscribe links</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Time-intensive for modest earnings; survey disqualifications common</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.swagbucks.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="rewards"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/inboxdollars.html">
             <td class="px-3 py-3 font-semibold text-slate-500">3</td>
             <td class="px-3 py-3 font-medium">InboxDollars</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Rewards</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">Cash & gift cards via activities + occasional sweepstakes/raffles</td>
             <td class="px-3 py-3 text-xs">Ongoing tasks + variable raffles</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Account settings or email footer unsubscribe</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Account settings or email footer unsubscribe</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Modest payouts relative to time invested</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.inboxdollars.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="daily"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/mondosweeps.html">
             <td class="px-3 py-3 font-semibold text-slate-500">4</td>
             <td class="px-3 py-3 font-medium">Mondosweeps</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Daily</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">$1,548,705 lump sum; $500k Dream Home; $300k/$125k cash; $88k Dream Car; $25 Daily Cash (guaranteed one winner/day); $100 cash; $750/$1k GCs</td>
             <td class="px-3 py-3 text-xs">Daily drawings (entries by midnight ET; winners notified next day)</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Email footer unsubscribe link or account preferences</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email footer unsubscribe link or account preferences</span>
+
+              <a class="unsubscribe-action secondary" href="https://www.mondosweeps.com/Site/PrivacyRightsRequest" target="_blank" rel="noopener">Privacy opt-out →</a>
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Aggressive daily marketing emails; big jackpots still long shots</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.mondosweeps.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="daily"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/winstakes.html">
             <td class="px-3 py-3 font-semibold text-slate-500">5</td>
             <td class="px-3 py-3 font-medium">Winstakes</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Daily</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3.5</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">Up to ~$1,542,625 lump sum cash; $25 Daily Cash; $50, $100, $750, $1,000 cash examples</td>
             <td class="px-3 py-3 text-xs">Daily ($25 Daily Cash guaranteed); some weekly</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Email footer or dedicated unsubscribe page</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email footer or dedicated unsubscribe page</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Similar spam volume to Mondosweeps</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.winstakes.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="daily"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/prizegrab.html">
             <td class="px-3 py-3 font-semibold text-slate-500">6</td>
             <td class="px-3 py-3 font-medium">Prizegrab</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Daily</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3.5</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">$10k cash examples; $300 Shell GC; $25 Dunkin' GC; other gift cards & merchandise</td>
             <td class="px-3 py-3 text-xs">Daily winners guaranteed; ongoing promotions</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Dedicated page: prizegrab.com/unsubscribe (or email footer)</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Dedicated page: prizegrab.com/unsubscribe (or email footer)</span>
+              <a class="unsubscribe-action" href="https://prizegrab.com/unsubscribe" target="_blank" rel="noopener">Unsubscribe →</a>
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Data selling / spam calls after signup common complaint</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://prizegrab.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="globalizer"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/prizeloot.html">
             <td class="px-3 py-3 font-semibold text-slate-500">7</td>
             <td class="px-3 py-3 font-medium">Prizeloot</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Globalizer</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-mid" title="Average – Some red flags or aggressive marketing">5.5</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">$499,999 cash; $77,777.77; $3,333 cash (multiple recent named winners); $200/$100/$20 Daily Cash; iPad, 50" TV, drone, Stanley tumbler</td>
             <td class="px-3 py-3 text-xs">Daily entries & daily drawings/awards (resets midnight ET)</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Email footer unsubscribe link</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email footer unsubscribe link</span>
+
+              <a class="unsubscribe-action secondary" href="https://www.prizeloot.com/i/pages/consumer-opt-out" target="_blank" rel="noopener">Privacy opt-out →</a>
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Globalizer-style marketing volume; inconsistent big prize independent proof</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.prizeloot.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="other"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/million-dollar-media.html">
             <td class="px-3 py-3 font-semibold text-slate-500">8</td>
             <td class="px-3 py-3 font-medium">Million Dollar Media</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Other</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3.5</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">Brand-partnered cash, cars, merchandise (real user reports e.g. SodaStream)</td>
             <td class="px-3 py-3 text-xs">Varies by partnered campaign</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Varies by specific promotion / email</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Varies by specific promotion / email</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Depends entirely on the partner brand; some campaigns feel sales-driven</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.instagram.com/milliondollarmedia/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="niche"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/retirewhiz.html">
             <td class="px-3 py-3 font-semibold text-slate-500">9</td>
             <td class="px-3 py-3 font-medium">RetireWhiz</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Niche</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">4</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">$250 cash; $5M Retirement Sweepstakes; $33k giveaway; ~$125k motorhome</td>
             <td class="px-3 py-3 text-xs">Daily or periodic (check specific rules for end dates)</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Email preferences or contact support</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email preferences or contact support</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Retirement-niche marketing emails can be persistent</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.retirewhiz.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="samples"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/pinchme-free-samples.html">
             <td class="px-3 py-3 font-semibold text-slate-500">10</td>
             <td class="px-3 py-3 font-medium">PINCHme (Free Samples)</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Samples</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-mid" title="Average – Some red flags or aggressive marketing">5</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">Free product samples / full-size items (build box of 4 via quizzes + coins for free shipping)</td>
             <td class="px-3 py-3 text-xs">Ongoing daily samples; qualification-based (not pure chance)</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Account settings or email unsubscribe</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Account settings or email unsubscribe</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Low-quality samples for many users; qualification frustration; site glitches reported</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.pinchme.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="globalizer"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/prizecraze-globalizer.html">
             <td class="px-3 py-3 font-semibold text-slate-500">11</td>
             <td class="px-3 py-3 font-medium">PrizeCraze (Globalizer)</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Globalizer</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-mid" title="Average – Some red flags or aggressive marketing">5.5</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">$25 Daily Cash (guaranteed one winner/day); bigger cash jackpots; Craze Coins for extra entries</td>
             <td class="px-3 py-3 text-xs">Daily drawings; one $25 guaranteed daily</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Email footer or account preferences</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email footer or account preferences</span>
+
+              <a class="unsubscribe-action secondary" href="https://www.prizecraze.com/Site/ConsumerOptOutPrefRequest" target="_blank" rel="noopener">Privacy opt-out →</a>
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Network marketing volume; typical Globalizer spam</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.prizecraze.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="samples"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/blissxo.html">
             <td class="px-3 py-3 font-semibold text-slate-500">12</td>
             <td class="px-3 py-3 font-medium">BlissXO</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Samples</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-mid" title="Average – Some red flags or aggressive marketing">5</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">$125k instant win; $80k+ in cash prizes; free samples & deals focus</td>
             <td class="px-3 py-3 text-xs">Instant win + periodic drawings</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Email preferences / footer link</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email preferences / footer link</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Spam association noted; freebie marketing intensity</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://blissxo.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="globalizer"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/winloot-globalizer.html">
             <td class="px-3 py-3 font-semibold text-slate-500">13</td>
             <td class="px-3 py-3 font-medium">Winloot (Globalizer)</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Globalizer</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-mid" title="Average – Some red flags or aggressive marketing">5.5</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">$5M / $1M / $100k+ cash; $250 Daily Cash (guaranteed); $5k instant wins; many small cash/GCs/electronics</td>
             <td class="px-3 py-3 text-xs">Daily + instant wins (multiple entries/day possible)</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Dedicated: sweepstakes.winloot.com/winloot-unsubscribe or email footer</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Dedicated: sweepstakes.winloot.com/winloot-unsubscribe or email footer</span>
+              <a class="unsubscribe-action" href="https://sweepstakes.winloot.com/winloot-unsubscribe" target="_blank" rel="noopener">Unsubscribe →</a>
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Highest complaint volume in network (non-payment claims + spam); mixed fulfillment reports</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://www.winloot.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="samples"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/daily-goodie-box.html">
             <td class="px-3 py-3 font-semibold text-slate-500">14</td>
             <td class="px-3 py-3 font-medium">Daily Goodie Box</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Samples</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-danger" title="High Risk – Significant red flags or deceptive practices">8.5</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">Free samples / full-size products in 'goodie boxes' (not guaranteed; based on brand campaigns & availability)</td>
             <td class="px-3 py-3 text-xs">Ongoing campaigns; receipt not guaranteed</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Contact admin@dailygoodiebox.com or cancel account via site</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Contact admin@dailygoodiebox.com or cancel account via site</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Many users report never receiving anything; impersonator messages; some similar 'box' reports of unexpected charges</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <a href="https://dailygoodiebox.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
-              
+
             </td>
           </tr>
-          
-          <tr class="border-b border-slate-100 hover:bg-teal-50/50">
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="leadgen"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/selectrewards.html">
             <td class="px-3 py-3 font-semibold text-slate-500">15</td>
             <td class="px-3 py-3 font-medium">SelectRewards</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Leadgen</span></td>
             <td class="px-3 py-3 text-center">
-              
-              
+
+
                 <span class="score-pill score-danger" title="High Risk – Significant red flags or deceptive practices">9</span>
-              
+
             </td>
             <td class="px-3 py-3 text-xs max-w-xs">Promised big gift cards (e.g. $750) via quizzes — user reports often low/no payout</td>
             <td class="px-3 py-3 text-xs">Funnel / quiz-based</td>
-            <td class="px-3 py-3 text-xs text-teal-700">Email unsubscribe if reachable</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email unsubscribe if reachable</span>
+
+
+            </td>
             <td class="px-3 py-3 text-xs text-red-700">Deceptive marketing; frequent reports of little to no real payout</td>
             <td class="px-3 py-3 text-center">
-              
+
                 <span class="text-slate-400">—</span>
-              
+
             </td>
           </tr>
-          
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/sweepstakes-advantage.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">16</td>
+            <td class="px-3 py-3 font-medium">Sweepstakes Advantage</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">2.5</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Directory covering cash, trips, vehicles, gift cards, instant wins, local contests, and daily-entry promotions</td>
+            <td class="px-3 py-3 text-xs">New third-party sweepstakes added daily; frequency varies by sponsor</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Newsletter unsubscribe link and account notification preferences</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Large listing volume requires users to review each outside sponsor's rules and privacy terms</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://www.sweepsadvantage.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/contest-girl.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">17</td>
+            <td class="px-3 py-3 font-medium">Contest Girl</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">2.5</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">More than 1,500 listed U.S. and Canadian sweepstakes spanning cash, travel, merchandise, and instant wins</td>
+            <td class="px-3 py-3 text-xs">Listings updated daily; filters include entry frequency, value, location, and expiration</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Newsletter unsubscribe; account controls for saved contests</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Older interface and community-submitted comments; eligibility differs between U.S. and Canadian listings</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://www.contestgirl.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/sweepstake-com.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">18</td>
+            <td class="px-3 py-3 font-medium">Sweepstake.com</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Hundreds of cash, travel, gift-card, merchandise, and instant-win promotions from outside sponsors</td>
+            <td class="px-3 py-3 text-xs">Human-reviewed listings added frequently; each promotion has its own schedule</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email newsletter unsubscribe link</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Directory links lead to third parties with different data collection and marketing practices</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://www.sweepstake.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/online-sweepstakes-com.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">19</td>
+            <td class="px-3 py-3 font-medium">Online-Sweepstakes.com</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Daily listings for cash, cars, travel, electronics, gift cards, and brand giveaways</td>
+            <td class="px-3 py-3 text-xs">New listings and expired-link cleanup advertised daily</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Newsletter unsubscribe and community account settings</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Users still leave the site to enter; sponsor quality, tracking, and opt-ins vary by listing</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://online-sweepstakes.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/sweepstoday.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">20</td>
+            <td class="px-3 py-3 font-medium">SweepsToday</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Curated free sweepstakes, giveaways, and contests linking to official sponsor pages</td>
+            <td class="px-3 py-3 text-xs">Active listings reviewed and refreshed regularly</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email footer unsubscribe link</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">A directory cannot control the privacy or fulfillment practices of every outside sponsor</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://www.sweepstoday.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/i-love-giveaways.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">21</td>
+            <td class="px-3 py-3 font-medium">I Love Giveaways</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3.5</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Daily sweepstakes, giveaways, instant-win games, cash, travel, and merchandise</td>
+            <td class="px-3 py-3 text-xs">Hundreds of active listings with new promotions added daily</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Newsletter unsubscribe and account preferences</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Broad directory volume means users must verify rules, eligibility, and sponsor consent language</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://ilovegiveaways.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/sweepfeed.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">22</td>
+            <td class="px-3 py-3 font-medium">SweepFeed</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3.5</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Aggregated high-value sweepstakes with category, expiration, and legitimacy signals</td>
+            <td class="px-3 py-3 text-xs">Automated discovery across dozens of sources with frequent updates</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Account settings or email unsubscribe</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Newer service; automated scoring and listing claims still require checking the official rules</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://www.sweepfeed.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/esweeps.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">23</td>
+            <td class="px-3 py-3 font-medium">eSweeps</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">4</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Cash, vacations, instant wins, freebies, and daily-entry promotions</td>
+            <td class="px-3 py-3 text-xs">Directory updated with ongoing third-party promotions</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Newsletter footer or contact request</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Promotes entry-helper software; users should avoid automation that violates individual sweepstakes rules</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://esweeps.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/winprizesonline.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">24</td>
+            <td class="px-3 py-3 font-medium">WinPrizesOnline</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">4</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Cash, cars, vacations, gift cards, instant wins, and daily-entry sweepstakes</td>
+            <td class="px-3 py-3 text-xs">New directory listings added throughout the year</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Newsletter unsubscribe link</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Newer directory with limited independent track record; every sponsor's official rules should be checked</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://www.winprizesonline.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="app"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/robin-giveaways.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">25</td>
+            <td class="px-3 py-3 font-medium">Robin Giveaways</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">App</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">4</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Discovery and tracking for daily-entry sweepstakes from outside sponsors</td>
+            <td class="px-3 py-3 text-xs">Continuously updated app-based feed; schedules vary by promotion</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>App account and notification settings</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">App requires an account and adds another data layer between entrants and outside sponsors</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://www.therobinapp.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="premium-directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/the-luck-foundry.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">26</td>
+            <td class="px-3 py-3 font-medium">The Luck Foundry</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Premium Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-mid" title="Average – Some red flags or aggressive marketing">4.5</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Sweepstakes aggregation, entry tracking, reminders, daily routines, and prize-value sorting</td>
+            <td class="px-3 py-3 text-xs">Listings refresh regularly; individual drawing schedules vary</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Account settings and email unsubscribe</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Premium features may cost money; paid convenience does not improve the underlying odds</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://theluckfoundry.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/sweetie-sweepstakes.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">27</td>
+            <td class="px-3 py-3 font-medium">Sweetie Sweepstakes</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-mid" title="Average – Some red flags or aggressive marketing">4.5</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Public sweepstakes listings plus local, quick-ending, and member-only listings through a paid companion service</td>
+            <td class="px-3 py-3 text-xs">Public listings updated regularly; premium local and early-access listings vary</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Email unsubscribe; paid Secret Sweeps membership managed through account/support</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Optional private membership costs about $50 per year; paying for access does not guarantee wins</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://sweetiesweepstakes.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="local-directory"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/localfreebie.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">28</td>
+            <td class="px-3 py-3 font-medium">LocalFreebie</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Local Directory</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">4</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">State-targeted sweepstakes, free samples, consumer rewards, and local offers</td>
+            <td class="px-3 py-3 text-xs">Listings organized by state and advertised as checked daily</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Newsletter unsubscribe or contact request</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Newer directory with limited independent history; local availability and sponsor terms vary</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://localfreebie.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
+          <tr class="border-b border-slate-100 hover:bg-teal-50/50"
+              data-category="samples"
+              data-verified="July 23, 2026"
+              data-review-url="reviews/i-love-free-things-ilft.html">
+            <td class="px-3 py-3 font-semibold text-slate-500">29</td>
+            <td class="px-3 py-3 font-medium">I Love Free Things (ILFT)</td>
+            <td class="px-3 py-3 text-xs"><span class="category-badge">Samples</span></td>
+            <td class="px-3 py-3 text-center">
+
+
+                <span class="score-pill score-midlow" title="Good – Generally legitimate with minor issues">3.5</span>
+
+            </td>
+            <td class="px-3 py-3 text-xs max-w-xs">Free samples, coupons, product-testing opportunities, giveaways, and limited-time brand offers</td>
+            <td class="px-3 py-3 text-xs">Fresh offers posted daily; many are first-come samples rather than drawings</td>
+            <td class="px-3 py-3 text-xs text-teal-700">
+              <span>Newsletter unsubscribe link</span>
+
+
+            </td>
+            <td class="px-3 py-3 text-xs text-red-700">Offer availability disappears quickly; outside brand forms may collect marketing data</td>
+            <td class="px-3 py-3 text-center">
+
+                <a href="https://ilft.com/" target="_blank" rel="noopener" class="text-teal-600 hover:underline font-medium">Visit</a>
+
+            </td>
+          </tr>
+
         </tbody>
       </table>
     </div>
@@ -449,5 +963,6 @@
       Some links may be affiliate links. Rankings are never paid.
     </footer>
   </main>
+  <script src="assets/tracker.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23T21:13:37.440918Z",
+  "last_updated": "2026-07-23T23:02:07.207701Z",
   "sites": [
     {
       "rank": 1,
@@ -12,7 +12,8 @@
       "redFlags": "Heavy impersonator scams (phone/texts asking for fees to claim). Real PCH never asks for money.",
       "link": "https://www.pch.com/",
       "affiliate_note": "Check FlexOffers / Impact for PCH campaigns",
-      "scrape_url": "https://www.pch.com/"
+      "scrape_url": "https://www.pch.com/",
+      "slug": "publishers-clearing-house-pch"
     },
     {
       "rank": 2,
@@ -25,7 +26,8 @@
       "redFlags": "Time-intensive for modest earnings; survey disqualifications common",
       "link": "https://www.swagbucks.com/",
       "affiliate_note": "Prodege / Impact / FlexOffers – typically $1–$3+ per verified signup",
-      "scrape_url": "https://www.swagbucks.com/"
+      "scrape_url": "https://www.swagbucks.com/",
+      "slug": "swagbucks"
     },
     {
       "rank": 3,
@@ -38,7 +40,8 @@
       "redFlags": "Modest payouts relative to time invested",
       "link": "https://www.inboxdollars.com/",
       "affiliate_note": "Impact / MaxBounty / Prodege – CPA around $2–$3 + residual %",
-      "scrape_url": "https://www.inboxdollars.com/"
+      "scrape_url": "https://www.inboxdollars.com/",
+      "slug": "inboxdollars"
     },
     {
       "rank": 4,
@@ -50,8 +53,10 @@
       "unsub": "Email footer unsubscribe link or account preferences",
       "redFlags": "Aggressive daily marketing emails; big jackpots still long shots",
       "link": "https://www.mondosweeps.com/",
+      "privacy_opt_out_url": "https://www.mondosweeps.com/Site/PrivacyRightsRequest",
       "affiliate_note": "Check if they have partner program (often network-driven)",
-      "scrape_url": "https://www.mondosweeps.com/"
+      "scrape_url": "https://www.mondosweeps.com/",
+      "slug": "mondosweeps"
     },
     {
       "rank": 5,
@@ -64,7 +69,8 @@
       "redFlags": "Similar spam volume to Mondosweeps",
       "link": "https://www.winstakes.com/",
       "affiliate_note": "Similar to Mondosweeps – look for network offers",
-      "scrape_url": "https://www.winstakes.com/"
+      "scrape_url": "https://www.winstakes.com/",
+      "slug": "winstakes"
     },
     {
       "rank": 6,
@@ -76,8 +82,10 @@
       "unsub": "Dedicated page: prizegrab.com/unsubscribe (or email footer)",
       "redFlags": "Data selling / spam calls after signup common complaint",
       "link": "https://prizegrab.com/",
+      "unsubscribe_url": "https://prizegrab.com/unsubscribe",
       "affiliate_note": "Search affiliate networks for Prizegrab offers",
-      "scrape_url": "https://prizegrab.com/"
+      "scrape_url": "https://prizegrab.com/",
+      "slug": "prizegrab"
     },
     {
       "rank": 7,
@@ -89,8 +97,10 @@
       "unsub": "Email footer unsubscribe link",
       "redFlags": "Globalizer-style marketing volume; inconsistent big prize independent proof",
       "link": "https://www.prizeloot.com/",
+      "privacy_opt_out_url": "https://www.prizeloot.com/i/pages/consumer-opt-out",
       "affiliate_note": "Globalizer network – often have CPA offers",
-      "scrape_url": "https://www.prizeloot.com/"
+      "scrape_url": "https://www.prizeloot.com/",
+      "slug": "prizeloot"
     },
     {
       "rank": 8,
@@ -103,7 +113,8 @@
       "redFlags": "Depends entirely on the partner brand; some campaigns feel sales-driven",
       "link": "https://www.instagram.com/milliondollarmedia/",
       "affiliate_note": "Contact for brand campaign partnerships",
-      "scrape_url": null
+      "scrape_url": null,
+      "slug": "million-dollar-media"
     },
     {
       "rank": 9,
@@ -116,7 +127,8 @@
       "redFlags": "Retirement-niche marketing emails can be persistent",
       "link": "https://www.retirewhiz.com/",
       "affiliate_note": "Content site – check for partner links",
-      "scrape_url": "https://www.retirewhiz.com/"
+      "scrape_url": "https://www.retirewhiz.com/",
+      "slug": "retirewhiz"
     },
     {
       "rank": 10,
@@ -129,7 +141,8 @@
       "redFlags": "Low-quality samples for many users; qualification frustration; site glitches reported",
       "link": "https://www.pinchme.com/",
       "affiliate_note": "Influencer / referral style – check their partner page",
-      "scrape_url": "https://www.pinchme.com/"
+      "scrape_url": "https://www.pinchme.com/",
+      "slug": "pinchme-free-samples"
     },
     {
       "rank": 11,
@@ -141,8 +154,10 @@
       "unsub": "Email footer or account preferences",
       "redFlags": "Network marketing volume; typical Globalizer spam",
       "link": "https://www.prizecraze.com/",
+      "privacy_opt_out_url": "https://www.prizecraze.com/Site/ConsumerOptOutPrefRequest",
       "affiliate_note": "Globalizer network CPA",
-      "scrape_url": "https://www.prizecraze.com/"
+      "scrape_url": "https://www.prizecraze.com/",
+      "slug": "prizecraze-globalizer"
     },
     {
       "rank": 12,
@@ -155,7 +170,8 @@
       "redFlags": "Spam association noted; freebie marketing intensity",
       "link": "https://blissxo.com/",
       "affiliate_note": "Check for partner/affiliate page",
-      "scrape_url": "https://blissxo.com/"
+      "scrape_url": "https://blissxo.com/",
+      "slug": "blissxo"
     },
     {
       "rank": 13,
@@ -167,8 +183,10 @@
       "unsub": "Dedicated: sweepstakes.winloot.com/winloot-unsubscribe or email footer",
       "redFlags": "Highest complaint volume in network (non-payment claims + spam); mixed fulfillment reports",
       "link": "https://www.winloot.com/",
+      "unsubscribe_url": "https://sweepstakes.winloot.com/winloot-unsubscribe",
       "affiliate_note": "Globalizer – strong CPA potential",
-      "scrape_url": "https://www.winloot.com/"
+      "scrape_url": "https://www.winloot.com/",
+      "slug": "winloot-globalizer"
     },
     {
       "rank": 14,
@@ -181,7 +199,8 @@
       "redFlags": "Many users report never receiving anything; impersonator messages; some similar 'box' reports of unexpected charges",
       "link": "https://dailygoodiebox.com/",
       "affiliate_note": "Avoid promoting heavily – high risk",
-      "scrape_url": "https://dailygoodiebox.com/"
+      "scrape_url": "https://dailygoodiebox.com/",
+      "slug": "daily-goodie-box"
     },
     {
       "rank": 15,
@@ -194,7 +213,204 @@
       "redFlags": "Deceptive marketing; frequent reports of little to no real payout",
       "link": "#",
       "affiliate_note": "Do not promote",
-      "scrape_url": null
+      "scrape_url": null,
+      "slug": "selectrewards"
+    },
+    {
+      "rank": 16,
+      "name": "Sweepstakes Advantage",
+      "score": 2.5,
+      "theme": "directory",
+      "prizes": "Directory covering cash, trips, vehicles, gift cards, instant wins, local contests, and daily-entry promotions",
+      "draw": "New third-party sweepstakes added daily; frequency varies by sponsor",
+      "unsub": "Newsletter unsubscribe link and account notification preferences",
+      "redFlags": "Large listing volume requires users to review each outside sponsor's rules and privacy terms",
+      "link": "https://www.sweepsadvantage.com/",
+      "affiliate_note": "Potential directory advertising and featured-placement partner",
+      "scrape_url": "https://www.sweepsadvantage.com/",
+      "slug": "sweepstakes-advantage"
+    },
+    {
+      "rank": 17,
+      "name": "Contest Girl",
+      "score": 2.5,
+      "theme": "directory",
+      "prizes": "More than 1,500 listed U.S. and Canadian sweepstakes spanning cash, travel, merchandise, and instant wins",
+      "draw": "Listings updated daily; filters include entry frequency, value, location, and expiration",
+      "unsub": "Newsletter unsubscribe; account controls for saved contests",
+      "redFlags": "Older interface and community-submitted comments; eligibility differs between U.S. and Canadian listings",
+      "link": "https://www.contestgirl.com/",
+      "affiliate_note": "Potential newsletter or directory sponsorship",
+      "scrape_url": "https://www.contestgirl.com/",
+      "slug": "contest-girl"
+    },
+    {
+      "rank": 18,
+      "name": "Sweepstake.com",
+      "score": 3,
+      "theme": "directory",
+      "prizes": "Hundreds of cash, travel, gift-card, merchandise, and instant-win promotions from outside sponsors",
+      "draw": "Human-reviewed listings added frequently; each promotion has its own schedule",
+      "unsub": "Email newsletter unsubscribe link",
+      "redFlags": "Directory links lead to third parties with different data collection and marketing practices",
+      "link": "https://www.sweepstake.com/",
+      "affiliate_note": "Potential directory advertising and sponsorship",
+      "scrape_url": "https://www.sweepstake.com/",
+      "slug": "sweepstake-com"
+    },
+    {
+      "rank": 19,
+      "name": "Online-Sweepstakes.com",
+      "score": 3,
+      "theme": "directory",
+      "prizes": "Daily listings for cash, cars, travel, electronics, gift cards, and brand giveaways",
+      "draw": "New listings and expired-link cleanup advertised daily",
+      "unsub": "Newsletter unsubscribe and community account settings",
+      "redFlags": "Users still leave the site to enter; sponsor quality, tracking, and opt-ins vary by listing",
+      "link": "https://online-sweepstakes.com/",
+      "affiliate_note": "Potential featured listing, newsletter, or sponsorship partner",
+      "scrape_url": "https://online-sweepstakes.com/",
+      "slug": "online-sweepstakes-com"
+    },
+    {
+      "rank": 20,
+      "name": "SweepsToday",
+      "score": 3,
+      "theme": "directory",
+      "prizes": "Curated free sweepstakes, giveaways, and contests linking to official sponsor pages",
+      "draw": "Active listings reviewed and refreshed regularly",
+      "unsub": "Email footer unsubscribe link",
+      "redFlags": "A directory cannot control the privacy or fulfillment practices of every outside sponsor",
+      "link": "https://www.sweepstoday.com/",
+      "affiliate_note": "Potential directory sponsorship",
+      "scrape_url": "https://www.sweepstoday.com/",
+      "slug": "sweepstoday"
+    },
+    {
+      "rank": 21,
+      "name": "I Love Giveaways",
+      "score": 3.5,
+      "theme": "directory",
+      "prizes": "Daily sweepstakes, giveaways, instant-win games, cash, travel, and merchandise",
+      "draw": "Hundreds of active listings with new promotions added daily",
+      "unsub": "Newsletter unsubscribe and account preferences",
+      "redFlags": "Broad directory volume means users must verify rules, eligibility, and sponsor consent language",
+      "link": "https://ilovegiveaways.com/",
+      "affiliate_note": "Potential directory sponsorship and featured placement",
+      "scrape_url": "https://ilovegiveaways.com/",
+      "slug": "i-love-giveaways"
+    },
+    {
+      "rank": 22,
+      "name": "SweepFeed",
+      "score": 3.5,
+      "theme": "directory",
+      "prizes": "Aggregated high-value sweepstakes with category, expiration, and legitimacy signals",
+      "draw": "Automated discovery across dozens of sources with frequent updates",
+      "unsub": "Account settings or email unsubscribe",
+      "redFlags": "Newer service; automated scoring and listing claims still require checking the official rules",
+      "link": "https://www.sweepfeed.com/",
+      "affiliate_note": "Potential software, newsletter, or featured-placement partner",
+      "scrape_url": "https://www.sweepfeed.com/",
+      "slug": "sweepfeed"
+    },
+    {
+      "rank": 23,
+      "name": "eSweeps",
+      "score": 4,
+      "theme": "directory",
+      "prizes": "Cash, vacations, instant wins, freebies, and daily-entry promotions",
+      "draw": "Directory updated with ongoing third-party promotions",
+      "unsub": "Newsletter footer or contact request",
+      "redFlags": "Promotes entry-helper software; users should avoid automation that violates individual sweepstakes rules",
+      "link": "https://esweeps.com/",
+      "affiliate_note": "Potential directory or software partnership",
+      "scrape_url": "https://esweeps.com/",
+      "slug": "esweeps"
+    },
+    {
+      "rank": 24,
+      "name": "WinPrizesOnline",
+      "score": 4,
+      "theme": "directory",
+      "prizes": "Cash, cars, vacations, gift cards, instant wins, and daily-entry sweepstakes",
+      "draw": "New directory listings added throughout the year",
+      "unsub": "Newsletter unsubscribe link",
+      "redFlags": "Newer directory with limited independent track record; every sponsor's official rules should be checked",
+      "link": "https://www.winprizesonline.com/",
+      "affiliate_note": "Potential directory sponsorship or featured placement",
+      "scrape_url": "https://www.winprizesonline.com/",
+      "slug": "winprizesonline"
+    },
+    {
+      "rank": 25,
+      "name": "Robin Giveaways",
+      "score": 4,
+      "theme": "app",
+      "prizes": "Discovery and tracking for daily-entry sweepstakes from outside sponsors",
+      "draw": "Continuously updated app-based feed; schedules vary by promotion",
+      "unsub": "App account and notification settings",
+      "redFlags": "App requires an account and adds another data layer between entrants and outside sponsors",
+      "link": "https://www.therobinapp.com/",
+      "affiliate_note": "Potential app referral or sponsorship partner",
+      "scrape_url": "https://www.therobinapp.com/",
+      "slug": "robin-giveaways"
+    },
+    {
+      "rank": 26,
+      "name": "The Luck Foundry",
+      "score": 4.5,
+      "theme": "premium-directory",
+      "prizes": "Sweepstakes aggregation, entry tracking, reminders, daily routines, and prize-value sorting",
+      "draw": "Listings refresh regularly; individual drawing schedules vary",
+      "unsub": "Account settings and email unsubscribe",
+      "redFlags": "Premium features may cost money; paid convenience does not improve the underlying odds",
+      "link": "https://theluckfoundry.com/",
+      "affiliate_note": "Potential premium-service affiliate or sponsorship partner",
+      "scrape_url": "https://theluckfoundry.com/",
+      "slug": "the-luck-foundry"
+    },
+    {
+      "rank": 27,
+      "name": "Sweetie Sweepstakes",
+      "score": 4.5,
+      "theme": "directory",
+      "prizes": "Public sweepstakes listings plus local, quick-ending, and member-only listings through a paid companion service",
+      "draw": "Public listings updated regularly; premium local and early-access listings vary",
+      "unsub": "Email unsubscribe; paid Secret Sweeps membership managed through account/support",
+      "redFlags": "Optional private membership costs about $50 per year; paying for access does not guarantee wins",
+      "link": "https://sweetiesweepstakes.com/",
+      "affiliate_note": "Potential membership referral or sponsorship partner",
+      "scrape_url": "https://sweetiesweepstakes.com/",
+      "slug": "sweetie-sweepstakes"
+    },
+    {
+      "rank": 28,
+      "name": "LocalFreebie",
+      "score": 4,
+      "theme": "local-directory",
+      "prizes": "State-targeted sweepstakes, free samples, consumer rewards, and local offers",
+      "draw": "Listings organized by state and advertised as checked daily",
+      "unsub": "Newsletter unsubscribe or contact request",
+      "redFlags": "Newer directory with limited independent history; local availability and sponsor terms vary",
+      "link": "https://localfreebie.com/",
+      "affiliate_note": "Potential local featured-placement and lead-generation partner",
+      "scrape_url": "https://localfreebie.com/",
+      "slug": "localfreebie"
+    },
+    {
+      "rank": 29,
+      "name": "I Love Free Things (ILFT)",
+      "score": 3.5,
+      "theme": "samples",
+      "prizes": "Free samples, coupons, product-testing opportunities, giveaways, and limited-time brand offers",
+      "draw": "Fresh offers posted daily; many are first-come samples rather than drawings",
+      "unsub": "Newsletter unsubscribe link",
+      "redFlags": "Offer availability disappears quickly; outside brand forms may collect marketing data",
+      "link": "https://ilft.com/",
+      "affiliate_note": "Potential freebie-directory sponsorship or featured offer placement",
+      "scrape_url": "https://ilft.com/",
+      "slug": "i-love-free-things-ilft"
     }
   ],
   "live_snippets": {}
