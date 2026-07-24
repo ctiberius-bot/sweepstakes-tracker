@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "id": "sweepstakes-advantage-winners-circle",
+      "name": "Sweepstakes Advantage Winners Circle",
+      "type": "rss",
+      "url": "https://www.sweepsadvantage.com/forum/forums/sweepstakes-winners-circle.11/index.rss",
+      "homepage": "https://www.sweepsadvantage.com/forum/forums/sweepstakes-winners-circle.11/",
+      "note": "Sweepstakes wins reported by Sweepstakes Advantage community members."
+    }
+  ]
+}

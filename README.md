@@ -1,6 +1,6 @@
-# SweepSafe Tracker
+# SafeTrackerHub Sweepstakes
 
-**A transparent ranking of online sweepstakes and free sample sites.**
+**Sweepstakes safety rankings and source-linked winner reports.**
 
 We rank sites by legitimacy and realistic chance of winning small prizes — not by hype or big jackpot promises.
 
@@ -21,7 +21,13 @@ We rank sites by legitimacy and realistic chance of winning small prizes — not
 Some links on this site may be affiliate links. If you sign up through them we may earn a small commission at no extra cost to you. This helps keep the tracker free and updated. Rankings are never paid for or influenced by commissions.
 
 ### Updates
-This list is manually reviewed and updated. Always double-check the official rules on each site before entering.
+ScamFactor scores are recalculated, reranked, and republished weekly. Editorial
+criterion values are updated when new evidence is verified. Always double-check
+the official rules on each site before entering.
+
+Winner reports are gathered daily from the feeds in `data/winner_sources.json`.
+New reports are archived on `winners.html` and sent through Buttondown only when
+the daily run finds something new.
 
 ---
 

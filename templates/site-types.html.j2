@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweepstakes Site Types Explained | SafeTrackerHub Sweepstakes</title>
+  <meta name="description" content="Definitions of the sweepstakes, rewards, directory, sample, and lead-generation site types used by SafeTrackerHub.">
+  <link rel="canonical" href="https://sweeps.safetrackerhub.com/site-types.html">
+  <link rel="icon" type="image/png" href="assets/scamfactor-stamp.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="site-header review-site-header">
+    <div class="review-shell review-masthead">
+      <a class="review-brand" href="index.html#rankings">← SafeTrackerHub Sweepstakes</a>
+      <span>Tracker glossary</span>
+    </div>
+  </header>
+  <main class="review-shell review-main">
+    <p class="section-kicker">Tracker glossary</p>
+    <h1 class="section-title">Sweepstakes site types explained</h1>
+    <p class="type-intro">A site’s type describes how it operates—not whether it is trustworthy. ScamFactor separately measures risk and friction. Use these definitions to understand what you are comparing.</p>
+    <div class="type-grid">
+      {% for type_name, description in site_types.items() %}
+        {% if type_examples[type_name] %}
+        <section class="type-card" id="{{ type_name }}">
+          <h2>{{ type_name|replace('-', ' ')|title }}</h2>
+          <p>{{ description }}</p>
+          <p class="type-examples">Examples in this tracker: {{ type_examples[type_name]|join(', ') }}</p>
+        </section>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="review-shell footer-bottom">Definitions last refreshed {{ last_updated }} · Site type and ScamFactor measure different things.</div>
+  </footer>
+</body>
+</html>

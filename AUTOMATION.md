@@ -1,81 +1,47 @@
-# How to Automate Daily Updates
+# Weekly ScamFactor Rescoring
 
-This guide shows you the easiest free way to automatically rebuild and publish a fresh `index.html` every day.
+The tracker is refreshed automatically by GitHub Actions every Monday at
+10:15 UTC. The workflow can also be run manually from the repository's Actions
+tab.
 
-## Recommended Method: GitHub Actions (Free)
+## How it works
 
-GitHub Actions can run your scraper every day, rebuild the page, and automatically update your Cloudflare Pages site.
+1. `.github/workflows/weekly-rescore.yml` starts the scheduled job.
+2. `rescore_sites.py --check-live` checks each official site, recomputes the
+   weighted ScamFactor score, sorts from lowest to highest, and assigns ranks.
+3. `scraper_simple.py` regenerates the homepage, site profiles, and sponsorship
+   page from the updated data.
+4. The workflow commits the source data and all generated pages.
+5. Cloudflare Pages detects the commit and publishes it.
 
-### Step-by-step Setup
+## Scoring inputs
 
-#### 1. Put the full project on GitHub
-You need **all** these files in one GitHub repository:
+Each `data.json` record has a `score_inputs` object with the five published
+criteria:
 
-- `index.html`
-- `scraper_simple.py`   ← currently the reliable one
-- `templates/` folder (with `tracker.html.j2`)
-- `.github/workflows/daily-update.yml`  ← the automation file I just created
-- `robots.txt`
-- `README.md`
+- `transparency` — 30%
+- `fulfillment` — 25%
+- `entry_model` — 20%
+- `win_realism` — 15%
+- `marketing` — 10%
 
-(You can also include the other files if you want.)
+Values must be between 1 and 10. A site that is unreachable during the weekly
+check receives a temporary 0.5-point operational-risk adjustment. Bot-protected
+responses such as 401, 403, and 429 do not receive that adjustment.
 
-#### 2. Connect the GitHub repo to Cloudflare Pages
-If you haven’t already:
+The scheduled calculation keeps the inventory current and consistently ordered.
+The editorial criterion values should still be updated whenever new evidence,
+complaints, rules, fulfillment history, or marketing practices are verified.
 
-1. Cloudflare Dashboard → **Workers & Pages**
-2. Create a new Pages project → **Connect to Git**
-3. Select your GitHub repository
-4. Build settings:
-   - Framework preset: `None`
-   - Build command: leave empty
-   - Build output directory: leave empty (or `/`)
-5. Save and Deploy
+## Manual run
 
-From now on, every time the `main` branch updates, Cloudflare will automatically redeploy the site.
+Open the repository's **Actions** tab, choose **Weekly ScamFactor Rescore**, and
+select **Run workflow**.
 
-#### 3. Enable the daily workflow
-The file `.github/workflows/daily-update.yml` is already set to:
+## Daily winner reports
 
-- Run every day at **10:00 UTC** (6:00 AM Eastern Time)
-- Also allow manual runs
-
-After you push the workflow file to GitHub:
-
-1. Go to your GitHub repository
-2. Click the **Actions** tab
-3. You should see “Daily Sweepstakes Update”
-4. You can click **Run workflow** to test it immediately
-
-#### 4. How it works
-1. GitHub Actions starts a free virtual machine
-2. It installs Python + required packages
-3. Runs `scraper_simple.py` (rebuilds `index.html`)
-4. Commits the new `index.html` if anything changed
-5. Pushes to GitHub
-6. Cloudflare Pages detects the push and redeploys the live site automatically
-
----
-
-## Alternative Options
-
-| Method                    | Difficulty | Cost     | Notes                              |
-|--------------------------|------------|----------|------------------------------------|
-| **GitHub Actions**       | Easy       | Free     | Best overall choice                |
-| Cloudflare Workers Cron  | Medium     | Free     | More complex for full HTML rebuild |
-| Local computer + Task Scheduler | Easy | Free     | Only works when your PC is on      |
-| PythonAnywhere / Railway | Medium     | Free tier| Good if you want the scraper online|
-| Make.com / n8n           | Medium     | Free tier| No-code but limited for this use   |
-
----
-
-## Important Notes
-
-- The current reliable scraper is `scraper_simple.py` (it uses the curated list and does not need internet).
-- When you later improve `scraper_v2.py` to successfully fetch live prize data, just change the workflow line to run `scraper_v2.py` instead.
-- GitHub Actions free tier gives you plenty of minutes for a once-per-day job.
-- Always keep a clear affiliate disclosure on the site.
-
----
-
-Would you like me to also create a version of the workflow that tries the live scraper (`scraper_v2.py`) and falls back to the simple version if it fails?
+The `Daily winner reports` workflow runs at 11:15 UTC. It checks the source
+feeds in `data/winner_sources.json`, updates the public winners archive, and
+sends one Buttondown edition only when new reports are found. It stores source
+IDs in `data/winner_state.json` so reports are not repeated. The repository
+secret `BUTTONDOWN_API_KEY` is required for sending.

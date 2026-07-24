@@ -10,3 +10,5 @@ Allow: /
 
 User-agent: DuckDuckBot
 Allow: /
+
+Sitemap: https://sweeps.safetrackerhub.com/sitemap.xml

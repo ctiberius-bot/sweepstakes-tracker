@@ -3,32 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ site.name }} Sweepstakes Site Profile | SafeTrackerHub</title>
+  <title>{{ site.name }} Review & ScamFactor Score | SafeTrackerHub Sweepstakes</title>
+  <meta name="description" content="Review {{ site.name }} for sweepstakes transparency, winner proof, entry traps, marketing pressure, and ScamFactor score.">
+  <link rel="canonical" href="https://sweeps.safetrackerhub.com/reviews/{{ site.slug }}.html">
+  <link rel="icon" type="image/png" href="../assets/scamfactor-stamp.png">
   <meta name="description" content="{{ site.name }} site profile: ScamFactor score, prize examples, entry frequency, unsubscribe instructions, and major red flags.">
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
   <header class="site-header review-site-header">
     <div class="review-shell review-masthead">
-      <a class="review-brand" href="../index.html">← SafeTrackerHub rankings</a>
+      <a class="review-brand" href="../index.html">← SafeTrackerHub Sweepstakes</a>
       <span>Reviewed {{ last_updated }}</span>
     </div>
   </header>
 
   <main class="review-shell review-main">
-    <nav class="review-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Sweepstakes tracker</a><span>/</span><span>{{ site.name }}</span></nav>
+    <nav class="review-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Sweepstakes rankings</a><span>/</span><span>{{ site.name }}</span></nav>
 
     <section class="review-hero">
       <div>
-        {% if site.link and site.link != "#" %}
-          <img class="review-favicon" src="{{ site.link.rstrip('/') }}/favicon.ico" alt="" width="48" height="48" onerror="this.remove()">
-        {% endif %}
+        <span class="site-mark site-mark-large" style="--site-mark-hue: {{ site.mark_hue }}" aria-hidden="true">
+          <span class="site-mark-fallback">{{ site.initials }}</span>
+          {% if site.link and site.link != "#" %}
+            <img class="site-mark-image" src="{{ site.favicon_url }}" alt="" width="48" height="48" onerror="this.remove()">
+          {% endif %}
+        </span>
         <p class="section-kicker">{{ site.theme|default('Sweepstakes site')|replace('-', ' ') }}</p>
         <h1>{{ site.name }} site profile</h1>
         <p class="review-deck">Prize examples, entry frequency, unsubscribe options, and the risk signals behind its score.</p>
       </div>
       <div class="review-score-card">
         <img class="review-score-stamp" src="../assets/scamfactor-stamp.png" alt="ScamFactor">
+        <div class="score-dial" style="--score: {{ site.score }}" role="img" aria-label="ScamFactor {{ site.score }} out of 10, where green is lower concern and red is higher concern">
+          <div class="score-dial-arc"></div>
+          <div class="score-dial-needle"></div>
+        </div>
+        <div class="score-dial-labels"><span>Lower concern</span><span>Higher concern</span></div>
         <strong>{{ site.score }}</strong>
         <span>out of 10 · lower is better</span>
       </div>
@@ -40,7 +51,7 @@
           <h2>Inventory record</h2>
           <dl class="review-facts">
             <div><dt>Tracker rank</dt><dd>#{{ site.rank }}</dd></div>
-            <div><dt>Site type</dt><dd>{{ site.theme|default('Other')|replace('-', ' ') }}</dd></div>
+            <div><dt>Site type</dt><dd><a href="../site-types.html#{{ site.theme|default('other') }}">{{ site.theme|default('Other')|replace('-', ' ') }}</a></dd></div>
             <div><dt>Last verified</dt><dd>{{ last_updated }}</dd></div>
             <div><dt>Current status</dt><dd>Active when last checked</dd></div>
             <div><dt>Entry and drawing schedule</dt><dd>{{ site.draw }}</dd></div>
@@ -73,8 +84,9 @@
           <h2>How to unsubscribe</h2>
           <p>{{ site.unsub }}</p>
           <div class="review-actions">
-            {% if site.unsubscribe_url %}<a class="review-button" href="{{ site.unsubscribe_url }}" target="_blank" rel="noopener">Open unsubscribe page →</a>{% endif %}
+            {% if site.unsubscribe_url %}<a class="review-button" href="{{ site.unsubscribe_url }}" target="_blank" rel="noopener">{{ site.unsubscribe_label|default('Open unsubscribe page') }} →</a>{% endif %}
             {% if site.privacy_opt_out_url %}<a class="review-button secondary" href="{{ site.privacy_opt_out_url }}" target="_blank" rel="noopener">Open privacy opt-out →</a>{% endif %}
+            {% if site.unsubscribe_help_url %}<a class="review-button secondary" href="{{ site.unsubscribe_help_url }}" target="_blank" rel="noopener">Official instructions →</a>{% endif %}
           </div>
         </section>
 
@@ -91,6 +103,7 @@
             {% if site.scrape_url %}<a href="{{ site.scrape_url }}" target="_blank" rel="noopener">Page checked for tracker data</a>{% endif %}
             {% if site.unsubscribe_url %}<a href="{{ site.unsubscribe_url }}" target="_blank" rel="noopener">Email unsubscribe page</a>{% endif %}
             {% if site.privacy_opt_out_url %}<a href="{{ site.privacy_opt_out_url }}" target="_blank" rel="noopener">Privacy-rights request</a>{% endif %}
+            {% if site.unsubscribe_help_url %}<a href="{{ site.unsubscribe_help_url }}" target="_blank" rel="noopener">Official unsubscribe instructions</a>{% endif %}
           </div>
           <p class="verification-note">This inventory record was last refreshed {{ last_updated }}. Missing fields are intentionally identified rather than guessed.</p>
         </section>
@@ -108,7 +121,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="review-shell footer-bottom">SafeTrackerHub · Verify official rules before entering · Never pay to claim a prize.</div>
+    <div class="review-shell footer-bottom">SafeTrackerHub Sweepstakes · Verify official rules before entering · Never pay to claim a prize.</div>
   </footer>
 </body>
 </html>

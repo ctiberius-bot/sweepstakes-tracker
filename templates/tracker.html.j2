@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SweepSafe – Legit Sweepstakes Tracker</title>
+  <title>SafeTrackerHub Sweepstakes | Safety Rankings & Winner Reports</title>
+  <meta name="description" content="Compare sweepstakes, giveaway, and rewards sites by safety signals, transparency, winner proof, entry traps, and marketing pressure.">
+  <link rel="canonical" href="https://sweeps.safetrackerhub.com/">
+  <link rel="icon" type="image/png" href="assets/scamfactor-stamp.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SafeTrackerHub Sweepstakes",
+    "alternateName": ["SafeTrackerHub", "sweeps.safetrackerhub.com"],
+    "url": "https://sweeps.safetrackerhub.com/"
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/site.css">
@@ -60,10 +72,10 @@
     <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div>
         <h1 class="text-2xl md:text-3xl font-bold flex items-center gap-2">
-          <i class="fas fa-shield-alt"></i> SweepSafe Tracker
+          <i class="fas fa-shield-alt"></i> SafeTrackerHub Sweepstakes
         </h1>
         <p class="text-teal-100 text-sm mt-1">
-          Ranked by legitimacy + realistic win opportunity • Updated {{ last_updated }}
+          Ranked from lowest to highest ScamFactor • Rescored weekly • Updated {{ last_updated }}
         </p>
       </div>
     </div>
@@ -148,7 +160,7 @@
               data-review-url="reviews/{{ s.slug }}.html">
             <td class="px-3 py-3 font-semibold text-slate-500">{{ s.rank }}</td>
             <td class="px-3 py-3 font-medium">{{ s.name }}</td>
-            <td class="px-3 py-3 text-xs"><span class="category-badge">{{ s.theme|default('other')|replace('-', ' ')|title }}</span></td>
+            <td class="px-3 py-3 text-xs"><a class="category-badge" href="site-types.html#{{ s.theme|default('other') }}">{{ s.theme|default('other')|replace('-', ' ')|title }}</a></td>
             <td class="px-3 py-3 text-center">
               {% set score = s.score|float %}
               {% if score <= 2 %}
@@ -168,10 +180,13 @@
             <td class="px-3 py-3 text-xs text-teal-700">
               <span>{{ s.unsub }}</span>
               {% if s.unsubscribe_url -%}
-                <a class="unsubscribe-action" href="{{ s.unsubscribe_url }}" target="_blank" rel="noopener">Unsubscribe →</a>
+                <a class="unsubscribe-action" href="{{ s.unsubscribe_url }}" target="_blank" rel="noopener">{{ s.unsubscribe_label|default('Unsubscribe') }} →</a>
               {%- endif %}
               {% if s.privacy_opt_out_url -%}
                 <a class="unsubscribe-action secondary" href="{{ s.privacy_opt_out_url }}" target="_blank" rel="noopener">Privacy opt-out →</a>
+              {%- endif %}
+              {% if s.unsubscribe_help_url -%}
+                <a class="unsubscribe-action secondary" href="{{ s.unsubscribe_help_url }}" target="_blank" rel="noopener">Official instructions →</a>
               {%- endif %}
             </td>
             <td class="px-3 py-3 text-xs text-red-700">{{ s.redFlags }}</td>

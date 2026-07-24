@@ -1,0 +1,38 @@
+name: Daily winner reports
+
+on:
+  schedule:
+    - cron: "15 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gather-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Gather new reports
+        id: gather
+        run: |
+          result="$(python gather_winners.py)"
+          echo "$result"
+          python scraper_simple.py
+          echo "new_count=$(printf '%s' "$result" | python -c 'import json,sys; print(json.load(sys.stdin)["new_count"])')" >> "$GITHUB_OUTPUT"
+      - name: Publish daily edition
+        if: steps.gather.outputs.new_count != '0'
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python publish_winners.py
+      - name: Save winner archive and state
+        run: |
+          git config user.name "SafeTrackerHub Bot"
+          git config user.email "winners@safetrackerhub.com"
+          git add data/winners.json data/winner_state.json winners.html data.json index.html reviews sponsorships.html site-types.html
+          git diff --cached --quiet || git commit -m "Update daily winner reports"
+          git push
