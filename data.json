@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-07-25T16:13:45.549529Z",
+  "last_updated": "2026-07-25T16:27:32.165042Z",
   "sites": [
     {
       "rank": 1,
       "name": "Publishers Clearing House (PCH)",
-      "score": 2.0,
+      "score": 2,
       "theme": "legacy",
       "prizes": "$1M cash + Cadillac Escalade (major current); many cash, cars, vacations",
       "draw": "Variable by promotion; major winners often in-person Prize Patrol",
@@ -17,11 +17,11 @@
       "scrape_url": "https://www.pch.com/",
       "slug": "publishers-clearing-house-pch",
       "score_inputs": {
-        "transparency": 2.0,
-        "fulfillment": 2.0,
-        "entry_model": 2.0,
-        "win_realism": 2.0,
-        "marketing": 2.0
+        "transparency": 2,
+        "fulfillment": 2,
+        "entry_model": 2,
+        "win_realism": 2,
+        "marketing": 2
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -33,15 +33,19 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$1M cash + Cadillac Escalade (major current)"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$1M cash + Cadillac Escalade (major current)",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "many cash, cars, vacations"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "many cash, cars, vacations",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -71,9 +75,9 @@
           "assessment": "strong"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/publishers-clearing-house-pch.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.pch.com/",
         "status": "protected",
         "http_status": 429,
@@ -91,7 +95,7 @@
     {
       "rank": 2,
       "name": "Swagbucks",
-      "score": 2.0,
+      "score": 2,
       "theme": "rewards",
       "prizes": "Ongoing raffles for cash/gift cards (hundreds of millions paid historically)",
       "draw": "Ongoing raffles + daily earning opportunities via tasks",
@@ -105,11 +109,11 @@
       "scrape_url": "https://www.swagbucks.com/",
       "slug": "swagbucks",
       "score_inputs": {
-        "transparency": 2.0,
-        "fulfillment": 2.0,
-        "entry_model": 2.0,
-        "win_realism": 2.0,
-        "marketing": 2.0
+        "transparency": 2,
+        "fulfillment": 2,
+        "entry_model": 2,
+        "win_realism": 2,
+        "marketing": 2
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -121,8 +125,10 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Ongoing raffles for cash/gift cards (hundreds of millions paid historically)"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Ongoing raffles for cash/gift cards (hundreds of millions paid historically)",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -152,16 +158,16 @@
           "assessment": "strong"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/swagbucks.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.swagbucks.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.swagbucks.com/",
-        "content_hash": "20ee5598698e0de9957b36e024dfcbbb378ec02e34a28796098a8c39d5931ce8",
+        "content_hash": "77fe2a9c251f8a261413c70834677eed044023765bb133aaae1a418cc48e1c95",
         "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "A member account is required for personalized offers, rewards, and member-only promotions.",
@@ -202,8 +208,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "More than 1,500 listed U.S. and Canadian sweepstakes spanning cash, travel, merchandise, and instant wins"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "More than 1,500 listed U.S. and Canadian sweepstakes spanning cash, travel, merchandise, and instant wins",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://www.contestgirl.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -233,17 +242,17 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/contest-girl.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.contestgirl.com/",
-        "status": "protected",
-        "http_status": 403,
+        "status": "reachable",
+        "http_status": 200,
         "final_url": "https://www.contestgirl.com/",
         "content_hash": "9e45502824bc0f5a8e63e24cdd79dcb2664cb5ebd07244bdd3a1c70fff2246c4",
         "changed": false,
         "last_success": "2026-07-24T16:15:35.362872Z",
-        "error": "HTTP 403"
+        "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
       "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
@@ -284,8 +293,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Directory covering cash, trips, vehicles, gift cards, instant wins, local contests, and daily-entry promotions"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Directory covering cash, trips, vehicles, gift cards, instant wins, local contests, and daily-entry promotions",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://www.sweepsadvantage.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -315,16 +327,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/sweepstakes-advantage.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.sweepsadvantage.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.sweepsadvantage.com/",
-        "content_hash": "13283a97b8797e2adb3e62e915c8713c6d2210a8ccdfa578da0e238cd4bc7908",
+        "content_hash": "bba7927c7205f6e806deb915e9044487e5eba73d1807aad524b546ed50c467e7",
         "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -338,7 +350,7 @@
     {
       "rank": 5,
       "name": "InboxDollars",
-      "score": 3.0,
+      "score": 3,
       "theme": "rewards",
       "prizes": "Cash & gift cards via activities + occasional sweepstakes/raffles",
       "draw": "Ongoing tasks + variable raffles",
@@ -350,11 +362,11 @@
       "scrape_url": "https://www.inboxdollars.com/",
       "slug": "inboxdollars",
       "score_inputs": {
-        "transparency": 3.0,
-        "fulfillment": 3.0,
-        "entry_model": 3.0,
-        "win_realism": 3.0,
-        "marketing": 3.0
+        "transparency": 3,
+        "fulfillment": 3,
+        "entry_model": 3,
+        "win_realism": 3,
+        "marketing": 3
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -366,8 +378,10 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Cash & gift cards via activities + occasional sweepstakes/raffles"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Cash & gift cards via activities + occasional sweepstakes/raffles",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -397,16 +411,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/inboxdollars.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.inboxdollars.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.inboxdollars.com/",
         "content_hash": "92b9376eededf1dccb8001c20ac37ede79c8d3f17c222e5ed8b835e38ab4af90",
         "changed": false,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "A member account is required for personalized offers, rewards, and member-only promotions.",
@@ -420,7 +434,7 @@
     {
       "rank": 6,
       "name": "Mondosweeps",
-      "score": 3.0,
+      "score": 3,
       "theme": "daily",
       "prizes": "$1,548,705 lump sum; $500k Dream Home; $300k/$125k cash; $88k Dream Car; $25 Daily Cash (guaranteed one winner/day); $100 cash; $750/$1k GCs",
       "draw": "Daily drawings (entries by midnight ET; winners notified next day)",
@@ -433,11 +447,11 @@
       "slug": "mondosweeps",
       "browser_refresh": true,
       "score_inputs": {
-        "transparency": 3.0,
-        "fulfillment": 3.0,
-        "entry_model": 3.0,
-        "win_realism": 3.0,
-        "marketing": 3.0
+        "transparency": 3,
+        "fulfillment": 3,
+        "entry_model": 3,
+        "win_realism": 3,
+        "marketing": 3
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -449,96 +463,111 @@
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "No recent public winner located for this specific prize.",
           "next_drawing": "Not clearly stated on the public prize page.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$1,548,705 lump sum",
           "entry_url": "https://www.mondosweeps.com/Sweepstakes/5000000-Cash-Sweepstakes",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "No recent public winner located for this specific prize.",
           "next_drawing": "Promotion closes October 23, 2026; the public rules excerpt does not state the drawing date.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$500,000 Dream Home",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "No recent public winner located for this specific prize.",
           "next_drawing": "Not clearly stated on the public prize page.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$300,000 cash",
           "entry_url": "https://www.mondosweeps.com/Sweepstakes/300000-Cash-Sweepstakes",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "No recent public winner located for this specific prize.",
           "next_drawing": "Not clearly stated on the public prize page.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$125,000 cash",
           "entry_url": "https://www.mondosweeps.com/Sweepstakes/125000-Cash-Sweepstakes",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "No recent public winner located for this specific prize.",
           "next_drawing": "Not clearly stated on the public prize page.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$88,888 Dream Car",
           "entry_url": "https://www.mondosweeps.com/Sweepstakes/88888-Dream-Car",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "No recent public winner located for this specific prize.",
           "next_drawing": "Not clearly stated on the public prize page.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$33,333 Dream Vacation",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "No recent public winner located for this specific prize.",
           "next_drawing": "Not clearly stated on the public prize page.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$10,000 Super Home Theater",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://www.mondosweeps.com/Sweepstakes/sweepstakes-10000-Super-H"
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "November 11, 2025",
           "next_drawing": "Not clearly stated on the public prize page.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$1,000 Amazon Gift Card",
           "entry_url": "https://www.mondosweeps.com/Sweepstakes/sweepstakes-1000-Amazon-G",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "July 7, 2026",
           "next_drawing": "Not clearly stated on the public prize page.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$750 Visa Gift Card",
           "entry_url": "https://www.mondosweeps.com/Sweepstakes/mondosweeps-750-Visa-Gift",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "July 8, 2026",
           "next_drawing": "Not clearly stated on the public prize page.",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$100 cash",
-          "entry_frequency": "Up to 3 entries daily"
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://www.mondosweeps.com/Sweepstakes/mondosweeps-Visa-Gift-Car"
         },
         {
           "login_required": "No account login shown on the public entry form; a valid email is required.",
           "last_won": "July 21, 2026",
           "next_drawing": "Daily at midnight Eastern Time",
-          "status": "Known when last verified",
+          "status": "Verified as listed on July 25, 2026",
           "label": "$25 Daily Cash",
           "entry_url": "https://www.mondosweeps.com/Sweepstakes/Daily-Cash-Prize-Giveaway",
-          "entry_frequency": "Up to 5 entries daily"
+          "entry_frequency": "Up to 5 entries daily",
+          "last_verified": "July 25, 2026"
         }
       ],
       "risk_signals": [
@@ -570,18 +599,15 @@
       ],
       "logo_asset": "assets/logos/mondosweeps.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.mondosweeps.com/",
-        "status": "reachable",
+        "status": "protected",
         "http_status": 403,
         "changed": false,
-        "error": null,
-        "final_url": "https://www.mondosweeps.com/",
-        "content_hash": "f9fbc3429fb1ff160dd0a4712b763e8a8b59b1416f6c24933641d52df5298c03",
-        "last_success": "2026-07-25T16:13:28.943623Z"
+        "error": "HTTP 403"
       },
       "entry_requirements": "Most drawings accept an email address and permit repeated daily entries; confirm each promotion's limit.",
-      "winner_evidence": "The public homepage displays recent dated winners; prize-specific pages and rules remain the controlling sources.",
+      "winner_evidence": "Look for dated winner names or initials on the operator's winners page and in promotion-specific rules.",
       "marketing_intensity": "Daily-entry operators commonly send frequent reminders and promotional messages.",
       "data_practices": "Entry data is used by the operator and may also be governed by promotion-specific terms.",
       "outbound_url": "https://www.mondosweeps.com/",
@@ -591,7 +617,7 @@
     {
       "rank": 7,
       "name": "Online-Sweepstakes.com",
-      "score": 3.0,
+      "score": 3,
       "theme": "directory",
       "prizes": "Daily listings for cash, cars, travel, electronics, gift cards, and brand giveaways",
       "draw": "New listings and expired-link cleanup advertised daily",
@@ -602,11 +628,11 @@
       "scrape_url": "https://online-sweepstakes.com/",
       "slug": "online-sweepstakes-com",
       "score_inputs": {
-        "transparency": 3.0,
-        "fulfillment": 3.0,
-        "entry_model": 3.0,
-        "win_realism": 3.0,
-        "marketing": 3.0
+        "transparency": 3,
+        "fulfillment": 3,
+        "entry_model": 3,
+        "win_realism": 3,
+        "marketing": 3
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -618,8 +644,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Daily listings for cash, cars, travel, electronics, gift cards, and brand giveaways"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Daily listings for cash, cars, travel, electronics, gift cards, and brand giveaways",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://online-sweepstakes.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -649,16 +678,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/online-sweepstakes-com.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://online-sweepstakes.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://online-sweepstakes.com/",
-        "content_hash": "bb82d64472764108bdedb4b7c7a0a827ec6192712e1af4e07b67733bf590c525",
-        "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "content_hash": "e70ac991c4fbd8a798f94bff69e388653f90b73e5f7bd72edc35ecb35e6ef642",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -672,7 +701,7 @@
     {
       "rank": 8,
       "name": "Sweepstake.com",
-      "score": 3.0,
+      "score": 3,
       "theme": "directory",
       "prizes": "Hundreds of cash, travel, gift-card, merchandise, and instant-win promotions from outside sponsors",
       "draw": "Human-reviewed listings added frequently; each promotion has its own schedule",
@@ -683,11 +712,11 @@
       "scrape_url": "https://www.sweepstake.com/",
       "slug": "sweepstake-com",
       "score_inputs": {
-        "transparency": 3.0,
-        "fulfillment": 3.0,
-        "entry_model": 3.0,
-        "win_realism": 3.0,
-        "marketing": 3.0
+        "transparency": 3,
+        "fulfillment": 3,
+        "entry_model": 3,
+        "win_realism": 3,
+        "marketing": 3
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -699,8 +728,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Hundreds of cash, travel, gift-card, merchandise, and instant-win promotions from outside sponsors"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Hundreds of cash, travel, gift-card, merchandise, and instant-win promotions from outside sponsors",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://www.sweepstake.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -730,16 +762,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/sweepstake-com.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.sweepstake.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.sweepstake.com/",
-        "content_hash": "04a3b89b73ea5e42c5dc1c0c6b743174b6e7ac01d908cc77cee8f9edad0d4a21",
+        "content_hash": "5a70d381f35895ad378a1490974dac4c7778f5b5d017e3dd1f802c33d0ba0a1e",
         "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -753,7 +785,7 @@
     {
       "rank": 9,
       "name": "SweepsToday",
-      "score": 3.0,
+      "score": 3,
       "theme": "directory",
       "prizes": "Curated free sweepstakes, giveaways, and contests linking to official sponsor pages",
       "draw": "Active listings reviewed and refreshed regularly",
@@ -764,11 +796,11 @@
       "scrape_url": "https://www.sweepstoday.com/",
       "slug": "sweepstoday",
       "score_inputs": {
-        "transparency": 3.0,
-        "fulfillment": 3.0,
-        "entry_model": 3.0,
-        "win_realism": 3.0,
-        "marketing": 3.0
+        "transparency": 3,
+        "fulfillment": 3,
+        "entry_model": 3,
+        "win_realism": 3,
+        "marketing": 3
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -780,8 +812,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Curated free sweepstakes, giveaways, and contests linking to official sponsor pages"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Curated free sweepstakes, giveaways, and contests linking to official sponsor pages",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://www.sweepstoday.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -811,16 +846,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/sweepstoday.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.sweepstoday.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.sweepstoday.com/",
-        "content_hash": "65adf4d1ce4a1ac9f391cb4bff2ca7aee280925ca442cf15c50f5e0dc5dfdefe",
+        "content_hash": "65cf7522b05bbaf94ffbffbf413970364fe7a9748d10612075625c79bad3eaa8",
         "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -861,8 +896,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Free samples, coupons, product-testing opportunities, giveaways, and limited-time brand offers"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Free samples, coupons, product-testing opportunities, giveaways, and limited-time brand offers",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://ilft.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -892,16 +930,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/i-love-free-things-ilft.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://ilft.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://ilft.com/",
-        "content_hash": "b1a411b2eef33c97150c5c5e1d3491370f71ee9cca0ae2efde590214383c9bfb",
-        "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "content_hash": "85d23ce8e1e953d36262dd81a0a298338204520c0616acb59922540a4223758f",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
@@ -942,8 +980,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Daily sweepstakes, giveaways, instant-win games, cash, travel, and merchandise"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Daily sweepstakes, giveaways, instant-win games, cash, travel, and merchandise",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://ilovegiveaways.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -973,16 +1014,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/i-love-giveaways.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://ilovegiveaways.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://ilovegiveaways.com/",
-        "content_hash": "d2f479356fc33792338c683f7103080498485314adc9eefeb6a62f2885ef7b93",
-        "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "content_hash": "bb4e6f8bd8a7e518081a1e7c1da0e4caecf60f53bbb4329c1ce584bbe75a2f6c",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -1023,8 +1064,10 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Brand-partnered cash, cars, merchandise (real user reports e.g. SodaStream)"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Brand-partnered cash, cars, merchandise (real user reports e.g. SodaStream)",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -1054,16 +1097,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/million-dollar-media.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.instagram.com/milliondollarmedia/",
         "status": "reachable",
         "http_status": 200,
-        "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmilliondollarmedia%2F&is_from_rle",
-        "content_hash": "41eb9637db99d97a4b3681cf70337ae499d796fdaa298727860c09f629923ec4",
+        "final_url": "https://www.instagram.com/milliondollarmedia/",
+        "content_hash": "2c39a7dce0aefc7b1d761c9311becaa0005d28503d9c57aaf974aa5c0c814a1b",
         "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "Requirements vary; verify the official site and promotion rules before providing information.",
@@ -1105,29 +1148,37 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$10k cash examples"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$10k cash examples",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$300 Shell GC"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$300 Shell GC",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$25 Dunkin' GC"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$25 Dunkin' GC",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "other gift cards & merchandise"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "other gift cards & merchandise",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -1157,16 +1208,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/prizegrab.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://prizegrab.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://prizegrab.com/",
-        "content_hash": "07335a90e497133de77af4f0549af333c07368e652716ff932c7a3da18a5aa8c",
+        "content_hash": "417e17d835e81ccdc4f6a82e875ff0019f649f66526ccf1ea2d4ea6ecf1248c9",
         "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "Most drawings accept an email address and permit repeated daily entries; confirm each promotion's limit.",
@@ -1207,8 +1258,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Aggregated high-value sweepstakes with category, expiration, and legitimacy signals"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Aggregated high-value sweepstakes with category, expiration, and legitimacy signals",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://www.sweepfeed.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -1238,16 +1292,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/sweepfeed.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.sweepfeed.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.sweepfeed.com/",
-        "content_hash": "98297fa9b97c38e3ad43171b149ba0666b7737bb1f8d88352e8c4c0a420e57e2",
+        "content_hash": "ccf90a2f4b41fc00c2cfda87ae7abab57e72d31d1dc18cea112d248528469c4f",
         "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -1271,6 +1325,7 @@
       "affiliate_note": "Similar to Mondosweeps – look for network offers",
       "scrape_url": "https://www.winstakes.com/",
       "slug": "winstakes",
+      "browser_refresh": true,
       "score_inputs": {
         "transparency": 3.5,
         "fulfillment": 3.5,
@@ -1285,25 +1340,154 @@
       "favicon_url": "https://www.winstakes.com/favicon.ico",
       "prize_items": [
         {
-          "login_required": "Check the official entry page; login requirements are not yet recorded.",
-          "last_won": "No prize-specific public winner date recorded.",
-          "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Up to ~$1,542,625 lump sum cash"
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "No prize-specific win found in the public homepage snapshot verified July 25, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$1,548,705 Lump Sum",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/5000000-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
         },
         {
-          "login_required": "Check the official entry page; login requirements are not yet recorded.",
-          "last_won": "No prize-specific public winner date recorded.",
-          "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$25 Daily Cash"
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "No prize-specific win found in the public homepage snapshot verified July 25, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$500,000 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/500000-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
         },
         {
-          "login_required": "Check the official entry page; login requirements are not yet recorded.",
-          "last_won": "No prize-specific public winner date recorded.",
-          "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$50, $100, $750, $1,000 cash examples"
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "No prize-specific win found in the public homepage snapshot verified July 25, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$300,000 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/300000-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "No prize-specific win found in the public homepage snapshot verified July 25, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$125,000 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/125000-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "No prize-specific win found in the public homepage snapshot verified July 25, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$88,888 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/88888-cash",
+          "entry_frequency": "Up to 5 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "No prize-specific win found in the public homepage snapshot verified July 25, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$33,333 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/33333-cash",
+          "entry_frequency": "Up to 5 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "Pete A. was reported as winning $10,000 on May 26, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$10,000 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/10000-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "No prize-specific win found in the public homepage snapshot verified July 25, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$2,500 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/2500-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "Linda H. was reported as winning $1,000 on May 22, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$1,000 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/1000-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "Melanie D. was reported as winning $750 on July 7, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$750 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/750-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "No prize-specific win found in the public homepage snapshot verified July 25, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$250 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/250-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "Donald K. was reported as winning $100 on July 8, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$100 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/100-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "Michael M. was reported as winning $75 on July 22, 2026.",
+          "next_drawing": "See the current official rules linked from the entry page.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$75 Cash",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/75-cash",
+          "entry_frequency": "Up to 3 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "Aliciaaann V. was reported as winning $50 on July 21, 2026.",
+          "next_drawing": "Weekly; verify the current rules for the exact cutoff.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$50 Weekly Prize",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/50-weekly-cash",
+          "entry_frequency": "Up to 2 entries daily",
+          "last_verified": "July 25, 2026"
+        },
+        {
+          "login_required": "No account login shown; entry requires a valid email address and acceptance of the displayed terms.",
+          "last_won": "B. F. was reported as winning $25 on July 23, 2026.",
+          "next_drawing": "Daily; verify the current rules for the exact cutoff.",
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$25 Daily Prize",
+          "entry_url": "https://www.winstakes.com/Sweepstakes/25-daily-cash",
+          "entry_frequency": "Up to 2 entries daily",
+          "last_verified": "July 25, 2026"
         }
       ],
       "risk_signals": [
@@ -1333,14 +1517,14 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/winstakes.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-25T02:30:00Z",
         "source_url": "https://www.winstakes.com/",
-        "status": "protected",
-        "http_status": 403,
+        "status": "browser_verified",
+        "http_status": 200,
         "changed": false,
-        "error": "HTTP 403"
+        "error": null
       },
       "entry_requirements": "Most drawings accept an email address and permit repeated daily entries; confirm each promotion's limit.",
       "winner_evidence": "Look for dated winner names or initials on the operator's winners page and in promotion-specific rules.",
@@ -1351,9 +1535,9 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 16,
+      "rank": 19,
       "name": "eSweeps",
-      "score": 4.0,
+      "score": 4,
       "theme": "directory",
       "prizes": "Cash, vacations, instant wins, freebies, and daily-entry promotions",
       "draw": "Directory updated with ongoing third-party promotions",
@@ -1364,11 +1548,11 @@
       "scrape_url": "https://esweeps.com/",
       "slug": "esweeps",
       "score_inputs": {
-        "transparency": 4.0,
-        "fulfillment": 4.0,
-        "entry_model": 4.0,
-        "win_realism": 4.0,
-        "marketing": 4.0
+        "transparency": 4,
+        "fulfillment": 4,
+        "entry_model": 4,
+        "win_realism": 4,
+        "marketing": 4
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -1380,8 +1564,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Cash, vacations, instant wins, freebies, and daily-entry promotions"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Cash, vacations, instant wins, freebies, and daily-entry promotions",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://esweeps.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -1411,16 +1598,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/esweeps.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://esweeps.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://esweeps.com/",
         "content_hash": "3cb87d6ce35f35c6d2e2112404ff241d2079ce5288b381af177a156bd87c13a9",
         "changed": false,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -1432,9 +1619,9 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 17,
+      "rank": 20,
       "name": "LocalFreebie",
-      "score": 4.0,
+      "score": 4,
       "theme": "local-directory",
       "prizes": "State-targeted sweepstakes, free samples, consumer rewards, and local offers",
       "draw": "Listings organized by state and advertised as checked daily",
@@ -1445,11 +1632,11 @@
       "scrape_url": "https://localfreebie.com/",
       "slug": "localfreebie",
       "score_inputs": {
-        "transparency": 4.0,
-        "fulfillment": 4.0,
-        "entry_model": 4.0,
-        "win_realism": 4.0,
-        "marketing": 4.0
+        "transparency": 4,
+        "fulfillment": 4,
+        "entry_model": 4,
+        "win_realism": 4,
+        "marketing": 4
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -1461,8 +1648,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "State-targeted sweepstakes, free samples, consumer rewards, and local offers"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "State-targeted sweepstakes, free samples, consumer rewards, and local offers",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://localfreebie.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -1492,16 +1682,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/localfreebie.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://localfreebie.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://localfreebie.com/",
         "content_hash": "1af938b692784f901ab5a2783c38c8181b94ac8f9815a1438c1b49a7ed540cb3",
         "changed": false,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "Listings are usually public, but eligibility and entry requirements depend on location and sponsor.",
@@ -1513,9 +1703,9 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 18,
+      "rank": 24,
       "name": "RetireWhiz",
-      "score": 4.0,
+      "score": 4,
       "theme": "niche",
       "prizes": "$250 cash; $5M Retirement Sweepstakes; $33k giveaway; ~$125k motorhome",
       "draw": "Daily or periodic (check specific rules for end dates)",
@@ -1526,11 +1716,11 @@
       "scrape_url": "https://www.retirewhiz.com/",
       "slug": "retirewhiz",
       "score_inputs": {
-        "transparency": 4.0,
-        "fulfillment": 4.0,
-        "entry_model": 4.0,
-        "win_realism": 4.0,
-        "marketing": 4.0
+        "transparency": 4,
+        "fulfillment": 4,
+        "entry_model": 4,
+        "win_realism": 4,
+        "marketing": 4
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -1542,29 +1732,37 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$250 cash"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$250 cash",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$5M Retirement Sweepstakes"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$5M Retirement Sweepstakes",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$33k giveaway"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$33k giveaway",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "~$125k motorhome"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "~$125k motorhome",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -1594,16 +1792,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/retirewhiz.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.retirewhiz.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.retirewhiz.com/",
         "content_hash": "c2908f6f5d918ce5b9b0dc0e3ab99cf0e00593806ec6db1a3805d440fd64a73a",
         "changed": false,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "Email registration or a site account may be required; eligibility can be tailored to the site's audience.",
@@ -1615,9 +1813,9 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 19,
+      "rank": 25,
       "name": "Robin Giveaways",
-      "score": 4.0,
+      "score": 4,
       "theme": "app",
       "prizes": "Discovery and tracking for daily-entry sweepstakes from outside sponsors",
       "draw": "Continuously updated app-based feed; schedules vary by promotion",
@@ -1628,11 +1826,11 @@
       "scrape_url": "https://www.therobinapp.com/",
       "slug": "robin-giveaways",
       "score_inputs": {
-        "transparency": 4.0,
-        "fulfillment": 4.0,
-        "entry_model": 4.0,
-        "win_realism": 4.0,
-        "marketing": 4.0
+        "transparency": 4,
+        "fulfillment": 4,
+        "entry_model": 4,
+        "win_realism": 4,
+        "marketing": 4
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -1644,8 +1842,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Discovery and tracking for daily-entry sweepstakes from outside sponsors"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Discovery and tracking for daily-entry sweepstakes from outside sponsors",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://www.therobinapp.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -1675,16 +1876,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/robin-giveaways.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.therobinapp.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.therobinapp.com/",
         "content_hash": "934a6c8ce209784c84efb1bc236519c19feb66623f4444d57c9eb042a38fbd10",
         "changed": false,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "An app account is usually required. Device permissions, notifications, and sponsor-specific entry terms may also apply.",
@@ -1696,9 +1897,9 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 20,
+      "rank": 26,
       "name": "WinPrizesOnline",
-      "score": 4.0,
+      "score": 4,
       "theme": "directory",
       "prizes": "Cash, cars, vacations, gift cards, instant wins, and daily-entry sweepstakes",
       "draw": "New directory listings added throughout the year",
@@ -1709,11 +1910,11 @@
       "scrape_url": "https://www.winprizesonline.com/",
       "slug": "winprizesonline",
       "score_inputs": {
-        "transparency": 4.0,
-        "fulfillment": 4.0,
-        "entry_model": 4.0,
-        "win_realism": 4.0,
-        "marketing": 4.0
+        "transparency": 4,
+        "fulfillment": 4,
+        "entry_model": 4,
+        "win_realism": 4,
+        "marketing": 4
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -1725,8 +1926,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Cash, cars, vacations, gift cards, instant wins, and daily-entry sweepstakes"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Cash, cars, vacations, gift cards, instant wins, and daily-entry sweepstakes",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://www.winprizesonline.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -1756,16 +1960,16 @@
           "assessment": "generally favorable"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/winprizesonline.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.winprizesonline.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.winprizesonline.com/",
-        "content_hash": "cbadd71906d3fb613d558a16ed23e0152bba3c7172f880010b16c543a99e1f48",
-        "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "content_hash": "db2aaced8b564fc63d55e602259c8bb0c52800fa4f2b57af19d4999a58009044",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -1777,7 +1981,7 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 21,
+      "rank": 37,
       "name": "Sweetie Sweepstakes",
       "score": 4.5,
       "theme": "directory",
@@ -1806,8 +2010,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Public sweepstakes listings plus local, quick-ending, and member-only listings through a paid companion service"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Public sweepstakes listings plus local, quick-ending, and member-only listings through a paid companion service",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://sweetiesweepstakes.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -1837,16 +2044,16 @@
           "assessment": "mixed"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/sweetie-sweepstakes.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://sweetiesweepstakes.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://sweetiesweepstakes.com/",
-        "content_hash": "102f4a59782187538ee60773986437a7c4380d2c198caff456501afb0a23cb0c",
-        "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "content_hash": "a267a98c3e61acea15095addc01e802880d9ec22f9ef90cd9c67f7bac09c441c",
+        "changed": false,
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -1858,7 +2065,7 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 22,
+      "rank": 38,
       "name": "The Luck Foundry",
       "score": 4.5,
       "theme": "premium-directory",
@@ -1887,8 +2094,11 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Sweepstakes aggregation, entry tracking, reminders, daily routines, and prize-value sorting"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Sweepstakes aggregation, entry tracking, reminders, daily routines, and prize-value sorting",
+          "last_verified": "July 25, 2026",
+          "entry_url": "https://theluckfoundry.com/",
+          "link_note": "Official public listings page; individual promotions link onward to sponsor entry pages."
         }
       ],
       "risk_signals": [
@@ -1918,16 +2128,16 @@
           "assessment": "mixed"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/the-luck-foundry.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://theluckfoundry.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://theluckfoundry.com/",
-        "content_hash": "cb21616ffa9f6fa517678e3afc19e13bdeef42fbe79d468951c32444d576d362",
+        "content_hash": "c5746ea03de22976eb41f45ac7a08b92496949868d0d92ff4255b932e1e3a49d",
         "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "Basic listings may be public; saved searches, alerts, or early listings can require an account or paid membership.",
@@ -1939,9 +2149,9 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 23,
+      "rank": 39,
       "name": "BlissXO",
-      "score": 5.0,
+      "score": 5,
       "theme": "samples",
       "prizes": "$125k instant win; $80k+ in cash prizes; free samples & deals focus",
       "draw": "Instant win + periodic drawings",
@@ -1952,11 +2162,11 @@
       "scrape_url": "https://blissxo.com/",
       "slug": "blissxo",
       "score_inputs": {
-        "transparency": 5.0,
-        "fulfillment": 5.0,
-        "entry_model": 5.0,
-        "win_realism": 5.0,
-        "marketing": 5.0
+        "transparency": 5,
+        "fulfillment": 5,
+        "entry_model": 5,
+        "win_realism": 5,
+        "marketing": 5
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -1968,22 +2178,28 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$125k instant win"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$125k instant win",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$80k+ in cash prizes"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$80k+ in cash prizes",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "free samples & deals focus"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "free samples & deals focus",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -2013,16 +2229,16 @@
           "assessment": "mixed"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/blissxo.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://blissxo.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://blissxo.com/",
-        "content_hash": "76ff40503c0053c7ac940348edb38857d069bc04c6c71dae86190fdffb76ef2f",
+        "content_hash": "9e20cca0143b856b51d897f10a7e5b36da5a857167f7352f2e381fb0c8985041",
         "changed": true,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
@@ -2034,9 +2250,9 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 24,
+      "rank": 40,
       "name": "PINCHme (Free Samples)",
-      "score": 5.0,
+      "score": 5,
       "theme": "samples",
       "prizes": "Free product samples / full-size items (build box of 4 via quizzes + coins for free shipping)",
       "draw": "Ongoing daily samples; qualification-based (not pure chance)",
@@ -2047,11 +2263,11 @@
       "scrape_url": "https://www.pinchme.com/",
       "slug": "pinchme-free-samples",
       "score_inputs": {
-        "transparency": 5.0,
-        "fulfillment": 5.0,
-        "entry_model": 5.0,
-        "win_realism": 5.0,
-        "marketing": 5.0
+        "transparency": 5,
+        "fulfillment": 5,
+        "entry_model": 5,
+        "win_realism": 5,
+        "marketing": 5
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -2063,8 +2279,10 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Free product samples / full-size items (build box of 4 via quizzes + coins for free shipping)"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Free product samples / full-size items (build box of 4 via quizzes + coins for free shipping)",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -2094,16 +2312,16 @@
           "assessment": "mixed"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/pinchme-free-samples.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.pinchme.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.pinchme.com/",
         "content_hash": "c79c542aea8f604f41d504953f3dd24a84f1e4e500d2061c4890216431203bcc",
         "changed": false,
-        "last_success": "2026-07-25T16:13:28.943623Z",
+        "last_success": "2026-07-24T16:15:35.362872Z",
         "error": null
       },
       "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
@@ -2115,7 +2333,7 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 25,
+      "rank": 41,
       "name": "PrizeCraze (Globalizer)",
       "score": 5.5,
       "theme": "globalizer",
@@ -2145,22 +2363,28 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$25 Daily Cash (guaranteed one winner/day)"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$25 Daily Cash (guaranteed one winner/day)",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "bigger cash jackpots"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "bigger cash jackpots",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Craze Coins for extra entries"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Craze Coins for extra entries",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -2190,9 +2414,9 @@
           "assessment": "mixed"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/prizecraze-globalizer.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.prizecraze.com/",
         "status": "protected",
         "http_status": 403,
@@ -2208,7 +2432,7 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 26,
+      "rank": 42,
       "name": "Prizeloot",
       "score": 5.5,
       "theme": "globalizer",
@@ -2238,36 +2462,46 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$499,999 cash"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$499,999 cash",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$77,777.77"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$77,777.77",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$3,333 cash (multiple recent named winners)"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$3,333 cash (multiple recent named winners)",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$200/$100/$20 Daily Cash"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$200/$100/$20 Daily Cash",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "iPad, 50\" TV, drone, Stanley tumbler"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "iPad, 50\" TV, drone, Stanley tumbler",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -2297,9 +2531,9 @@
           "assessment": "mixed"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/prizeloot.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.prizeloot.com/",
         "status": "protected",
         "http_status": 403,
@@ -2315,7 +2549,7 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 27,
+      "rank": 43,
       "name": "Winloot (Globalizer)",
       "score": 5.5,
       "theme": "globalizer",
@@ -2345,29 +2579,37 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$5M / $1M / $100k+ cash"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$5M / $1M / $100k+ cash",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$250 Daily Cash (guaranteed)"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$250 Daily Cash (guaranteed)",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "$5k instant wins"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "$5k instant wins",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "many small cash/GCs/electronics"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "many small cash/GCs/electronics",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -2397,9 +2639,9 @@
           "assessment": "mixed"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/winloot-globalizer.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://www.winloot.com/",
         "status": "protected",
         "http_status": 403,
@@ -2415,7 +2657,7 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 28,
+      "rank": 44,
       "name": "Daily Goodie Box",
       "score": 8.5,
       "theme": "samples",
@@ -2444,15 +2686,19 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Free samples / full-size products in 'goodie boxes' (not guaranteed"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Free samples / full-size products in 'goodie boxes' (not guaranteed",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         },
         {
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "based on brand campaigns & availability)"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "based on brand campaigns & availability)",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -2482,17 +2728,17 @@
           "assessment": "high concern"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/daily-goodie-box.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "https://dailygoodiebox.com/",
-        "status": "protected",
-        "http_status": 403,
+        "status": "reachable",
+        "http_status": 200,
         "final_url": "https://dailygoodiebox.com/",
         "content_hash": "c1a8883e0651ca27272513774e858275e10444cc89a1ed3666cdee1d0b2f9aa5",
-        "changed": false,
+        "changed": true,
         "last_success": "2026-07-24T16:15:35.362872Z",
-        "error": "HTTP 403"
+        "error": null
       },
       "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
       "winner_evidence": "Sample fulfillment is campaign-based rather than a conventional drawing; confirm shipment or selection terms.",
@@ -2503,9 +2749,9 @@
       "placement_tier": "standard"
     },
     {
-      "rank": 29,
+      "rank": 45,
       "name": "SelectRewards",
-      "score": 9.0,
+      "score": 9,
       "theme": "leadgen",
       "prizes": "Promised big gift cards (e.g. $750) via quizzes — user reports often low/no payout",
       "draw": "Funnel / quiz-based",
@@ -2516,11 +2762,11 @@
       "scrape_url": null,
       "slug": "selectrewards",
       "score_inputs": {
-        "transparency": 9.0,
-        "fulfillment": 9.0,
-        "entry_model": 9.0,
-        "win_realism": 9.0,
-        "marketing": 9.0
+        "transparency": 9,
+        "fulfillment": 9,
+        "entry_model": 9,
+        "win_realism": 9,
+        "marketing": 9
       },
       "weekly_check_status": "not_checked",
       "last_scored": "2026-07-24T01:54:32.632810Z",
@@ -2532,8 +2778,10 @@
           "login_required": "Check the official entry page; login requirements are not yet recorded.",
           "last_won": "No prize-specific public winner date recorded.",
           "next_drawing": "Not yet recorded; verify the current official rules.",
-          "status": "Known when last verified",
-          "label": "Promised big gift cards (e.g. $750) via quizzes — user reports often low/no payout"
+          "status": "Verified as listed on July 25, 2026",
+          "label": "Promised big gift cards (e.g. $750) via quizzes — user reports often low/no payout",
+          "last_verified": "July 25, 2026",
+          "verification_note": "No exact public prize-entry URL independently verified on July 25, 2026; no link supplied."
         }
       ],
       "risk_signals": [
@@ -2563,9 +2811,9 @@
           "assessment": "high concern"
         }
       ],
-      "logo_asset": "",
+      "logo_asset": "assets/logos/selectrewards.png",
       "profile_refresh": {
-        "checked_at": "2026-07-25T16:13:28.943623Z",
+        "checked_at": "2026-07-24T16:15:35.362872Z",
         "source_url": "#",
         "status": "not_applicable",
         "changed": false
@@ -2581,5 +2829,5 @@
   ],
   "live_snippets": {},
   "last_rescored": "2026-07-24T01:54:32.632810Z",
-  "last_profile_refresh": "2026-07-25T16:13:28.943623Z"
+  "last_profile_refresh": "2026-07-25"
 }

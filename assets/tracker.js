@@ -18,7 +18,6 @@
             <div><div class="brand-name">SafeTracker: <em>Sweepstakes</em></div><div class="brand-network">Safety rankings & winner reports</div></div>
           </div>
           <nav class="main-nav" aria-label="Primary navigation">
-            <a href="active-sweepstakes.html">Active sweepstakes</a>
             <a href="#rankings">Rankings</a>
             <a href="winners.html">Winners</a>
             <a href="methodology.html">How we score</a>
@@ -47,10 +46,6 @@
       <div class="trust-item"><span class="trust-label">Last reviewed</span><span class="trust-value">${updated}</span></div>`;
     main.prepend(trust);
     trust.insertAdjacentHTML("afterend", `
-      <a class="active-launch-strip" href="active-sweepstakes.html" data-track="active_inventory_open" data-placement="homepage_strip">
-        <span><strong>Now tracking individual promotions</strong> · Browse current prizes by deadline, category, and entry frequency.</span>
-        <b>See active sweepstakes →</b>
-      </a>
       <aside class="newsletter-strip" aria-label="Daily winners email">
         <span><strong>Daily winners</strong> · Source-linked reports when there is something new.</span>
         <form action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post" data-track-form="newsletter_signup">
@@ -140,6 +135,9 @@
         </div>
         <div class="controls" aria-label="Ranking controls">
           <label class="search-wrap"><span>Search the inventory</span><input id="tracker-search" class="control search-control" type="search" placeholder="Site name, prize, or red flag…" aria-label="Search tracker"></label>
+          <select id="type-filter" class="control" aria-label="Filter by site type">
+            <option value="">All site types</option>
+          </select>
           <select id="score-filter" class="control" aria-label="Filter by ScamFactor">
             <option value="0">All ScamFactor scores</option><option value="2">Excellent: 2 or lower</option><option value="4">Good: 4 or lower</option><option value="6">Moderate: 6 or lower</option>
           </select>
@@ -162,11 +160,11 @@
         <div class="max-w-7xl mx-auto px-4">
           <div class="footer-grid">
             <div><div class="footer-title">SafeTracker: Sweepstakes</div><p class="footer-copy">Plain-English safety rankings and source-linked winner reports for sweepstakes, giveaway, and rewards sites.</p></div>
-            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="active-sweepstakes.html">Active sweepstakes</a><a href="#rankings">Rankings</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
+            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
             <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="methodology.html">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a><a href="contact.html">Protected contact</a></div></div>
             <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links may earn commissions and featured visibility may be purchased. Paid placements are labeled. ScamFactor scores remain visible and summarize the risk signals shown in each profile.</p></div>
           </div>
-          <div class="footer-bottom"><span>Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</span><span class="site-version">SafeTracker: Sweepstakes v1.2</span></div>
+          <div class="footer-bottom"><span>Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</span><span class="site-version">SafeTracker: Sweepstakes v1.3</span></div>
         </div>
       </footer>`);
   }
@@ -183,6 +181,7 @@
   const tbody = table.tBodies[0];
   const rows = Array.from(tbody.rows);
   const search = document.querySelector("#tracker-search");
+  const typeFilter = document.querySelector("#type-filter");
   const scoreFilter = document.querySelector("#score-filter");
   const sort = document.querySelector("#sort-rankings");
   const count = document.querySelector("#results-count");
@@ -232,6 +231,7 @@
       rank: Number(clean(cells[0].textContent)),
       name: clean(cells[1].textContent),
       category: clean(cells[2].textContent),
+      categoryKey: row.dataset.category || clean(cells[2].textContent).toLowerCase().replace(/\s+/g, "-"),
       score: Number(clean(cells[3].textContent)),
       prizes: clean(cells[4].textContent),
       frequency: clean(cells[5].textContent),
@@ -243,6 +243,18 @@
     };
   };
   const items = rows.map(rowData);
+  const typeLabel = (value) => value
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+  [...new Set(items.map((item) => item.categoryKey))]
+    .sort((a, b) => typeLabel(a).localeCompare(typeLabel(b)))
+    .forEach((value) => {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = typeLabel(value);
+      typeFilter.append(option);
+    });
 
   const badgeLabels = {
     1: "Best established name",
@@ -341,6 +353,7 @@
 
   function applyControls() {
     const term = clean(search.value).toLowerCase();
+    const selectedType = typeFilter.value;
     const ceiling = Number(scoreFilter.value);
     const ordered = [...items].sort((a, b) => {
       if (sort.value === "score-low") return a.score - b.score || a.name.localeCompare(b.name);
@@ -354,7 +367,9 @@
     let visible = 0;
     ordered.forEach((item) => {
       const haystack = `${item.name} ${item.prizes} ${item.flags}`.toLowerCase();
-      const show = (!term || haystack.includes(term)) && (!ceiling || item.score <= ceiling);
+      const show = (!term || haystack.includes(term))
+        && (!selectedType || item.categoryKey === selectedType)
+        && (!ceiling || item.score <= ceiling);
       item.row.hidden = !show;
       if (show) {
         visible += 1;
@@ -364,7 +379,7 @@
     count.textContent = `${visible} of ${items.length} sites shown`;
   }
 
-  [search, scoreFilter, sort].forEach((control) => control.addEventListener("input", applyControls));
+  [search, typeFilter, scoreFilter, sort].forEach((control) => control.addEventListener("input", applyControls));
   closeDialog.addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) dialog.close();
@@ -372,6 +387,7 @@
   // Browsers may restore form values when a local preview reloads. Always open
   // the tracker in its complete, editorial-rank state.
   search.value = "";
+  typeFilter.value = "";
   scoreFilter.value = "0";
   sort.value = "score-low";
   applyControls();

@@ -24,6 +24,7 @@ WINNERS_FILE = BASE / "data" / "winners.json"
 ACTIVE_SWEEPS_FILE = BASE / "data" / "active_sweepstakes.json"
 SITE_ORIGIN = "https://sweeps.safetrackerhub.com"
 SITE_TYPES = {
+    "limited": "A specific sweepstakes with a fixed closing date. It remains in the active inventory until it ends, then moves to the historical record.",
     "app": "An app that helps users discover, save, or manage third-party sweepstakes. It adds convenience, but also another account and data layer.",
     "daily": "An operator offering recurring daily-entry drawings, often with frequent promotional email. Repetition can create more chances, but not necessarily better odds.",
     "directory": "A listing service that sends visitors to sweepstakes run by outside sponsors. Quality, eligibility, privacy, and fulfillment vary by each linked promotion.",
@@ -37,6 +38,51 @@ SITE_TYPES = {
     "samples": "A product-sampling or freebie program where availability may depend on demographics, brand campaigns, or limited inventory rather than a conventional drawing.",
     "other": "A site or promotion model that does not fit the tracker’s main categories. Its individual profile explains the specific structure and concerns.",
 }
+
+
+def promotion_as_site(promotion):
+    """Normalize a fixed-term promotion into the same inventory shape as recurring sweepstakes."""
+    value = promotion.get("value") or 0
+    frequency = promotion.get("entry_frequency", "One time")
+    transparency = 3.5 if "verified listing" in promotion.get("source_name", "").lower() else 4.5
+    fulfillment = 4.5
+    entry_model = 3.0 if frequency == "One time" else 3.8
+    win_realism = 3.2 if value and value <= 5000 else 4.2
+    marketing = 4.2
+    score_inputs = {
+        "transparency": transparency,
+        "fulfillment": fulfillment,
+        "entry_model": entry_model,
+        "win_realism": win_realism,
+        "marketing": marketing,
+    }
+    score = round(transparency * .30 + fulfillment * .25 + entry_model * .20 + win_realism * .15 + marketing * .10, 1)
+    closes = date.fromisoformat(promotion["closes"])
+    return {
+        "name": promotion["title"], "score": score, "theme": "limited",
+        "prizes": promotion["prize"],
+        "draw": f"{frequency} · Ends {closes.strftime('%B %d, %Y')}",
+        "unsub": "This is a limited promotion. Use the organizer’s email opt-out link if entry creates marketing subscriptions.",
+        "redFlags": "Limited independent fulfillment history. Confirm the sponsor, eligibility, free entry method, and official rules before submitting personal information.",
+        "link": promotion["entry_url"], "scrape_url": promotion["source_url"], "slug": promotion["slug"],
+        "score_inputs": score_inputs, "eligibility": promotion["eligibility"],
+        "entry_requirements": f"{frequency} entry. Confirm all entry methods and limits in the official rules.",
+        "winner_evidence": "No completed fulfillment record is yet available for this open promotion.",
+        "marketing_intensity": "Not independently measured. Entry may enroll the visitor in sponsor marketing; review the form carefully.",
+        "data_practices": "Data is submitted to the sponsor or its promotion administrator under the rules and privacy terms linked from the entry flow.",
+        "prize_items": [{
+            "label": promotion["prize_details"], "login_required": "Confirm on the entry page.",
+            "last_won": "Promotion still open; no final winner recorded.",
+            "next_drawing": promotion.get("closes_time", promotion["closes"]),
+            "status": "Open, limited promotion",
+            "entry_url": promotion["entry_url"],
+            "last_verified": promotion["last_verified"],
+        }],
+        "profile_refresh": {"status": "manually_verified", "checked_at": promotion["last_verified"], "source_url": promotion["source_url"]},
+        "promotion_status": "open", "promotion_format": "limited", "closes": promotion["closes"],
+        "source_name": promotion["source_name"],
+        "logo_asset": promotion.get("logo_asset", ""),
+    }
 
 TYPE_PROFILE_DEFAULTS = {
     "directory": {
@@ -219,13 +265,15 @@ def split_prize_summary(value):
 
 def prize_items(site):
     """Turn known prize examples into displayable records with verified entry URLs."""
+    checked_at = site.get("profile_refresh", {}).get("checked_at", "")
+    checked_date = checked_at[:10] if checked_at else "the most recent profile check"
     if site.get("prize_items"):
         return [
             {
                 "login_required": site.get("entry_requirements", "Check the official entry page for account requirements."),
                 "last_won": "No prize-specific public winner date recorded.",
                 "next_drawing": "Not yet recorded; verify the current official rules.",
-                "status": "Known when last verified",
+                "status": f"Verified as listed on {checked_date}",
                 **item,
             }
             for item in site["prize_items"]
@@ -248,7 +296,7 @@ def prize_items(site):
             "login_required": "Check the official entry page; login requirements are not yet recorded.",
             "last_won": "No prize-specific public winner date recorded.",
             "next_drawing": "Not yet recorded; verify the current official rules.",
-            "status": "Known when last verified",
+            "status": f"Verified as listed on {checked_date}",
         }
         for item in items
     ] or [
@@ -260,6 +308,14 @@ def prize_items(site):
             "status": "No public inventory recorded",
         }
     ]
+
+
+def display_date(value):
+    """Preserve readable dates and trim timestamps only when they are ISO-formatted."""
+    text = str(value or "").strip()
+    if len(text) >= 10 and text[4:5] == "-" and text[7:8] == "-":
+        return text[:10]
+    return text
 
 
 def signal_summary(label, score):
@@ -287,6 +343,16 @@ def main():
     sites = data.get("sites", [])
     if not sites:
         raise ValueError("No sites found in data.json")
+    active_sweeps_data = json.loads(ACTIVE_SWEEPS_FILE.read_text(encoding="utf-8")) if ACTIVE_SWEEPS_FILE.exists() else {"promotions": []}
+    today = datetime.now(timezone.utc).date()
+    sites = [
+        *sites,
+        *[
+            promotion_as_site(promotion)
+            for promotion in active_sweeps_data.get("promotions", [])
+            if date.fromisoformat(promotion["closes"]) >= today
+        ],
+    ]
     monetization = json.loads(MONETIZATION_FILE.read_text(encoding="utf-8")) if MONETIZATION_FILE.exists() else {}
     affiliate_links = monetization.get("affiliate_links", {})
     sites.sort(key=lambda site: (float(site["score"]), site["name"].casefold()))
@@ -300,10 +366,10 @@ def main():
         site["outbound_url"] = site.get("affiliate_url") or site.get("link")
         site["is_affiliate"] = bool(site.get("affiliate_url"))
         site["placement_tier"] = site.get("placement_tier", "standard")
-        site["logo_asset"] = (
-            "assets/logos/mondosweeps.png"
-            if site["slug"] == "mondosweeps"
-            else ""
+        site["logo_asset"] = site.get("logo_asset") or (
+            "assets/logos/mondosweeps.png" if site["slug"] == "mondosweeps" else
+            "assets/logos/winstakes.png" if site["slug"] == "winstakes" else
+            ""
         )
         defaults = TYPE_PROFILE_DEFAULTS.get(site.get("theme", "other"), TYPE_PROFILE_DEFAULTS["other"])
         for key, value in defaults.items():
@@ -339,6 +405,7 @@ def main():
         loader=FileSystemLoader(str(TEMPLATE_DIR)),
         autoescape=select_autoescape(["html", "xml"])
     )
+    env.filters["display_date"] = display_date
 
     template = env.get_template("tracker.html.j2")
     review_template = env.get_template("review.html.j2")
@@ -511,6 +578,10 @@ def main():
         encoding="utf-8",
     )
     REVIEWS_DIR.mkdir(exist_ok=True)
+    current_review_slugs = {site["slug"] for site in sites}
+    for existing in REVIEWS_DIR.glob("*.html"):
+        if existing.stem not in current_review_slugs:
+            existing.unlink()
     for site in sites:
         review_html = review_template.render(
             site=site,

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-07-24T20:00:00-04:00",
+  "updated_at": "2026-07-25",
   "promotions": [
     {
       "slug": "logitech-mclaren-g-challenge-summer-giveaway",
@@ -20,7 +20,9 @@
       "rules_url": "https://www.sweepstakesradar.com/listing/logitech-mclaren-g-challenge-summer-giveaway",
       "source_url": "https://www.sweepstakesradar.com/listing/logitech-mclaren-g-challenge-summer-giveaway",
       "source_name": "Sweepstakes Radar verified listing",
-      "last_verified": "July 24, 2026"
+      "last_verified": "July 25, 2026",
+      "verification_note": "Checked July 25, 2026; an authoritative exact entry URL was not independently verified, so the dated third-party source remains visible.",
+      "logo_asset": "assets/logos/logitech-mclaren-g-challenge-summer-giveaway.png"
     },
     {
       "slug": "pepsi-captain-ds-family-cruise",
@@ -36,11 +38,12 @@
       "closes": "2026-07-27",
       "closes_time": "July 27, 2026",
       "winners": "1",
-      "entry_url": "https://www.sweepstakesradar.com/ending-soon",
-      "rules_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_name": "Sweepstakes Radar ending-soon inventory",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://www.captainds.com/pepsi-alaska/",
+      "rules_url": "https://bit.ly/FAMILYCRUISE",
+      "source_url": "https://www.captainds.com/pepsi-alaska/",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/pepsi-captain-ds-family-cruise.png"
     },
     {
       "slug": "gold-peak-golf-sweepstakes",
@@ -56,11 +59,12 @@
       "closes": "2026-07-27",
       "closes_time": "July 27, 2026",
       "winners": "5",
-      "entry_url": "https://www.sweepstakesradar.com/ending-soon",
-      "rules_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_name": "Sweepstakes Radar ending-soon inventory",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://www.coca-cola.com/us/en/offerings/gold-peak-tea/gold-peak-tea-sweepstakes",
+      "rules_url": "https://www.coca-cola.com/us/en/legal/coca-cola-meals-summer-sweeps",
+      "source_url": "https://www.coca-cola.com/us/en/offerings/gold-peak-tea/gold-peak-tea-sweepstakes",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/gold-peak-golf-sweepstakes.png"
     },
     {
       "slug": "mathnasium-little-learners-adventure",
@@ -76,11 +80,12 @@
       "closes": "2026-07-28",
       "closes_time": "July 28, 2026",
       "winners": "1",
-      "entry_url": "https://www.sweepstakesradar.com/listing/mathnasium-little-learners-adventure-sweepstakes-paw-patrol-movie-trip",
-      "rules_url": "https://www.sweepstakesradar.com/listing/mathnasium-little-learners-adventure-sweepstakes-paw-patrol-movie-trip",
-      "source_url": "https://www.sweepstakesradar.com/listing/mathnasium-little-learners-adventure-sweepstakes-paw-patrol-movie-trip",
-      "source_name": "Sweepstakes Radar verified listing",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://www.mathnasium.com/",
+      "rules_url": "https://www.mathnasium.com/",
+      "source_url": "https://www.mathnasium.com/",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/mathnasium-little-learners-adventure.png"
     },
     {
       "slug": "richell-july-pet-gate",
@@ -96,11 +101,12 @@
       "closes": "2026-07-28",
       "closes_time": "July 28, 2026 at 11:59 p.m. ET",
       "winners": "1",
-      "entry_url": "https://www.sweepstakesradar.com/listing/richell-july-sweepstakes-win-a-convertible-pet-gate",
-      "rules_url": "https://www.sweepstakesradar.com/listing/richell-july-sweepstakes-win-a-convertible-pet-gate",
-      "source_url": "https://www.sweepstakesradar.com/listing/richell-july-sweepstakes-win-a-convertible-pet-gate",
-      "source_name": "Sweepstakes Radar verified listing",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://www.richellusa.com/richell-july-sweepstakes-2026/",
+      "rules_url": "https://www.richellusa.com/richell-july-sweepstakes-2026/",
+      "source_url": "https://www.richellusa.com/richell-july-sweepstakes-2026/",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/richell-july-pet-gate.png"
     },
     {
       "slug": "texas-roadhouse-rib-fest-truck",
@@ -116,11 +122,12 @@
       "closes": "2026-07-28",
       "closes_time": "July 28, 2026",
       "winners": "1",
-      "entry_url": "https://www.sweepstakesradar.com/listing/texas-roadhouse-rib-fest-win-a-2026-dodge-ram",
-      "rules_url": "https://www.sweepstakesradar.com/listing/texas-roadhouse-rib-fest-win-a-2026-dodge-ram",
-      "source_url": "https://www.sweepstakesradar.com/listing/texas-roadhouse-rib-fest-win-a-2026-dodge-ram",
-      "source_name": "Sweepstakes Radar verified listing",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://form.texasroadhouse.com/national-dodge-ram-giveaway-2026",
+      "rules_url": "https://form.texasroadhouse.com/national-dodge-ram-giveaway-2026",
+      "source_url": "https://form.texasroadhouse.com/national-dodge-ram-giveaway-2026",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/texas-roadhouse-rib-fest-truck.png"
     },
     {
       "slug": "valvoline-for-the-driven",
@@ -140,7 +147,9 @@
       "rules_url": "https://www.sweepstakesradar.com/ending-soon",
       "source_url": "https://www.sweepstakesradar.com/ending-soon",
       "source_name": "Sweepstakes Radar ending-soon inventory",
-      "last_verified": "July 24, 2026"
+      "last_verified": "July 25, 2026",
+      "verification_note": "Checked July 25, 2026; an authoritative exact entry URL was not independently verified, so the dated third-party source remains visible.",
+      "logo_asset": "assets/logos/valvoline-for-the-driven.png"
     },
     {
       "slug": "pottery-barn-kids-back-to-school",
@@ -156,11 +165,12 @@
       "closes": "2026-07-29",
       "closes_time": "July 29, 2026",
       "winners": "1",
-      "entry_url": "https://www.sweepstakesradar.com/listing/pottery-barn-kids-back-to-school-sweepstakes-win-1500-gift-card",
-      "rules_url": "https://www.sweepstakesradar.com/listing/pottery-barn-kids-back-to-school-sweepstakes-win-1500-gift-card",
-      "source_url": "https://www.sweepstakesradar.com/listing/pottery-barn-kids-back-to-school-sweepstakes-win-1500-gift-card",
-      "source_name": "Sweepstakes Radar verified listing",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://www.potterybarnkids.com/pages/bts-sweepstakes/",
+      "rules_url": "https://www.potterybarnkids.com/customer-service/legal/exclusive-offers/",
+      "source_url": "https://www.potterybarnkids.com/pages/bts-sweepstakes/",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/pottery-barn-kids-back-to-school.png"
     },
     {
       "slug": "mattress-warehouse-live-nation-flyaway",
@@ -180,7 +190,9 @@
       "rules_url": "https://www.sweepstakesradar.com/ending-soon",
       "source_url": "https://www.sweepstakesradar.com/ending-soon",
       "source_name": "Sweepstakes Radar ending-soon inventory",
-      "last_verified": "July 24, 2026"
+      "last_verified": "July 25, 2026",
+      "verification_note": "Checked July 25, 2026; an authoritative exact entry URL was not independently verified, so the dated third-party source remains visible.",
+      "logo_asset": "assets/logos/mattress-warehouse-live-nation-flyaway.png"
     },
     {
       "slug": "dell-mclaren-vip-race-weekend",
@@ -200,7 +212,9 @@
       "rules_url": "https://www.sweepstakesradar.com/listing/dell-mclaren-vip-race-weekend-sweepstakes-hot-pick",
       "source_url": "https://www.sweepstakesradar.com/listing/dell-mclaren-vip-race-weekend-sweepstakes-hot-pick",
       "source_name": "Sweepstakes Radar verified listing",
-      "last_verified": "July 24, 2026"
+      "last_verified": "July 25, 2026",
+      "verification_note": "Checked July 25, 2026; an authoritative exact entry URL was not independently verified, so the dated third-party source remains visible.",
+      "logo_asset": "assets/logos/dell-mclaren-vip-race-weekend.png"
     },
     {
       "slug": "fabfitfun-summer-dream",
@@ -216,11 +230,12 @@
       "closes": "2026-07-29",
       "closes_time": "July 29, 2026",
       "winners": "131",
-      "entry_url": "https://www.sweepstakesradar.com/ending-soon",
-      "rules_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_name": "Sweepstakes Radar ending-soon inventory",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://fabfitfun.com/magazine/fabfitfun-summer-dream-sweepstakes/",
+      "rules_url": "https://fabfitfun.com/magazine/fabfitfun-summer-dream-sweepstakes/",
+      "source_url": "https://fabfitfun.com/magazine/fabfitfun-summer-dream-sweepstakes/",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/fabfitfun-summer-dream.png"
     },
     {
       "slug": "coca-cola-wanta-fanta-blizzcon",
@@ -236,11 +251,12 @@
       "closes": "2026-07-30",
       "closes_time": "July 30, 2026",
       "winners": "3",
-      "entry_url": "https://www.sweepstakesradar.com/ending-soon",
-      "rules_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_name": "Sweepstakes Radar ending-soon inventory",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://www.coca-cola.com/us/en/offerings/fanta/wanta-fanta",
+      "rules_url": "https://www.coca-cola.com/us/en/offerings/fanta/wanta-fanta",
+      "source_url": "https://www.coca-cola.com/us/en/offerings/fanta/wanta-fanta",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/coca-cola-wanta-fanta-blizzcon.png"
     },
     {
       "slug": "hallmark-gold-crown-cruise",
@@ -256,11 +272,12 @@
       "closes": "2026-07-31",
       "closes_time": "July 31, 2026",
       "winners": "1",
-      "entry_url": "https://www.sweepstakesradar.com/ending-soon",
-      "rules_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_name": "Sweepstakes Radar ending-soon inventory",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://www.hallmarkgoldcrownsweepstakes.com/",
+      "rules_url": "https://www.hallmarkgoldcrownsweepstakes.com/",
+      "source_url": "https://www.hallmarkgoldcrownsweepstakes.com/",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/hallmark-gold-crown-cruise.png"
     },
     {
       "slug": "bmw-summer-of-soccer",
@@ -276,11 +293,12 @@
       "closes": "2026-07-31",
       "closes_time": "July 31, 2026",
       "winners": "10",
-      "entry_url": "https://www.sweepstakesradar.com/ending-soon",
-      "rules_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_name": "Sweepstakes Radar ending-soon inventory",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://2026dempseytrackday.eventsbmw.com/#rsvp",
+      "rules_url": "https://2026dempseytrackday.eventsbmw.com/",
+      "source_url": "https://2026dempseytrackday.eventsbmw.com/#rsvp",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": ""
     },
     {
       "slug": "coors-light-soccer-cash",
@@ -296,11 +314,12 @@
       "closes": "2026-07-31",
       "closes_time": "July 31, 2026",
       "winners": "236",
-      "entry_url": "https://www.sweepstakesradar.com/ending-soon",
-      "rules_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_url": "https://www.sweepstakesradar.com/ending-soon",
-      "source_name": "Sweepstakes Radar ending-soon inventory",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://www.coorslight.com/en-US/soccer",
+      "rules_url": "https://www.promorules.com/MK262618",
+      "source_url": "https://www.coorslight.com/en-US/soccer",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/coors-light-soccer-cash.png"
     },
     {
       "slug": "kubota-hometown-proud",
@@ -316,11 +335,12 @@
       "closes": "2026-07-31",
       "closes_time": "July 31, 2026",
       "winners": "1",
-      "entry_url": "https://www.sweepstakesradar.com/listing/kubota-hometown-proud-win-give-sweepstakes",
-      "rules_url": "https://www.sweepstakesradar.com/listing/kubota-hometown-proud-win-give-sweepstakes",
-      "source_url": "https://www.sweepstakesradar.com/listing/kubota-hometown-proud-win-give-sweepstakes",
-      "source_name": "Sweepstakes Radar verified listing",
-      "last_verified": "July 24, 2026"
+      "entry_url": "https://www.kubotahometownproud.com/winandgivesweepstakes",
+      "rules_url": "https://www.kubotausa.com/docs/default-source/default-document-library/kubota-hometown-proud-sweepstakes-2026-official-rules.pdf",
+      "source_url": "https://www.kubotahometownproud.com/winandgivesweepstakes",
+      "source_name": "Official sponsor promotion page",
+      "last_verified": "July 25, 2026",
+      "logo_asset": "assets/logos/kubota-hometown-proud.png"
     }
   ]
 }

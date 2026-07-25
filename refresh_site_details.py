@@ -140,7 +140,7 @@ def main():
                 error=None,
             )
             changed_count += int(changed)
-            if site.get("slug") == "mondosweeps":
+            if site.get("slug") in {"mondosweeps", "winstakes"}:
                 refresh_mondosweeps(site, body, checked_at)
         except HTTPError as error:
             refresh.update(
