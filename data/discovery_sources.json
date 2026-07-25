@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "sweepstakes-radar",
+      "name": "Sweepstakes Radar ending soon",
+      "url": "https://www.sweepstakesradar.com/ending-soon",
+      "kind": "promotion_directory"
+    },
+    {
+      "id": "sweepstake-com",
+      "name": "Sweepstake.com newest listings",
+      "url": "https://www.sweepstake.com/directory/",
+      "kind": "promotion_directory"
+    },
+    {
+      "id": "sweeps-advantage",
+      "name": "Sweepstakes Advantage",
+      "url": "https://www.sweepsadvantage.com/",
+      "kind": "promotion_directory"
+    },
+    {
+      "id": "i-love-giveaways",
+      "name": "I Love Giveaways",
+      "url": "https://ilovegiveaways.com/",
+      "kind": "promotion_directory"
+    }
+  ]
+}

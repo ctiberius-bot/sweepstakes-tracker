@@ -1,0 +1,35 @@
+name: Daily sweepstakes discovery
+
+on:
+  schedule:
+    - cron: "30 9 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: daily-sweepstakes-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Discover and quarantine candidates
+        run: python discover_candidates.py
+      - name: Add review report to run summary
+        run: cat DISCOVERY_REVIEW.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit review queue only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/discovery_candidates.json DISCOVERY_REVIEW.md
+          git commit -m "Discovery queue: $(date -u +'%Y-%m-%d')" || exit 0
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

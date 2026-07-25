@@ -1,5 +1,25 @@
 # Automated profile updates and ScamFactor rescoring
 
+## Daily candidate discovery
+
+`.github/workflows/daily-discovery.yml` runs at 09:30 UTC and can also be
+started manually. It scans the public sources in
+`data/discovery_sources.json`, extracts possible recurring sweepstakes and
+limited promotions, removes known inventory URLs and tracking parameters,
+classifies each candidate provisionally, and merges it into
+`data/discovery_candidates.json`.
+
+The job deliberately stops before publication. It does not edit `data.json`,
+assign a ScamFactor score, rebuild the site, or deploy a candidate. Its only
+outputs are the quarantine queue and `DISCOVERY_REVIEW.md`, which is also shown
+in the GitHub Actions run summary.
+
+Before approval, a reviewer must verify the official entry page, official
+rules, sponsor, prize, eligibility, closing date or recurring schedule, free
+entry method, entry limits, marketing consent, and evidence for all five
+ScamFactor criteria. Change a candidate's `status` only after that review.
+Promotion into the public inventory remains a separate, intentional step.
+
 ## Daily profile refresh
 
 The tracker checks every public profile source daily at 12:45 UTC. The refresh
