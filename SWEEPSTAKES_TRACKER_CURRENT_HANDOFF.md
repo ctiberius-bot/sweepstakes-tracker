@@ -11,8 +11,8 @@ This is the current source-of-truth handoff for continuing the SafeTracker: Swee
 - Production branch: `main`
 - Hosting: Cloudflare Pages, triggered by pushes to GitHub
 - Local repository: `C:\Users\ctibe\Documents\Codex\2026-07-23\new\sweepstakes-tracker`
-- Release in this handoff: `v1.3`
-- Release date: July 25, 2026
+- Release in this handoff: `v1.4`
+- Release date: July 26, 2026
 
 ## Core product decision
 
@@ -82,9 +82,18 @@ The generator and validation currently pass:
 - The known-prizes layout uses available width without introducing horizontal scrolling.
 - Validation passes for all 45 merged inventory pages and all 16 active promotion pages/cards.
 
+## Version 1.4 traffic-growth release
+
+- Added 10 indexable safety, strategy, comparison, and site-specific editorial guides.
+- Added a homepage guide hub, contextual guide links on all 45 profiles, guide-to-profile links, and guide-to-guide navigation.
+- Added four high-intent pages covering PrizeGrab legitimacy, PCH winner-notification scams, Sweepstakes Advantage alternatives, and daily-entry site comparisons.
+- Added all guide routes to the sitemap and extended generated-site validation to cover guide output and internal links.
+- Added IndexNow ownership verification and a GitHub workflow that notifies participating search engines after every production push.
+- Google Search Console is connected, but its Performance report was still processing and showed no query data on July 26, 2026. Use impressions, clicks, CTR, queries, and pages once data appears to drive the next editorial cycle.
+
 ## Production authorization status
 
-The user explicitly authorized the v1.3 production release on July 25, 2026.
+The user explicitly authorized the v1.4 production release on July 26, 2026.
 
 ## Important repository state
 

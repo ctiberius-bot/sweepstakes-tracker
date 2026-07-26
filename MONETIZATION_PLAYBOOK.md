@@ -40,6 +40,8 @@ Events are emitted to `/api/events`, stored in the `safetracker-analytics` Cloud
 - Bing Webmaster Tools imported `https://safetrackerhub.com/` from Google Search Console.
 - The production sitemap was submitted separately to Bing and accepted for processing.
 - A 100-page Bing Site Scan for `https://sweeps.safetrackerhub.com/` was queued on July 25, 2026.
+- IndexNow notifications are automated through `.github/workflows/indexnow.yml`; the public ownership key is verified before every submission.
+- Google Search Console Performance was still processing with no query rows on July 26, 2026. Once data appears, prioritize non-branded queries and pages with impressions but weak CTR.
 - The sweepstakes-directory submission URLs in `DISCOVERY_REVIEW.md` are for submitting individual promotions, not for listing SafeTrackerHub itself. Do not submit the tracker as though it were a sweepstakes.
 
 ## Affiliate launch order

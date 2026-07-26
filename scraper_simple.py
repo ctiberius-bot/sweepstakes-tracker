@@ -599,7 +599,14 @@ def main():
             "premium-directory": ["legitimate-sweepstakes-sites", "daily-sweepstakes-entry-strategy", "dedicated-sweepstakes-email"],
             "local-directory": ["legitimate-sweepstakes-sites", "daily-sweepstakes-entry-strategy", "how-sweepstakes-winners-are-verified"],
         }
-        selected_slugs = theme_guide_slugs.get(
+        profile_guide_slugs = {
+            "prizegrab": ["is-prizegrab-legitimate", "daily-sweepstakes-entry-strategy", "dedicated-sweepstakes-email"],
+            "publishers-clearing-house-pch": ["pch-winner-notification-scam", "how-to-spot-sweepstakes-scams", "how-sweepstakes-winners-are-verified"],
+            "sweepstakes-advantage": ["sweepstakes-advantage-alternatives", "legitimate-sweepstakes-sites", "daily-sweepstakes-entry-strategy"],
+            "mondosweeps": ["best-daily-entry-sweepstakes-sites", "daily-sweepstakes-entry-strategy", "dedicated-sweepstakes-email"],
+            "winloot-globalizer": ["best-daily-entry-sweepstakes-sites", "how-to-spot-sweepstakes-scams", "dedicated-sweepstakes-email"],
+        }
+        selected_slugs = profile_guide_slugs.get(site["slug"]) or theme_guide_slugs.get(
             site.get("theme", "other"),
             ["how-to-spot-sweepstakes-scams", "legitimate-sweepstakes-sites", "how-sweepstakes-winners-are-verified"],
         )

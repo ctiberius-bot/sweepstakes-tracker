@@ -1,0 +1,26 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: indexnow-production
+  cancel-in-progress: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Allow production deployment to finish
+        run: sleep 120
+      - name: Verify public ownership key
+        run: |
+          test "$(curl --fail --silent --show-error https://sweeps.safetrackerhub.com/11c63a4b0413df328ccc7bd97d284321.txt)" = "11c63a4b0413df328ccc7bd97d284321"
+      - name: Notify participating search engines
+        run: python scripts/submit_indexnow.py
