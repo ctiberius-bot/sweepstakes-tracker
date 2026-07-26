@@ -15,12 +15,12 @@ export async function onRequestGet({ env }) {
   const [totals, events, operators, daily] = await env.ANALYTICS_DB.batch([
     env.ANALYTICS_DB.prepare(`
       SELECT
-        SUM(CASE WHEN received_at >= datetime('now', '-7 days') THEN 1 ELSE 0 END) AS events_7d,
-        SUM(CASE WHEN received_at >= datetime('now', '-30 days') THEN 1 ELSE 0 END) AS events_30d,
-        SUM(CASE WHEN event = 'page_view' AND received_at >= datetime('now', '-7 days') THEN 1 ELSE 0 END) AS page_views_7d,
-        SUM(CASE WHEN event = 'page_view' AND received_at >= datetime('now', '-30 days') THEN 1 ELSE 0 END) AS page_views_30d,
-        SUM(CASE WHEN event IN ('outbound_click', 'sweepstakes_entry_click') AND received_at >= datetime('now', '-7 days') THEN 1 ELSE 0 END) AS outbound_clicks_7d,
-        SUM(CASE WHEN event IN ('outbound_click', 'sweepstakes_entry_click') AND received_at >= datetime('now', '-30 days') THEN 1 ELSE 0 END) AS outbound_clicks_30d
+        COALESCE(SUM(CASE WHEN received_at >= datetime('now', '-7 days') THEN 1 ELSE 0 END), 0) AS events_7d,
+        COALESCE(SUM(CASE WHEN received_at >= datetime('now', '-30 days') THEN 1 ELSE 0 END), 0) AS events_30d,
+        COALESCE(SUM(CASE WHEN event = 'page_view' AND received_at >= datetime('now', '-7 days') THEN 1 ELSE 0 END), 0) AS page_views_7d,
+        COALESCE(SUM(CASE WHEN event = 'page_view' AND received_at >= datetime('now', '-30 days') THEN 1 ELSE 0 END), 0) AS page_views_30d,
+        COALESCE(SUM(CASE WHEN event IN ('outbound_click', 'sweepstakes_entry_click') AND received_at >= datetime('now', '-7 days') THEN 1 ELSE 0 END), 0) AS outbound_clicks_7d,
+        COALESCE(SUM(CASE WHEN event IN ('outbound_click', 'sweepstakes_entry_click') AND received_at >= datetime('now', '-30 days') THEN 1 ELSE 0 END), 0) AS outbound_clicks_30d
       FROM analytics_events
     `),
     env.ANALYTICS_DB.prepare(`
