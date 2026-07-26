@@ -634,6 +634,7 @@ body {
 .seo-guide-links { display: flex; flex-wrap: wrap; gap: .45rem 1rem; margin-top: .7rem; font-size: .75rem; }
 .seo-guide-links a { color: #0f766e; font-weight: 750; }
 .guide-hub { margin: 0 0 2rem; scroll-margin-top: 1rem; }
+.guide-hub-below-rankings { margin-top: 1.5rem; }
 .guide-hub-heading { display: grid; grid-template-columns: minmax(0, .85fr) minmax(18rem, 1.15fr); gap: 2rem; align-items: end; margin-bottom: 1rem; }
 .guide-hub-heading h2 { margin: .25rem 0 0; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.55rem, 3vw, 2.35rem); line-height: 1.05; }
 .guide-hub-heading > p { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.6; }
