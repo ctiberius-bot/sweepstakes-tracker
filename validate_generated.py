@@ -38,6 +38,9 @@ for site in sites:
         raise SystemExit(f"{path.name} is missing: {', '.join(missing)}")
     if site["name"] not in page:
         raise SystemExit(f"{path.name} does not contain its site name")
+    title_match = re.search(r"<title>(.*?)</title>", page, re.DOTALL)
+    if not title_match or len(title_match.group(1).strip()) > 70:
+        raise SystemExit(f"{path.name} has a missing or overlong title tag")
     if re.search(r"<dt>(?:Last verified|Profile refreshed)</dt><dd>[A-Za-z]+ \d{1,2}, \d{1,3}</dd>", page):
         raise SystemExit(f"{path.name} contains a truncated display date")
 
@@ -46,8 +49,15 @@ for promotion in active_promotions:
     page = path.read_text(encoding="utf-8")
     if promotion["title"] not in page or "ScamFactor" not in page:
         raise SystemExit(f"{path.name} is not a complete merged-inventory profile")
+    title_match = re.search(r"<title>(.*?)</title>", page, re.DOTALL)
+    if not title_match or len(title_match.group(1).strip()) > 70:
+        raise SystemExit(f"{path.name} has a missing or overlong title tag")
     if re.search(r"<dt>(?:Last verified|Profile refreshed)</dt><dd>[A-Za-z]+ \d{1,2}, \d{1,3}</dd>", page):
         raise SystemExit(f"{path.name} contains a truncated display date")
+
+for generated_html in BASE.rglob("*.html"):
+    if "/cdn-cgi/l/email-protection" in generated_html.read_text(encoding="utf-8"):
+        raise SystemExit(f"{generated_html.relative_to(BASE)} contains a Cloudflare email-protection crawl target")
 
 print(f"Validated {len(sites) + len(active_promotions)} merged inventory detail pages.")
 
