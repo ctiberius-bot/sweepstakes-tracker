@@ -10,6 +10,7 @@ BASE = Path(__file__).parent
 data = json.loads((BASE / "data.json").read_text(encoding="utf-8"))
 sites = data["sites"]
 promotions = json.loads((BASE / "data" / "active_sweepstakes.json").read_text(encoding="utf-8"))["promotions"]
+editorial_pages = json.loads((BASE / "data" / "editorial.json").read_text(encoding="utf-8"))["articles"]
 active_promotions = [promotion for promotion in promotions if date.fromisoformat(promotion["closes"]) >= date.today()]
 review_dir = BASE / "reviews"
 required_markers = (
@@ -71,3 +72,39 @@ inventory_page = (BASE / "active-sweepstakes.html").read_text(encoding="utf-8")
 if inventory_page.count('class="sweep-card"') != len(active):
     raise SystemExit("Active sweepstakes page does not contain one card per open promotion.")
 print(f"Validated {len(active)} active promotion pages and inventory cards.")
+
+guides_dir = BASE / "guides"
+expected_guides = {f"{article['slug']}.html" for article in editorial_pages}
+actual_guides = {path.name for path in guides_dir.glob("*.html")}
+if expected_guides != actual_guides:
+    raise SystemExit(
+        f"Guide file mismatch. Missing={sorted(expected_guides - actual_guides)} "
+        f"Extra={sorted(actual_guides - expected_guides)}"
+    )
+site_slugs = {site["slug"] for site in sites}
+for article in editorial_pages:
+    page = (guides_dir / f"{article['slug']}.html").read_text(encoding="utf-8")
+    required = (article["title"], article["meta_description"], "Quick check", "Related site profiles")
+    missing = [marker for marker in required if marker not in page]
+    if missing:
+        raise SystemExit(f"{article['slug']}.html is missing: {', '.join(missing)}")
+    invalid_profiles = [
+        profile["slug"] for profile in article["related_profiles"]
+        if profile["slug"] not in site_slugs
+    ]
+    if invalid_profiles:
+        raise SystemExit(f"{article['slug']} contains invalid related profiles: {invalid_profiles}")
+
+for profile_name in expected:
+    page = (review_dir / profile_name).read_text(encoding="utf-8")
+    if "Guides related to this site" not in page:
+        raise SystemExit(f"{profile_name} is missing contextual guide links")
+
+sitemap = (BASE / "sitemap.xml").read_text(encoding="utf-8")
+missing_sitemap_guides = [
+    article["slug"] for article in editorial_pages
+    if f"https://sweeps.safetrackerhub.com/guides/{article['slug']}" not in sitemap
+]
+if missing_sitemap_guides:
+    raise SystemExit(f"Sitemap is missing guides: {missing_sitemap_guides}")
+print(f"Validated {len(editorial_pages)} editorial guides and contextual links on {len(expected)} profiles.")

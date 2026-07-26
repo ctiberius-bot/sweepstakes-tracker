@@ -113,9 +113,30 @@
           <a href="methodology.html">Read our complete scoring methodology →</a>
           <a href="site-types.html">Understand each type of sweepstakes site →</a>
           <a href="winners.html">Search reported sweepstakes winners →</a>
+          <a href="#guides">Browse practical safety guides →</a>
         </div>
       </div>
     </details>
+
+    <section id="guides" class="guide-hub" aria-labelledby="guide-hub-heading">
+      <div class="guide-hub-heading">
+        <div>
+          <p class="section-kicker">Enter smarter</p>
+          <h2 id="guide-hub-heading">Sweepstakes safety and strategy guides</h2>
+        </div>
+        <p>Practical, plain-language help for checking a prize notice, protecting your inbox, understanding taxes, and building a manageable entry routine.</p>
+      </div>
+      <div class="guide-card-grid">
+        {% for article in editorial_pages %}
+        <a class="guide-card" href="guides/{{ article.slug }}.html">
+          <span>{{ article.eyebrow }}</span>
+          <strong>{{ article.title }}</strong>
+          <p>{{ article.meta_description }}</p>
+          <em>Read guide →</em>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
 
     <!-- Top CTAs -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">

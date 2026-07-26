@@ -1,0 +1,286 @@
+{
+  "articles": [
+    {
+      "slug": "how-to-spot-sweepstakes-scams",
+      "title": "How to Spot a Sweepstakes Scam",
+      "meta_description": "Use this practical checklist to identify fake prize notices, impersonation scams, advance-fee demands, and risky sweepstakes entry forms.",
+      "eyebrow": "Scam prevention guide",
+      "intro": "A real sweepstakes can still generate marketing, but it will not require you to pay a fee to claim a prize. The fastest way to evaluate a message is to slow down, identify the actual sponsor, and verify the promotion outside the message that contacted you.",
+      "quick_check": [
+        "Never pay taxes, shipping, processing, insurance, or activation fees to claim a prize.",
+        "Do not trust caller ID, a social-media profile, or a logo as proof of identity.",
+        "Find the sponsor’s official website independently and use its published contact information.",
+        "Do not provide bank credentials, gift-card numbers, crypto, or remote access to your device."
+      ],
+      "sections": [
+        {
+          "heading": "The clearest warning signs",
+          "paragraphs": [
+            "Advance-fee demands are the strongest signal. Scammers often describe the payment as taxes, customs, delivery, insurance, or a refundable deposit. Legitimate sponsors do not collect prize taxes by gift card, wire transfer, cryptocurrency, or payment app.",
+            "Urgency is another common tactic. A caller may claim the prize expires today or instruct you to keep the win secret. That pressure is designed to prevent independent verification."
+          ],
+          "bullets": [
+            "A message says you won a promotion you do not remember entering.",
+            "The sender uses a free email account or a look-alike domain.",
+            "You must pay, purchase, or complete offers before receiving the prize.",
+            "The sender requests sensitive information before proving the promotion exists.",
+            "The message contains no official rules, sponsor name, or verifiable drawing details."
+          ]
+        },
+        {
+          "heading": "Verify the win independently",
+          "paragraphs": [
+            "Do not use the phone number or link in the winning message as your only verification source. Search for the sponsor’s official website, locate the promotion’s rules or winners page, and contact the sponsor through information published there.",
+            "Compare the promotion name, entry period, drawing date, eligibility, and administrator with the message. A real brand can be impersonated, so brand recognition alone is not enough."
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "What a legitimate winner may be asked to provide",
+          "paragraphs": [
+            "A verified winner may need to confirm identity, eligibility, age, address, and tax information. Higher-value prizes often require an affidavit or tax form. The sequence matters: first verify the promotion and administrator, then provide only the information required through a confirmed channel.",
+            "If anything does not match the official rules, stop and contact the sponsor directly."
+          ],
+          "bullets": []
+        }
+      ],
+      "related_profiles": [
+        {"slug": "publishers-clearing-house-pch", "label": "Publishers Clearing House profile"},
+        {"slug": "sweepstakes-advantage", "label": "Sweepstakes Advantage profile"},
+        {"slug": "prizegrab", "label": "PrizeGrab profile"}
+      ]
+    },
+    {
+      "slug": "legitimate-sweepstakes-sites",
+      "title": "How to Find Legitimate Sweepstakes Sites",
+      "meta_description": "Learn how to compare sweepstakes sites using official rules, sponsor transparency, winner evidence, entry requirements, and privacy practices.",
+      "eyebrow": "Site evaluation guide",
+      "intro": "A legitimate-looking website is not enough. The best sweepstakes sites make it possible to identify who operates the service, understand how entries work, review official rules, and verify that real promotions and winners exist.",
+      "quick_check": [
+        "Confirm the operator and sponsor are clearly identified.",
+        "Read official rules before entering, especially eligibility and entry limits.",
+        "Look for dated winner evidence or a credible fulfillment history.",
+        "Understand whether the site runs prizes itself or links to outside sponsors."
+      ],
+      "sections": [
+        {
+          "heading": "Start with the site’s role",
+          "paragraphs": [
+            "Some sites operate their own recurring drawings. Others are directories that link to promotions run by unrelated sponsors. Rewards platforms may combine sweepstakes with surveys, shopping, games, or paid offers. These models create different risks and should not be evaluated as though they are identical.",
+            "A directory can be useful while still sending you to outside forms with separate privacy policies and eligibility rules. Always evaluate the final sponsor and entry page."
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "Signals of a stronger operation",
+          "paragraphs": [
+            "Look for a stable company identity, accessible terms, privacy information, official rules, realistic prize descriptions, and clear contact channels. Dated winner announcements are more useful than vague claims that thousands of people have won.",
+            "A long operating history can reduce uncertainty, but it does not make every promotion safe. Familiar brands are frequently impersonated."
+          ],
+          "bullets": [
+            "Rules name the sponsor, administrator, entry period, eligibility, prize, and drawing process.",
+            "Entry is free and does not require payment to improve the stated odds.",
+            "The site explains account requirements and marketing consent.",
+            "Unsubscribe and privacy-request methods are available.",
+            "Prize and winner claims can be checked against dated public information."
+          ]
+        },
+        {
+          "heading": "Compare friction as well as legitimacy",
+          "paragraphs": [
+            "A lawful promotion may still demand substantial time, send frequent email, share information with partners, or offer very long odds. SafeTracker’s ScamFactor score compares those consumer-friction signals; it is not a guarantee that a visitor will win.",
+            "Use the score alongside the profile’s source freshness, winner evidence, entry requirements, and data-practice notes."
+          ],
+          "bullets": []
+        }
+      ],
+      "related_profiles": [
+        {"slug": "mondosweeps", "label": "MondoSweeps profile"},
+        {"slug": "sweepstakes-advantage", "label": "Sweepstakes Advantage profile"},
+        {"slug": "online-sweepstakes-com", "label": "Online-Sweepstakes.com profile"}
+      ]
+    },
+    {
+      "slug": "sweepstakes-taxes",
+      "title": "Sweepstakes Taxes: What Winners Should Know",
+      "meta_description": "A plain-language overview of U.S. sweepstakes prize taxes, prize valuation, records, forms, and questions to ask before accepting a prize.",
+      "eyebrow": "Winner planning guide",
+      "intro": "In the United States, sweepstakes prizes are generally taxable income. The sponsor may report the prize value, but the winner is responsible for understanding the tax impact and keeping records. This guide is educational and is not individualized tax advice.",
+      "quick_check": [
+        "Ask for the prize’s stated fair market value before accepting.",
+        "Save the official rules, award notice, tax forms, and proof of actual value.",
+        "Budget for possible federal, state, and local tax obligations.",
+        "Consult a qualified tax professional for high-value, vehicle, travel, or unusual prizes."
+      ],
+      "sections": [
+        {
+          "heading": "Prizes are generally taxable",
+          "paragraphs": [
+            "Cash and noncash prizes can create taxable income. A sponsor may request tax information and issue a reporting form when required. Receiving no form does not necessarily eliminate the winner’s reporting obligation.",
+            "The tax impact depends on the winner’s circumstances and jurisdiction. High-value prizes can create a meaningful bill even when the prize is not cash."
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "Pay attention to prize valuation",
+          "paragraphs": [
+            "Official rules often list an approximate retail value. The actual fair market value may differ, particularly for travel packages, vehicles, electronics, or products that sell below list price. Keep evidence of the value available when the prize was received and discuss discrepancies with a tax professional.",
+            "Travel prizes may include components that are difficult to use or do not cover all expenses. Read the rules for airfare limits, hotel dates, ground transportation, meals, taxes, and guest requirements before accepting."
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "Taxes are different from a scammer’s fee",
+          "paragraphs": [
+            "A legitimate tax obligation is handled through normal tax reporting—not by sending gift cards, crypto, a wire transfer, or an upfront payment to an unknown caller. A demand to prepay taxes to release a prize is a major scam signal.",
+            "Verify the promotion and sponsor independently before sharing a Social Security number or completing tax paperwork."
+          ],
+          "bullets": []
+        }
+      ],
+      "related_profiles": [
+        {"slug": "publishers-clearing-house-pch", "label": "Publishers Clearing House profile"},
+        {"slug": "selectrewards", "label": "SelectRewards profile"},
+        {"slug": "winstakes", "label": "Winstakes profile"}
+      ]
+    },
+    {
+      "slug": "dedicated-sweepstakes-email",
+      "title": "How to Set Up a Dedicated Sweepstakes Email",
+      "meta_description": "Create a separate sweepstakes inbox, reduce marketing clutter, protect your main email, and organize entry confirmations and winner notices.",
+      "eyebrow": "Privacy and organization guide",
+      "intro": "A dedicated sweepstakes email separates entry confirmations and promotional messages from banking, work, health, and personal accounts. It also makes unusual winner notices easier to evaluate without exposing your most important inbox.",
+      "quick_check": [
+        "Create a new address used only for sweepstakes and samples.",
+        "Use a unique password and enable multifactor authentication.",
+        "Never reuse the password from your primary email.",
+        "Create folders for confirmations, official rules, and possible winner notices."
+      ],
+      "sections": [
+        {
+          "heading": "Choose separation, not anonymity",
+          "paragraphs": [
+            "Use accurate eligibility information when a promotion requires it, but keep the inbox itself separate from sensitive accounts. A dedicated address reduces cross-account exposure and gives you a clear place to monitor promotion-related messages.",
+            "Avoid an address that looks disposable if a sponsor’s rules prohibit temporary accounts. A normal free mailbox or an alias on a domain you control is usually easier to manage."
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "Organize the inbox",
+          "paragraphs": [
+            "Create labels for entry confirmations, daily-entry reminders, official rules, prize claims, and expired promotions. Filters can group known senders, but do not automatically trust a message merely because it lands in a familiar folder.",
+            "Review spam periodically because legitimate automated notices can be filtered. At the same time, treat unexpected winner messages as unverified until you confirm them independently."
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "Control marketing over time",
+          "paragraphs": [
+            "Unsubscribe from promotions you no longer enter and use privacy-request tools when appropriate. Do not click an unsubscribe link in an obviously fraudulent message; blocking or reporting it is safer.",
+            "If an operator requires extensive data sharing or makes consent difficult to understand, reconsider whether the entry is worth the exposure."
+          ],
+          "bullets": []
+        }
+      ],
+      "related_profiles": [
+        {"slug": "mondosweeps", "label": "MondoSweeps profile"},
+        {"slug": "prizegrab", "label": "PrizeGrab profile"},
+        {"slug": "winloot-globalizer", "label": "Winloot profile"}
+      ]
+    },
+    {
+      "slug": "how-sweepstakes-winners-are-verified",
+      "title": "How Sweepstakes Winners Are Verified",
+      "meta_description": "Understand winner selection, notification, eligibility checks, affidavits, tax forms, deadlines, and safe prize-claim verification.",
+      "eyebrow": "Prize-claim guide",
+      "intro": "Winning is usually a process, not a single congratulatory message. Sponsors may need to confirm the selected entrant’s identity, eligibility, compliance with the rules, and tax information before formally awarding a prize.",
+      "quick_check": [
+        "Match the notice to a promotion you entered and its official rules.",
+        "Verify the sender using contact information published by the sponsor.",
+        "Check the response deadline and required documents carefully.",
+        "Never pay a fee or purchase gift cards to complete verification."
+      ],
+      "sections": [
+        {
+          "heading": "Selection is followed by eligibility review",
+          "paragraphs": [
+            "A potential winner may be selected randomly or according to the judging method described in the rules. The sponsor or administrator then confirms that the entry was valid and that the person meets age, location, timing, and other eligibility requirements.",
+            "If the selected entrant cannot be reached, misses a deadline, or is ineligible, the rules may allow an alternate winner to be selected."
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "Common verification documents",
+          "paragraphs": [
+            "Depending on the prize, a winner may receive an affidavit of eligibility, liability or publicity release, tax form, or identity-verification request. These documents are not automatically suspicious, but they should arrive through a channel you have independently confirmed.",
+            "Read the entire document and compare it with the official rules before signing. Ask the administrator to explain unfamiliar terms."
+          ],
+          "bullets": [
+            "Full legal name, age, and mailing address.",
+            "Proof of eligibility or identity.",
+            "A signed affidavit or release.",
+            "Taxpayer information for reportable prizes.",
+            "Travel-companion forms for trip prizes."
+          ]
+        },
+        {
+          "heading": "Confirm the award before sharing sensitive data",
+          "paragraphs": [
+            "Search the sponsor’s official website independently and contact the listed administrator. Do not rely solely on a reply address, direct message, or phone number supplied in the notification.",
+            "Keep copies of the rules, notice, correspondence, signed forms, and delivery records. These records help with disputes, valuation, and taxes."
+          ],
+          "bullets": []
+        }
+      ],
+      "related_profiles": [
+        {"slug": "publishers-clearing-house-pch", "label": "Publishers Clearing House profile"},
+        {"slug": "winstakes", "label": "Winstakes profile"},
+        {"slug": "sweepstoday", "label": "SweepsToday profile"}
+      ]
+    },
+    {
+      "slug": "daily-sweepstakes-entry-strategy",
+      "title": "A Practical Daily Sweepstakes Entry Strategy",
+      "meta_description": "Build a manageable daily sweepstakes routine, prioritize worthwhile promotions, track deadlines, and avoid wasting time or exposing unnecessary data.",
+      "eyebrow": "Entry strategy guide",
+      "intro": "More entries can improve your chance only when the rules allow repeat entry, but volume alone is not a strategy. A sustainable routine prioritizes promotions you actually want, limits data exposure, and avoids spending more time than the prize is worth.",
+      "quick_check": [
+        "Read the rules once and record the closing date and entry limit.",
+        "Prioritize prizes you would accept and can realistically use.",
+        "Use bookmarks or a tracker instead of repeatedly searching.",
+        "Stop when entry friction, marketing, or required data outweighs the value."
+      ],
+      "sections": [
+        {
+          "heading": "Build a small, repeatable list",
+          "paragraphs": [
+            "Choose a manageable group of daily-entry promotions and keep their official links together. Confirm whether the limit resets by calendar day, every 24 hours, per household, or under another rule.",
+            "Remove closed promotions promptly and do not continue through copied or unofficial entry pages after the advertised deadline."
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "Prioritize quality over raw volume",
+          "paragraphs": [
+            "Consider the prize’s usefulness, eligibility, number of available prizes, entry frequency, sponsor reputation, and amount of information requested. A smaller regional or niche promotion may be more relevant than a national jackpot, although exact odds are often unavailable.",
+            "Do not buy products or complete paid offers unless you independently want them. A legitimate sweepstakes must provide the free entry method described in its rules."
+          ],
+          "bullets": []
+        },
+        {
+          "heading": "Track without creating new risk",
+          "paragraphs": [
+            "Use a dedicated email address and a simple calendar, spreadsheet, or bookmark folder. Avoid browser extensions or automation tools that require broad access to personal data unless you understand and trust them.",
+            "Save confirmation numbers only when useful, and never store passwords or sensitive tax information in an entry tracker."
+          ],
+          "bullets": []
+        }
+      ],
+      "related_profiles": [
+        {"slug": "mondosweeps", "label": "MondoSweeps profile"},
+        {"slug": "prizegrab", "label": "PrizeGrab profile"},
+        {"slug": "winloot-globalizer", "label": "Winloot profile"}
+      ]
+    }
+  ]
+}

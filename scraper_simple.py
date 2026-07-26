@@ -22,6 +22,8 @@ REVIEWS_DIR = BASE / "reviews"
 SWEEPSTAKES_DIR = BASE / "sweepstakes"
 WINNERS_FILE = BASE / "data" / "winners.json"
 ACTIVE_SWEEPS_FILE = BASE / "data" / "active_sweepstakes.json"
+EDITORIAL_FILE = BASE / "data" / "editorial.json"
+GUIDES_DIR = BASE / "guides"
 SITE_ORIGIN = "https://sweeps.safetrackerhub.com"
 SITE_TYPES = {
     "limited": "A specific sweepstakes with a fixed closing date. It remains in the active inventory until it ends, then moves to the historical record.",
@@ -416,9 +418,13 @@ def main():
     sweepstakes_detail_template = env.get_template("sweepstakes-detail.html.j2")
     methodology_template = env.get_template("methodology.html.j2")
     contact_template = env.get_template("contact.html.j2")
+    editorial_template = env.get_template("editorial.html.j2")
+    editorial_data = json.loads(EDITORIAL_FILE.read_text(encoding="utf-8"))
+    editorial_pages = editorial_data.get("articles", [])
 
     html = template.render(
         sites=sites,
+        editorial_pages=editorial_pages,
         last_updated=last_updated_str,
         last_updated_iso=now.date().isoformat(),
     )
@@ -583,13 +589,45 @@ def main():
         if existing.stem not in current_review_slugs:
             existing.unlink()
     for site in sites:
+        theme_guide_slugs = {
+            "limited": ["daily-sweepstakes-entry-strategy", "legitimate-sweepstakes-sites", "sweepstakes-taxes"],
+            "daily": ["daily-sweepstakes-entry-strategy", "dedicated-sweepstakes-email", "how-sweepstakes-winners-are-verified"],
+            "globalizer": ["dedicated-sweepstakes-email", "how-to-spot-sweepstakes-scams", "how-sweepstakes-winners-are-verified"],
+            "leadgen": ["how-to-spot-sweepstakes-scams", "dedicated-sweepstakes-email", "legitimate-sweepstakes-sites"],
+            "rewards": ["dedicated-sweepstakes-email", "legitimate-sweepstakes-sites", "sweepstakes-taxes"],
+            "directory": ["legitimate-sweepstakes-sites", "how-to-spot-sweepstakes-scams", "daily-sweepstakes-entry-strategy"],
+            "premium-directory": ["legitimate-sweepstakes-sites", "daily-sweepstakes-entry-strategy", "dedicated-sweepstakes-email"],
+            "local-directory": ["legitimate-sweepstakes-sites", "daily-sweepstakes-entry-strategy", "how-sweepstakes-winners-are-verified"],
+        }
+        selected_slugs = theme_guide_slugs.get(
+            site.get("theme", "other"),
+            ["how-to-spot-sweepstakes-scams", "legitimate-sweepstakes-sites", "how-sweepstakes-winners-are-verified"],
+        )
+        related_guides = [article for article in editorial_pages if article["slug"] in selected_slugs]
         review_html = review_template.render(
             site=site,
+            related_guides=related_guides,
             last_updated=last_updated_str,
             last_updated_iso=now.date().isoformat(),
         )
         (REVIEWS_DIR / f"{site['slug']}.html").write_text(
             clean_generated_html(review_html),
+            encoding="utf-8",
+        )
+    GUIDES_DIR.mkdir(exist_ok=True)
+    current_guide_slugs = {article["slug"] for article in editorial_pages}
+    for existing in GUIDES_DIR.glob("*.html"):
+        if existing.stem not in current_guide_slugs:
+            existing.unlink()
+    for article in editorial_pages:
+        article_html = editorial_template.render(
+            article=article,
+            editorial_pages=editorial_pages,
+            last_updated=last_updated_str,
+            last_updated_iso=now.date().isoformat(),
+        )
+        (GUIDES_DIR / f"{article['slug']}.html").write_text(
+            clean_generated_html(article_html),
             encoding="utf-8",
         )
     sitemap_urls = [
@@ -601,6 +639,7 @@ def main():
         f"{SITE_ORIGIN}/methodology",
         f"{SITE_ORIGIN}/contact",
         f"{SITE_ORIGIN}/sponsorships",
+        *[f"{SITE_ORIGIN}/guides/{article['slug']}" for article in editorial_pages],
         *[f"{SITE_ORIGIN}/reviews/{site['slug']}" for site in sites],
         *[f"{SITE_ORIGIN}/sweepstakes/{promotion['slug']}" for promotion in active_promotions],
     ]

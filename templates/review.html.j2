@@ -175,6 +175,16 @@
         </section>
 
         <section class="review-section">
+          <p class="section-kicker">Practical next steps</p>
+          <h2>Guides related to this site</h2>
+          <div class="profile-guide-links">
+            {% for guide in related_guides %}
+            <a href="../guides/{{ guide.slug }}.html"><strong>{{ guide.title }}</strong><span>{{ guide.meta_description }}</span></a>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section class="review-section">
           <h2>Source and verification links</h2>
           <div class="source-list">
             {% if site.outbound_url and site.outbound_url != "#" %}<a href="{{ site.outbound_url }}" target="_blank" rel="noopener{% if site.is_affiliate %} sponsored{% endif %}" data-track="outbound_click" data-site="{{ site.slug }}" data-placement="sources">Official website</a>{% endif %}
