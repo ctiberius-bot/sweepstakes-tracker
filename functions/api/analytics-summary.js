@@ -12,7 +12,7 @@ export async function onRequestGet({ env }) {
     });
   }
 
-  const [totals, events, operators, daily] = await env.ANALYTICS_DB.batch([
+  const [totals, events, operators, daily, campaigns] = await env.ANALYTICS_DB.batch([
     env.ANALYTICS_DB.prepare(`
       SELECT
         COALESCE(SUM(CASE WHEN received_at >= datetime('now', '-7 days') THEN 1 ELSE 0 END), 0) AS events_7d,
@@ -54,6 +54,18 @@ export async function onRequestGet({ env }) {
       GROUP BY date(received_at)
       ORDER BY date(received_at)
     `),
+    env.ANALYTICS_DB.prepare(`
+      SELECT placement AS campaign,
+        site AS medium,
+        COUNT(*) AS page_views_30d
+      FROM analytics_events
+      WHERE event = 'page_view'
+        AND received_at >= datetime('now', '-30 days')
+        AND placement != ''
+      GROUP BY placement, site
+      ORDER BY page_views_30d DESC, placement
+      LIMIT 50
+    `),
   ]);
 
   return new Response(JSON.stringify({
@@ -63,5 +75,6 @@ export async function onRequestGet({ env }) {
     events: events.results,
     operators: operators.results,
     daily: daily.results,
+    campaigns: campaigns.results,
   }), { headers: HEADERS });
 }

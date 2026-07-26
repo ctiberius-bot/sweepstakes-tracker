@@ -94,7 +94,14 @@ if expected_guides != actual_guides:
 site_slugs = {site["slug"] for site in sites}
 for article in editorial_pages:
     page = (guides_dir / f"{article['slug']}.html").read_text(encoding="utf-8")
-    required = (article["title"], article["meta_description"], "Quick check", "Related site profiles")
+    required = (
+        article["title"],
+        article["meta_description"],
+        "Quick check",
+        "Related site profiles",
+        "SafeTracker Editorial Team",
+        "How this research is produced",
+    )
     missing = [marker for marker in required if marker not in page]
     if missing:
         raise SystemExit(f"{article['slug']}.html is missing: {', '.join(missing)}")
@@ -104,6 +111,9 @@ for article in editorial_pages:
     ]
     if invalid_profiles:
         raise SystemExit(f"{article['slug']} contains invalid related profiles: {invalid_profiles}")
+    title_match = re.search(r"<title>(.*?)</title>", page, re.DOTALL)
+    if not title_match or len(title_match.group(1).strip()) > 70:
+        raise SystemExit(f"{article['slug']}.html has a missing or overlong title tag")
 
 for profile_name in expected:
     page = (review_dir / profile_name).read_text(encoding="utf-8")
@@ -117,4 +127,22 @@ missing_sitemap_guides = [
 ]
 if missing_sitemap_guides:
     raise SystemExit(f"Sitemap is missing guides: {missing_sitemap_guides}")
+flagship_slugs = {
+    "best-sweepstakes-sites-with-winner-evidence",
+    "2026-sweepstakes-scam-warning-signs-report",
+    "pch-vs-sweepstakes-advantage-vs-prizegrab",
+    "2026-sweepstakes-safety-report",
+}
+if not flagship_slugs.issubset({article["slug"] for article in editorial_pages}):
+    raise SystemExit("One or more flagship traffic guides are missing.")
+about_page = (BASE / "about.html").read_text(encoding="utf-8")
+for marker in ("About SafeTracker", "Automation and AI assistance", "Sponsorships and affiliate links", "Corrections and accountability"):
+    if marker not in about_page:
+        raise SystemExit(f"about.html is missing: {marker}")
+if "https://sweeps.safetrackerhub.com/about" not in sitemap:
+    raise SystemExit("Sitemap is missing the About page.")
+report_page = (guides_dir / "2026-sweepstakes-safety-report.html").read_text(encoding="utf-8")
+for marker in ("45", "4.1", "29", "16", "assets/social/2026-sweepstakes-safety-report.png"):
+    if marker not in report_page:
+        raise SystemExit(f"Safety report is missing: {marker}")
 print(f"Validated {len(editorial_pages)} editorial guides and contextual links on {len(expected)} profiles.")

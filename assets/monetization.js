@@ -26,5 +26,12 @@
     const form = event.target.closest("[data-track-form]");
     if (form) track(form.dataset.trackForm, { placement: form.getAttribute("action") });
   });
-  track("page_view");
+  const campaign = new URLSearchParams(location.search);
+  const source = campaign.get("utm_source") || "";
+  const medium = campaign.get("utm_medium") || "";
+  const name = campaign.get("utm_campaign") || "";
+  track("page_view", {
+    site: medium,
+    placement: [source, name].filter(Boolean).join(":"),
+  });
 })();

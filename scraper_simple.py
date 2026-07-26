@@ -418,6 +418,7 @@ def main():
     sweepstakes_detail_template = env.get_template("sweepstakes-detail.html.j2")
     methodology_template = env.get_template("methodology.html.j2")
     contact_template = env.get_template("contact.html.j2")
+    about_template = env.get_template("about.html.j2")
     editorial_template = env.get_template("editorial.html.j2")
     editorial_data = json.loads(EDITORIAL_FILE.read_text(encoding="utf-8"))
     editorial_pages = editorial_data.get("articles", [])
@@ -583,6 +584,14 @@ def main():
         clean_generated_html(contact_html),
         encoding="utf-8",
     )
+    about_html = about_template.render(
+        last_updated=last_updated_str,
+        last_updated_iso=now.date().isoformat(),
+    )
+    (BASE / "about.html").write_text(
+        clean_generated_html(about_html),
+        encoding="utf-8",
+    )
     REVIEWS_DIR.mkdir(exist_ok=True)
     current_review_slugs = {site["slug"] for site in sites}
     for existing in REVIEWS_DIR.glob("*.html"):
@@ -610,6 +619,7 @@ def main():
             site.get("theme", "other"),
             ["how-to-spot-sweepstakes-scams", "legitimate-sweepstakes-sites", "how-sweepstakes-winners-are-verified"],
         )
+        selected_slugs = [*selected_slugs, "2026-sweepstakes-safety-report"]
         related_guides = [article for article in editorial_pages if article["slug"] in selected_slugs]
         review_html = review_template.render(
             site=site,
@@ -645,6 +655,7 @@ def main():
         f"{SITE_ORIGIN}/site-types",
         f"{SITE_ORIGIN}/methodology",
         f"{SITE_ORIGIN}/contact",
+        f"{SITE_ORIGIN}/about",
         f"{SITE_ORIGIN}/sponsorships",
         *[f"{SITE_ORIGIN}/guides/{article['slug']}" for article in editorial_pages],
         *[f"{SITE_ORIGIN}/reviews/{site['slug']}" for site in sites],

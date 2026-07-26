@@ -230,7 +230,7 @@
         <p>Practical, plain-language help for checking a prize notice, protecting your inbox, understanding taxes, and building a manageable entry routine.</p>
       </div>
       <div class="guide-card-grid">
-        {% for article in editorial_pages %}
+        {% for article in editorial_pages if article.featured|default(false) %}
         <a class="guide-card" href="guides/{{ article.slug }}.html">
           <span>{{ article.eyebrow }}</span>
           <strong>{{ article.title }}</strong>
@@ -243,10 +243,11 @@
 
     <footer class="text-center text-xs text-slate-500 py-6 border-t">
       Data last refreshed {{ last_updated }}. Always verify official rules on each site.<br>
+      <a href="about.html">About and editorial policy</a> · <a href="methodology.html">Methodology</a> · <a href="contact.html">Corrections</a><br>
       Some links may be affiliate links, and featured visibility may be purchased. Paid placements are labeled; ScamFactor scores remain visible. · SafeTracker: Sweepstakes v1.4
     </footer>
   </main>
   <script src="assets/tracker.js"></script>
-  <script src="assets/monetization.js"></script>
+  <script src="assets/monetization.js?v=20260726-2"></script>
 </body>
 </html>

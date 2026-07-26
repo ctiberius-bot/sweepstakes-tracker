@@ -95,6 +95,23 @@ The generator and validation currently pass:
 
 The user explicitly authorized the v1.4 production release on July 26, 2026.
 
+### July 26 traffic acquisition package
+
+The v1.4 release now also includes:
+
+- `about.html` with authorship, editorial standards, automation/AI disclosure, sponsorship independence, and corrections policy.
+- Four homepage-featured research pages:
+  - `guides/best-sweepstakes-sites-with-winner-evidence.html`
+  - `guides/2026-sweepstakes-scam-warning-signs-report.html`
+  - `guides/pch-vs-sweepstakes-advantage-vs-prizegrab.html`
+  - `guides/2026-sweepstakes-safety-report.html`
+- A shareable report graphic at `assets/social/2026-sweepstakes-safety-report.png`.
+- UTM campaign attribution in `/api/analytics-summary` under `campaigns`.
+- `TRAFFIC_LAUNCH_KIT.md` with tracked links, newsletter and community copy, outreach templates, a prospect list, and the seven-day distribution sequence.
+- An 88-URL sitemap and IndexNow coverage for the new pages.
+
+The remaining distribution actions require the owner’s public accounts or final sender identity: send the Buttondown newsletter, make the permitted social/community posts, and personalize/send the first outreach messages. Do not mass-post or send unpersonalized pitches.
+
 ## Important repository state
 
 The worktree has many modified generated pages plus source/template changes and new limited-promotion detail pages. Preserve all of it.
