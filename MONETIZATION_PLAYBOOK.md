@@ -31,7 +31,16 @@
 - `sponsor_lead`
 - `newsletter_signup`
 
-Events are emitted to `/api/events` and appear as structured `monetization_event` records in Cloudflare function logs. Add a durable analytics destination later if longitudinal reporting is needed.
+Events are emitted to `/api/events`, stored in the `safetracker-analytics` Cloudflare D1 database through the `ANALYTICS_DB` production binding, and also appear as structured `monetization_event` records in Cloudflare function logs. Rolling 7-day and 30-day aggregates are available from `/api/analytics-summary`.
+
+## Search visibility submissions
+
+- Google Search Console domain property `safetrackerhub.com` is verified through Cloudflare DNS.
+- `https://sweeps.safetrackerhub.com/sitemap.xml` was accepted by Google with 73 discovered pages.
+- Bing Webmaster Tools imported `https://safetrackerhub.com/` from Google Search Console.
+- The production sitemap was submitted separately to Bing and accepted for processing.
+- A 100-page Bing Site Scan for `https://sweeps.safetrackerhub.com/` was queued on July 25, 2026.
+- The sweepstakes-directory submission URLs in `DISCOVERY_REVIEW.md` are for submitting individual promotions, not for listing SafeTrackerHub itself. Do not submit the tracker as though it were a sweepstakes.
 
 ## Affiliate launch order
 

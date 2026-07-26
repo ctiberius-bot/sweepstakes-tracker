@@ -2,6 +2,13 @@
 
 Focus first on the highest-trust, highest-converting sites on your list. These are real programs that still pay.
 
+## Application Status — July 25, 2026
+
+- **Prodege / Swagbucks / InboxDollars:** Application inquiry sent to `affiliates@prodege.com` from the project owner's Gmail account. Awaiting onboarding instructions.
+- **FlexOffers / Publishers Clearing House:** Registration reached the publisher account-creation screen. Completion requires the owner to choose a password and personally accept the FlexOffers Publisher Terms and Conditions. After network approval, search the advertiser catalog for Publishers Clearing House, Swagbucks, and InboxDollars.
+- **Impact:** Not opened yet. A marketplace application requires publisher identity, media-property verification, tax residency information, and acceptance of platform terms; complete after the owner confirms the legal/tax profile to use.
+- **Affiliate links:** Do not replace official outbound URLs until a network approves the publisher account and supplies the correct tracking link.
+
 ## Tier 1 – Highest Priority (Apply Immediately)
 
 ### 1. Swagbucks (Prodege)
