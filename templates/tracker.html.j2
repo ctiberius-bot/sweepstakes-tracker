@@ -118,26 +118,6 @@
       </div>
     </details>
 
-    <section id="guides" class="guide-hub" aria-labelledby="guide-hub-heading">
-      <div class="guide-hub-heading">
-        <div>
-          <p class="section-kicker">Enter smarter</p>
-          <h2 id="guide-hub-heading">Sweepstakes safety and strategy guides</h2>
-        </div>
-        <p>Practical, plain-language help for checking a prize notice, protecting your inbox, understanding taxes, and building a manageable entry routine.</p>
-      </div>
-      <div class="guide-card-grid">
-        {% for article in editorial_pages %}
-        <a class="guide-card" href="guides/{{ article.slug }}.html">
-          <span>{{ article.eyebrow }}</span>
-          <strong>{{ article.title }}</strong>
-          <p>{{ article.meta_description }}</p>
-          <em>Read guide →</em>
-        </a>
-        {% endfor %}
-      </div>
-    </section>
-
     <!-- Top CTAs -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
       <a href="https://www.swagbucks.com/" target="_blank" rel="noopener sponsored"
@@ -240,6 +220,26 @@
         </tbody>
       </table>
     </div>
+
+    <section id="guides" class="guide-hub guide-hub-below-rankings" aria-labelledby="guide-hub-heading">
+      <div class="guide-hub-heading">
+        <div>
+          <p class="section-kicker">Enter smarter</p>
+          <h2 id="guide-hub-heading">Sweepstakes safety and strategy guides</h2>
+        </div>
+        <p>Practical, plain-language help for checking a prize notice, protecting your inbox, understanding taxes, and building a manageable entry routine.</p>
+      </div>
+      <div class="guide-card-grid">
+        {% for article in editorial_pages %}
+        <a class="guide-card" href="guides/{{ article.slug }}.html">
+          <span>{{ article.eyebrow }}</span>
+          <strong>{{ article.title }}</strong>
+          <p>{{ article.meta_description }}</p>
+          <em>Read guide →</em>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
 
     <footer class="text-center text-xs text-slate-500 py-6 border-t">
       Data last refreshed {{ last_updated }}. Always verify official rules on each site.<br>
