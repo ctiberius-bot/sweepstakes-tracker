@@ -1,6 +1,6 @@
 # SafeTracker: Sweepstakes — Current Work Handoff
 
-Last synchronized: July 25, 2026
+Last synchronized: July 27, 2026
 
 ## Start here
 
@@ -13,6 +13,32 @@ This is the current source-of-truth handoff for continuing the SafeTracker: Swee
 - Local repository: `C:\Users\ctibe\Documents\Codex\2026-07-23\new\sweepstakes-tracker`
 - Release in this handoff: `v1.4`
 - Release date: July 26, 2026
+
+## Canonical business identity
+
+This hierarchy is authoritative across every ChatGPT/Codex client and machine:
+
+- **Just Signal LLC** is the parent holding company and legal entity.
+- **SafeTrackerHub** is an operating brand/product family owned by Just Signal LLC.
+- **SafeTracker: Sweepstakes** is the sweepstakes product and site within SafeTrackerHub.
+
+Use **Just Signal LLC** for contracts, tax records, banking, payment processors,
+affiliate-network applications, sponsorship agreements, and other requests for
+the legal business name. Do not present SafeTrackerHub or SafeTracker:
+Sweepstakes as the legal entity.
+
+The South Carolina Secretary of State approved the Articles of Organization on
+July 27, 2026:
+
+- Business name: Just Signal LLC
+- Filing ID: `260727-0850153`
+- Transaction ID: `2279767`
+- Approval email received: July 27, 2026 at 8:50 AM Eastern
+
+Formation is complete. Remaining business-administration steps include
+downloading and preserving the approved documents, obtaining the EIN, opening
+the business bank account, and using the legal entity details to complete
+FlexOffers and other monetization applications.
 
 ## Core product decision
 
@@ -111,6 +137,26 @@ The v1.4 release now also includes:
 - An 88-URL sitemap and IndexNow coverage for the new pages.
 
 The remaining distribution actions require the owner’s public accounts or final sender identity: send the Buttondown newsletter, make the permitted social/community posts, and personalize/send the first outreach messages. Do not mass-post or send unpersonalized pitches.
+
+## Pinterest distribution status
+
+- Pinterest business profile: `https://www.pinterest.com/safetrackersweepstakes/`
+- Claimed site: `sweeps.safetrackerhub.com`
+- The first six-post campaign was created and scheduled at 10:00 AM Eastern on
+  July 27, July 29, July 31, August 2, August 4, and August 6, 2026.
+- The July 27 Pin, `10 Sweepstakes Scam Warning Signs`, published successfully.
+- Five Pins remain scheduled.
+- Pinterest initially rejected claimed-domain destination links as possible
+  spam, so the scheduled campaign is temporarily link-free.
+- A daily monitor is active and should notify the user when Pinterest approves
+  the claimed domain or clearly lifts the destination-link restriction.
+
+## Initial traffic baseline
+
+As of July 27, 2026 at approximately 10:50 AM Eastern, the production analytics
+endpoint reported 22 page views: 11 on July 26 and 11 on July 27. It reported
+zero outbound clicks and no attributed campaign visits. These are page views,
+not unique visitors, and may include owner/testing traffic.
 
 ## Important repository state
 
