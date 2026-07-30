@@ -682,13 +682,35 @@ body {
 .editorial-related { margin: 2rem 0; padding: 1.35rem; border: 1px solid var(--line); border-radius: .9rem; background: #fff; }
 .editorial-related-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .55rem; }
 .editorial-related-links a { padding: .75rem; border-radius: .55rem; background: #f1f5f9; color: #0f766e; font-size: .76rem; font-weight: 800; }
+.guide-archive-cta { margin: 1.25rem 0 0; text-align: right; }
+.guide-archive { padding-top: 1.5rem; padding-bottom: 5rem; }
+.guide-archive-hero { max-width: 62rem; padding: clamp(2.25rem, 7vw, 5.5rem) 0 2.5rem; }
+.guide-archive-hero h1 { max-width: 14ch; margin: .4rem 0 1rem; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.8rem, 7vw, 5.4rem); line-height: .95; letter-spacing: -.05em; }
+.guide-archive-hero > p:last-child { max-width: 66ch; color: #475569; font-size: 1.08rem; line-height: 1.7; }
+.guide-latest { display: grid; grid-template-columns: minmax(0, 1fr) minmax(13rem, .32fr); gap: 2rem; align-items: end; padding: 2rem; border: 1px solid #99f6e4; border-radius: 1rem; background: linear-gradient(135deg, #f0fdfa, #ffffff); }
+.guide-latest h2 { max-width: 24ch; margin: .3rem 0 .65rem; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.08; }
+.guide-latest p { max-width: 62ch; color: #475569; line-height: 1.65; }
+.guide-latest dl { display: grid; grid-template-columns: 1fr; margin: 0; border-top: 1px solid var(--line); }
+.guide-latest dl div { padding: .8rem 0; border-bottom: 1px solid var(--line); }
+.guide-latest dt { color: #64748b; font-size: .65rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.guide-latest dd { margin: .25rem 0 0; color: var(--ink); font-size: .82rem; font-weight: 750; }
+.guide-archive-list { padding-top: 3rem; }
+.guide-archive-heading { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1rem; }
+.guide-archive-heading h2 { margin: .2rem 0 0; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 2rem; }
+.guide-archive-heading > p { color: #64748b; font-size: .76rem; font-weight: 750; }
+.guide-archive-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+.guide-archive-grid article { display: flex; flex-direction: column; min-height: 16rem; padding: 1.25rem; border: 1px solid var(--line); border-radius: .85rem; background: #fff; }
+.guide-archive-grid h3 { margin: .45rem 0 .65rem; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; line-height: 1.2; }
+.guide-archive-grid article > p:not(.guide-archive-meta) { flex: 1; color: #475569; font-size: .82rem; line-height: 1.6; }
+.guide-archive-grid article > a { margin-top: 1rem; color: var(--teal-800); font-size: .75rem; font-weight: 850; }
+.guide-archive-meta { margin: 0; color: #b45309; font-size: .63rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
 .guide-directory { padding-top: 1.5rem; }
 .guide-directory > div { display: flex; flex-wrap: wrap; gap: .5rem; }
 .guide-directory a { padding: .48rem .68rem; border: 1px solid var(--line); border-radius: 999px; color: #0f766e; font-size: .7rem; font-weight: 750; }
 .methodology-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 2rem 0; }
 .methodology-grid .type-card:first-child { grid-column: 1 / -1; }
 @media (max-width: 720px) {
-  .seo-guide-columns, .methodology-grid, .guide-hub-heading, .editorial-related-links, .report-metrics { grid-template-columns: 1fr; }
+  .seo-guide-columns, .methodology-grid, .guide-hub-heading, .editorial-related-links, .report-metrics, .guide-latest, .guide-archive-grid { grid-template-columns: 1fr; }
   .report-metrics div + div { border-left: 0; border-top: 1px solid var(--line); }
   .guide-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .methodology-grid .type-card:first-child { grid-column: auto; }

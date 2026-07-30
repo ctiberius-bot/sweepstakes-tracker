@@ -1,5 +1,7 @@
 import tempfile
 import unittest
+import json
+from datetime import date
 from datetime import datetime, timezone
 from pathlib import Path
 from unittest.mock import patch
@@ -56,6 +58,26 @@ class WinnerCollectorTests(unittest.TestCase):
         self.assertIn("From the SafeTracker guide library", html)
         self.assertIn("Read the guide", html)
         self.assertIn("## Two useful reminders", publish_winners.build_email(reports)[1])
+
+    def test_new_editorial_guides_enter_newsletter_rotation_automatically(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            (base / "data").mkdir()
+            (base / "data" / "editorial.json").write_text(
+                json.dumps({
+                    "articles": [{
+                        "slug": "new-weekly-guide",
+                        "title": "A New Weekly Guide",
+                        "meta_description": "A newly published guide.",
+                        "published": "2026-08-01",
+                    }]
+                }),
+                encoding="utf-8",
+            )
+            with patch.object(publish_winners, "BASE", base):
+                guide, tips = publish_winners.edition_extras(date(2026, 8, 1))
+            self.assertEqual(guide["slug"], "new-weekly-guide")
+            self.assertEqual(len(tips), 2)
 
 
 if __name__ == "__main__":

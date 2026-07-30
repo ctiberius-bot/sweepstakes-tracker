@@ -420,8 +420,14 @@ def main():
     contact_template = env.get_template("contact.html.j2")
     about_template = env.get_template("about.html.j2")
     editorial_template = env.get_template("editorial.html.j2")
+    guides_template = env.get_template("guides.html.j2")
     editorial_data = json.loads(EDITORIAL_FILE.read_text(encoding="utf-8"))
     editorial_pages = editorial_data.get("articles", [])
+    editorial_pages = sorted(
+        editorial_pages,
+        key=lambda article: (article.get("published", "2026-07-26"), article["title"]),
+        reverse=True,
+    )
 
     html = template.render(
         sites=sites,
@@ -592,6 +598,36 @@ def main():
         clean_generated_html(about_html),
         encoding="utf-8",
     )
+    guides_schema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Sweepstakes Safety and Strategy Guides",
+        "url": f"{SITE_ORIGIN}/guides",
+        "mainEntity": {
+            "@type": "ItemList",
+            "numberOfItems": len(editorial_pages),
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": position,
+                    "url": f"{SITE_ORIGIN}/guides/{article['slug']}",
+                    "name": article["title"],
+                }
+                for position, article in enumerate(editorial_pages, start=1)
+            ],
+        },
+    }
+    guides_html = guides_template.render(
+        articles=editorial_pages,
+        latest=editorial_pages[0] if editorial_pages else None,
+        structured_data=guides_schema,
+        last_updated=last_updated_str,
+    )
+    GUIDES_DIR.mkdir(exist_ok=True)
+    (GUIDES_DIR / "index.html").write_text(
+        clean_generated_html(guides_html),
+        encoding="utf-8",
+    )
     REVIEWS_DIR.mkdir(exist_ok=True)
     current_review_slugs = {site["slug"] for site in sites}
     for existing in REVIEWS_DIR.glob("*.html"):
@@ -634,7 +670,7 @@ def main():
     GUIDES_DIR.mkdir(exist_ok=True)
     current_guide_slugs = {article["slug"] for article in editorial_pages}
     for existing in GUIDES_DIR.glob("*.html"):
-        if existing.stem not in current_guide_slugs:
+        if existing.name != "index.html" and existing.stem not in current_guide_slugs:
             existing.unlink()
     for article in editorial_pages:
         article_html = editorial_template.render(
@@ -657,6 +693,7 @@ def main():
         f"{SITE_ORIGIN}/contact",
         f"{SITE_ORIGIN}/about",
         f"{SITE_ORIGIN}/sponsorships",
+        f"{SITE_ORIGIN}/guides",
         *[f"{SITE_ORIGIN}/guides/{article['slug']}" for article in editorial_pages],
         *[f"{SITE_ORIGIN}/reviews/{site['slug']}" for site in sites],
         *[f"{SITE_ORIGIN}/sweepstakes/{promotion['slug']}" for promotion in active_promotions],

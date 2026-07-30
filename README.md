@@ -30,7 +30,10 @@ SQLite is the canonical historical archive (`data/winners.sqlite`); a generated
 JSON export powers the searchable `winners.html` page. New reports are sent
 through Buttondown only when the daily run finds something new. Each edition
 also includes two rotating safety tips and a rotating link and synopsis from
-the SafeTracker guide library.
+the SafeTracker guide library. The public `guides.html` page is the canonical
+archive for all weekly and evergreen guides. Adding an article to
+`data/editorial.json` automatically adds it to that archive, the sitemap, and
+the newsletter spotlight rotation unless `newsletter_exclude` is set to true.
 
 Version 1.1 also includes the separate Active Sweepstakes inventory framework.
 Individual promotions will live there rather than in the platform rankings.

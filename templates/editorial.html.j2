@@ -15,10 +15,10 @@
   <link rel="icon" type="image/png" href="../assets/safetracker-icon.png">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"Article","headline":{{ article.title|tojson }},"description":{{ article.meta_description|tojson }},"datePublished":{{ article.published|default(last_updated_iso)|tojson }},"dateModified":"{{ last_updated_iso }}","author":{"@type":"Organization","name":"SafeTracker Editorial Team","url":"https://sweeps.safetrackerhub.com/about"},"publisher":{"@type":"Organization","name":"SafeTrackerHub"},"mainEntityOfPage":"https://sweeps.safetrackerhub.com/guides/{{ article.slug }}"},
+    {"@type":"Article","headline":{{ article.title|tojson }},"description":{{ article.meta_description|tojson }},"datePublished":{{ article.published|default("2026-07-26")|tojson }},"dateModified":"{{ last_updated_iso }}","author":{"@type":"Organization","name":"SafeTracker Editorial Team","url":"https://sweeps.safetrackerhub.com/about"},"publisher":{"@type":"Organization","name":"SafeTrackerHub"},"mainEntityOfPage":"https://sweeps.safetrackerhub.com/guides/{{ article.slug }}"},
     {"@type":"BreadcrumbList","itemListElement":[
       {"@type":"ListItem","position":1,"name":"SafeTracker: Sweepstakes","item":"https://sweeps.safetrackerhub.com/"},
-      {"@type":"ListItem","position":2,"name":"Safety guides","item":"https://sweeps.safetrackerhub.com/#guides"},
+      {"@type":"ListItem","position":2,"name":"Safety guides","item":"https://sweeps.safetrackerhub.com/guides"},
       {"@type":"ListItem","position":3,"name":{{ article.title|tojson }},"item":"https://sweeps.safetrackerhub.com/guides/{{ article.slug }}"}
     ]}
   ]}</script>
@@ -33,7 +33,7 @@
   </header>
 
   <main class="review-shell editorial-main">
-    <nav class="review-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Sweepstakes rankings</a><span>/</span><a href="../index.html#guides">Guides</a><span>/</span><span>{{ article.title }}</span></nav>
+    <nav class="review-breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Sweepstakes rankings</a><span>/</span><a href="index.html">Guides</a><span>/</span><span>{{ article.title }}</span></nav>
 
     <article class="editorial-layout">
       <header class="editorial-hero">
@@ -119,12 +119,13 @@
           <a href="{{ item.slug }}.html">{{ item.title }}</a>
           {% endfor %}
         </div>
+        <p><a class="text-link" href="index.html">Browse the complete guide archive →</a></p>
       </nav>
     </article>
   </main>
 
   <footer class="site-footer">
-    <div class="review-shell footer-bottom"><span>SafeTracker: Sweepstakes · <a href="../about.html">About and editorial policy</a> · <a href="../methodology.html">Methodology</a> · <a href="../contact.html">Corrections</a></span><span class="site-version">v1.4</span></div>
+    <div class="review-shell footer-bottom"><span>SafeTracker: Sweepstakes · <a href="index.html">Guides archive</a> · <a href="../about.html">About and editorial policy</a> · <a href="../methodology.html">Methodology</a> · <a href="../contact.html">Corrections</a></span><span class="site-version">v1.4</span></div>
   </footer>
   <script src="../assets/monetization.js?v=20260726-2"></script>
 </body>

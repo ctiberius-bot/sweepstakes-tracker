@@ -14,16 +14,6 @@ from winner_db import connect, mark_sent, unsent_reports
 
 BASE = Path(__file__).parent
 
-GUIDE_ROTATION = [
-    "how-to-spot-sweepstakes-scams",
-    "legitimate-sweepstakes-sites",
-    "dedicated-sweepstakes-email",
-    "how-sweepstakes-winners-are-verified",
-    "daily-sweepstakes-entry-strategy",
-    "best-sweepstakes-sites-with-winner-evidence",
-    "sweepstakes-taxes",
-]
-
 TIP_ROTATION = [
     "Never pay a fee, buy gift cards, send cryptocurrency, or wire money to claim a legitimate prize.",
     "Verify a winner notice using the sponsor's official website and rules, not only the link or phone number in the message.",
@@ -46,17 +36,19 @@ def report_label(report):
 
 def edition_extras(day):
     editorial = json.loads((BASE / "data" / "editorial.json").read_text(encoding="utf-8"))
-    guides = {
-        article["slug"]: article
-        for article in editorial.get("articles", [])
-        if article.get("slug") in GUIDE_ROTATION
-    }
-    available = [guides[slug] for slug in GUIDE_ROTATION if slug in guides]
+    available = sorted(
+        [
+            article
+            for article in editorial.get("articles", [])
+            if not article.get("newsletter_exclude", False)
+        ],
+        key=lambda article: (article.get("published", "2026-07-26"), article["slug"]),
+    )
     if not available:
         raise RuntimeError("No newsletter guide spotlights are available in data/editorial.json.")
 
     index = day.toordinal()
-    guide = available[index % len(available)]
+    guide = available[(index // 7) % len(available)]
     tips = [
         TIP_ROTATION[index % len(TIP_ROTATION)],
         TIP_ROTATION[(index + 3) % len(TIP_ROTATION)],
