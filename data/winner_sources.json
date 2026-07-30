@@ -15,6 +15,7 @@
       "url": "https://www.mondosweeps.com/",
       "report_url": "https://www.mondosweeps.com/Winner/Index/",
       "max_age_days": 45,
+      "require_matches": true,
       "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+won\\s+(?P<prize>\\$[\\d,]+(?:\\.\\d{2})?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2})"
     },
     {
@@ -25,6 +26,7 @@
       "url": "https://www.winstakes.com/",
       "report_url": "https://www.winstakes.com/Winner/Index/",
       "max_age_days": 45,
+      "require_matches": true,
       "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+won\\s+(?P<prize>\\$[\\d,]+(?:\\.\\d{2})?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2})"
     },
     {
@@ -34,6 +36,7 @@
       "type": "html_regex",
       "url": "https://www.prizeloot.com/sweeps/winners",
       "max_age_days": 45,
+      "require_matches": true,
       "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+Of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+Won\\s+the\\s+(?P<prize>.+?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2}\\s+\\d{4})"
     },
     {
@@ -43,6 +46,7 @@
       "type": "html_regex",
       "url": "https://entries.winloot.com/sweeps/winners",
       "max_age_days": 45,
+      "require_matches": true,
       "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+Of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+Won\\s+the\\s+(?P<prize>.+?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2}\\s+\\d{4})"
     },
     {
@@ -52,6 +56,7 @@
       "type": "html_regex",
       "url": "https://www.prizecraze.com/Site/Winners",
       "max_age_days": 45,
+      "require_matches": true,
       "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+Of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+Won\\s+the\\s+(?P<prize>.+?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2}\\s+\\d{4})"
     }
   ]

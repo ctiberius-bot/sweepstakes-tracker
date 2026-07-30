@@ -74,7 +74,7 @@ def fetch_html(url):
         page = browser.new_page(user_agent=USER_AGENT, locale="en-US")
         page.goto(url, wait_until="domcontentloaded", timeout=45000)
         page.wait_for_timeout(2500)
-        content = page.content()
+        content = page.locator("body").inner_text()
         browser.close()
     return content
 
@@ -176,6 +176,8 @@ def fetch_html_regex(source):
             "verification_level": "operator_published",
         })
     unique = {report["id"]: report for report in reports}
+    if source.get("require_matches") and not unique:
+        raise ValueError("Winner page loaded, but no expected winner records matched.")
     return list(unique.values())
 
 
