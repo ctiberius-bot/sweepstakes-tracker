@@ -34,7 +34,7 @@ jobs:
         run: |
           result="$(python gather_winners.py)"
           echo "$result"
-          python scraper_simple.py
+          python render_winners.py
           echo "pending_count=$(printf '%s' "$result" | python -c 'import json,sys; print(json.load(sys.stdin)["pending_count"])')" >> "$GITHUB_OUTPUT"
           echo "source_errors=$(printf '%s' "$result" | python -c 'import json,sys; print(json.load(sys.stdin)["source_errors"])')" >> "$GITHUB_OUTPUT"
 
@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "SafeTrackerHub Bot"
           git config user.email "winners@safetrackerhub.com"
-          git add data/winners.sqlite data/winners.json data/winner_state.json data/winner_source_status.json winners.html active-sweepstakes.html data.json index.html sitemap.xml reviews sponsorships.html site-types.html
+          git add data/winners.sqlite data/winners.json data/winner_state.json data/winner_source_status.json winners.html
           if ! git diff --cached --quiet; then
             git commit -m "Collect daily winner reports"
             git pull --rebase origin main
