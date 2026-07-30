@@ -46,14 +46,14 @@
       <div class="trust-item"><span class="trust-label">Last reviewed</span><span class="trust-value">${updated}</span></div>`;
     main.prepend(trust);
     trust.insertAdjacentHTML("afterend", `
-      <aside class="newsletter-strip" aria-label="Daily winners email">
-        <span><strong>Daily winners</strong> · Source-linked reports when there is something new.</span>
+      <aside class="newsletter-strip" aria-label="The Winner Signal email">
+        <span><strong>The Winner Signal</strong> Source-linked winner updates—only when something new is reported.</span>
         <form action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post" data-track-form="newsletter_signup">
           <label class="sr-only" for="strip-newsletter-email">Email address</label>
           <input id="strip-newsletter-email" type="email" name="email" autocomplete="email" placeholder="Email address" required>
           <input type="hidden" name="embed" value="1">
           <input type="hidden" name="tag" value="daily-winners">
-          <button type="submit">Subscribe</button>
+          <button type="submit">Send me winner updates</button>
         </form>
       </aside>`);
 

@@ -5,34 +5,103 @@ on:
     - cron: "15 11 * * *"
   workflow_dispatch:
 
+concurrency:
+  group: daily-winner-reports
+  cancel-in-progress: false
+
 permissions:
   contents: write
+  issues: write
 
 jobs:
   gather-and-publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - name: Gather new reports
+      - name: Install read-only browser fallback
+        run: python -m playwright install --with-deps chromium
+
+      - name: Gather winner reports
         id: gather
+        shell: bash
         run: |
           result="$(python gather_winners.py)"
           echo "$result"
           python scraper_simple.py
-          echo "new_count=$(printf '%s' "$result" | python -c 'import json,sys; print(json.load(sys.stdin)["new_count"])')" >> "$GITHUB_OUTPUT"
-      - name: Publish daily edition
-        if: steps.gather.outputs.new_count != '0'
-        env:
-          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
-        run: python publish_winners.py
-      - name: Save winner archive and state
+          echo "pending_count=$(printf '%s' "$result" | python -c 'import json,sys; print(json.load(sys.stdin)["pending_count"])')" >> "$GITHUB_OUTPUT"
+          echo "source_errors=$(printf '%s' "$result" | python -c 'import json,sys; print(json.load(sys.stdin)["source_errors"])')" >> "$GITHUB_OUTPUT"
+
+      - name: Save collected reports before delivery
+        shell: bash
         run: |
           git config user.name "SafeTrackerHub Bot"
           git config user.email "winners@safetrackerhub.com"
-          git add data/winners.sqlite data/winners.json data/winner_state.json winners.html active-sweepstakes.html data.json index.html sitemap.xml reviews sponsorships.html site-types.html
-          git diff --cached --quiet || git commit -m "Update daily winner reports"
-          git push
+          git add data/winners.sqlite data/winners.json data/winner_state.json data/winner_source_status.json winners.html active-sweepstakes.html data.json index.html sitemap.xml reviews sponsorships.html site-types.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Collect daily winner reports"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Publish pending edition
+        if: steps.gather.outputs.pending_count != '0' && vars.WINNER_NEWSLETTER_ENABLED == 'true'
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: python publish_winners.py
+
+      - name: Save delivery state
+        if: steps.gather.outputs.pending_count != '0' && vars.WINNER_NEWSLETTER_ENABLED == 'true'
+        shell: bash
+        run: |
+          git add data/winners.sqlite data/winners.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Mark winner reports delivered"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Confirm held edition
+        if: steps.gather.outputs.pending_count != '0' && vars.WINNER_NEWSLETTER_ENABLED != 'true'
+        run: echo "${{ steps.gather.outputs.pending_count }} reports are saved and awaiting newsletter approval."
+
+      - name: Record partial source failures
+        if: steps.gather.outputs.source_errors != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "[automation] Winner sources need attention";
+            const body = `The daily winner job completed, but **${{ steps.gather.outputs.source_errors }} source(s)** failed.\n\n[Open this run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}) and inspect \`data/winner_source_status.json\`.`;
+            const open = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", per_page: 100});
+            const existing = open.data.find(issue => issue.title === title);
+            if (existing) await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body});
+            else await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title, body});
+
+      - name: Close recovered alerts
+        if: success() && steps.gather.outputs.source_errors == '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const titles = ["[automation] Daily winner newsletter failed", "[automation] Winner sources need attention"];
+            const open = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", per_page: 100});
+            for (const issue of open.data.filter(item => titles.includes(item.title))) {
+              await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, state: "closed"});
+            }
+
+      - name: Alert on job failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "[automation] Daily winner newsletter failed";
+            const body = `The winner collector or newsletter delivery failed.\n\n[Open this run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}). Reports saved before delivery remain pending and will be retried automatically.`;
+            const open = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", per_page: 100});
+            const existing = open.data.find(issue => issue.title === title);
+            if (existing) await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body});
+            else await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title, body});

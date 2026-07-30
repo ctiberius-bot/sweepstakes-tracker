@@ -5,8 +5,54 @@
       "name": "Sweepstakes Advantage Winners Circle",
       "type": "rss",
       "url": "https://www.sweepsadvantage.com/forum/forums/sweepstakes-winners-circle.11/index.rss",
-      "homepage": "https://www.sweepsadvantage.com/forum/forums/sweepstakes-winners-circle.11/",
-      "note": "Sweepstakes wins reported by Sweepstakes Advantage community members."
+      "homepage": "https://www.sweepsadvantage.com/forum/forums/sweepstakes-winners-circle.11/"
+    },
+    {
+      "id": "mondosweeps-winners",
+      "name": "MondoSweeps",
+      "operator": "MondoSweeps",
+      "type": "html_regex",
+      "url": "https://www.mondosweeps.com/",
+      "report_url": "https://www.mondosweeps.com/Winner/Index/",
+      "max_age_days": 45,
+      "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+won\\s+(?P<prize>\\$[\\d,]+(?:\\.\\d{2})?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2})"
+    },
+    {
+      "id": "winstakes-winners",
+      "name": "WinStakes",
+      "operator": "WinStakes",
+      "type": "html_regex",
+      "url": "https://www.winstakes.com/",
+      "report_url": "https://www.winstakes.com/Winner/Index/",
+      "max_age_days": 45,
+      "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+won\\s+(?P<prize>\\$[\\d,]+(?:\\.\\d{2})?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2})"
+    },
+    {
+      "id": "prizeloot-winners",
+      "name": "PrizeLoot",
+      "operator": "PrizeLoot",
+      "type": "html_regex",
+      "url": "https://www.prizeloot.com/sweeps/winners",
+      "max_age_days": 45,
+      "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+Of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+Won\\s+the\\s+(?P<prize>.+?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2}\\s+\\d{4})"
+    },
+    {
+      "id": "winloot-winners",
+      "name": "WinLoot",
+      "operator": "WinLoot",
+      "type": "html_regex",
+      "url": "https://entries.winloot.com/sweeps/winners",
+      "max_age_days": 45,
+      "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+Of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+Won\\s+the\\s+(?P<prize>.+?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2}\\s+\\d{4})"
+    },
+    {
+      "id": "prizecraze-winners",
+      "name": "PrizeCraze",
+      "operator": "PrizeCraze",
+      "type": "html_regex",
+      "url": "https://www.prizecraze.com/Site/Winners",
+      "max_age_days": 45,
+      "pattern": "(?P<winner>[A-Za-z][A-Za-z .'-]{1,60}?)(?:\\s+Of\\s+(?P<location>[A-Za-z .'-]+,\\s*[A-Z]{2}))?\\s+Won\\s+the\\s+(?P<prize>.+?)\\s+on\\s+(?P<date>[A-Z][a-z]+\\s+\\d{1,2}\\s+\\d{4})"
     }
   ]
 }
