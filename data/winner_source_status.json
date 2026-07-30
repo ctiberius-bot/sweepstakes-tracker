@@ -1,52 +1,47 @@
 {
-  "checked_at": "2026-07-30T00:11:55.582943Z",
+  "checked_at": "2026-07-30T00:26:24.131877Z",
   "sources": [
     {
       "source_id": "sweepstakes-advantage-winners-circle",
       "source_name": "Sweepstakes Advantage Winners Circle",
       "status": "ok",
       "reports_found": 20,
-      "checked_at": "2026-07-30T00:11:55.582943Z"
+      "checked_at": "2026-07-30T00:26:24.131877Z"
     },
     {
       "source_id": "mondosweeps-winners",
       "source_name": "MondoSweeps",
-      "status": "error",
+      "status": "ok",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:11:55.582943Z",
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "checked_at": "2026-07-30T00:26:24.131877Z"
     },
     {
       "source_id": "winstakes-winners",
       "source_name": "WinStakes",
-      "status": "error",
+      "status": "ok",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:11:55.582943Z",
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "checked_at": "2026-07-30T00:26:24.131877Z"
     },
     {
       "source_id": "prizeloot-winners",
       "source_name": "PrizeLoot",
-      "status": "error",
+      "status": "ok",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:11:55.582943Z",
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "checked_at": "2026-07-30T00:26:24.131877Z"
     },
     {
       "source_id": "winloot-winners",
       "source_name": "WinLoot",
-      "status": "error",
+      "status": "ok",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:11:55.582943Z",
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "checked_at": "2026-07-30T00:26:24.131877Z"
     },
     {
       "source_id": "prizecraze-winners",
       "source_name": "PrizeCraze",
-      "status": "error",
+      "status": "ok",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:11:55.582943Z",
-      "error": "HTTPError: HTTP Error 403: Forbidden"
+      "checked_at": "2026-07-30T00:26:24.131877Z"
     }
   ]
 }
