@@ -14,6 +14,25 @@ from winner_db import connect, mark_sent, unsent_reports
 
 BASE = Path(__file__).parent
 
+GUIDE_ROTATION = [
+    "how-to-spot-sweepstakes-scams",
+    "legitimate-sweepstakes-sites",
+    "dedicated-sweepstakes-email",
+    "how-sweepstakes-winners-are-verified",
+    "daily-sweepstakes-entry-strategy",
+    "best-sweepstakes-sites-with-winner-evidence",
+    "sweepstakes-taxes",
+]
+
+TIP_ROTATION = [
+    "Never pay a fee, buy gift cards, send cryptocurrency, or wire money to claim a legitimate prize.",
+    "Verify a winner notice using the sponsor's official website and rules, not only the link or phone number in the message.",
+    "Use a dedicated sweepstakes email address so prize notices and promotional mail stay separate from sensitive accounts.",
+    "Save the official rules and confirmation page for prizes you care about; entry pages can disappear after a promotion closes.",
+    "Check the response deadline in a potential winner notice, then confirm the sender independently before sharing personal information.",
+    "A familiar company name does not authenticate a call, text, or email; scammers routinely impersonate legitimate brands.",
+]
+
 
 def escape(value):
     return html.escape(str(value or ""))
@@ -25,8 +44,31 @@ def report_label(report):
     return "Community-reported win"
 
 
+def edition_extras(day):
+    editorial = json.loads((BASE / "data" / "editorial.json").read_text(encoding="utf-8"))
+    guides = {
+        article["slug"]: article
+        for article in editorial.get("articles", [])
+        if article.get("slug") in GUIDE_ROTATION
+    }
+    available = [guides[slug] for slug in GUIDE_ROTATION if slug in guides]
+    if not available:
+        raise RuntimeError("No newsletter guide spotlights are available in data/editorial.json.")
+
+    index = day.toordinal()
+    guide = available[index % len(available)]
+    tips = [
+        TIP_ROTATION[index % len(TIP_ROTATION)],
+        TIP_ROTATION[(index + 3) % len(TIP_ROTATION)],
+    ]
+    return guide, tips
+
+
 def build_email(reports):
-    today = datetime.now(timezone.utc).strftime("%B %d, %Y").replace(" 0", " ")
+    edition_day = datetime.now(timezone.utc).date()
+    today = edition_day.strftime("%B %d, %Y").replace(" 0", " ")
+    guide, tips = edition_extras(edition_day)
+    guide_url = f"https://sweeps.safetrackerhub.com/guides/{guide['slug']}.html"
     official = [report for report in reports if report.get("source_type") == "operator_announcement"]
     community = [report for report in reports if report.get("source_type") != "operator_announcement"]
     subject = f"{len(reports)} new sweepstakes winner report{'s' if len(reports) != 1 else ''} — {today}"
@@ -73,6 +115,19 @@ def build_email(reports):
     We found <strong>{len(reports)} new report{'s' if len(reports) != 1 else ''}</strong> across <strong>{len(set(r['source_id'] for r in reports))} monitored source{'s' if len(set(r['source_id'] for r in reports)) != 1 else ''}</strong>.
   </td></tr>
   {''.join(sections)}
+  <tr><td style="padding:20px 26px;background:#edf8f6;border-top:1px solid #cfe7e3">
+    <div style="margin-bottom:9px;color:#08756b;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase">Two useful reminders</div>
+    <ul style="margin:0;padding-left:19px;color:#334155;font-size:14px;line-height:1.55">
+      <li style="margin-bottom:7px">{escape(tips[0])}</li>
+      <li>{escape(tips[1])}</li>
+    </ul>
+  </td></tr>
+  <tr><td style="padding:20px 26px;background:#ffffff;border-top:1px solid #d9e4e2">
+    <div style="margin-bottom:7px;color:#b66512;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase">From the SafeTracker guide library</div>
+    <a href="{escape(guide_url)}" style="color:#102a2a;font-family:Georgia,serif;font-size:20px;font-weight:800;line-height:1.25;text-decoration:none">{escape(guide['title'])}</a>
+    <p style="margin:8px 0 12px;color:#475569;font-size:14px;line-height:1.55">{escape(guide['meta_description'])}</p>
+    <a href="{escape(guide_url)}" style="color:#08756b;font-size:14px;font-weight:800;text-decoration:none">Read the guide &#8594;</a>
+  </td></tr>
   <tr><td style="padding:18px 26px;background:#fff4df;border-top:1px solid #f4d7a7;color:#5f420d;font-size:13px;line-height:1.5">
     <strong>A real prize never requires gift cards, wire transfers, crypto, or a “processing fee.”</strong>
     A published winner report does not prove that a message claiming you won is genuine.
@@ -93,6 +148,19 @@ def build_email(reports):
             prize = f" — {report['prize']}" if report.get("prize") else ""
             lines.append(f"- [{title}{prize}]({report['source_url']}) · {report['source_name']} · {report['reported_at'][:10]}")
         lines.append("")
+    lines.extend([
+        "## Two useful reminders",
+        "",
+        f"- {tips[0]}",
+        f"- {tips[1]}",
+        "",
+        "## From the SafeTracker guide library",
+        "",
+        f"[{guide['title']}]({guide_url})",
+        "",
+        guide["meta_description"],
+        "",
+    ])
     lines.extend([
         "**Safety reminder:** Never pay a fee or provide banking information to claim a legitimate prize.",
         "",

@@ -28,7 +28,9 @@ the official rules on each site before entering.
 Winner reports are gathered daily from the feeds in `data/winner_sources.json`.
 SQLite is the canonical historical archive (`data/winners.sqlite`); a generated
 JSON export powers the searchable `winners.html` page. New reports are sent
-through Buttondown only when the daily run finds something new.
+through Buttondown only when the daily run finds something new. Each edition
+also includes two rotating safety tips and a rotating link and synopsis from
+the SafeTracker guide library.
 
 Version 1.1 also includes the separate Active Sweepstakes inventory framework.
 Individual promotions will live there rather than in the platform rankings.

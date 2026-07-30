@@ -52,6 +52,10 @@ class WinnerCollectorTests(unittest.TestCase):
         self.assertIn("1 new sweepstakes winner report", subject)
         self.assertIn("The Winner Signal", html)
         self.assertIn("Official operator announcement", html)
+        self.assertIn("Two useful reminders", html)
+        self.assertIn("From the SafeTracker guide library", html)
+        self.assertIn("Read the guide", html)
+        self.assertIn("## Two useful reminders", publish_winners.build_email(reports)[1])
 
 
 if __name__ == "__main__":
