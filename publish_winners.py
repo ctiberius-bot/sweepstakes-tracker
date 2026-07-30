@@ -100,7 +100,7 @@ def build_email(reports):
 <table role="presentation" width="100%" style="max-width:640px;background:#f8fbfa;border-radius:14px;overflow:hidden">
   <tr><td style="padding:22px 26px;background:#073f3b;border-bottom:5px solid #f0a23b">
     <div style="color:#9ee2d8;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase">SafeTracker: Sweepstakes</div>
-    <h1 style="margin:6px 0 5px;color:#fff;font-family:Georgia,serif;font-size:29px;line-height:1.15">The Winner Signal</h1>
+    <h1 style="margin:6px 0 5px;color:#fff;font-family:Georgia,serif;font-size:29px;line-height:1.15">Winner Signal</h1>
     <p style="margin:0;color:#cce9e5;font-size:14px">Source-linked winner reports. No empty editions. No manufactured claims.</p>
   </td></tr>
   <tr><td style="padding:20px 26px 0;color:#334155;font-size:14px;line-height:1.55">
@@ -130,7 +130,7 @@ def build_email(reports):
   </td></tr>
 </table></td></tr></table></body></html>"""
 
-    lines = ["# The Winner Signal", "", preheader, ""]
+    lines = ["# Winner Signal", "", preheader, ""]
     for heading, items in (("Published by sweepstakes operators", official), ("Reported by sweepstakes communities", community)):
         if not items:
             continue

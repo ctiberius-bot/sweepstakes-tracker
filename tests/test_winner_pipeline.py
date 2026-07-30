@@ -1,6 +1,7 @@
 import tempfile
 import unittest
 import json
+import sqlite3
 from datetime import date
 from datetime import datetime, timezone
 from pathlib import Path
@@ -8,6 +9,7 @@ from unittest.mock import patch
 
 import gather_winners
 import publish_winners
+import winner_db
 
 
 class WinnerCollectorTests(unittest.TestCase):
@@ -52,7 +54,8 @@ class WinnerCollectorTests(unittest.TestCase):
         }]
         subject, _, html = publish_winners.build_email(reports)
         self.assertIn("1 new sweepstakes winner report", subject)
-        self.assertIn("The Winner Signal", html)
+        self.assertIn("Winner Signal", html)
+        self.assertNotIn("The Winner Signal", html)
         self.assertIn("Official operator announcement", html)
         self.assertIn("Two useful reminders", html)
         self.assertIn("From the SafeTracker guide library", html)
@@ -78,6 +81,67 @@ class WinnerCollectorTests(unittest.TestCase):
                 guide, tips = publish_winners.edition_extras(date(2026, 8, 1))
             self.assertEqual(guide["slug"], "new-weekly-guide")
             self.assertEqual(len(tips), 2)
+
+    def test_rss_identity_is_stable_when_feed_metadata_changes(self):
+        source = {
+            "id": "community",
+            "name": "Community",
+            "type": "rss",
+            "url": "https://example.com/feed",
+            "homepage": "https://example.com/",
+        }
+        first = b"""<rss><channel><item>
+            <title>A winner report</title>
+            <link>https://example.com/thread/123</link>
+            <guid>old-guid</guid>
+            <pubDate>Mon, 27 Jul 2026 12:00:00 GMT</pubDate>
+        </item></channel></rss>"""
+        changed = first.replace(b"old-guid", b"new-guid").replace(
+            b"27 Jul 2026", b"29 Jul 2026"
+        )
+        with patch.object(gather_winners, "fetch_bytes", return_value=first):
+            first_report = gather_winners.fetch_rss(source)[0]
+        with patch.object(gather_winners, "fetch_bytes", return_value=changed):
+            changed_report = gather_winners.fetch_rss(source)[0]
+        self.assertEqual(first_report["id"], changed_report["id"])
+
+    def test_duplicate_source_urls_preserve_the_sent_record(self):
+        database = sqlite3.connect(":memory:")
+        database.row_factory = sqlite3.Row
+        database.executescript(winner_db.SCHEMA)
+        values = (
+            "Winner", "", "", "", "", "", None,
+            "2026-07-24T00:00:00Z", "source", "Source",
+            "community_report", "https://example.com/thread/123",
+            "source_reported", "",
+        )
+        database.execute(
+            """
+            INSERT INTO winner_reports (
+                id, raw_title, winner_name, privacy_label, promotion_name, prize,
+                operator, drawing_date, reported_at, source_id, source_name,
+                source_type, source_url, verification_level, author,
+                first_seen_at, last_seen_at, sent_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            ("old", *values, "2026-07-24T01:00:00Z", "2026-07-24T01:00:00Z", "2026-07-24T02:00:00Z"),
+        )
+        database.execute(
+            """
+            INSERT INTO winner_reports (
+                id, raw_title, winner_name, privacy_label, promotion_name, prize,
+                operator, drawing_date, reported_at, source_id, source_name,
+                source_type, source_url, verification_level, author,
+                first_seen_at, last_seen_at, sent_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            ("new", *values, "2026-07-30T01:00:00Z", "2026-07-30T01:00:00Z", None),
+        )
+        winner_db.deduplicate_reports(database)
+        rows = database.execute("SELECT id, sent_at FROM winner_reports").fetchall()
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["id"], "old")
+        self.assertEqual(rows[0]["sent_at"], "2026-07-24T02:00:00Z")
 
 
 if __name__ == "__main__":

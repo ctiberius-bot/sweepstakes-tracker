@@ -46,8 +46,8 @@
       <div class="trust-item"><span class="trust-label">Last reviewed</span><span class="trust-value">${updated}</span></div>`;
     main.prepend(trust);
     trust.insertAdjacentHTML("afterend", `
-      <aside class="newsletter-strip" aria-label="The Winner Signal email">
-        <span><strong>The Winner Signal</strong> Source-linked winner updates—only when something new is reported.</span>
+      <aside class="newsletter-strip" aria-label="Winner Signal email">
+        <span><strong>Winner Signal</strong> Source-linked winner updates—only when something new is reported.</span>
         <form action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post" data-track-form="newsletter_signup">
           <label class="sr-only" for="strip-newsletter-email">Email address</label>
           <input id="strip-newsletter-email" type="email" name="email" autocomplete="email" placeholder="Email address" required>
@@ -164,7 +164,7 @@
             <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="methodology.html">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a><a href="contact.html">Protected contact</a></div></div>
             <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links may earn commissions and featured visibility may be purchased. Paid placements are labeled. ScamFactor scores remain visible and summarize the risk signals shown in each profile.</p></div>
           </div>
-          <div class="footer-bottom"><span>Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</span><span class="site-version">SafeTracker: Sweepstakes v1.4</span></div>
+          <div class="footer-bottom"><span>Data last refreshed ${updated}. Always verify official rules before entering. Never pay to claim a prize.</span><span class="site-version">SafeTracker: Sweepstakes v1.5</span></div>
         </div>
       </footer>`);
   }

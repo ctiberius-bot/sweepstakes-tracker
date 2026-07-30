@@ -62,7 +62,54 @@ def connect():
     connection = sqlite3.connect(DB_FILE)
     connection.row_factory = sqlite3.Row
     connection.executescript(SCHEMA)
+    deduplicate_reports(connection)
+    connection.execute(
+        "CREATE UNIQUE INDEX IF NOT EXISTS idx_winner_source_url "
+        "ON winner_reports(source_id, source_url)"
+    )
+    connection.commit()
     return connection
+
+
+def deduplicate_reports(connection):
+    """Merge repeated source URLs, preserving the oldest record and delivery state."""
+    duplicate_keys = connection.execute(
+        """
+        SELECT source_id, source_url
+        FROM winner_reports
+        GROUP BY source_id, source_url
+        HAVING COUNT(*) > 1
+        """
+    ).fetchall()
+    for key in duplicate_keys:
+        rows = connection.execute(
+            """
+            SELECT id, first_seen_at, last_seen_at, sent_at
+            FROM winner_reports
+            WHERE source_id = ? AND source_url = ?
+            ORDER BY first_seen_at ASC, reported_at ASC
+            """,
+            (key["source_id"], key["source_url"]),
+        ).fetchall()
+        survivor = rows[0]
+        sent_values = [row["sent_at"] for row in rows if row["sent_at"]]
+        connection.execute(
+            """
+            UPDATE winner_reports
+            SET first_seen_at = ?, last_seen_at = ?, sent_at = ?
+            WHERE id = ?
+            """,
+            (
+                min(row["first_seen_at"] for row in rows),
+                max(row["last_seen_at"] for row in rows),
+                min(sent_values) if sent_values else None,
+                survivor["id"],
+            ),
+        )
+        connection.executemany(
+            "DELETE FROM winner_reports WHERE id = ?",
+            [(row["id"],) for row in rows[1:]],
+        )
 
 
 def upsert_reports(connection, reports):
@@ -80,9 +127,8 @@ def upsert_reports(connection, reports):
                 :operator, :drawing_date, :published_at, :source_id, :source_name,
                 :source_type, :url, :verification_level, :author, :now, :now
             )
-            ON CONFLICT(id) DO UPDATE SET
+            ON CONFLICT(source_id, source_url) DO UPDATE SET
                 raw_title=excluded.raw_title,
-                source_url=excluded.source_url,
                 last_seen_at=excluded.last_seen_at
             """,
             {

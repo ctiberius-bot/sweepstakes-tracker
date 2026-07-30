@@ -8,7 +8,7 @@ Last updated: July 24, 2026
 - GitHub: https://github.com/ctiberius-bot/sweepstakes-tracker
 - Production branch: `main`
 - Hosting: Cloudflare Pages, automatically deployed from GitHub
-- Current production release: v1.4
+- Current production release: v1.5
 - Release date: July 26, 2026
 
 This file is the durable context for continuing the project from another computer or ChatGPT/Codex client. Read it before making changes.

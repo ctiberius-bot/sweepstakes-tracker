@@ -22,7 +22,7 @@ required_markers = (
     'id="unsubscribe"',
     "Source and verification links",
     "automated public-source check",
-    "v1.4",
+    "v1.5",
 )
 
 expected = {f"{site['slug']}.html" for site in sites} | {f"{promotion['slug']}.html" for promotion in active_promotions}

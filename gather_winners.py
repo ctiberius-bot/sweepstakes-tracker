@@ -121,7 +121,9 @@ def fetch_rss(source):
         except (TypeError, ValueError):
             published = datetime.now(timezone.utc)
         reports.append({
-            "id": report_id(source["id"], guid, link, title),
+            # Forum feeds can change an item's GUID and publication timestamp
+            # when a thread is edited. The canonical thread URL is stable.
+            "id": report_id(source["id"], link or guid or title),
             "title": title or "Winner report",
             "url": link or source["homepage"],
             "author": author,

@@ -2,6 +2,15 @@
 
 Last synchronized: July 29, 2026
 
+## July 30 v1.5 release
+
+- The newsletter is branded **Winner Signal** and sends one consolidated edition containing every newly collected report across all monitored sources.
+- Community reports are deduplicated by canonical source URL so feed timestamp or GUID changes cannot create repeat archive records or newsletter items.
+- The archive was cleaned from 40 database rows to 34 unique source reports. The pending edition was reduced from 20 items to 14 genuinely new source threads.
+- Each edition includes two rotating safety tips and one rotating guide spotlight.
+- `/guides/` is the public, indexable archive for all current and future SafeTracker editorial guides.
+- Production site version: `v1.5`.
+
 ## July 29 winner-newsletter repair
 
 Production commit `85ccff7` repairs and redesigns the winner-report system:
@@ -11,7 +20,7 @@ Production commit `85ccff7` repairs and redesigns the winner-report system:
 - The collector now monitors the Sweepstakes Advantage community feed plus official winner pages for MondoSweeps, WinStakes, PrizeLoot, WinLoot, and PrizeCraze.
 - Official pages that reject simple requests use a read-only headless-browser fallback in GitHub Actions. Source health is saved in `data/winner_source_status.json`.
 - Full job failures and partial source failures create or update durable GitHub issues; recovery closes the alerts.
-- The newsletter is now branded **The Winner Signal**, with structured HTML, clear operator-versus-community labels, source links, and scam-safety context.
+- The newsletter was initially branded **The Winner Signal**; v1.5 shortened the public name to **Winner Signal**.
 - The global signup strip and winner archive signup copy were rewritten.
 - Twenty pending reports were collected into `newsletter-previews/winner-signal-catch-up.html`.
 - Delivery is intentionally held: the workflow will send only when the repository variable `WINNER_NEWSLETTER_ENABLED` is exactly `true`. Do not enable it until the catch-up edition is approved.
@@ -28,7 +37,7 @@ This is the current source-of-truth handoff for continuing the SafeTracker: Swee
 - Production branch: `main`
 - Hosting: Cloudflare Pages, triggered by pushes to GitHub
 - Local repository: `C:\Users\ctibe\Documents\Codex\2026-07-23\new\sweepstakes-tracker`
-- Release in this handoff: `v1.4`
+- Release in this handoff: `v1.5`
 - Release date: July 26, 2026
 
 ## Canonical business identity
