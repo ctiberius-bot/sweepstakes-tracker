@@ -1,47 +1,52 @@
 {
-  "checked_at": "2026-07-30T00:26:24.131877Z",
+  "checked_at": "2026-07-30T00:29:17.756344Z",
   "sources": [
     {
       "source_id": "sweepstakes-advantage-winners-circle",
       "source_name": "Sweepstakes Advantage Winners Circle",
       "status": "ok",
       "reports_found": 20,
-      "checked_at": "2026-07-30T00:26:24.131877Z"
+      "checked_at": "2026-07-30T00:29:17.756344Z"
     },
     {
       "source_id": "mondosweeps-winners",
       "source_name": "MondoSweeps",
-      "status": "ok",
+      "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:26:24.131877Z"
+      "checked_at": "2026-07-30T00:29:17.756344Z",
+      "error": "ValueError: Winner page loaded, but no expected winner records matched."
     },
     {
       "source_id": "winstakes-winners",
       "source_name": "WinStakes",
-      "status": "ok",
+      "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:26:24.131877Z"
+      "checked_at": "2026-07-30T00:29:17.756344Z",
+      "error": "ValueError: Winner page loaded, but no expected winner records matched."
     },
     {
       "source_id": "prizeloot-winners",
       "source_name": "PrizeLoot",
-      "status": "ok",
+      "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:26:24.131877Z"
+      "checked_at": "2026-07-30T00:29:17.756344Z",
+      "error": "ValueError: Winner page loaded, but no expected winner records matched."
     },
     {
       "source_id": "winloot-winners",
       "source_name": "WinLoot",
-      "status": "ok",
+      "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:26:24.131877Z"
+      "checked_at": "2026-07-30T00:29:17.756344Z",
+      "error": "ValueError: Winner page loaded, but no expected winner records matched."
     },
     {
       "source_id": "prizecraze-winners",
       "source_name": "PrizeCraze",
-      "status": "ok",
+      "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-07-30T00:26:24.131877Z"
+      "checked_at": "2026-07-30T00:29:17.756344Z",
+      "error": "ValueError: Winner page loaded, but no expected winner records matched."
     }
   ]
 }
