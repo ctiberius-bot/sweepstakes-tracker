@@ -1,6 +1,21 @@
 # SafeTracker: Sweepstakes — Current Work Handoff
 
-Last synchronized: July 27, 2026
+Last synchronized: July 29, 2026
+
+## July 29 winner-newsletter repair
+
+Production commit `85ccff7` repairs and redesigns the winner-report system:
+
+- Fixed the daily failure caused by `publish_winners.py` using `json` without importing it.
+- Collection is now persisted before delivery, so a Buttondown or workflow failure leaves reports pending for automatic retry.
+- The collector now monitors the Sweepstakes Advantage community feed plus official winner pages for MondoSweeps, WinStakes, PrizeLoot, WinLoot, and PrizeCraze.
+- Official pages that reject simple requests use a read-only headless-browser fallback in GitHub Actions. Source health is saved in `data/winner_source_status.json`.
+- Full job failures and partial source failures create or update durable GitHub issues; recovery closes the alerts.
+- The newsletter is now branded **The Winner Signal**, with structured HTML, clear operator-versus-community labels, source links, and scam-safety context.
+- The global signup strip and winner archive signup copy were rewritten.
+- Twenty pending reports were collected into `newsletter-previews/winner-signal-catch-up.html`.
+- Delivery is intentionally held: the workflow will send only when the repository variable `WINNER_NEWSLETTER_ENABLED` is exactly `true`. Do not enable it until the catch-up edition is approved.
+- Local validation passed: two unit tests, Python compilation, and a no-network/no-Buttondown preview build.
 
 ## Start here
 
