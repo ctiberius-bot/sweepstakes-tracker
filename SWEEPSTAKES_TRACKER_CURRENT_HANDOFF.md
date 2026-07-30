@@ -16,6 +16,8 @@ Production commit `85ccff7` repairs and redesigns the winner-report system:
 - Twenty pending reports were collected into `newsletter-previews/winner-signal-catch-up.html`.
 - Delivery is intentionally held: the workflow will send only when the repository variable `WINNER_NEWSLETTER_ENABLED` is exactly `true`. Do not enable it until the catch-up edition is approved.
 - Local validation passed: two unit tests, Python compilation, and a no-network/no-Buttondown preview build.
+- Production verification run `30502644646` completed successfully: collection, pre-delivery persistence, held-edition handling, and recovery-alert closing all passed; the Buttondown publishing steps were skipped as intended.
+- The five official winner collectors are deployed but their sites currently present Cloudflare bot verification to the GitHub runner. They are correctly recorded as source errors and the partial-source GitHub alert is active rather than silently treating zero matches as success. Do not describe official-site collection as operational until a permitted machine-readable source or operator access is available.
 
 ## Start here
 
