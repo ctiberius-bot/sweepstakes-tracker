@@ -177,7 +177,8 @@ def fetch_html_regex(source):
         })
     unique = {report["id"]: report for report in reports}
     if source.get("require_matches") and not unique:
-        raise ValueError("Winner page loaded, but no expected winner records matched.")
+        excerpt = re.sub(r"\s+", " ", page_text).strip()[:300]
+        raise ValueError(f"Winner page loaded, but no expected records matched. Page excerpt: {excerpt}")
     return list(unique.values())
 
 
