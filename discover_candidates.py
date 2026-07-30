@@ -72,8 +72,13 @@ def candidate_id(url):
     return hashlib.sha256(url.encode("utf-8")).hexdigest()[:16]
 
 
-def classify(title, url):
+def classify(title, url, source=None):
     text = f"{title} {url}"
+    # A promotion-directory link is a time-bounded promotion even when its
+    # title contains words such as "rewards" or "daily." Persistent operators
+    # must be confirmed during review rather than inferred from directory copy.
+    if (source or {}).get("kind") == "promotion_directory":
+        return "limited"
     if RECURRING_TERMS.search(text):
         return "recurring"
     if LIMITED_TERMS.search(text):
@@ -91,13 +96,15 @@ def extract_candidates(html, source):
         evidence = f"{title} {resolved}"
         if not resolved or resolved in seen or len(title) < 5:
             continue
+        if "/forum/" in urlsplit(resolved).path.lower():
+            continue
         if not MATCH_TERMS.search(evidence) or EXCLUDE_TERMS.search(title):
             continue
         seen.add(resolved)
         found.append({
             "id": candidate_id(resolved),
             "title": title[:180],
-            "candidate_type": classify(title, resolved),
+            "candidate_type": classify(title, resolved, source),
             "discovered_url": resolved,
             "discovered_domain": urlsplit(resolved).netloc,
             "source_id": source["id"],

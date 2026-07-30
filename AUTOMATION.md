@@ -20,6 +20,19 @@ entry method, entry limits, marketing consent, and evidence for all five
 ScamFactor criteria. Change a candidate's `status` only after that review.
 Promotion into the public inventory remains a separate, intentional step.
 
+## Weekly controlled inventory review
+
+`.github/workflows/weekly-inventory-review.yml` runs every Monday at 13:00 UTC.
+It checks currently published operator URLs for removal signals, creates a
+separate removal quarantine queue, and opens a dated GitHub review issue with a
+link to the protected `/admin/` Review Desk.
+
+The Review Desk records approve, reject, and defer decisions in the existing
+Cloudflare D1 database with the reviewer identity and an append-only audit
+record. Approval is not publication. No discovery or removal changes
+`data.json`, generated pages, or production until a separate production
+preparation and release is explicitly approved.
+
 ## Daily profile refresh
 
 The tracker checks every public profile source daily at 12:45 UTC. The refresh

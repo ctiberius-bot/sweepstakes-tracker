@@ -1,0 +1,89 @@
+name: Weekly inventory review
+
+on:
+  schedule:
+    - cron: "0 13 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: weekly-inventory-review
+  cancel-in-progress: false
+
+jobs:
+  prepare-review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check published inventory for removal signals
+        run: python audit_inventory.py
+
+      - name: Commit quarantine queues only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/removal_candidates.json
+          git commit -m "Weekly inventory review: $(date -u +'%Y-%m-%d')" || exit 0
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Open the weekly operator review
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const discoveries = JSON.parse(fs.readFileSync("data/discovery_candidates.json", "utf8"));
+            const removals = JSON.parse(fs.readFileSync("data/removal_candidates.json", "utf8"));
+            const pending = (discoveries.candidates || []).filter(item => item.status === "needs_review");
+            const limited = pending.filter(item => item.candidate_type === "limited").length;
+            const persistent = pending.filter(item => ["persistent", "recurring"].includes(item.candidate_type)).length;
+            const unclassified = pending.length - limited - persistent;
+            const date = new Date().toISOString().slice(0, 10);
+            const title = `[Review required] SafeTracker weekly inventory — ${date}`;
+            const body = [
+              "The weekly inventory review is ready. **Nothing has been published or removed automatically.**",
+              "",
+              `- Pending discoveries: **${pending.length}**`,
+              `- Limited promotions: **${limited}**`,
+              `- Possible persistent sites: **${persistent}**`,
+              `- Needs classification: **${unclassified}**`,
+              `- Possible removals: **${(removals.candidates || []).length}**`,
+              "",
+              "Review and record decisions in the protected admin console:",
+              "https://sweeps.safetrackerhub.com/admin/",
+              "",
+              "After review, production preparation and publication remain separate, explicitly approved steps.",
+              "",
+              `[Workflow run](${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})`,
+            ].join("\n");
+            try {
+              await github.rest.issues.getLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: "admin-review",
+              });
+            } catch (error) {
+              if (error.status !== 404) throw error;
+              await github.rest.issues.createLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: "admin-review",
+                color: "176b4d",
+                description: "Requires a SafeTracker inventory decision",
+              });
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+              labels: ["admin-review"],
+            });

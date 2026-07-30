@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>SafeTracker Review Desk</title>
+  <link rel="stylesheet" href="../assets/admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <div>
+      <span class="eyebrow">SafeTracker administration</span>
+      <h1>Review Desk</h1>
+      <p>Approve the research decision. Publication remains a separate, deliberate step.</p>
+    </div>
+    <div class="identity" id="identity">Checking access…</div>
+  </header>
+
+  <main>
+    <section class="guardrail">
+      <strong>Nothing here publishes automatically.</strong>
+      <span>Approved records enter the production-preparation queue. They still require validation, a generated-site check, and a separately approved release.</span>
+    </section>
+
+    <section class="summary-grid" aria-label="Review summary">
+      <article><span>Awaiting review</span><strong id="count-pending">—</strong></article>
+      <article><span>Approved</span><strong id="count-approved">—</strong></article>
+      <article><span>Deferred</span><strong id="count-deferred">—</strong></article>
+      <article><span>Rejected</span><strong id="count-rejected">—</strong></article>
+      <article class="attention"><span>Possible removals</span><strong id="count-removals">—</strong></article>
+    </section>
+
+    <section class="review-panel">
+      <div class="panel-heading">
+        <div>
+          <span class="eyebrow">Weekly intake</span>
+          <h2>Candidate inventory</h2>
+          <p id="freshness">Loading the latest quarantine batch…</p>
+        </div>
+        <button class="secondary" id="refresh" type="button">Refresh</button>
+      </div>
+
+      <div class="filters">
+        <label>
+          <span>Find</span>
+          <input id="search" type="search" placeholder="Name, domain, source or ID">
+        </label>
+        <label>
+          <span>Review queue</span>
+          <select id="queue-filter">
+            <option value="all">Everything</option>
+            <option value="discovery">New discoveries</option>
+            <option value="removal">Possible removals</option>
+          </select>
+        </label>
+        <label>
+          <span>Classification</span>
+          <select id="type-filter">
+            <option value="all">All types</option>
+            <option value="persistent">Persistent sites</option>
+            <option value="limited">Limited promotions</option>
+            <option value="needs_classification">Needs classification</option>
+          </select>
+        </label>
+        <label>
+          <span>Decision</span>
+          <select id="decision-filter">
+            <option value="pending">Pending only</option>
+            <option value="all">All decisions</option>
+            <option value="approve">Approved</option>
+            <option value="defer">Deferred</option>
+            <option value="reject">Rejected</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="results-meta">
+        <strong id="result-count">0 records</strong>
+        <span>Newest discoveries first; removal warnings appear at the top.</span>
+      </div>
+      <div id="review-list" class="review-list" aria-live="polite"></div>
+      <div class="pagination">
+        <button class="secondary" id="previous-page" type="button">Previous</button>
+        <span id="page-label">Page 1</span>
+        <button class="secondary" id="next-page" type="button">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="decision-dialog">
+    <form method="dialog" id="decision-form">
+      <div class="dialog-heading">
+        <div>
+          <span class="eyebrow" id="dialog-kind">Candidate</span>
+          <h2 id="dialog-title">Review decision</h2>
+        </div>
+        <button class="close" value="cancel" aria-label="Close">×</button>
+      </div>
+      <p id="dialog-source" class="source-line"></p>
+      <input type="hidden" id="dialog-id">
+      <input type="hidden" id="dialog-review-type">
+      <fieldset>
+        <legend>Classification</legend>
+        <select id="dialog-classification">
+          <option value="persistent">Persistent sweepstakes site</option>
+          <option value="limited">Limited promotion</option>
+          <option value="needs_classification">Needs more research</option>
+          <option value="remove">Remove from inventory</option>
+          <option value="keep">Keep in inventory</option>
+        </select>
+      </fieldset>
+      <label class="notes">
+        <span>Review notes</span>
+        <textarea id="dialog-notes" rows="5" placeholder="Official rules, sponsor, closing date, concerns, correction needed…"></textarea>
+      </label>
+      <div class="dialog-actions">
+        <button class="reject" data-decision="reject" type="button">Reject</button>
+        <button class="defer" data-decision="defer" type="button">Defer</button>
+        <button class="approve" data-decision="approve" type="button">Approve</button>
+      </div>
+      <p class="save-status" id="save-status"></p>
+    </form>
+  </dialog>
+
+  <script src="../assets/admin.js" defer></script>
+</body>
+</html>
