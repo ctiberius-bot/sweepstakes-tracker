@@ -1,8 +1,29 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-30T16:59:10.756594Z",
-  "count": 36,
+  "updated_at": "2026-07-31T17:09:09.013590Z",
+  "count": 37,
   "winners": [
+    {
+      "id": "5eb77dd269e85d2a9cdb590a",
+      "title": "BeatBox Coconut Breeze Beach Towel",
+      "winner_name": "",
+      "privacy_label": "",
+      "promotion_name": "",
+      "prize": "",
+      "operator": "",
+      "drawing_date": null,
+      "published_at": "2026-07-31T16:02:29Z",
+      "source_id": "sweepstakes-advantage-winners-circle",
+      "source_name": "Sweepstakes Advantage Winners Circle",
+      "source_type": "community_report",
+      "url": "https://www.sweepsadvantage.com/forum/threads/beatbox-coconut-breeze-beach-towel.104996/",
+      "verification_level": "source_reported",
+      "author": "aprilandjesse2004",
+      "first_seen_at": "2026-07-31T17:09:09.008270Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
+      "sent_at": null,
+      "published_display": "July 31, 2026"
+    },
     {
       "id": "a1d9a1a6bb919d443326cb1d",
       "title": "Big Summer Giveaway BH&G",
@@ -20,7 +41,7 @@
       "verification_level": "source_reported",
       "author": "geehohl",
       "first_seen_at": "2026-07-30T16:59:10.752969Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 30, 2026"
     },
@@ -41,7 +62,7 @@
       "verification_level": "source_reported",
       "author": "mratt1",
       "first_seen_at": "2026-07-30T16:59:10.752969Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 30, 2026"
     },
@@ -62,7 +83,7 @@
       "verification_level": "source_reported",
       "author": "kcharlton",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -83,7 +104,7 @@
       "verification_level": "source_reported",
       "author": "dreamweavermirar",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -104,7 +125,7 @@
       "verification_level": "source_reported",
       "author": "walrus22",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -125,7 +146,7 @@
       "verification_level": "source_reported",
       "author": "kpettyfan45",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -146,7 +167,7 @@
       "verification_level": "source_reported",
       "author": "damnyankee2",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -167,7 +188,7 @@
       "verification_level": "source_reported",
       "author": "wandag777",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -188,7 +209,7 @@
       "verification_level": "source_reported",
       "author": "deparrie",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -209,7 +230,7 @@
       "verification_level": "source_reported",
       "author": "alet",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -230,7 +251,7 @@
       "verification_level": "source_reported",
       "author": "bradleesweeps",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -251,7 +272,7 @@
       "verification_level": "source_reported",
       "author": "mratt1",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 29, 2026"
     },
@@ -272,7 +293,7 @@
       "verification_level": "source_reported",
       "author": "sweepsadv",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 27, 2026"
     },
@@ -293,7 +314,7 @@
       "verification_level": "source_reported",
       "author": "luckycatme2",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 27, 2026"
     },
@@ -314,7 +335,7 @@
       "verification_level": "source_reported",
       "author": "krs797",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 26, 2026"
     },
@@ -335,7 +356,7 @@
       "verification_level": "source_reported",
       "author": "jillianne1979",
       "first_seen_at": "2026-07-30T00:11:18.173041Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": null,
       "published_display": "July 25, 2026"
     },
@@ -419,7 +440,7 @@
       "verification_level": "source_reported",
       "author": "jdlarch",
       "first_seen_at": "2026-07-24T03:43:14.058689Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": "2026-07-24T03:43:25.593059Z",
       "published_display": "July 24, 2026"
     },
@@ -503,7 +524,7 @@
       "verification_level": "source_reported",
       "author": "puddin69",
       "first_seen_at": "2026-07-24T03:43:14.058689Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": "2026-07-24T03:43:25.593059Z",
       "published_display": "July 23, 2026"
     },
@@ -692,7 +713,7 @@
       "verification_level": "source_reported",
       "author": "stephaniebonck",
       "first_seen_at": "2026-07-24T03:43:14.058689Z",
-      "last_seen_at": "2026-07-30T16:59:10.752969Z",
+      "last_seen_at": "2026-07-31T17:09:09.008270Z",
       "sent_at": "2026-07-24T03:43:25.593059Z",
       "published_display": "July 21, 2026"
     },
