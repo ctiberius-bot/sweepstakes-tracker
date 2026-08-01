@@ -84,6 +84,31 @@ def node_text(node, tag):
     return (child.text or "").strip() if child is not None else ""
 
 
+def plain_html(value):
+    parser = TextExtractor()
+    parser.feed(value or "")
+    return html.unescape(parser.text()).strip()
+
+
+def concise(value, limit=240):
+    cleaned = re.sub(r"\s+", " ", value or "").strip()
+    if len(cleaned) <= limit:
+        return cleaned
+    return cleaned[:limit - 1].rsplit(" ", 1)[0] + "…"
+
+
+def rss_prize_summary(content):
+    """Keep the useful part of a community report without inventing prize details."""
+    text = plain_html(content)
+    sentences = [part.strip() for part in re.split(r"(?<=[.!?])\s+|\s{2,}", text) if part.strip()]
+    prize_sentences = [
+        sentence for sentence in sentences
+        if re.search(r"\b(won|winner|prize|received|selected)\b", sentence, re.IGNORECASE)
+    ]
+    selected = " ".join(prize_sentences[:2]) or text
+    return concise(selected) or "Prize details were not stated in the report preview."
+
+
 def report_id(source_id, *parts):
     identity = ":".join(str(part).strip().lower() for part in parts if part)
     return hashlib.sha256(f"{source_id}:{identity}".encode()).hexdigest()[:24]
@@ -116,6 +141,7 @@ def fetch_rss(source):
         link = node_text(item, "link")
         guid = node_text(item, "guid")
         author = node_text(item, "{http://purl.org/dc/elements/1.1/}creator")
+        content = node_text(item, "{http://purl.org/rss/1.0/modules/content/}encoded")
         try:
             published = parsedate_to_datetime(node_text(item, "pubDate")).astimezone(timezone.utc)
         except (TypeError, ValueError):
@@ -125,6 +151,11 @@ def fetch_rss(source):
             # when a thread is edited. The canonical thread URL is stable.
             "id": report_id(source["id"], link or guid or title),
             "title": title or "Winner report",
+            "winner_name": author or "Anonymous community member",
+            "privacy_label": author or "Anonymous community member",
+            "promotion_name": title or "Contest not identified in the report title",
+            "prize": rss_prize_summary(content),
+            "operator": "",
             "url": link or source["homepage"],
             "author": author,
             "published_at": published.isoformat().replace("+00:00", "Z"),

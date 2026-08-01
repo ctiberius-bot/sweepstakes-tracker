@@ -35,6 +35,18 @@ def report_label(report):
     return "Community-reported win"
 
 
+def display_winner(report):
+    return report.get("winner_name") or report.get("author") or "Winner not named in public report"
+
+
+def display_prize(report):
+    return report.get("prize") or "Prize details not stated in the public report"
+
+
+def display_contest(report):
+    return report.get("promotion_name") or report.get("raw_title") or "Contest not identified"
+
+
 def edition_extras(day):
     editorial = json.loads((BASE / "data" / "editorial.json").read_text(encoding="utf-8"))
     available = sorted(
@@ -73,18 +85,23 @@ def build_email(reports):
             continue
         cards = []
         for report in items:
-            prize = escape(report.get("prize"))
-            winner = escape(report.get("winner_name") or report.get("raw_title"))
-            detail = f'<p style="margin:6px 0 0;color:#334155;font-size:14px;line-height:1.45">{prize}</p>' if prize else ""
-            author = f" · {escape(report.get('author'))}" if report.get("author") else ""
+            winner = escape(display_winner(report))
+            prize = escape(display_prize(report))
+            contest = escape(display_contest(report))
             cards.append(f"""
               <tr><td style="padding:0 0 12px">
                 <table role="presentation" width="100%" style="border:1px solid #d9e4e2;border-radius:10px;background:#ffffff">
                   <tr><td style="padding:16px 18px">
                     <div style="margin-bottom:7px;color:#08756b;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase">{escape(report_label(report))}</div>
-                    <a href="{escape(report['source_url'])}" style="color:#102a2a;font-size:17px;font-weight:800;line-height:1.3;text-decoration:none">{winner}</a>
-                    {detail}
-                    <p style="margin:8px 0 0;color:#64748b;font-size:12px">{escape(report['source_name'])}{author} · {escape(report['reported_at'][:10])}</p>
+                    <table role="presentation" width="100%" style="border-collapse:collapse;color:#102a2a;font-size:14px;line-height:1.5">
+                      <tr><td width="92" valign="top" style="padding:3px 10px 3px 0;color:#475569;font-weight:800">WHO WON</td><td style="padding:3px 0;font-weight:700">{winner}</td></tr>
+                      <tr><td width="92" valign="top" style="padding:3px 10px 3px 0;color:#475569;font-weight:800">WHAT</td><td style="padding:3px 0">{prize}</td></tr>
+                      <tr><td width="92" valign="top" style="padding:3px 10px 3px 0;color:#475569;font-weight:800">CONTEST</td><td style="padding:3px 0">{contest}</td></tr>
+                    </table>
+                    <table role="presentation" cellspacing="0" cellpadding="0" style="margin-top:13px"><tr><td bgcolor="#075e54" style="border-radius:6px;background:#075e54">
+                      <a href="{escape(report['source_url'])}" style="display:inline-block;padding:10px 15px;color:#ffffff !important;font-size:13px;font-weight:800;text-decoration:none"><span style="color:#ffffff !important">OPEN ORIGINAL WINNER REPORT</span></a>
+                    </td></tr></table>
+                    <p style="margin:10px 0 0;color:#64748b;font-size:12px">{escape(report['source_name'])} · {escape(report['reported_at'][:10])}</p>
                   </td></tr>
                 </table>
               </td></tr>""")
@@ -126,7 +143,9 @@ def build_email(reports):
     A published winner report does not prove that a message claiming you won is genuine.
   </td></tr>
   <tr><td align="center" style="padding:22px 26px">
-    <a href="https://sweeps.safetrackerhub.com/winners.html" style="display:inline-block;padding:11px 18px;border-radius:7px;background:#08756b;color:#fff;font-size:14px;font-weight:800;text-decoration:none">Search the winner archive</a>
+    <table role="presentation" cellspacing="0" cellpadding="0" align="center"><tr><td bgcolor="#075e54" style="border-radius:7px;background:#075e54">
+      <a href="https://sweeps.safetrackerhub.com/winners.html" style="display:inline-block;padding:12px 19px;color:#ffffff !important;font-size:14px;font-weight:800;text-decoration:none"><span style="color:#ffffff !important">SEARCH THE WINNER ARCHIVE</span></a>
+    </td></tr></table>
     <p style="margin:15px 0 0;color:#64748b;font-size:11px;line-height:1.5">SafeTracker links each item to the monitored source and labels operator announcements separately from community reports.</p>
   </td></tr>
 </table></td></tr></table></body></html>"""
@@ -137,9 +156,12 @@ def build_email(reports):
             continue
         lines.extend([f"## {heading}", ""])
         for report in items:
-            title = report.get("winner_name") or report["raw_title"]
-            prize = f" — {report['prize']}" if report.get("prize") else ""
-            lines.append(f"- [{title}{prize}]({report['source_url']}) · {report['source_name']} · {report['reported_at'][:10]}")
+            lines.extend([
+                f"- **Who won:** {display_winner(report)}",
+                f"  **What they won:** {display_prize(report)}",
+                f"  **Contest:** {display_contest(report)}",
+                f"  **Report:** [Open original winner report]({report['source_url']})",
+            ])
         lines.append("")
     lines.extend([
         "## Two useful reminders",

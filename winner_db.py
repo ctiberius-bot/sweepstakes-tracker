@@ -129,6 +129,13 @@ def upsert_reports(connection, reports):
             )
             ON CONFLICT(source_id, source_url) DO UPDATE SET
                 raw_title=excluded.raw_title,
+                winner_name=excluded.winner_name,
+                privacy_label=excluded.privacy_label,
+                promotion_name=excluded.promotion_name,
+                prize=excluded.prize,
+                operator=excluded.operator,
+                reported_at=excluded.reported_at,
+                author=excluded.author,
                 last_seen_at=excluded.last_seen_at
             """,
             {
