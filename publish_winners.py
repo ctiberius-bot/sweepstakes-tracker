@@ -199,6 +199,7 @@ def main():
                 "Authorization": f"Token {token}",
                 "Content-Type": "application/json",
                 "User-Agent": "SafeTracker-WinnerMonitor/1.2",
+                "X-Buttondown-Live-Dangerously": "true",
             },
         )
         try:
