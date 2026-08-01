@@ -5,6 +5,7 @@ import argparse
 import html
 import json
 import os
+import urllib.error
 import urllib.request
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -200,8 +201,12 @@ def main():
                 "User-Agent": "SafeTracker-WinnerMonitor/1.2",
             },
         )
-        with urllib.request.urlopen(request, timeout=30) as response:
-            result = json.loads(response.read().decode("utf-8"))
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                result = json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as error:
+            detail = error.read().decode("utf-8", errors="replace")
+            raise RuntimeError(f"Buttondown API returned HTTP {error.code}: {detail}") from error
         if not args.draft:
             accepted_statuses = {"about_to_send", "in_flight", "sent"}
             if result.get("status") not in accepted_statuses:
