@@ -85,7 +85,11 @@ print(f"Validated {len(active)} active promotion pages and inventory cards.")
 
 guides_dir = BASE / "guides"
 expected_guides = {f"{article['slug']}.html" for article in editorial_pages}
-actual_guides = {path.name for path in guides_dir.glob("*.html")}
+actual_guides = {
+    path.name
+    for path in guides_dir.glob("*.html")
+    if path.name != "index.html"
+}
 if expected_guides != actual_guides:
     raise SystemExit(
         f"Guide file mismatch. Missing={sorted(expected_guides - actual_guides)} "

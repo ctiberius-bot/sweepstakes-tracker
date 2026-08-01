@@ -33,7 +33,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json index.html winners.html active-sweepstakes.html sitemap.xml reviews sponsorships.html site-types.html contact.html methodology.html
+          git add data.json ./*.html sitemap.xml reviews guides sweepstakes
           git commit -m "Daily profile refresh: $(date -u +'%Y-%m-%d')" || exit 0
           git push
         env:
