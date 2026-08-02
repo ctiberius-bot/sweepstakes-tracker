@@ -12,7 +12,8 @@
   {% if article.share_image %}<meta property="og:image" content="https://sweeps.safetrackerhub.com/{{ article.share_image }}">{% endif %}
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <link rel="canonical" href="https://sweeps.safetrackerhub.com/guides/{{ article.slug }}">
-  <link rel="icon" type="image/png" href="../assets/safetracker-icon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
     {"@type":"Article","headline":{{ article.title|tojson }},"description":{{ article.meta_description|tojson }},"datePublished":{{ article.published|default("2026-07-26")|tojson }},"dateModified":"{{ last_updated_iso }}","author":{"@type":"Organization","name":"SafeTracker Editorial Team","url":"https://sweeps.safetrackerhub.com/about"},"publisher":{"@type":"Organization","name":"SafeTrackerHub"},"mainEntityOfPage":"https://sweeps.safetrackerhub.com/guides/{{ article.slug }}"},

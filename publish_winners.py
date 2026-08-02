@@ -117,9 +117,11 @@ def build_email(reports):
 <table role="presentation" width="100%" style="background:#eef4f3"><tr><td align="center" style="padding:24px 10px">
 <table role="presentation" width="100%" style="max-width:640px;background:#f8fbfa;border-radius:14px;overflow:hidden">
   <tr><td style="padding:22px 26px;background:#073f3b;border-bottom:5px solid #f0a23b">
-    <div style="color:#9ee2d8;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase">SafeTracker: Sweepstakes</div>
-    <h1 style="margin:6px 0 5px;color:#fff;font-family:Georgia,serif;font-size:29px;line-height:1.15">Winner Signal</h1>
-    <p style="margin:0;color:#cce9e5;font-size:14px">Source-linked winner reports. No empty editions. No manufactured claims.</p>
+    <table role="presentation"><tr><td style="padding-right:14px;vertical-align:middle"><img src="https://sweeps.safetrackerhub.com/assets/safetracker-sweepstakes-shield.png" width="54" height="65" alt="SafeTracker Sweepstakes" style="display:block;width:54px;height:65px;object-fit:contain"></td><td style="vertical-align:middle">
+      <div style="color:#9ee2d8;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase">SafeTracker: Sweepstakes</div>
+      <h1 style="margin:6px 0 5px;color:#fff;font-family:Georgia,serif;font-size:29px;line-height:1.15">Winner Signal</h1>
+      <p style="margin:0;color:#cce9e5;font-size:14px">Source-linked winner reports. No empty editions. No manufactured claims.</p>
+    </td></tr></table>
   </td></tr>
   <tr><td style="padding:20px 26px 0;color:#334155;font-size:14px;line-height:1.55">
     We found <strong>{len(reports)} new report{'s' if len(reports) != 1 else ''}</strong> across <strong>{len(set(r['source_id'] for r in reports))} monitored source{'s' if len(set(r['source_id'] for r in reports)) != 1 else ''}</strong>.
