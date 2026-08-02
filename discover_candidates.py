@@ -8,6 +8,7 @@ discovery signals; they never modify data.json or generated public pages.
 import argparse
 import hashlib
 import json
+import os
 import re
 import ssl
 from datetime import datetime, timezone
@@ -144,6 +145,7 @@ def merge_queue(discovered, now):
     existing = {item["id"]: item for item in queue.get("candidates", [])}
     known = known_urls()
     new_count = 0
+    added = []
     for item in discovered:
         if item["discovered_url"] in known:
             continue
@@ -168,11 +170,12 @@ def merge_queue(discovered, now):
                 }
             })
             existing[item["id"]] = item
+            added.append(dict(item))
             new_count += 1
     queue["updated_at"] = now
     queue["candidates"] = sorted(existing.values(), key=lambda item: (item.get("status") != "needs_review", item.get("first_seen", ""), item["title"].casefold()))
     QUEUE_FILE.write_text(json.dumps(queue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    return queue, new_count
+    return queue, new_count, added
 
 
 def write_report(queue, source_results, new_count):
@@ -217,7 +220,9 @@ def write_report(queue, source_results, new_count):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--fixture-dir", type=Path, help="Read <source-id>.html fixtures instead of the network")
+    parser.add_argument("--run-output", type=Path, help="Write a machine-readable record of this discovery run")
     args = parser.parse_args()
+    started_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     sources = json.loads(SOURCES_FILE.read_text(encoding="utf-8"))["sources"]
     now = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     discovered = []
@@ -233,8 +238,37 @@ def main():
             results.append({"name": source["name"], "status": "ok", "count": len(items)})
         except (OSError, HTTPError, URLError, ValueError) as exc:
             results.append({"name": source["name"], "status": f"error: {type(exc).__name__}", "count": 0})
-    queue, new_count = merge_queue(discovered, now)
+    queue, new_count, added = merge_queue(discovered, now)
     write_report(queue, results, new_count)
+    review_total = sum(1 for item in queue["candidates"] if item["status"] == "needs_review")
+    if args.run_output:
+        run_id = os.environ.get("GITHUB_RUN_ID") or f"local-{int(datetime.now(timezone.utc).timestamp())}"
+        repository = os.environ.get("GITHUB_REPOSITORY", "ctiberius-bot/sweepstakes-tracker")
+        server = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
+        payload = {
+            "jobId": "sweeps-daily-discovery",
+            "providerRunId": run_id,
+            "trigger": os.environ.get("GITHUB_EVENT_NAME", "manual"),
+            "status": "completed",
+            "conclusion": "success",
+            "startedAt": started_at,
+            "completedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+            "candidatesSeen": len(discovered),
+            "candidatesAdded": new_count,
+            "quarantineTotal": review_total,
+            "sourceResults": results,
+            "addedItems": [{
+                "id": item["id"],
+                "title": item["title"],
+                "domain": item["discovered_domain"],
+                "source": item["source_name"],
+                "url": item["discovered_url"],
+            } for item in added],
+            "runUrl": f"{server}/{repository}/actions/runs/{run_id}",
+            "summary": f"Discovery completed: {len(discovered)} candidate links scanned; {new_count} added; {review_total} awaiting review.",
+        }
+        args.run_output.parent.mkdir(parents=True, exist_ok=True)
+        args.run_output.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Discovered {len(discovered)} links; {new_count} new; {sum(1 for item in queue['candidates'] if item['status'] == 'needs_review')} awaiting review.")
     for result in results:
         print(f"  {result['name']}: {result['status']} ({result['count']})")

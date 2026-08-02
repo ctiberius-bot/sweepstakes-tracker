@@ -21,7 +21,8 @@ jobs:
         with:
           python-version: "3.11"
       - name: Discover and quarantine candidates
-        run: python discover_candidates.py
+        id: discovery
+        run: python discover_candidates.py --run-output "$RUNNER_TEMP/discovery-run.json"
       - name: Add review report to run summary
         run: cat DISCOVERY_REVIEW.md >> "$GITHUB_STEP_SUMMARY"
       - name: Commit review queue only
@@ -33,3 +34,10 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Record discovery outcome in Signal Command
+        if: always()
+        run: python scripts/report_discovery_run.py "$RUNNER_TEMP/discovery-run.json"
+        env:
+          DISCOVERY_STEP_OUTCOME: ${{ steps.discovery.outcome }}
+          SIGNAL_COMMAND_DISCOVERY_URL: https://sc.justsignal.company/api/discovery-runs/ingest
+          SIGNAL_COMMAND_PUBLICATION_TOKEN: ${{ secrets.SIGNAL_COMMAND_PUBLICATION_TOKEN }}
