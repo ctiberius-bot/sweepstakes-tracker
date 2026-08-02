@@ -85,6 +85,21 @@ The scheduled calculation keeps the inventory current and consistently ordered.
 The editorial criterion values should still be updated whenever new evidence,
 complaints, rules, fulfillment history, or marketing practices are verified.
 
+## Signal Command approval publication
+
+`.github/workflows/publish-approved.yml` polls the protected Signal Command
+publication queue every five minutes. An approval enters this queue only after
+the reviewer completes all public profile fields and evidence for all five
+ScamFactor inputs. The Sweepstakes adapter validates the manifest again, updates
+`data.json`, regenerates every inventory card and profile, runs the full generated
+site validation, pushes the production source, and acknowledges the live profile
+URL back to Signal Command.
+
+The queue uses a versioned, tracker-neutral manifest. See
+`TRACKER_PUBLICATION_ADAPTER.md` for the contract used by other SafeTracker
+verticals. Approval is publication only when this evidence-complete workflow is
+used; legacy review decisions without a publication manifest remain unpublished.
+
 ## Manual run
 
 Open the repository's **Actions** tab, choose **Weekly ScamFactor Rescore**, and

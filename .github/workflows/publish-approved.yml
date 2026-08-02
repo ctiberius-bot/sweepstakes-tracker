@@ -1,0 +1,57 @@
+name: Publish Signal Command approvals
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: signal-command-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install generator dependency
+        run: python -m pip install -r requirements.txt
+      - name: Ingest approved publication manifests
+        id: ingest
+        run: python scripts/publish_approved.py ingest --results "$RUNNER_TEMP/publications.json"
+        env:
+          SIGNAL_COMMAND_PUBLICATION_TOKEN: ${{ secrets.SIGNAL_COMMAND_PUBLICATION_TOKEN }}
+          SIGNAL_COMMAND_PUBLICATION_URL: https://sc.justsignal.company/api/publications
+      - name: Rebuild and validate public cards and profiles
+        if: steps.ingest.outputs.changed == 'true'
+        run: |
+          python scraper_simple.py
+          python validate_generated.py
+      - name: Validate an already-generated retry
+        if: steps.ingest.outputs.count != '0' && steps.ingest.outputs.changed != 'true'
+        run: python validate_generated.py
+      - name: Commit and publish tracker changes
+        if: steps.ingest.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json ./*.html sitemap.xml reviews guides sweepstakes
+          git commit -m "Publish approved Signal Command profiles"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Verify production profile routes
+        if: steps.ingest.outputs.count != '0'
+        run: python scripts/publish_approved.py verify --results "$RUNNER_TEMP/publications.json"
+      - name: Acknowledge live profiles
+        if: steps.ingest.outputs.count != '0'
+        run: python scripts/publish_approved.py ack --results "$RUNNER_TEMP/publications.json"
+        env:
+          SIGNAL_COMMAND_PUBLICATION_TOKEN: ${{ secrets.SIGNAL_COMMAND_PUBLICATION_TOKEN }}
+          SIGNAL_COMMAND_PUBLICATION_URL: https://sc.justsignal.company/api/publications
