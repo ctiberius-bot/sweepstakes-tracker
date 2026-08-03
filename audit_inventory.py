@@ -7,6 +7,7 @@ import ssl
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
 BASE = Path(__file__).parent
@@ -17,6 +18,14 @@ USER_AGENT = "SafeTrackerHub-InventoryAudit/1.0 (+https://sweeps.safetrackerhub.
 
 def record_id(slug, url):
     return hashlib.sha256(f"{slug}|{url}".encode("utf-8")).hexdigest()[:16]
+
+
+def is_public_http_url(url):
+    """Return whether an inventory value is a usable public web URL."""
+    if not isinstance(url, str):
+        return False
+    parsed = urlsplit(url.strip())
+    return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
 
 
 def check_url(url, timeout=20):
@@ -45,11 +54,16 @@ def main():
     queue = json.loads(QUEUE_FILE.read_text(encoding="utf-8")) if QUEUE_FILE.exists() else {"schema_version": 1, "candidates": []}
     existing = {item["id"]: item for item in queue.get("candidates", [])}
     active_ids = set()
+    checked = 0
+    skipped = 0
 
     for site in inventory.get("sites", []):
         url = site.get("link") or site.get("outbound_url") or site.get("scrape_url")
-        if not url:
+        if not is_public_http_url(url):
+            skipped += 1
             continue
+        url = url.strip()
+        checked += 1
         item_id = record_id(site.get("slug", ""), url)
         result = check_url(url)
         previous = existing.get(item_id, {})
@@ -85,7 +99,10 @@ def main():
         key=lambda item: (-int(item.get("consecutive_failures", 0)), item.get("name", "").casefold()),
     )
     QUEUE_FILE.write_text(json.dumps(queue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Checked {len(inventory.get('sites', []))} inventory records; {len(queue['candidates'])} require removal review.")
+    print(
+        f"Checked {checked} inventory URLs; skipped {skipped} records without a public HTTP(S) URL; "
+        f"{len(queue['candidates'])} require removal review."
+    )
 
 
 if __name__ == "__main__":
