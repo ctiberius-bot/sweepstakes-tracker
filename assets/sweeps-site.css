@@ -15,6 +15,8 @@
   --score-mid: #d6b62f;
   --score-high: #e48a2b;
   --score-danger: #d44b3e;
+  --header-logo-width: 5.25rem;
+  --header-logo-height: 6rem;
 }
 
 html { scroll-behavior: smooth; }
@@ -40,8 +42,8 @@ body {
 }
 .brand-lockup { display: flex; align-items: center; gap: .75rem; }
 .brand-mark {
-  width: 5.25rem;
-  height: 6rem;
+  width: var(--header-logo-width);
+  height: var(--header-logo-height);
   flex: 0 0 auto;
   filter: drop-shadow(0 2px 2px rgba(0,0,0,.18));
 }
@@ -52,7 +54,7 @@ body {
   height: 100%;
   object-fit: contain;
 }
-.brand-shield-inline { width: 5.25rem; height: 6rem; flex: 0 0 auto; }
+.brand-shield-inline { width: var(--header-logo-width); height: var(--header-logo-height); flex: 0 0 auto; }
 .brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
 .brand-name em { color: #ffd68a; font-style: normal; }
 .brand-name { font-size: 1.15rem; font-weight: 850; letter-spacing: -.025em; }
@@ -341,8 +343,8 @@ body {
 .review-brand { display: inline-flex; align-items: center; gap: .5rem; color: white; font-weight: 850; text-decoration: none; }
 .review-brand::before {
   content: "";
-  width: 1.8rem;
-  height: 2.15rem;
+  width: var(--header-logo-width);
+  height: var(--header-logo-height);
   flex: 0 0 auto;
   background: url("sweeps-shield.svg") center / contain no-repeat;
   filter: drop-shadow(0 1px 1px rgba(0,0,0,.18));
@@ -551,6 +553,7 @@ body {
 }
 
 @media (max-width: 720px) {
+  .review-masthead { align-items: flex-start; flex-direction: column; gap: .35rem; padding-block: .7rem; }
   .content-shell { padding-top: 1.25rem; }
   .hero h1 { font-size: 2rem; }
   .tracker-table-wrap { display: none; }
@@ -581,8 +584,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .brand-mark,
-  .brand-shield-inline { width: 4.25rem; height: 4.9rem; }
+  :root { --header-logo-width: 4.25rem; --header-logo-height: 4.9rem; }
   .review-hero { gap: 1.25rem; padding-top: 1.35rem; }
   .review-identity { flex-direction: column; align-items: stretch; }
   .review-identity .site-mark-large,
