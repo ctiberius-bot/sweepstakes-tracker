@@ -196,8 +196,8 @@ Key modified source files include:
 - `validate_generated.py`
 - `templates/tracker.html.j2`
 - `templates/review.html.j2`
-- `assets/tracker.js`
-- `assets/site.css`
+- `assets/sweeps-tracker.js`
+- `assets/sweeps-site.css`
 - `assets/logos/winstakes.png`
 
 Generated output is also modified across `index.html`, `reviews/`, category pages, sitemap, and promotion pages.

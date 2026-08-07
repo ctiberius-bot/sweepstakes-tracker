@@ -92,8 +92,8 @@ Scores are editorial estimates based on available evidence and should be revisit
 - `templates/tracker.html.j2` — main tracker template.
 - `templates/review.html.j2` — individual site-profile template.
 - `templates/sponsorships.html.j2` — sponsorship page template.
-- `assets/site.css` — primary redesign styles.
-- `assets/tracker.js` — client-side layout enhancement, search, filters, sorting, mobile cards, favicons, and quick-details dialog.
+- `assets/sweeps-site.css` — primary redesign styles.
+- `assets/sweeps-tracker.js` — client-side layout enhancement, search, filters, sorting, mobile cards, favicons, and quick-details dialog.
 - `assets/scamfactor-stamp.png` — transparent ScamFactor rubber-stamp artwork.
 - `index.html` — generated production homepage.
 - `reviews/*.html` — generated site-profile pages.
