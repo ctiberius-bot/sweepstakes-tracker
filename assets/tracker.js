@@ -14,7 +14,7 @@
       <div class="max-w-7xl mx-auto px-4">
         <div class="masthead">
           <div class="brand-lockup">
-            <span class="brand-mark" aria-hidden="true"><span>ST</span></span>
+            <span class="brand-mark" aria-hidden="true"><img src="assets/sweeps-shield.svg" alt="" width="120" height="162"></span>
             <div><div class="brand-name">SafeTracker: <em>Sweepstakes</em></div><div class="brand-network">Safety rankings & winner reports</div></div>
           </div>
           <nav class="main-nav" aria-label="Primary navigation">
