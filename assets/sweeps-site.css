@@ -40,8 +40,8 @@ body {
 }
 .brand-lockup { display: flex; align-items: center; gap: .75rem; }
 .brand-mark {
-  width: 2.8rem;
-  height: 3.1rem;
+  width: 5.25rem;
+  height: 6rem;
   flex: 0 0 auto;
   filter: drop-shadow(0 2px 2px rgba(0,0,0,.18));
 }
@@ -52,7 +52,7 @@ body {
   height: 100%;
   object-fit: contain;
 }
-.brand-shield-inline { width: 2.8rem; height: 3.1rem; flex: 0 0 auto; }
+.brand-shield-inline { width: 5.25rem; height: 6rem; flex: 0 0 auto; }
 .brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; }
 .brand-name em { color: #ffd68a; font-style: normal; }
 .brand-name { font-size: 1.15rem; font-weight: 850; letter-spacing: -.025em; }
@@ -581,6 +581,8 @@ body {
 }
 
 @media (max-width: 480px) {
+  .brand-mark,
+  .brand-shield-inline { width: 4.25rem; height: 4.9rem; }
   .review-hero { gap: 1.25rem; padding-top: 1.35rem; }
   .review-identity { flex-direction: column; align-items: stretch; }
   .review-identity .site-mark-large,
