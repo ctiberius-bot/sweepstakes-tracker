@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-08T12:04:54.674608Z",
+  "updated_at": "2026-08-08T12:04:57.194155Z",
   "count": 56,
   "winners": [
     {
@@ -21,7 +21,7 @@
       "author": "siehien",
       "first_seen_at": "2026-08-08T12:04:54.669768Z",
       "last_seen_at": "2026-08-08T12:04:54.669768Z",
-      "sent_at": null,
+      "sent_at": "2026-08-08T12:04:57.191641Z",
       "published_display": "August 8, 2026"
     },
     {
@@ -84,7 +84,7 @@
       "author": "danmantx",
       "first_seen_at": "2026-08-08T12:04:54.669768Z",
       "last_seen_at": "2026-08-08T12:04:54.669768Z",
-      "sent_at": null,
+      "sent_at": "2026-08-08T12:04:57.191641Z",
       "published_display": "August 7, 2026"
     },
     {
