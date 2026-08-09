@@ -602,7 +602,7 @@ def main():
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Sweepstakes Safety and Strategy Guides",
-        "url": f"{SITE_ORIGIN}/guides",
+        "url": f"{SITE_ORIGIN}/guides/",
         "mainEntity": {
             "@type": "ItemList",
             "numberOfItems": len(editorial_pages),
@@ -693,7 +693,7 @@ def main():
         f"{SITE_ORIGIN}/contact",
         f"{SITE_ORIGIN}/about",
         f"{SITE_ORIGIN}/sponsorships",
-        f"{SITE_ORIGIN}/guides",
+        f"{SITE_ORIGIN}/guides/",
         *[f"{SITE_ORIGIN}/guides/{article['slug']}" for article in editorial_pages],
         *[f"{SITE_ORIGIN}/reviews/{site['slug']}" for site in sites],
         *[f"{SITE_ORIGIN}/sweepstakes/{promotion['slug']}" for promotion in active_promotions],

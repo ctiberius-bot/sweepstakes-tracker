@@ -125,12 +125,23 @@ for profile_name in expected:
         raise SystemExit(f"{profile_name} is missing contextual guide links")
 
 sitemap = (BASE / "sitemap.xml").read_text(encoding="utf-8")
+if "<loc>https://sweeps.safetrackerhub.com/guides</loc>" in sitemap:
+    raise SystemExit("Sitemap contains the redirecting /guides URL instead of /guides/.")
+if "<loc>https://sweeps.safetrackerhub.com/guides/</loc>" not in sitemap:
+    raise SystemExit("Sitemap is missing the canonical /guides/ URL.")
 missing_sitemap_guides = [
     article["slug"] for article in editorial_pages
     if f"https://sweeps.safetrackerhub.com/guides/{article['slug']}" not in sitemap
 ]
 if missing_sitemap_guides:
     raise SystemExit(f"Sitemap is missing guides: {missing_sitemap_guides}")
+redirects = (BASE / "_redirects").read_text(encoding="utf-8")
+for legacy_url in (
+    "/reviews/fabfitfun-summer-dream",
+    "/sweepstakes/fabfitfun-summer-dream",
+):
+    if f"{legacy_url} /active-sweepstakes 301" not in redirects:
+        raise SystemExit(f"Missing permanent redirect for {legacy_url}.")
 flagship_slugs = {
     "best-sweepstakes-sites-with-winner-evidence",
     "2026-sweepstakes-scam-warning-signs-report",
