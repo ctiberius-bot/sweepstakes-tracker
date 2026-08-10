@@ -109,6 +109,44 @@ select **Run workflow**.
 
 The `Daily winner reports` workflow runs at 11:15 UTC. It checks the source
 feeds in `data/winner_sources.json`, updates the public winners archive, and
-sends one Buttondown edition only when new reports are found. It stores source
-IDs in `data/winner_state.json` so reports are not repeated. The repository
-secret `BUTTONDOWN_API_KEY` is required for sending.
+publishes one edition only when new reports are found. It stores source IDs in
+`data/winner_state.json` so reports are not repeated. Buttondown remains the
+production delivery provider unless the explicit Kit cutover gate below is
+approved. This preserves daily delivery while the Kit account is reviewed.
+
+After either provider accepts the edition, the job marks the reports delivered,
+snapshots the edition to `data/newsletter_editions.json`, writes its permanent
+page under `newsletter/`, rebuilds `newsletter/index.html`, and adds the public
+archive URL to `sitemap.xml`. Marking happens before archive rendering so a
+rendering failure cannot cause a duplicate email on the next daily run; the
+workflow failure alert still makes an archive problem visible.
+
+Delivery runs only when `WINNER_NEWSLETTER_ENABLED` is `true`. The workflow uses
+Buttondown and `BUTTONDOWN_API_KEY` by default. It uses Kit and `KIT_API_KEY`
+only when the repository variable `WINNER_NEWSLETTER_KIT_CUTOVER` is exactly
+`approved`. Kit broadcasts are scheduled with `public: false`, so daily emails
+are not published to Kit's public newsletter feed.
+
+Do not set the Kit cutover variable until all of these are true:
+
+1. Kit has removed the disabled-features banner and Support has approved the
+   dedicated `sweepstakes-research@safetrackerhub.com` account.
+2. `winners@safetrackerhub.com` is the verified default sender with the display
+   name `Winner Signal by SafeTracker` and the Kit email template contains the
+   required unsubscribe control and physical mailing address.
+3. A V4 API key from that account is saved as the `KIT_API_KEY` repository
+   secret, and a private draft proves broadcast creation works without a live
+   send.
+4. A Kit form named `Winner Signal` is published with confirmation email on,
+   auto-confirm off, and subscriber-data forwarding off. Its immediate redirect
+   is `https://sweeps.safetrackerhub.com/newsletter/thanks.html`; its
+   post-confirmation redirect is
+   `https://sweeps.safetrackerhub.com/newsletter/confirmed.html`.
+5. The exact Kit JavaScript embed UID and source are entered in
+   `assets/winner-signal-config.js`, the public signup `provider` is changed to
+   `kit`, and an incognito walkthrough confirms the form, redirects, confirmed
+   subscriber state, branding, analytics event, and unsubscribe footer.
+
+Until those gates pass, keep the signup provider and delivery provider on
+Buttondown. Do not remove `BUTTONDOWN_API_KEY`, subscribers, tags, or account
+configuration during the overlap period.

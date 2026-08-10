@@ -8,12 +8,16 @@ import os
 import urllib.error
 import urllib.request
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from newsletter_archive import archive_edition
 from winner_db import connect, mark_sent, unsent_reports
 
 BASE = Path(__file__).parent
+BUTTONDOWN_EMAILS_URL = "https://api.buttondown.com/v1/emails"
+KIT_BROADCASTS_URL = "https://api.kit.com/v4/broadcasts"
+DEFAULT_KIT_SEND_DELAY_MINUTES = 5
 
 TIP_ROTATION = [
     "Never pay a fee, buy gift cards, send cryptocurrency, or wire money to claim a legitimate prize.",
@@ -76,7 +80,7 @@ def build_email(reports):
     guide_url = f"https://sweeps.safetrackerhub.com/guides/{guide['slug']}.html"
     official = [report for report in reports if report.get("source_type") == "operator_announcement"]
     community = [report for report in reports if report.get("source_type") != "operator_announcement"]
-    subject = f"{len(reports)} new sweepstakes winner report{'s' if len(reports) != 1 else ''} — {today}"
+    subject = f"Winner Signal: {len(reports)} new sweepstakes winner report{'s' if len(reports) != 1 else ''} — {today}"
     preheader = f"New source-linked winner reports from {len(set(r['source_id'] for r in reports))} monitored sources."
 
     sections = []
@@ -146,11 +150,11 @@ def build_email(reports):
     <table role="presentation" cellspacing="0" cellpadding="0" align="center"><tr><td bgcolor="#075e54" style="border-radius:7px;background:#075e54">
       <a href="https://sweeps.safetrackerhub.com/winners.html" style="display:inline-block;padding:12px 19px;color:#ffffff !important;font-size:14px;font-weight:800;text-decoration:none"><span style="color:#ffffff !important">SEARCH THE WINNER ARCHIVE</span></a>
     </td></tr></table>
-    <p style="margin:15px 0 0;color:#64748b;font-size:11px;line-height:1.5">SafeTracker links each item to the monitored source and labels operator announcements separately from community reports.</p>
+    <p style="margin:15px 0 0;color:#64748b;font-size:11px;line-height:1.5"><strong>Winner Signal by SafeTracker: Sweepstakes</strong><br>SafeTracker links each item to the monitored source and labels operator announcements separately from community reports. You receive Winner Signal only when new reports are found; your email provider places unsubscribe and mailing-address controls below this edition.</p>
   </td></tr>
 </table></td></tr></table></body></html>"""
 
-    lines = ["# Winner Signal", "", preheader, ""]
+    lines = ["# Winner Signal", "", "By SafeTracker: Sweepstakes", "", preheader, ""]
     for heading, items in (("Published by sweepstakes operators", official), ("Reported by sweepstakes communities", community)):
         if not items:
             continue
@@ -180,14 +184,86 @@ def build_email(reports):
         "**Safety reminder:** Never pay a fee or provide banking information to claim a legitimate prize.",
         "",
         "[Search the winner archive](https://sweeps.safetrackerhub.com/winners.html)",
+        "",
+        "Winner Signal is a free publication from SafeTracker: Sweepstakes. Your email provider includes unsubscribe and mailing-address controls with this edition.",
     ])
     return subject, "\n".join(lines), body_html
 
 
+def build_kit_payload(subject, body_html, *, draft=False, send_at=None):
+    """Build a private Kit broadcast payload for the dedicated account audience."""
+    if draft:
+        send_at = None
+    elif send_at is None:
+        raise ValueError("send_at is required for a scheduled Kit broadcast.")
+    return {
+        "subject": subject,
+        "content": body_html,
+        "description": "Source-linked winner reports from SafeTracker: Sweepstakes.",
+        "preview_text": "New source-linked sweepstakes winner reports.",
+        "public": False,
+        "send_at": send_at,
+    }
+
+
+def create_kit_broadcast(token, payload):
+    request = urllib.request.Request(
+        KIT_BROADCASTS_URL,
+        data=json.dumps(payload).encode(),
+        method="POST",
+        headers={
+            "X-Kit-Api-Key": token,
+            "Content-Type": "application/json",
+            "User-Agent": "SafeTracker-WinnerMonitor/2.0",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            result = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"Kit API returned HTTP {error.code}: {detail}") from error
+    broadcast = result.get("broadcast", result)
+    if not broadcast.get("id"):
+        raise RuntimeError("Kit API created a broadcast without returning an id.")
+    return broadcast
+
+
+def create_buttondown_email(token, subject, body_html, *, draft=False):
+    """Create a Buttondown draft or queue an edition for the current audience."""
+    payload = {
+        "subject": subject,
+        "body": "<!-- buttondown-editor-mode: fancy -->" + body_html,
+        "status": "draft" if draft else "about_to_send",
+        "slug": datetime.now(timezone.utc).strftime("winner-signal-%Y-%m-%d"),
+        "description": "Winner Signal by SafeTracker: Sweepstakes — source-linked winner reports.",
+    }
+    request = urllib.request.Request(
+        BUTTONDOWN_EMAILS_URL,
+        data=json.dumps(payload).encode(),
+        method="POST",
+        headers={
+            "Authorization": f"Token {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "SafeTracker-WinnerMonitor/2.0",
+            "X-Buttondown-Live-Dangerously": "true",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            result = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"Buttondown API returned HTTP {error.code}: {detail}") from error
+    if not result.get("id"):
+        raise RuntimeError("Buttondown created an email without returning an id.")
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--preview", type=Path, help="Write a local HTML preview and do not contact Buttondown.")
-    parser.add_argument("--draft", action="store_true", help="Create a Buttondown draft without sending it.")
+    parser.add_argument("--preview", type=Path, help="Write a local HTML preview and do not contact a provider.")
+    parser.add_argument("--draft", action="store_true", help="Create a provider draft without sending it.")
     args = parser.parse_args()
 
     with connect() as database:
@@ -203,44 +279,71 @@ def main():
             print(json.dumps({"preview": str(args.preview), "pending_count": len(pending), "subject": subject}))
             return
 
-        token = os.environ.get("BUTTONDOWN_API_KEY")
-        if not token:
-            raise SystemExit("BUTTONDOWN_API_KEY is required.")
-        payload = json.dumps({
-            "subject": subject,
-            "body": "<!-- buttondown-editor-mode: fancy -->" + body_html,
-            "status": "draft" if args.draft else "about_to_send",
-            "slug": datetime.now(timezone.utc).strftime("winner-signal-%Y-%m-%d"),
-            "description": "Source-linked winner reports from SafeTracker: Sweepstakes.",
-        }).encode()
-        request = urllib.request.Request(
-            "https://api.buttondown.com/v1/emails",
-            data=payload,
-            method="POST",
-            headers={
-                "Authorization": f"Token {token}",
-                "Content-Type": "application/json",
-                "User-Agent": "SafeTracker-WinnerMonitor/1.2",
-                "X-Buttondown-Live-Dangerously": "true",
-            },
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=30) as response:
-                result = json.loads(response.read().decode("utf-8"))
-        except urllib.error.HTTPError as error:
-            detail = error.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"Buttondown API returned HTTP {error.code}: {detail}") from error
+        provider = os.environ.get("WINNER_NEWSLETTER_PROVIDER", "buttondown").strip().lower()
+        if provider not in {"buttondown", "kit"}:
+            raise SystemExit("WINNER_NEWSLETTER_PROVIDER must be 'buttondown' or 'kit'.")
+
+        provider_id = None
+        accepted_at = None
+        provider_status = "draft" if args.draft else "queued"
+        if provider == "buttondown":
+            token = os.environ.get("BUTTONDOWN_API_KEY")
+            if not token:
+                raise SystemExit("BUTTONDOWN_API_KEY is required while Buttondown is active.")
+            result = create_buttondown_email(token, subject, body_html, draft=args.draft)
+            provider_id = result["id"]
+            provider_status = result.get("status", provider_status)
+            if not args.draft:
+                accepted_statuses = {"about_to_send", "in_flight", "sent"}
+                if provider_status not in accepted_statuses:
+                    raise RuntimeError(
+                        f"Buttondown created email {provider_id} with unexpected status "
+                        f"{provider_status!r}; reports remain pending."
+                    )
+                accepted_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+        else:
+            token = os.environ.get("KIT_API_KEY")
+            if not token:
+                raise SystemExit("KIT_API_KEY is required while Kit is active.")
+            delay_minutes = int(os.environ.get("KIT_SEND_DELAY_MINUTES", DEFAULT_KIT_SEND_DELAY_MINUTES))
+            if delay_minutes < 1:
+                raise SystemExit("KIT_SEND_DELAY_MINUTES must be at least 1.")
+            send_at = None if args.draft else (
+                datetime.now(timezone.utc) + timedelta(minutes=delay_minutes)
+            ).isoformat()
+            broadcast = create_kit_broadcast(
+                token,
+                build_kit_payload(subject, body_html, draft=args.draft, send_at=send_at),
+            )
+            provider_id = broadcast["id"]
+            provider_status = "draft" if args.draft else "scheduled"
+            if not args.draft:
+                accepted_at = broadcast.get("send_at")
+                if not accepted_at:
+                    raise RuntimeError(
+                        f"Kit created broadcast {provider_id} without a scheduled send time; "
+                        "reports remain pending."
+                    )
+
+        archive_path = None
         if not args.draft:
-            accepted_statuses = {"about_to_send", "in_flight", "sent"}
-            if result.get("status") not in accepted_statuses:
-                raise RuntimeError(
-                    f"Buttondown created email {result.get('id', 'without an id')} "
-                    f"with unexpected status {result.get('status')!r}; reports remain pending."
-                )
+            # Once the provider has accepted a live edition, mark the reports first.
+            # If archive rendering subsequently fails, the job alerts without risking a
+            # duplicate newsletter on the next daily run.
             mark_sent(database, [winner["id"] for winner in pending])
+            archive_path = archive_edition(
+                pending,
+                subject,
+                accepted_at,
+                provider_id,
+                provider=provider,
+            )
         print(json.dumps({
-            "buttondown_id": result.get("id"),
-            "status": "draft" if args.draft else "queued",
+            "provider": provider,
+            "provider_id": provider_id,
+            "status": provider_status,
+            "accepted_at": accepted_at,
+            "archive_path": str(archive_path) if archive_path else None,
             "report_count": len(pending),
         }))
 

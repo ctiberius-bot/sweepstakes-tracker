@@ -5,9 +5,10 @@ import sqlite3
 from datetime import date
 from datetime import datetime, timezone
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 import gather_winners
+import newsletter_archive
 import publish_winners
 import winner_db
 
@@ -39,7 +40,7 @@ class WinnerCollectorTests(unittest.TestCase):
         self.assertEqual(reports[0]["prize"], "$500")
         self.assertEqual(reports[0]["source_type"], "operator_announcement")
 
-    def test_preview_never_requires_buttondown(self):
+    def test_preview_never_requires_delivery_credentials(self):
         reports = [{
             "id": "one",
             "raw_title": "Jamie R. won $500",
@@ -55,12 +56,122 @@ class WinnerCollectorTests(unittest.TestCase):
         subject, _, html = publish_winners.build_email(reports)
         self.assertIn("1 new sweepstakes winner report", subject)
         self.assertIn("Winner Signal", html)
+        self.assertTrue(subject.startswith("Winner Signal:"))
+        self.assertIn("Winner Signal by SafeTracker: Sweepstakes", html)
         self.assertNotIn("The Winner Signal", html)
         self.assertIn("Official operator announcement", html)
         self.assertIn("Two useful reminders", html)
         self.assertIn("From the SafeTracker guide library", html)
         self.assertIn("Read the guide", html)
         self.assertIn("## Two useful reminders", publish_winners.build_email(reports)[1])
+
+    def test_kit_payload_schedules_a_private_broadcast(self):
+        send_at = "2026-08-10T15:30:00+00:00"
+        payload = publish_winners.build_kit_payload(
+            "Winner Signal",
+            "<p>One new report</p>",
+            send_at=send_at,
+        )
+        self.assertEqual(payload["send_at"], send_at)
+        self.assertFalse(payload["public"])
+        self.assertNotIn("subscriber_filter", payload)
+
+    def test_kit_draft_is_private_and_unscheduled(self):
+        payload = publish_winners.build_kit_payload(
+            "Winner Signal",
+            "<p>One new report</p>",
+            draft=True,
+            send_at="2026-08-10T15:30:00+00:00",
+        )
+        self.assertIsNone(payload["send_at"])
+        self.assertFalse(payload["public"])
+
+    def test_kit_request_uses_v4_api_key_header(self):
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = json.dumps({
+            "broadcast": {"id": 123, "send_at": "2026-08-10T15:30:00Z"}
+        }).encode()
+        with patch.object(publish_winners.urllib.request, "urlopen", return_value=response) as urlopen:
+            broadcast = publish_winners.create_kit_broadcast(
+                "secret-key",
+                publish_winners.build_kit_payload(
+                    "Winner Signal",
+                    "<p>One new report</p>",
+                    send_at="2026-08-10T15:30:00+00:00",
+                ),
+            )
+        request = urlopen.call_args.args[0]
+        self.assertEqual(request.full_url, "https://api.kit.com/v4/broadcasts")
+        self.assertEqual(request.get_header("X-kit-api-key"), "secret-key")
+        self.assertEqual(broadcast["id"], 123)
+
+    def test_buttondown_request_preserves_current_delivery_path(self):
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = json.dumps({
+            "id": "email-123", "status": "about_to_send"
+        }).encode()
+        with patch.object(publish_winners.urllib.request, "urlopen", return_value=response) as urlopen:
+            email = publish_winners.create_buttondown_email(
+                "buttondown-secret",
+                "Winner Signal: One new report",
+                "<p>One new report</p>",
+            )
+        request = urlopen.call_args.args[0]
+        self.assertEqual(request.full_url, "https://api.buttondown.com/v1/emails")
+        self.assertEqual(request.get_header("Authorization"), "Token buttondown-secret")
+        self.assertEqual(email["status"], "about_to_send")
+
+    def test_successful_edition_rebuilds_first_party_archive(self):
+        reports = [{
+            "id": "one",
+            "raw_title": "Jamie R. won $500",
+            "winner_name": "Jamie R.",
+            "prize": "$500",
+            "promotion_name": "Daily cash drawing",
+            "source_id": "example",
+            "source_name": "Example Sweeps",
+            "source_type": "operator_announcement",
+            "source_url": "https://example.com/winners",
+            "reported_at": "2026-08-10T12:00:00Z",
+            "author": "",
+        }]
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            (base / "templates").mkdir()
+            (base / "templates" / "newsletter-archive.html.j2").write_text(
+                "{% for edition in editions %}{{ edition.subject }} {{ edition.slug }}{% endfor %}",
+                encoding="utf-8",
+            )
+            (base / "templates" / "newsletter-edition.html.j2").write_text(
+                "{{ edition.subject }} {% for report in edition.reports %}{{ report.source_url }}{% endfor %}",
+                encoding="utf-8",
+            )
+            (base / "templates" / "newsletter-thanks.html.j2").write_text(
+                "Check your inbox", encoding="utf-8"
+            )
+            (base / "templates" / "newsletter-confirmed.html.j2").write_text(
+                "Subscription confirmed", encoding="utf-8"
+            )
+            path = newsletter_archive.archive_edition(
+                reports,
+                "1 new sweepstakes winner report — August 10, 2026",
+                "2026-08-10T15:30:00Z",
+                123,
+                base=base,
+            )
+            newsletter_archive.archive_edition(
+                reports,
+                "1 new sweepstakes winner report — August 10, 2026",
+                "2026-08-10T15:30:00Z",
+                123,
+                base=base,
+            )
+            payload = json.loads((base / "data" / "newsletter_editions.json").read_text(encoding="utf-8"))
+            self.assertEqual(path.as_posix(), "newsletter/winner-signal-2026-08-10.html")
+            self.assertEqual(len(payload["editions"]), 1)
+            self.assertIn("winner-signal-2026-08-10", (base / "newsletter" / "index.html").read_text(encoding="utf-8"))
+            self.assertIn("https://example.com/winners", (base / path).read_text(encoding="utf-8"))
+            self.assertEqual(payload["editions"][0]["delivery_provider"], "unknown")
 
     def test_new_editorial_guides_enter_newsletter_rotation_automatically(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -81,6 +192,46 @@ class WinnerCollectorTests(unittest.TestCase):
                 guide, tips = publish_winners.edition_extras(date(2026, 8, 1))
             self.assertEqual(guide["slug"], "new-weekly-guide")
             self.assertEqual(len(tips), 2)
+
+    def test_every_public_signup_placement_uses_shared_provider_config(self):
+        homepage = publish_winners.BASE / "index.html"
+        pages = [
+            publish_winners.BASE / "winners.html",
+            publish_winners.BASE / "newsletter" / "index.html",
+            publish_winners.BASE / "newsletter" / "winner-signal-2026-08-10.html",
+        ]
+        homepage_markup = homepage.read_text(encoding="utf-8")
+        self.assertIn("winner-signal-config.js", homepage_markup)
+        self.assertIn("winner-signal-signup.js", homepage_markup)
+        self.assertIn(
+            "data-winner-signal-signup",
+            (publish_winners.BASE / "assets" / "sweeps-tracker.js").read_text(encoding="utf-8"),
+        )
+        for page in pages:
+            markup = page.read_text(encoding="utf-8")
+            self.assertIn("data-winner-signal-signup", markup, page)
+            self.assertIn("winner-signal-config.js", markup, page)
+            self.assertIn("winner-signal-signup.js", markup, page)
+        config = (publish_winners.BASE / "assets" / "winner-signal-config.js").read_text(encoding="utf-8")
+        self.assertIn('provider: "buttondown"', config)
+        self.assertNotIn("KIT_API_KEY", config)
+
+    def test_subscription_status_pages_are_branded_and_private(self):
+        thanks = (publish_winners.BASE / "newsletter" / "thanks.html").read_text(encoding="utf-8")
+        confirmed = (publish_winners.BASE / "newsletter" / "confirmed.html").read_text(encoding="utf-8")
+        self.assertIn('content="noindex,follow"', thanks)
+        self.assertIn("Check your inbox", thanks)
+        self.assertIn("winners@safetrackerhub.com", thanks)
+        self.assertIn('content="noindex,follow"', confirmed)
+        self.assertIn("Winner Signal by SafeTracker: Sweepstakes", confirmed)
+
+    def test_workflow_requires_explicit_kit_cutover_and_keeps_buttondown_default(self):
+        workflow = (publish_winners.BASE / ".github" / "workflows" / "daily-winners.yml").read_text(encoding="utf-8")
+        self.assertIn("WINNER_NEWSLETTER_KIT_CUTOVER == 'approved'", workflow)
+        self.assertIn("'kit' || 'buttondown'", workflow)
+        self.assertIn("BUTTONDOWN_API_KEY", workflow)
+        self.assertIn("KIT_API_KEY", workflow)
+        self.assertIn("if: always()", workflow)
 
     def test_rss_identity_is_stable_when_feed_metadata_changes(self):
         source = {

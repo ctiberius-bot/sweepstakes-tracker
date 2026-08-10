@@ -25,21 +25,14 @@
         <p class="section-kicker">Reported by monitored sources</p>
         <h1>Winner archive</h1>
         <p class="winners-intro">A searchable, persistent history of published winner reports. Every record carries its source and distinguishes community reports from operator announcements.</p>
+        <p><a class="winner-source" href="newsletter/">Browse past Winner Signal editions →</a></p>
       </div>
       <aside class="newsletter-card">
         <p class="section-kicker">Free winner alerts</p>
         <h2>Winner Signal</h2>
         <p>Know when monitored sweepstakes publish a winner. Every item links to its source, and we send nothing when there is nothing new.</p>
-        <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post">
-          <div class="newsletter-fields">
-            <label class="sr-only" for="winners-email">Email address</label>
-            <input id="winners-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
-            <input type="hidden" name="embed" value="1">
-            <input type="hidden" name="tag" value="daily-winners">
-            <button type="submit">Send me updates</button>
-          </div>
-          <span class="newsletter-privacy">No empty emails. No winner claims. Unsubscribe anytime.</span>
-        </form>
+        <div id="winner-signal-archive-signup" data-winner-signal-signup data-variant="card"></div>
+        <span class="newsletter-privacy">Double opt-in. No empty emails. No winner claims. Unsubscribe anytime.</span>
       </aside>
     </section>
     <section class="winner-search-panel" aria-label="Search winner archive">
@@ -676,6 +669,8 @@
       search.addEventListener("input", update);
     })();
   </script>
+  <script src="assets/winner-signal-config.js"></script>
+  <script src="assets/winner-signal-signup.js"></script>
   <script src="assets/monetization.js?v=20260726-2"></script>
 </body>
 </html>
