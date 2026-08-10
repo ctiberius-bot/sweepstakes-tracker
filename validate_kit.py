@@ -10,7 +10,7 @@ from collections import Counter
 
 API_BASE = "https://api.kit.com/v4"
 EXPECTED_ACCOUNT_EMAIL = "sweepstakes-research@safetrackerhub.com"
-EXPECTED_FORM_NAME = "Winner Signal"
+EXPECTED_FORM_NAMES = ("Winner Signal", "Winner Signal — Website Signup")
 
 
 def api_get(token, path):
@@ -49,10 +49,11 @@ def validate(token):
     identity_matches = EXPECTED_ACCOUNT_EMAIL in identities
 
     active_forms = [form for form in forms_response.get("forms", []) if not form.get("archived")]
+    accepted_form_names = {name.casefold() for name in EXPECTED_FORM_NAMES}
     matching_forms = [
         form
         for form in active_forms
-        if str(form.get("name", "")).strip().casefold() == EXPECTED_FORM_NAME.casefold()
+        if str(form.get("name", "")).strip().casefold() in accepted_form_names
     ]
     matching_form = matching_forms[0] if len(matching_forms) == 1 else None
     form_ready = bool(
@@ -119,6 +120,8 @@ def validate(token):
                 "name": form.get("name"),
                 "type": form.get("type"),
                 "uid": form.get("uid"),
+                "embed_js": form.get("embed_js"),
+                "embed_url": form.get("embed_url"),
             }
             for form in active_forms
         ],
