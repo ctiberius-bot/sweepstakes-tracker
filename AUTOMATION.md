@@ -147,6 +147,14 @@ Do not set the Kit cutover variable until all of these are true:
    `kit`, and an incognito walkthrough confirms the form, redirects, confirmed
    subscriber state, branding, analytics event, and unsubscribe footer.
 
+Run the manual **Validate Kit migration readiness** workflow after creating or
+changing the dedicated Kit account. It uses `KIT_API_KEY` only for read-only V4
+requests to verify the account identity, active Winner Signal form UID/embed
+source, subscriber state counts, and default template. It never creates a
+broadcast, draft, subscriber, form, or account setting. A successful run is a
+non-sending integration check only; Kit Support approval or removal of the
+disabled-features banner remains a separate cutover gate.
+
 Until those gates pass, keep the signup provider and delivery provider on
 Buttondown. Do not remove `BUTTONDOWN_API_KEY`, subscribers, tags, or account
 configuration during the overlap period.
