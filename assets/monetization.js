@@ -23,8 +23,12 @@
     track(link.dataset.track, { site: link.dataset.site, placement: link.dataset.placement });
   });
   document.addEventListener("submit", (event) => {
-    const form = event.target.closest("[data-track-form]");
-    if (form) track(form.dataset.trackForm, { placement: form.getAttribute("action") });
+    const form = event.target.closest("form");
+    if (!form) return;
+    const tracked = form.closest("[data-track-form]");
+    const newsletter = form.closest("[data-winner-signal-signup]") || /(?:kit|convertkit)\.com\/forms\//i.test(form.action);
+    if (tracked) track(tracked.dataset.trackForm, { placement: form.getAttribute("action") });
+    else if (newsletter) track("newsletter_signup", { placement: form.getAttribute("action") });
   });
   const campaign = new URLSearchParams(location.search);
   const source = campaign.get("utm_source") || "";

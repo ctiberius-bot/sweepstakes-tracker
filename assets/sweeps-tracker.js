@@ -20,6 +20,7 @@
           <nav class="main-nav" aria-label="Primary navigation">
             <a href="#rankings">Rankings</a>
             <a href="winners.html">Winners</a>
+            <a href="newsletter/">Winner Signal</a>
             <a href="methodology.html">How we score</a>
             <a href="contact.html">Contact</a>
             <a class="nav-disclosure" href="sponsorships.html">Advertise</a>
@@ -48,14 +49,9 @@
     trust.insertAdjacentHTML("afterend", `
       <aside class="newsletter-strip" aria-label="Winner Signal email">
         <span><strong>Winner Signal</strong> Source-linked winner updates—only when something new is reported.</span>
-        <form action="https://buttondown.com/api/emails/embed-subscribe/safetrackerhub" method="post" data-track-form="newsletter_signup">
-          <label class="sr-only" for="strip-newsletter-email">Email address</label>
-          <input id="strip-newsletter-email" type="email" name="email" autocomplete="email" placeholder="Email address" required>
-          <input type="hidden" name="embed" value="1">
-          <input type="hidden" name="tag" value="daily-winners">
-          <button type="submit">Send me winner updates</button>
-        </form>
+        <div id="winner-signal-strip" data-winner-signal-signup data-variant="strip"></div>
       </aside>`);
+    window.WinnerSignalSignup?.mountAll();
 
     const safety = Array.from(main.children).find((element) => element.textContent.includes("Never pay to claim a prize"));
     if (safety) safety.className = "safety-note";
@@ -160,7 +156,7 @@
         <div class="max-w-7xl mx-auto px-4">
           <div class="footer-grid">
             <div><div class="footer-title">SafeTracker: Sweepstakes</div><p class="footer-copy">Plain-English safety rankings and source-linked winner reports for sweepstakes, giveaway, and rewards sites.</p></div>
-            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="winners.html">Winners</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
+            <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#rankings">Rankings</a><a href="winners.html">Winners</a><a href="newsletter/">Winner Signal</a><a href="#editor-picks">Editor picks</a><a href="methodology.html">Methodology</a></div></div>
             <div><div class="footer-title">Our standards</div><div class="footer-links"><a href="methodology.html">Published scoring</a><a href="#disclosure">Affiliate policy</a><a href="#rankings">Review dates</a><a href="contact.html">Protected contact</a></div></div>
             <div><div class="footer-title">Disclosure</div><p class="footer-copy">Some links may earn commissions and featured visibility may be purchased. Paid placements are labeled. ScamFactor scores remain visible and summarize the risk signals shown in each profile.</p></div>
           </div>

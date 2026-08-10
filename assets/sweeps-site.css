@@ -101,6 +101,7 @@ body {
 .newsletter-fields button { border: 0; border-radius: .5rem; background: #ffd68a; color: #3e2a06; padding: .58rem .8rem; font-size: .75rem; font-weight: 850; cursor: pointer; }
 .newsletter-fields button:hover { background: #ffe2a9; }
 .newsletter-privacy { color: #9fc9c2; font-size: .63rem; }
+.newsletter-unavailable { margin: 0; color: #7f1d1d; font-size: .72rem; font-weight: 750; }
 .newsletter-strip {
   display: flex;
   align-items: center;
@@ -490,6 +491,12 @@ body {
 .newsletter-card { padding: 1.2rem; border-radius: .9rem; background: var(--teal-950); color: white; }
 .newsletter-card h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; }
 .newsletter-card p { margin: .5rem 0 .8rem; color: #b9d8d3; font-size: .78rem; line-height: 1.5; }
+.newsletter-archive-signup { max-width: 42rem; margin: 0 0 1.5rem; }
+.newsletter-status-page { min-height: 70vh; padding-top: clamp(2.5rem, 8vw, 6rem); padding-bottom: 5rem; }
+.newsletter-status-card { max-width: 46rem; padding: clamp(1.5rem, 5vw, 3rem); border: 1px solid var(--line); border-top: 5px solid #d49a31; border-radius: 1rem; background: var(--card); box-shadow: 0 18px 50px rgba(33, 45, 43, .08); }
+.newsletter-status-card h1 { margin-top: .35rem; color: var(--teal-950); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1; letter-spacing: -.04em; }
+.newsletter-status-card > p:not(.section-kicker):not(.source-note), .newsletter-status-card li { color: var(--muted); line-height: 1.7; }
+.newsletter-status-card ul { margin: 1.25rem 0; padding-left: 1.25rem; }
 .winner-list { display: grid; gap: .75rem; }
 .winner-card { padding: 1.1rem 1.2rem; border: 1px solid var(--line); border-radius: .85rem; background: var(--card); }
 .winner-card h2 { font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; }

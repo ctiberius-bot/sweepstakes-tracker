@@ -23,6 +23,7 @@ SWEEPSTAKES_DIR = BASE / "sweepstakes"
 WINNERS_FILE = BASE / "data" / "winners.json"
 ACTIVE_SWEEPS_FILE = BASE / "data" / "active_sweepstakes.json"
 EDITORIAL_FILE = BASE / "data" / "editorial.json"
+NEWSLETTER_EDITIONS_FILE = BASE / "data" / "newsletter_editions.json"
 GUIDES_DIR = BASE / "guides"
 SITE_ORIGIN = "https://sweeps.safetrackerhub.com"
 SITE_TYPES = {
@@ -683,6 +684,12 @@ def main():
             clean_generated_html(article_html),
             encoding="utf-8",
         )
+    newsletter_payload = (
+        json.loads(NEWSLETTER_EDITIONS_FILE.read_text(encoding="utf-8"))
+        if NEWSLETTER_EDITIONS_FILE.exists()
+        else {"editions": []}
+    )
+    newsletter_editions = newsletter_payload.get("editions", [])
     sitemap_urls = [
         f"{SITE_ORIGIN}/",
         f"{SITE_ORIGIN}/winners",
@@ -694,6 +701,8 @@ def main():
         f"{SITE_ORIGIN}/about",
         f"{SITE_ORIGIN}/sponsorships",
         f"{SITE_ORIGIN}/guides/",
+        f"{SITE_ORIGIN}/newsletter/",
+        *[f"{SITE_ORIGIN}/newsletter/{edition['slug']}.html" for edition in newsletter_editions],
         *[f"{SITE_ORIGIN}/guides/{article['slug']}" for article in editorial_pages],
         *[f"{SITE_ORIGIN}/reviews/{site['slug']}" for site in sites],
         *[f"{SITE_ORIGIN}/sweepstakes/{promotion['slug']}" for promotion in active_promotions],

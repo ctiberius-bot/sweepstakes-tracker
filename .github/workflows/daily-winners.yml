@@ -53,23 +53,25 @@ jobs:
       - name: Publish pending edition
         if: steps.gather.outputs.pending_count != '0' && vars.WINNER_NEWSLETTER_ENABLED == 'true'
         env:
+          WINNER_NEWSLETTER_PROVIDER: ${{ vars.WINNER_NEWSLETTER_KIT_CUTOVER == 'approved' && 'kit' || 'buttondown' }}
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
         run: python publish_winners.py
 
       - name: Save delivery state
-        if: steps.gather.outputs.pending_count != '0' && vars.WINNER_NEWSLETTER_ENABLED == 'true'
+        if: always() && steps.gather.outputs.pending_count != '0' && vars.WINNER_NEWSLETTER_ENABLED == 'true'
         shell: bash
         run: |
-          git add data/winners.sqlite data/winners.json
+          git add data/winners.sqlite data/winners.json data/newsletter_editions.json newsletter/ sitemap.xml
           if ! git diff --cached --quiet; then
-            git commit -m "Mark winner reports delivered"
+            git commit -m "Archive and mark winner reports delivered"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
 
       - name: Confirm held edition
         if: steps.gather.outputs.pending_count != '0' && vars.WINNER_NEWSLETTER_ENABLED != 'true'
-        run: echo "${{ steps.gather.outputs.pending_count }} reports are saved and awaiting newsletter approval."
+        run: echo "${{ steps.gather.outputs.pending_count }} reports are saved and awaiting newsletter activation."
 
       - name: Record partial source failures
         if: steps.gather.outputs.source_errors != '0'
@@ -83,14 +85,25 @@ jobs:
             if (existing) await github.rest.issues.createComment({owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body});
             else await github.rest.issues.create({owner: context.repo.owner, repo: context.repo.repo, title, body});
 
-      - name: Close recovered alerts
+      - name: Close recovered job-failure alert
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const titles = ["[automation] Daily winner newsletter failed"];
+            const open = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", per_page: 100});
+            for (const issue of open.data.filter(item => titles.includes(item.title))) {
+              await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, state: "closed"});
+            }
+
+      - name: Close recovered source alert
         if: success() && steps.gather.outputs.source_errors == '0'
         uses: actions/github-script@v7
         with:
           script: |
-            const titles = ["[automation] Daily winner newsletter failed", "[automation] Winner sources need attention"];
+            const title = "[automation] Winner sources need attention";
             const open = await github.rest.issues.listForRepo({owner: context.repo.owner, repo: context.repo.repo, state: "open", per_page: 100});
-            for (const issue of open.data.filter(item => titles.includes(item.title))) {
+            for (const issue of open.data.filter(item => item.title === title)) {
               await github.rest.issues.update({owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, state: "closed"});
             }
 
