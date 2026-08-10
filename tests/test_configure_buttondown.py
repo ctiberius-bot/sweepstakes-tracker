@@ -40,7 +40,7 @@ class ButtondownConfigurationTests(unittest.TestCase):
         with patch.object(
             configure_buttondown.urllib.request,
             "urlopen",
-            side_effect=[response({"results": [current]}), response(verified), response(verified)],
+            side_effect=[response(current), response(verified), response(verified)],
         ) as urlopen:
             result = configure_buttondown.configure("secret", apply=True)
 
@@ -52,6 +52,30 @@ class ButtondownConfigurationTests(unittest.TestCase):
         )
         self.assertEqual(result["changed_fields"], ["from_name"])
         self.assertTrue(result["verified"])
+
+    def test_scoped_key_targets_the_verified_newsletter_id(self):
+        current = {
+            "id": configure_buttondown.TARGET_NEWSLETTER_ID,
+            "username": "safetrackerhub",
+            **configure_buttondown.DESIRED_SETTINGS,
+        }
+
+        def response(payload):
+            result = MagicMock()
+            result.__enter__.return_value.read.return_value = json.dumps(payload).encode()
+            return result
+
+        with patch.object(
+            configure_buttondown.urllib.request,
+            "urlopen",
+            side_effect=[response(current), response(current)],
+        ) as urlopen:
+            configure_buttondown.configure("secret")
+        self.assertTrue(
+            urlopen.call_args_list[0].args[0].full_url.endswith(
+                f"/newsletters/{configure_buttondown.TARGET_NEWSLETTER_ID}"
+            )
+        )
 
 
 if __name__ == "__main__":
