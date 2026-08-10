@@ -9,6 +9,7 @@ import urllib.request
 
 API_BASE = "https://api.buttondown.com/v1"
 TARGET_USERNAME = "safetrackerhub"
+TARGET_NEWSLETTER_ID = "578556bf-3096-48bb-a643-23092ecbb24f"
 DESIRED_SETTINGS = {
     "name": "Winner Signal",
     "from_name": "Winner Signal by SafeTracker",
@@ -54,14 +55,12 @@ def api_request(token, method, path, payload=None):
 
 
 def find_newsletter(token):
-    response = api_request(token, "GET", "/newsletters")
-    newsletters = response.get("results", response) if isinstance(response, dict) else response
-    matches = [item for item in newsletters if item.get("username") == TARGET_USERNAME]
-    if len(matches) != 1:
+    newsletter = api_request(token, "GET", f"/newsletters/{TARGET_NEWSLETTER_ID}")
+    if newsletter.get("username") != TARGET_USERNAME:
         raise RuntimeError(
-            f"Expected one Buttondown newsletter named {TARGET_USERNAME!r}; found {len(matches)}."
+            f"Buttondown newsletter {TARGET_NEWSLETTER_ID!r} is not {TARGET_USERNAME!r}."
         )
-    return matches[0]
+    return newsletter
 
 
 def setting_snapshot(newsletter):
