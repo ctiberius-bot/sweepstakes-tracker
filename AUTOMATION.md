@@ -147,6 +147,11 @@ Do not set the Kit cutover variable until all of these are true:
    `kit`, and an incognito walkthrough confirms the form, redirects, confirmed
    subscriber state, branding, analytics event, and unsubscribe footer.
 
+The verified production form is `Winner Signal — Website Signup` (Kit form ID
+`9783990`, UID `5baaf4cb40`). Its public embed source is stored in the shared
+signup config while Buttondown remains the selected provider. This makes the
+eventual provider flip atomic without exposing the private V4 API key.
+
 Run the manual **Validate Kit migration readiness** workflow after creating or
 changing the dedicated Kit account. It uses `KIT_API_KEY` only for read-only V4
 requests to verify the account identity, active Winner Signal form UID/embed

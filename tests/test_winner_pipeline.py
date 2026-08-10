@@ -214,6 +214,11 @@ class WinnerCollectorTests(unittest.TestCase):
             self.assertIn("winner-signal-signup.js", markup, page)
         config = (publish_winners.BASE / "assets" / "winner-signal-config.js").read_text(encoding="utf-8")
         self.assertIn('provider: "buttondown"', config)
+        self.assertIn('formUid: "5baaf4cb40"', config)
+        self.assertIn(
+            'scriptSrc: "https://safetracker-sweepstakes-winner-signal.kit.com/5baaf4cb40/index.js"',
+            config,
+        )
         self.assertNotIn("KIT_API_KEY", config)
 
     def test_subscription_status_pages_are_branded_and_private(self):

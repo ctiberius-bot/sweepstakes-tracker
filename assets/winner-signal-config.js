@@ -7,7 +7,7 @@ window.WinnerSignalSignupConfig = Object.freeze({
     tag: "daily-winners",
   }),
   kit: Object.freeze({
-    formUid: "",
-    scriptSrc: "",
+    formUid: "5baaf4cb40",
+    scriptSrc: "https://safetracker-sweepstakes-winner-signal.kit.com/5baaf4cb40/index.js",
   }),
 });
