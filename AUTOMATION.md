@@ -150,3 +150,11 @@ Do not set the Kit cutover variable until all of these are true:
 Until those gates pass, keep the signup provider and delivery provider on
 Buttondown. Do not remove `BUTTONDOWN_API_KEY`, subscribers, tags, or account
 configuration during the overlap period.
+
+The manual `Configure Winner Signal branding` workflow applies and reads back
+the approved temporary Buttondown overlap settings using the encrypted
+`BUTTONDOWN_API_KEY`. It does not create an email or change subscriber state.
+It sets the newsletter and sender display names, brand color, time zone,
+double-opt-in confirmation copy, and the first-party pre- and post-confirmation
+redirects. Run it after deploying changes to `newsletter/thanks.html` or
+`newsletter/confirmed.html`, never before those URLs are publicly reachable.
