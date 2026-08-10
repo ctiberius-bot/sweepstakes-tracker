@@ -27,7 +27,7 @@ class KitReadinessTests(unittest.TestCase):
             "forms": [
                 {
                     "id": 51,
-                    "name": "Winner Signal",
+                    "name": "Winner Signal — Website Signup",
                     "type": "embed",
                     "uid": "abc123",
                     "embed_js": "https://example.kit.com/abc123/index.js",
