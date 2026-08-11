@@ -110,11 +110,10 @@ select **Run workflow**.
 The `Daily winner reports` workflow runs at 11:15 UTC. It checks the source
 feeds in `data/winner_sources.json`, updates the public winners archive, and
 publishes one edition only when new reports are found. It stores source IDs in
-`data/winner_state.json` so reports are not repeated. Buttondown remains the
-production delivery provider unless the explicit Kit cutover gate below is
-approved. This preserves daily delivery while the Kit account is reviewed.
+`data/winner_state.json` so reports are not repeated. Kit is the sole production
+signup and delivery provider for Winner Signal.
 
-After either provider accepts the edition, the job marks the reports delivered,
+After Kit accepts the edition, the job marks the reports delivered,
 snapshots the edition to `data/newsletter_editions.json`, writes its permanent
 page under `newsletter/`, rebuilds `newsletter/index.html`, and adds the public
 archive URL to `sitemap.xml`. Marking happens before archive rendering so a
@@ -122,15 +121,15 @@ rendering failure cannot cause a duplicate email on the next daily run; the
 workflow failure alert still makes an archive problem visible.
 
 Delivery runs only when `WINNER_NEWSLETTER_ENABLED` is `true`. The workflow uses
-Buttondown and `BUTTONDOWN_API_KEY` by default. It uses Kit and `KIT_API_KEY`
-only when the repository variable `WINNER_NEWSLETTER_KIT_CUTOVER` is exactly
-`approved`. Kit broadcasts are scheduled with `public: false`, so daily emails
-are not published to Kit's public newsletter feed.
+the dedicated account's `KIT_API_KEY`. Kit broadcasts are scheduled with
+`public: false`, so daily emails are not published to Kit's public newsletter
+feed. Live broadcasts are scheduled 15 minutes after provider acceptance to
+leave a short operational inspection window.
 
-Do not set the Kit cutover variable until all of these are true:
+The production Kit configuration is:
 
-1. Kit has removed the disabled-features banner and Support has approved the
-   dedicated `sweepstakes-research@safetrackerhub.com` account.
+1. Kit has removed the disabled-features banner and approved the dedicated
+   Winner Signal account.
 2. `winners@safetrackerhub.com` is the verified default sender with the display
    name `Winner Signal by SafeTracker` and the Kit email template contains the
    required unsubscribe control and physical mailing address.
@@ -143,14 +142,11 @@ Do not set the Kit cutover variable until all of these are true:
    post-confirmation redirect is
    `https://sweeps.safetrackerhub.com/newsletter/confirmed.html`.
 5. The exact Kit JavaScript embed UID and source are entered in
-   `assets/winner-signal-config.js`, the public signup `provider` is changed to
-   `kit`, and an incognito walkthrough confirms the form, redirects, confirmed
-   subscriber state, branding, analytics event, and unsubscribe footer.
+   `assets/winner-signal-config.js`, whose public signup provider is `kit`.
 
 The verified production form is `Winner Signal — Website Signup` (Kit form ID
 `9783990`, UID `5baaf4cb40`). Its public embed source is stored in the shared
-signup config while Buttondown remains the selected provider. This makes the
-eventual provider flip atomic without exposing the private V4 API key.
+signup config without exposing the private V4 API key.
 
 Run the manual **Validate Kit migration readiness** workflow after creating or
 changing the dedicated Kit account. It uses `KIT_API_KEY` only for read-only V4
@@ -160,14 +156,5 @@ broadcast, draft, subscriber, form, or account setting. A successful run is a
 non-sending integration check only; Kit Support approval or removal of the
 disabled-features banner remains a separate cutover gate.
 
-Until those gates pass, keep the signup provider and delivery provider on
-Buttondown. Do not remove `BUTTONDOWN_API_KEY`, subscribers, tags, or account
-configuration during the overlap period.
-
-The manual `Configure Winner Signal branding` workflow applies and reads back
-the approved temporary Buttondown overlap settings using the encrypted
-`BUTTONDOWN_API_KEY`. It does not create an email or change subscriber state.
-It sets the newsletter and sender display names, brand color, time zone,
-double-opt-in confirmation copy, and the first-party pre- and post-confirmation
-redirects. Run it after deploying changes to `newsletter/thanks.html` or
-`newsletter/confirmed.html`, never before those URLs are publicly reachable.
+Buttondown is retired from production. Do not reintroduce a Buttondown signup
+action, API key, workflow, or delivery fallback.

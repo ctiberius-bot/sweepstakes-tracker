@@ -105,22 +105,6 @@ class WinnerCollectorTests(unittest.TestCase):
         self.assertEqual(request.get_header("X-kit-api-key"), "secret-key")
         self.assertEqual(broadcast["id"], 123)
 
-    def test_buttondown_request_preserves_current_delivery_path(self):
-        response = MagicMock()
-        response.__enter__.return_value.read.return_value = json.dumps({
-            "id": "email-123", "status": "about_to_send"
-        }).encode()
-        with patch.object(publish_winners.urllib.request, "urlopen", return_value=response) as urlopen:
-            email = publish_winners.create_buttondown_email(
-                "buttondown-secret",
-                "Winner Signal: One new report",
-                "<p>One new report</p>",
-            )
-        request = urlopen.call_args.args[0]
-        self.assertEqual(request.full_url, "https://api.buttondown.com/v1/emails")
-        self.assertEqual(request.get_header("Authorization"), "Token buttondown-secret")
-        self.assertEqual(email["status"], "about_to_send")
-
     def test_successful_edition_rebuilds_first_party_archive(self):
         reports = [{
             "id": "one",
@@ -213,7 +197,8 @@ class WinnerCollectorTests(unittest.TestCase):
             self.assertIn("winner-signal-config.js", markup, page)
             self.assertIn("winner-signal-signup.js", markup, page)
         config = (publish_winners.BASE / "assets" / "winner-signal-config.js").read_text(encoding="utf-8")
-        self.assertIn('provider: "buttondown"', config)
+        self.assertIn('provider: "kit"', config)
+        self.assertNotIn("buttondown.com", config)
         self.assertIn('formUid: "5baaf4cb40"', config)
         self.assertIn(
             'scriptSrc: "https://safetracker-sweepstakes-winner-signal.kit.com/5baaf4cb40/index.js"',
@@ -230,12 +215,11 @@ class WinnerCollectorTests(unittest.TestCase):
         self.assertIn('content="noindex,follow"', confirmed)
         self.assertIn("Winner Signal by SafeTracker: Sweepstakes", confirmed)
 
-    def test_workflow_requires_explicit_kit_cutover_and_keeps_buttondown_default(self):
+    def test_workflow_uses_only_kit_for_production_delivery(self):
         workflow = (publish_winners.BASE / ".github" / "workflows" / "daily-winners.yml").read_text(encoding="utf-8")
-        self.assertIn("WINNER_NEWSLETTER_KIT_CUTOVER == 'approved'", workflow)
-        self.assertIn("'kit' || 'buttondown'", workflow)
-        self.assertIn("BUTTONDOWN_API_KEY", workflow)
         self.assertIn("KIT_API_KEY", workflow)
+        self.assertNotIn("BUTTONDOWN_API_KEY", workflow)
+        self.assertNotIn("WINNER_NEWSLETTER_KIT_CUTOVER", workflow)
         self.assertIn("if: always()", workflow)
 
     def test_rss_identity_is_stable_when_feed_metadata_changes(self):

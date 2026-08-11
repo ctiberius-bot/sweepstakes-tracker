@@ -53,8 +53,6 @@ jobs:
       - name: Publish pending edition
         if: steps.gather.outputs.pending_count != '0' && vars.WINNER_NEWSLETTER_ENABLED == 'true'
         env:
-          WINNER_NEWSLETTER_PROVIDER: ${{ vars.WINNER_NEWSLETTER_KIT_CUTOVER == 'approved' && 'kit' || 'buttondown' }}
-          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
         run: python publish_winners.py
 

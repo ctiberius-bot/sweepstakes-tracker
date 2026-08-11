@@ -29,8 +29,7 @@ Winner reports are gathered daily from the feeds in `data/winner_sources.json`.
 SQLite is the canonical historical archive (`data/winners.sqlite`); a generated
 JSON export powers the searchable `winners.html` page. New reports are sent
 through the active Winner Signal provider only when the daily run finds
-something new. Buttondown remains the production default until the dedicated
-Kit account passes the documented cutover gates. Each edition
+something new. Kit is the production signup and delivery platform. Each edition
 also includes two rotating safety tips and a rotating link and synopsis from
 the SafeTracker guide library. The public `guides.html` page is the canonical
 archive for all weekly and evergreen guides. Adding an article to
@@ -38,9 +37,8 @@ archive for all weekly and evergreen guides. Adding an article to
 the newsletter spotlight rotation unless `newsletter_exclude` is set to true.
 Successfully accepted Winner Signal editions are also snapshotted to the
 first-party `newsletter/` archive and added to its rebuilt index and sitemap.
-Signup placements share `assets/winner-signal-config.js`; changing that single
-public configuration after Kit validation updates the homepage, winner archive,
-and newsletter archive without leaving a hidden Buttondown form behind.
+Signup placements share `assets/winner-signal-config.js`, so the homepage,
+winner archive, and newsletter archive all use the same verified Kit form.
 
 Version 1.1 also includes the separate Active Sweepstakes inventory framework.
 Individual promotions will live there rather than in the platform rankings.
