@@ -1,21 +1,21 @@
 # SafeTracker discovery review
 
-Updated: 2026-08-10T12:02:38.866527Z
+Updated: 2026-08-11T11:58:20.386853Z
 
 This is a quarantine queue. Nothing listed here is published or scored automatically.
 
-- New candidates this run: **47**
-- Awaiting review: **1021**
+- New candidates this run: **37**
+- Awaiting review: **1058**
 - Sources attempted: **4**
 
 ## Source status
 
 | Source | Result | Candidates |
 |---|---:|---:|
-| Sweepstakes Radar ending soon | ok | 72 |
+| Sweepstakes Radar ending soon | ok | 79 |
 | Sweepstake.com newest listings | ok | 22 |
 | Sweepstakes Advantage | ok | 50 |
-| I Love Giveaways | ok | 36 |
+| I Love Giveaways | ok | 37 |
 
 ## Review checklist
 
@@ -270,7 +270,7 @@ Before approving a candidate, verify the official entry page, official rules, sp
 | `2ed8b5e6a61626fb` | recurring | [SweepstakesRunnings July Great Big Giveaway - Win YETI Cooler, Bucket, Chair and Drinkware Package - SweepstakesNewAdded:1 day agoExpires:in 7 daysUp for grabs: YETI cooler, bucket](https://www.sweepstake.com/directory/149058/runnings-july-great-big-giveaway) | Sweepstake.com newest listings | 2026-07-25 |
 | `2a67ecd2323dc71c` | recurring | [SweepstakesTeam Visma Cervélo R5 Mountain Bike Contest - Win a Cervélo R5 Team Mountain Bike - SweepstakesNew Expires soonAdded:14 hours agoExpires:in 2 daysEnter the Tam Visma Cer](https://www.sweepstake.com/directory/149063/team-visma-cerv-lo-r5-mountain-bike-contest) | Sweepstake.com newest listings | 2026-07-25 |
 | `c87403aee26079df` | recurring | [SweepstakesVisit St. Pete-Clearwater Catch Some Rays Sweepstakes - Win a Trip for 4 to a Tampa Bay Rays Game - SweepstakesNewAdded:1 day agoExpires:in 7 daysEnter to win a trip for](https://www.sweepstake.com/directory/149059/visit-st-pete-clearwater-catch-some-rays-sweepstakes) | Sweepstake.com newest listings | 2026-07-25 |
-| `c95e52371bd584b5` | limited | [T-Mobile Tech Giveaways](https://www.sweepsadvantage.com/t-mobile-sweepstakes) | Sweepstakes Advantage | 2026-07-25 |
+| `c95e52371bd584b5` | limited | [T-Mobile Tuesdays Week #532 Sweepstakes](https://www.sweepsadvantage.com/t-mobile-sweepstakes) | Sweepstakes Advantage | 2026-07-25 |
 | `1394b1e9b6ece7aa` | limited | [Tecate Beer for a Year Sweepstakes 2026 – Enjoy Free Beer](https://ilovegiveaways.com/sweepstakes/tecate-beer-year-sweepstakes-2026) | I Love Giveaways | 2026-07-25 |
 | `dee16f43f4d3ba55` | limited | [Tip Top $5,000 Towards Your Wedding Sweepstakes 2026](https://ilovegiveaways.com/sweepstakes/tip-top-5000-wedding-sweepstakes-2026) | I Love Giveaways | 2026-07-25 |
 | `6a5237e1cc66cf46` | limited | [Truck](https://www.sweepsadvantage.com/truck-sweepstakes) | Sweepstakes Advantage | 2026-07-25 |
