@@ -3,33 +3,23 @@
   "editions": [
     {
       "slug": "winner-signal-2026-08-11",
-      "subject": "Winner Signal: 2 new sweepstakes winner reports — August 11, 2026",
-      "scheduled_at": "2026-08-11T14:46:42.356450Z",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — August 11, 2026",
+      "scheduled_at": "2026-08-11T22:34:58Z",
       "display_date": "August 11, 2026",
-      "provider_id": "em_7v7n5pzqw4820vmp2mcq9b32dh",
-      "delivery_provider": "buttondown",
-      "report_count": 2,
+      "provider_id": "25401943",
+      "delivery_provider": "kit",
+      "report_count": 1,
       "source_count": 1,
       "reports": [
         {
-          "id": "cb067eaa71bf279dd0530873",
-          "winner_name": "tigerkitty",
-          "prize": "You’ve potentially won* a branded Yeti backpack cooler. Look for an email coming soon with more information on how to claim your prize.",
-          "promotion_name": "Miller Lite Cowboys IW",
+          "id": "464b5ca30de060de6af9275c",
+          "winner_name": "specklesinc",
+          "prize": "fifty dollar win but not til nov 2",
+          "promotion_name": "miller high life",
           "source_name": "Sweepstakes Advantage Winners Circle",
           "source_type": "community_report",
-          "source_url": "https://www.sweepsadvantage.com/forum/threads/miller-lite-cowboys-iw.105032/",
-          "reported_at": "2026-08-11T12:34:14Z"
-        },
-        {
-          "id": "9125c650418ce366cd489f21",
-          "winner_name": "suzyq_w",
-          "prize": "I am so excited for these, arv 230.00 for the prize [td] You have been selected as a potential winner in the Mountain Dew® x Wolverine® Boots Sweepstakes, subject to verification of your eligibility and compliance with the Official…",
-          "promotion_name": "Mountain Dew x Wolverine Boots Sweepstakes",
-          "source_name": "Sweepstakes Advantage Winners Circle",
-          "source_type": "community_report",
-          "source_url": "https://www.sweepsadvantage.com/forum/threads/mountain-dew-x-wolverine-boots-sweepstakes.105033/",
-          "reported_at": "2026-08-11T12:34:40Z"
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/miller-high-life.105035/",
+          "reported_at": "2026-08-11T20:46:06Z"
         }
       ]
     },
@@ -498,5 +488,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-11T14:46:42.361140Z"
+  "updated_at": "2026-08-11T22:19:59.351999Z"
 }

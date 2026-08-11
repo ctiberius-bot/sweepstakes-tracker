@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-11T22:19:56.896079Z",
+  "updated_at": "2026-08-11T22:19:59.349046Z",
   "count": 61,
   "winners": [
     {
@@ -42,7 +42,7 @@
       "author": "specklesinc",
       "first_seen_at": "2026-08-11T22:19:56.890993Z",
       "last_seen_at": "2026-08-11T22:19:56.890993Z",
-      "sent_at": null,
+      "sent_at": "2026-08-11T22:19:59.345641Z",
       "published_display": "August 11, 2026"
     },
     {
