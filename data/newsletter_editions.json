@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-14",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — August 14, 2026",
+      "scheduled_at": "2026-08-14T14:54:23Z",
+      "display_date": "August 14, 2026",
+      "provider_id": "25444160",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "c66582705f2b6c9d7d7701c1",
+          "winner_name": "kimchifarts69420",
+          "prize": "I entered the Farmer Focus contest and I just received an email today saying I won!!!",
+          "promotion_name": "$1000 Farmer Focus",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/1000-farmer-focus.105039/",
+          "reported_at": "2026-08-14T01:40:27Z"
+        },
+        {
+          "id": "941094f4589900c84051561a",
+          "winner_name": "siehien",
+          "prize": "MARK & KELLY LIVE DAILY WINNER ROOMBA You've won a Pair of Sport Viper Sunglasses from the Minute Maid Juice Vault Giveaway and must provide additional information using the provided link to claim your prize within three days.",
+          "promotion_name": "MORE WINS ON SWEEPSTAKES PLUS",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/more-wins-on-sweepstakes-plus.105040/",
+          "reported_at": "2026-08-14T14:16:15Z"
+        },
+        {
+          "id": "ad9a0ab51e759e403b6d7fc6",
+          "winner_name": "generalwizard",
+          "prize": "new book to read (win). sure feel like i'm doing something wrong when i see people winning great prizes over and over. congrats everyone.",
+          "promotion_name": "My book self overflow-iff",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/my-book-self-overflow-iff.105044/",
+          "reported_at": "2026-08-14T14:16:53Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-13",
       "subject": "Winner Signal: 1 new sweepstakes winner report — August 13, 2026",
       "scheduled_at": "2026-08-13T15:02:08Z",
@@ -510,5 +552,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-13T14:47:08.933371Z"
+  "updated_at": "2026-08-14T14:39:24.151515Z"
 }
