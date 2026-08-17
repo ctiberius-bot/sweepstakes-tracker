@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-17",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — August 17, 2026",
+      "scheduled_at": "2026-08-17T11:57:51Z",
+      "display_date": "August 17, 2026",
+      "provider_id": "25477002",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "99b88a792c669c3f0a8501fc",
+          "winner_name": "tigerkitty",
+          "prize": "Won $20",
+          "promotion_name": "Newport Summer IW",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/newport-summer-iw.105050/",
+          "reported_at": "2026-08-17T03:05:47Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-14",
       "subject": "Winner Signal: 3 new sweepstakes winner reports — August 14, 2026",
       "scheduled_at": "2026-08-14T14:54:23Z",
@@ -552,5 +574,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-14T14:39:24.151515Z"
+  "updated_at": "2026-08-17T11:42:51.697887Z"
 }
