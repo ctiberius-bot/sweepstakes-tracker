@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-18",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — August 18, 2026",
+      "scheduled_at": "2026-08-18T11:58:16Z",
+      "display_date": "August 18, 2026",
+      "provider_id": "25494888",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "2f3c8e5f50d962e38f902e50",
+          "winner_name": "archidis99",
+          "prize": "Won this a few months back, but received my prize this week, a $200 Fanatics gift card.",
+          "promotion_name": "Smirnoff New Drink Menu Sweepstakes",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/smirnoff-new-drink-menu-sweepstakes.104528/",
+          "reported_at": "2026-08-18T06:17:45Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-17",
       "subject": "Winner Signal: 1 new sweepstakes winner report — August 17, 2026",
       "scheduled_at": "2026-08-17T11:57:51Z",
@@ -574,5 +596,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-17T11:42:51.697887Z"
+  "updated_at": "2026-08-18T11:43:17.238673Z"
 }
