@@ -1,8 +1,50 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-17T11:42:51.695894Z",
-  "count": 66,
+  "updated_at": "2026-08-18T11:43:14.857441Z",
+  "count": 67,
   "winners": [
+    {
+      "id": "dfb0e664acd545aa911606e9",
+      "title": "Won $4000 from Ferrero",
+      "winner_name": "reneed1",
+      "privacy_label": "reneed1",
+      "promotion_name": "Won $4000 from Ferrero",
+      "prize": "Just wanted to let everyone know that I won the weekly Grand Prize in the Ferrero Go All In Promotion instant win Game Sweepstakes!",
+      "operator": "",
+      "drawing_date": null,
+      "published_at": "2026-08-18T09:53:24Z",
+      "source_id": "sweepstakes-advantage-winners-circle",
+      "source_name": "Sweepstakes Advantage Winners Circle",
+      "source_type": "community_report",
+      "url": "https://www.sweepsadvantage.com/forum/threads/won-4000-from-ferrero.105024/",
+      "verification_level": "source_reported",
+      "author": "reneed1",
+      "first_seen_at": "2026-08-07T14:40:22.149074Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
+      "sent_at": "2026-08-07T14:40:24.600264Z",
+      "published_display": "August 18, 2026"
+    },
+    {
+      "id": "2f3c8e5f50d962e38f902e50",
+      "title": "Smirnoff New Drink Menu Sweepstakes",
+      "winner_name": "archidis99",
+      "privacy_label": "archidis99",
+      "promotion_name": "Smirnoff New Drink Menu Sweepstakes",
+      "prize": "Won this a few months back, but received my prize this week, a $200 Fanatics gift card.",
+      "operator": "",
+      "drawing_date": null,
+      "published_at": "2026-08-18T06:17:45Z",
+      "source_id": "sweepstakes-advantage-winners-circle",
+      "source_name": "Sweepstakes Advantage Winners Circle",
+      "source_type": "community_report",
+      "url": "https://www.sweepsadvantage.com/forum/threads/smirnoff-new-drink-menu-sweepstakes.104528/",
+      "verification_level": "source_reported",
+      "author": "archidis99",
+      "first_seen_at": "2026-08-18T11:43:14.849297Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
+      "sent_at": null,
+      "published_display": "August 18, 2026"
+    },
     {
       "id": "99b88a792c669c3f0a8501fc",
       "title": "Newport Summer IW",
@@ -12,7 +54,7 @@
       "prize": "Won $20",
       "operator": "",
       "drawing_date": null,
-      "published_at": "2026-08-17T03:05:47Z",
+      "published_at": "2026-08-17T17:38:28Z",
       "source_id": "sweepstakes-advantage-winners-circle",
       "source_name": "Sweepstakes Advantage Winners Circle",
       "source_type": "community_report",
@@ -20,7 +62,7 @@
       "verification_level": "source_reported",
       "author": "tigerkitty",
       "first_seen_at": "2026-08-17T11:42:49.250967Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-17T11:42:51.692927Z",
       "published_display": "August 17, 2026"
     },
@@ -33,7 +75,7 @@
       "prize": "Won a $25 Amazon gift card from the SweepsAdvantage forum sweepstakes!!",
       "operator": "",
       "drawing_date": null,
-      "published_at": "2026-08-15T20:14:53Z",
+      "published_at": "2026-08-17T15:10:32Z",
       "source_id": "sweepstakes-advantage-winners-circle",
       "source_name": "Sweepstakes Advantage Winners Circle",
       "source_type": "community_report",
@@ -41,9 +83,9 @@
       "verification_level": "source_reported",
       "author": "gda32570",
       "first_seen_at": "2026-08-10T14:45:30.173544Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-10T14:45:33.429393Z",
-      "published_display": "August 15, 2026"
+      "published_display": "August 17, 2026"
     },
     {
       "id": "9125c650418ce366cd489f21",
@@ -62,7 +104,7 @@
       "verification_level": "source_reported",
       "author": "suzyq_w",
       "first_seen_at": "2026-08-11T14:46:38.518458Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-11T14:46:42.356471Z",
       "published_display": "August 15, 2026"
     },
@@ -83,7 +125,7 @@
       "verification_level": "source_reported",
       "author": "specklesinc",
       "first_seen_at": "2026-08-11T22:19:56.890993Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-11T22:19:59.345641Z",
       "published_display": "August 15, 2026"
     },
@@ -104,7 +146,7 @@
       "verification_level": "source_reported",
       "author": "tigerkitty",
       "first_seen_at": "2026-08-11T14:46:38.518458Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-11T14:46:42.356471Z",
       "published_display": "August 15, 2026"
     },
@@ -125,7 +167,7 @@
       "verification_level": "source_reported",
       "author": "siehien",
       "first_seen_at": "2026-08-14T14:39:21.493060Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-14T14:39:24.146201Z",
       "published_display": "August 15, 2026"
     },
@@ -146,7 +188,7 @@
       "verification_level": "source_reported",
       "author": "kimchifarts69420",
       "first_seen_at": "2026-08-14T14:39:21.493060Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-14T14:39:24.146201Z",
       "published_display": "August 14, 2026"
     },
@@ -167,7 +209,7 @@
       "verification_level": "source_reported",
       "author": "generalwizard",
       "first_seen_at": "2026-08-14T14:39:21.493060Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-14T14:39:24.146201Z",
       "published_display": "August 14, 2026"
     },
@@ -188,30 +230,9 @@
       "verification_level": "source_reported",
       "author": "logansweeps1980",
       "first_seen_at": "2026-08-13T14:47:06.285207Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-13T14:47:08.929026Z",
       "published_display": "August 14, 2026"
-    },
-    {
-      "id": "dfb0e664acd545aa911606e9",
-      "title": "Won $4000 from Ferrero",
-      "winner_name": "reneed1",
-      "privacy_label": "reneed1",
-      "promotion_name": "Won $4000 from Ferrero",
-      "prize": "Just wanted to let everyone know that I won the weekly Grand Prize in the Ferrero Go All In Promotion instant win Game Sweepstakes!",
-      "operator": "",
-      "drawing_date": null,
-      "published_at": "2026-08-10T01:55:02Z",
-      "source_id": "sweepstakes-advantage-winners-circle",
-      "source_name": "Sweepstakes Advantage Winners Circle",
-      "source_type": "community_report",
-      "url": "https://www.sweepsadvantage.com/forum/threads/won-4000-from-ferrero.105024/",
-      "verification_level": "source_reported",
-      "author": "reneed1",
-      "first_seen_at": "2026-08-07T14:40:22.149074Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
-      "sent_at": "2026-08-07T14:40:24.600264Z",
-      "published_display": "August 10, 2026"
     },
     {
       "id": "b2b3bea5fadd0a9402cbd7b1",
@@ -230,7 +251,7 @@
       "verification_level": "source_reported",
       "author": "danmantx",
       "first_seen_at": "2026-08-08T12:04:54.669768Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-08T12:04:57.191641Z",
       "published_display": "August 10, 2026"
     },
@@ -251,7 +272,7 @@
       "verification_level": "source_reported",
       "author": "tiara1402",
       "first_seen_at": "2026-08-10T14:45:30.173544Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-10T14:45:33.429393Z",
       "published_display": "August 9, 2026"
     },
@@ -272,7 +293,7 @@
       "verification_level": "source_reported",
       "author": "siehien",
       "first_seen_at": "2026-08-08T12:04:54.669768Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-08T12:04:57.191641Z",
       "published_display": "August 9, 2026"
     },
@@ -293,7 +314,7 @@
       "verification_level": "source_reported",
       "author": "sweepsadv",
       "first_seen_at": "2026-08-02T14:53:05.195305Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-02T14:53:07.753347Z",
       "published_display": "August 9, 2026"
     },
@@ -314,7 +335,7 @@
       "verification_level": "source_reported",
       "author": "luckycatme2",
       "first_seen_at": "2026-08-04T17:24:18.323253Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-04T17:24:20.862991Z",
       "published_display": "August 8, 2026"
     },
@@ -335,7 +356,7 @@
       "verification_level": "source_reported",
       "author": "brian j",
       "first_seen_at": "2026-08-07T14:40:22.149074Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-07T14:40:24.600264Z",
       "published_display": "August 8, 2026"
     },
@@ -356,7 +377,7 @@
       "verification_level": "source_reported",
       "author": "sunluvr",
       "first_seen_at": "2026-08-03T17:30:36.181134Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-03T17:30:38.441854Z",
       "published_display": "August 6, 2026"
     },
@@ -377,7 +398,7 @@
       "verification_level": "source_reported",
       "author": "sweeps4unme",
       "first_seen_at": "2026-08-03T17:30:36.181134Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-03T17:30:38.441854Z",
       "published_display": "August 5, 2026"
     },
@@ -398,7 +419,7 @@
       "verification_level": "source_reported",
       "author": "sunluvr",
       "first_seen_at": "2026-08-01T22:18:29.076206Z",
-      "last_seen_at": "2026-08-17T11:42:49.250967Z",
+      "last_seen_at": "2026-08-18T11:43:14.849297Z",
       "sent_at": "2026-08-01T22:23:24.293390Z",
       "published_display": "August 4, 2026"
     },
