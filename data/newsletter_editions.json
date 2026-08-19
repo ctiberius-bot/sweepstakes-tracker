@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-19",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — August 19, 2026",
+      "scheduled_at": "2026-08-19T11:58:05Z",
+      "display_date": "August 19, 2026",
+      "provider_id": "25511591",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "8341b26cc5225e250345b70a",
+          "winner_name": "guitarguarddog",
+          "prize": "I won $100 on the spin to win game a minute ago.",
+          "promotion_name": "Fanatics",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/fanatics.105054/",
+          "reported_at": "2026-08-18T15:04:58Z"
+        },
+        {
+          "id": "3e26f3d3c1f0e3b6bc240952",
+          "winner_name": "babydjs_mom",
+          "prize": "I won $1,000 from the AllRoundsOnBeckham sweeps from Stella Artois and they sent it as a $1,000 prepaid gift card!",
+          "promotion_name": "Stella Artois Winner and Lucky Strike Winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/stella-artois-winner-and-lucky-strike-winner.105053/",
+          "reported_at": "2026-08-19T02:50:54Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-18",
       "subject": "Winner Signal: 1 new sweepstakes winner report — August 18, 2026",
       "scheduled_at": "2026-08-18T11:58:16Z",
@@ -596,5 +628,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-18T11:43:17.238673Z"
+  "updated_at": "2026-08-19T11:43:06.154842Z"
 }
