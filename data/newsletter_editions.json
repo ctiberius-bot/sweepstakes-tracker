@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-20",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — August 20, 2026",
+      "scheduled_at": "2026-08-20T11:59:50Z",
+      "display_date": "August 20, 2026",
+      "provider_id": "25527370",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "4faa963065f7f7f14b315369",
+          "winner_name": "hedytf13",
+          "prize": "I won a Kindle copy of The Magic by Robert LiPuma from Goodreads.",
+          "promotion_name": "Won a Free Kindle Book from Goodreads",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-a-free-kindle-book-from-goodreads.105057/",
+          "reported_at": "2026-08-19T22:07:31Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-19",
       "subject": "Winner Signal: 2 new sweepstakes winner reports — August 19, 2026",
       "scheduled_at": "2026-08-19T11:58:05Z",
@@ -628,5 +650,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-19T11:43:06.154842Z"
+  "updated_at": "2026-08-20T11:44:51.571026Z"
 }
