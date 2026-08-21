@@ -2,6 +2,78 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-21",
+      "subject": "Winner Signal: 6 new sweepstakes winner reports — August 21, 2026",
+      "scheduled_at": "2026-08-21T11:59:18Z",
+      "display_date": "August 21, 2026",
+      "provider_id": "25543118",
+      "delivery_provider": "kit",
+      "report_count": 6,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "3ffd906809323e8c9e221fb6",
+          "winner_name": "geehohl",
+          "prize": "This one from Jane's Popcorn: BOTH the person entering & the person tagged won!",
+          "promotion_name": "My 1st INSTAGRAM WIN...",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/my-1st-instagram-win.105062/",
+          "reported_at": "2026-08-20T21:42:52Z"
+        },
+        {
+          "id": "b79beb1259752b0fdb8077aa",
+          "winner_name": "guitarguarddog",
+          "prize": "I just got a phone call from the Modelo contest administrator saying I won a soccer ball from their latest game. Another prize for the kids lol",
+          "promotion_name": "Modelo text to win",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/modelo-text-to-win.105060/",
+          "reported_at": "2026-08-20T21:46:43Z"
+        },
+        {
+          "id": "9d330d76c081968bd0deec34",
+          "winner_name": "aeroutt",
+          "prize": "Wooo!! Just when I thought I might be wasting my time, got my first win after almost 2 months of consistently sweeping. Free one-year Strava subscription + a branded shirt and water bottle. Small win, but excited about the strava…",
+          "promotion_name": "Lone River Strava Sweepstakes Winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/lone-river-strava-sweepstakes-winner.105061/",
+          "reported_at": "2026-08-20T21:47:21Z"
+        },
+        {
+          "id": "cf66f61eb078cb424e8c8405",
+          "winner_name": "sweepslover20222022",
+          "prize": "Just won $100 from Fanatics, can't wait to get some stuff for football season!",
+          "promotion_name": "Won $100 from Fanatics",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-100-from-fanatics.105059/",
+          "reported_at": "2026-08-20T21:48:14Z"
+        },
+        {
+          "id": "e1d679e4ca2641e8ffd90e2a",
+          "winner_name": "ohiomom",
+          "prize": "The Sprite® Living Tracklist Sweepstakes: Enter Now | Coca-Cola US What's your music story? Enter the Sprite® Living Tracklist Sweepstakes for a chance to win a prepaid gift card or a Bluetooth speaker. Closes September 30th.…",
+          "promotion_name": "Won $50 Visa GC from Sprite Living Tracklist Sweepstakes",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-50-visa-gc-from-sprite-living-tracklist-sweepstakes.105063/",
+          "reported_at": "2026-08-20T22:34:59Z"
+        },
+        {
+          "id": "7a994e698166d5cd78843877",
+          "winner_name": "jaimieleigh",
+          "prize": "I was informed today I won a cookie jar from Oreo Sweepstakes x BTS love letter sweepstakes.",
+          "promotion_name": "Oreo BTS cookie jar",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/oreo-bts-cookie-jar.105064/",
+          "reported_at": "2026-08-21T03:43:12Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-20",
       "subject": "Winner Signal: 1 new sweepstakes winner report — August 20, 2026",
       "scheduled_at": "2026-08-20T11:59:50Z",
@@ -650,5 +722,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-20T11:44:51.571026Z"
+  "updated_at": "2026-08-21T11:44:19.410383Z"
 }
