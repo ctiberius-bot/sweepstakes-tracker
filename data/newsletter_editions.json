@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-22",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — August 22, 2026",
+      "scheduled_at": "2026-08-22T11:52:06Z",
+      "display_date": "August 22, 2026",
+      "provider_id": "25556888",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "7d0cd0d522aad5ce9fe485d8",
+          "winner_name": "kimchifarts69420",
+          "prize": "I won a gift card to Fanatics!",
+          "promotion_name": "Won a $100 Fanatics Gift Card from the “Ultimate Mango Matchday Sweepstakes”",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-a-100-fanatics-gift-card-from-the-%E2%80%9Cultimate-mango-matchday-sweepstakes%E2%80%9D.105068/",
+          "reported_at": "2026-08-22T03:22:33Z"
+        },
+        {
+          "id": "5775326377df04768c400268",
+          "winner_name": "vickiburton",
+          "prize": "I won a Pika 3D Scanner $699.",
+          "promotion_name": "Congratulations! You’re a Creality Creator Awards Launch Giveaway Winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/congratulations-you%E2%80%99re-a-creality-creator-awards-launch-giveaway-winner.105065/",
+          "reported_at": "2026-08-22T03:23:15Z"
+        },
+        {
+          "id": "d42a189cff12a058dd2048e1",
+          "winner_name": "bata99",
+          "prize": "I haven't won anything in a bit, so this was a nice surprise to receive!",
+          "promotion_name": "Small suprise win",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/small-suprise-win.105067/",
+          "reported_at": "2026-08-22T03:23:47Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-21",
       "subject": "Winner Signal: 6 new sweepstakes winner reports — August 21, 2026",
       "scheduled_at": "2026-08-21T11:59:18Z",
@@ -722,5 +764,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-21T11:44:19.410383Z"
+  "updated_at": "2026-08-22T11:37:07.220196Z"
 }
