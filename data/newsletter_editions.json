@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-23",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — August 23, 2026",
+      "scheduled_at": "2026-08-23T11:52:07Z",
+      "display_date": "August 23, 2026",
+      "provider_id": "25566182",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "da27785472b612a8fe15dc9b",
+          "winner_name": "lindarb49",
+          "prize": "GOODREADS WINNER",
+          "promotion_name": "FINALLY!!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/finally.105071/",
+          "reported_at": "2026-08-22T23:02:13Z"
+        },
+        {
+          "id": "4bd25fcc55f4644bcb350ed4",
+          "winner_name": "anniebaby",
+          "prize": "I was the first period grand prize winner for the Cincinnati Bengals Game trip!",
+          "promotion_name": "2026 Frito-Lay Gameday Experiences Sweepstakes Winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/2026-frito-lay-gameday-experiences-sweepstakes-winner.105072/",
+          "reported_at": "2026-08-23T02:55:54Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-22",
       "subject": "Winner Signal: 3 new sweepstakes winner reports — August 22, 2026",
       "scheduled_at": "2026-08-22T11:52:06Z",
@@ -764,5 +796,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-22T11:37:07.220196Z"
+  "updated_at": "2026-08-23T11:37:08.306770Z"
 }
