@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-25",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — August 25, 2026",
+      "scheduled_at": "2026-08-25T12:00:42Z",
+      "display_date": "August 25, 2026",
+      "provider_id": "25598474",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "5001a017918b732a6c97fcff",
+          "winner_name": "vickiburton",
+          "prize": "I won the grand prize of a 4 night stay in Glasgow, Scotland, air from LAX to Glasgow, and a $500 stipend for spending money. I'm posting the winner's page, showing all winners in this fabulous sweeps.",
+          "promotion_name": "San Diego Scottish Highland Games",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/san-diego-scottish-highland-games.104852/",
+          "reported_at": "2026-08-24T23:12:56Z"
+        },
+        {
+          "id": "81e019f9a8f10961383a4b4c",
+          "winner_name": "jdlarch",
+          "prize": "Got an email a several weeks ago stating I'd won one of the Royals 4-ticket fan experiences at the Kauffman Stadium in Kansas city. So lucky to have won and experienced that with the family.",
+          "promotion_name": "KC Royals Fireworks Friday winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/kc-royals-fireworks-friday-winner.105076/",
+          "reported_at": "2026-08-25T06:20:23Z"
+        },
+        {
+          "id": "57445421fe12638df2bf60c7",
+          "winner_name": "theshadowed",
+          "prize": "Prize details were not stated in the report preview.",
+          "promotion_name": "Won a Stadium Scarf in the Minute Maid® Juice Vault",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-a-stadium-scarf-in-the-minute-maid%C2%AE-juice-vault.105075/",
+          "reported_at": "2026-08-25T06:21:17Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-23",
       "subject": "Winner Signal: 2 new sweepstakes winner reports — August 23, 2026",
       "scheduled_at": "2026-08-23T11:52:07Z",
@@ -796,5 +838,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-23T11:37:08.306770Z"
+  "updated_at": "2026-08-25T11:45:43.452417Z"
 }
