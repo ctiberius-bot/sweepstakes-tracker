@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-28",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — August 28, 2026",
+      "scheduled_at": "2026-08-28T21:42:02Z",
+      "display_date": "August 28, 2026",
+      "provider_id": "25658013",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "3bac076b7329f695b485384e",
+          "winner_name": "logansweeps1980",
+          "prize": "I won a cool LP from KPOP Mart and Straykids. This is my first ever sweepstakes prize received.",
+          "promotion_name": "#THIS & THAT Giveaway",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/this-that-giveaway.105085/",
+          "reported_at": "2026-08-28T19:39:06Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-27",
       "subject": "Winner Signal: 2 new sweepstakes winner reports — August 27, 2026",
       "scheduled_at": "2026-08-27T21:18:47Z",
@@ -892,5 +914,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-27T21:03:48.391860Z"
+  "updated_at": "2026-08-28T21:27:03.159636Z"
 }
