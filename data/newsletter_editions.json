@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-08-29",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — August 29, 2026",
+      "scheduled_at": "2026-08-29T15:54:43Z",
+      "display_date": "August 29, 2026",
+      "provider_id": "25665314",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "384247b8c645838942f192a0",
+          "winner_name": "aprilandjesse2004",
+          "prize": "Today I received a surprise package from Beauty of Joseon filled with some of their bestselling skincare products! I'm looking forward to trying these out, especially the sunscreen that's received so many great reviews.",
+          "promotion_name": "Surprise Box on Porch:  Beauty of Joseon",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/surprise-box-on-porch-beauty-of-joseon.105087/",
+          "reported_at": "2026-08-29T12:48:55Z"
+        },
+        {
+          "id": "ddd9ee0e5eb8476989d6f960",
+          "winner_name": "vickiburton",
+          "prize": "A thrilling win since I'm going on my Scotland trip in January. I'll be \"styling\" when I go to the Burns Supper. Thanks SA for posting such great sweepstakes and curating the best. Oh, by the way, this was a review of a product and had an…",
+          "promotion_name": "Blue Nile: Lab Grown Diamond Earrings ARV $150",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/blue-nile-lab-grown-diamond-earrings-arv-150.105088/",
+          "reported_at": "2026-08-29T12:49:43Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-28",
       "subject": "Winner Signal: 1 new sweepstakes winner report — August 28, 2026",
       "scheduled_at": "2026-08-28T21:42:02Z",
@@ -914,5 +946,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-28T21:27:03.159636Z"
+  "updated_at": "2026-08-29T15:39:43.895245Z"
 }
