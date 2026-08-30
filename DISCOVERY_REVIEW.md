@@ -1,21 +1,21 @@
 # SafeTracker discovery review
 
-Updated: 2026-08-29T14:37:58.567338Z
+Updated: 2026-08-30T14:28:59.676162Z
 
 This is a quarantine queue. Nothing listed here is published or scored automatically.
 
-- New candidates this run: **33**
-- Awaiting review: **1941**
+- New candidates this run: **43**
+- Awaiting review: **1984**
 - Sources attempted: **4**
 
 ## Source status
 
 | Source | Result | Candidates |
 |---|---:|---:|
-| Sweepstakes Radar ending soon | ok | 178 |
+| Sweepstakes Radar ending soon | ok | 169 |
 | Sweepstake.com newest listings | ok | 23 |
 | Sweepstakes Advantage | ok | 51 |
-| I Love Giveaways | ok | 43 |
+| I Love Giveaways | ok | 44 |
 
 ## Review checklist
 
