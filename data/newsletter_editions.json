@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-01",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — September 1, 2026",
+      "scheduled_at": "2026-09-01T15:43:52Z",
+      "display_date": "September 1, 2026",
+      "provider_id": "25709803",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "a54ff03ee96ae156b3061734",
+          "winner_name": "vickiburton",
+          "prize": "I'm not sure which one I won. No email or anything inside to tell me what I won.",
+          "promotion_name": "Bob's Red Mill",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/bobs-red-mill.105095/",
+          "reported_at": "2026-09-01T13:03:59Z"
+        },
+        {
+          "id": "52aafbd94b57408784d646d2",
+          "winner_name": "jse216",
+          "prize": "I won a bunch of giftcards/certificates this month.",
+          "promotion_name": "Giftcards!!!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/giftcards.105096/",
+          "reported_at": "2026-09-01T14:02:32Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-08-29",
       "subject": "Winner Signal: 2 new sweepstakes winner reports — August 29, 2026",
       "scheduled_at": "2026-08-29T15:54:43Z",
@@ -946,5 +978,5 @@
       ]
     }
   ],
-  "updated_at": "2026-08-29T15:39:43.895245Z"
+  "updated_at": "2026-09-01T15:28:52.925207Z"
 }
