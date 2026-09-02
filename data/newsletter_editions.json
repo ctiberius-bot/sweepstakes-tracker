@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-02",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — September 2, 2026",
+      "scheduled_at": "2026-09-02T15:23:31Z",
+      "display_date": "September 2, 2026",
+      "provider_id": "25727752",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "7105212ef5d6f8c018accd22",
+          "winner_name": "milic13",
+          "prize": "i won August's sweep for submitting giveaways - thank you Sweeps Advantage!!",
+          "promotion_name": "Won $25 Amazon GC from Sweeps Advantage!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-25-amazon-gc-from-sweeps-advantage.105097/",
+          "reported_at": "2026-09-01T22:33:38Z"
+        },
+        {
+          "id": "b9124a2b0642d769363538e0",
+          "winner_name": "rferrari001",
+          "prize": "Just got a message I was a winner in the Ritas\" Cash in with Ritas sweeps\"!",
+          "promotion_name": "Ritas Winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/ritas-winner.105099/",
+          "reported_at": "2026-09-02T11:14:26Z"
+        },
+        {
+          "id": "566d476a7564fd7991c26e39",
+          "winner_name": "guitarguarddog",
+          "prize": "I won a $25 Fanatics GC !",
+          "promotion_name": "Coca Cola IW",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/coca-cola-iw.105101/",
+          "reported_at": "2026-09-02T14:52:54Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-01",
       "subject": "Winner Signal: 2 new sweepstakes winner reports — September 1, 2026",
       "scheduled_at": "2026-09-01T15:43:52Z",
@@ -978,5 +1020,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-01T15:28:52.925207Z"
+  "updated_at": "2026-09-02T15:08:32.266918Z"
 }
