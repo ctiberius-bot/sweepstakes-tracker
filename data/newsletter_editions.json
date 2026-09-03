@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-03",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — September 3, 2026",
+      "scheduled_at": "2026-09-03T15:16:50Z",
+      "display_date": "September 3, 2026",
+      "provider_id": "25745193",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "31591057a00ac87fd6d71140",
+          "winner_name": "reneed1",
+          "prize": "Thanks to White Claw and Sweepstakes Advantage!",
+          "promotion_name": "Won a Great Prize from White Claw!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-a-great-prize-from-white-claw.105103/",
+          "reported_at": "2026-09-03T12:48:19Z"
+        },
+        {
+          "id": "5ec1df02c8a2ac2bda0fc7b4",
+          "winner_name": "guitarguarddog",
+          "prize": "I was quick enough to win a free 3 topping Domino Pizza using the alternative method of entry",
+          "promotion_name": "Dominos Pizza",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/dominos-pizza.105104/",
+          "reported_at": "2026-09-03T13:11:28Z"
+        },
+        {
+          "id": "fe3ef68834033a67ea873da8",
+          "winner_name": "guitarguarddog",
+          "prize": "I won $20 a minute ago!",
+          "promotion_name": "Newport Find Your Summer Pleasure",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/newport-find-your-summer-pleasure.105105/",
+          "reported_at": "2026-09-03T13:59:59Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-02",
       "subject": "Winner Signal: 3 new sweepstakes winner reports — September 2, 2026",
       "scheduled_at": "2026-09-02T15:23:31Z",
@@ -1020,5 +1062,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-02T15:08:32.266918Z"
+  "updated_at": "2026-09-03T15:01:51.128406Z"
 }
