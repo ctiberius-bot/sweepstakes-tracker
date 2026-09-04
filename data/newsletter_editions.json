@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-04",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — September 4, 2026",
+      "scheduled_at": "2026-09-04T15:14:53Z",
+      "display_date": "September 4, 2026",
+      "provider_id": "25761646",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 2,
+      "reports": [
+        {
+          "id": "225002337effc89c1689d20b",
+          "winner_name": "Robert W.",
+          "prize": "$25",
+          "promotion_name": "$25",
+          "source_name": "MondoSweeps",
+          "source_type": "operator_announcement",
+          "source_url": "https://www.mondosweeps.com/Winner/Index/",
+          "reported_at": "2026-08-26T00:00:00Z"
+        },
+        {
+          "id": "9066e2c3a2c2bc6476caf3f1",
+          "winner_name": "sunluvr",
+          "prize": "Modelo(R) Football Sweepstakes Winner Thank you so much for participating in The Modelo® Football Sweepstakes. You are a Grand Prize Winner and will receive: one (1) $50 e-check 2023 Wins Woman's World Dungeons and Dragons Sweep -…",
+          "promotion_name": "Modelo(R) Football Sweepstakes Winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/modelo-r-football-sweepstakes-winner.101005/",
+          "reported_at": "2026-09-03T22:43:51Z"
+        },
+        {
+          "id": "ea133717a54ed3d670038892",
+          "winner_name": "aprilandjesse2004",
+          "prize": "Just won $20 on the instant win .",
+          "promotion_name": "Me Too:  Newport Find Your Summer Pleasure",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/me-too-newport-find-your-summer-pleasure.105109/",
+          "reported_at": "2026-09-04T14:28:44Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-03",
       "subject": "Winner Signal: 3 new sweepstakes winner reports — September 3, 2026",
       "scheduled_at": "2026-09-03T15:16:50Z",
@@ -1062,5 +1104,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-03T15:01:51.128406Z"
+  "updated_at": "2026-09-04T14:59:54.355267Z"
 }

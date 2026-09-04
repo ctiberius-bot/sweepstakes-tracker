@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-04T14:59:51.879072Z",
+  "updated_at": "2026-09-04T14:59:54.352467Z",
   "count": 101,
   "winners": [
     {
@@ -21,7 +21,7 @@
       "author": "aprilandjesse2004",
       "first_seen_at": "2026-09-04T14:59:51.873170Z",
       "last_seen_at": "2026-09-04T14:59:51.873170Z",
-      "sent_at": null,
+      "sent_at": "2026-09-04T14:59:54.349021Z",
       "published_display": "September 4, 2026"
     },
     {
@@ -63,7 +63,7 @@
       "author": "sunluvr",
       "first_seen_at": "2026-09-04T14:59:51.873170Z",
       "last_seen_at": "2026-09-04T14:59:51.873170Z",
-      "sent_at": null,
+      "sent_at": "2026-09-04T14:59:54.349021Z",
       "published_display": "September 3, 2026"
     },
     {
@@ -525,7 +525,7 @@
       "author": "",
       "first_seen_at": "2026-09-04T14:59:51.873170Z",
       "last_seen_at": "2026-09-04T14:59:51.873170Z",
-      "sent_at": null,
+      "sent_at": "2026-09-04T14:59:54.349021Z",
       "published_display": "August 26, 2026"
     },
     {
