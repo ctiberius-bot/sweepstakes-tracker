@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-06",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — September 6, 2026",
+      "scheduled_at": "2026-09-06T14:27:59Z",
+      "display_date": "September 6, 2026",
+      "provider_id": "25784798",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "748ab775a7d26423eda219b3",
+          "winner_name": "tigerkitty",
+          "prize": "CONGRATULATIONS!​ You've won* one (1) year of a Disney+ Premium subscription!",
+          "promotion_name": "Merkle Pack a Snacktime IW",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/merkle-pack-a-snacktime-iw.105120/",
+          "reported_at": "2026-09-06T03:11:16Z"
+        },
+        {
+          "id": "ce416156e485dcc4128e28f4",
+          "winner_name": "tigerkitty",
+          "prize": "You’re a Winner!​ Congratulations, you’ve just won a free package of Goldfish®!",
+          "promotion_name": "Campbell's Pokemon IW",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/campbells-pokemon-iw.105121/",
+          "reported_at": "2026-09-06T13:20:17Z"
+        },
+        {
+          "id": "69a96db2d3984968f4c85f00",
+          "winner_name": "sunluvr",
+          "prize": "Grand Prize winner of the Modelo: Chelada Apparel Collection Giveaway. I won Modelo Chelada-branded sweatshirt (size L), hat, and socks (ARV $110.95)",
+          "promotion_name": "Modelo: Chelada Apparel Collection Giveaway",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/modelo-chelada-apparel-collection-giveaway.105119/",
+          "reported_at": "2026-09-06T13:21:08Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-05",
       "subject": "Winner Signal: 4 new sweepstakes winner reports — September 5, 2026",
       "scheduled_at": "2026-09-05T14:07:47Z",
@@ -1156,5 +1198,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-05T13:52:47.996259Z"
+  "updated_at": "2026-09-06T14:13:00.181886Z"
 }
