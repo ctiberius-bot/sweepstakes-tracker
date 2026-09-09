@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-09",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — September 9, 2026",
+      "scheduled_at": "2026-09-09T15:23:26Z",
+      "display_date": "September 9, 2026",
+      "provider_id": "25835921",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "7d2c8fc87e294705b4b989a7",
+          "winner_name": "shallynd",
+          "prize": "So excited! My first win in a very long time! The box includes the following: Salsa (16 oz jar) from Inca Sioux Falls greeting cards (set of 3) with custom artwork from MacaelaMade Hot sauce (5 oz bottle) from Dagger & Arrow Coastal Blend…",
+          "promotion_name": "Sioux Falls Sourced Box - Winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/sioux-falls-sourced-box-winner.105129/",
+          "reported_at": "2026-09-09T13:59:51Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-08",
       "subject": "Winner Signal: 1 new sweepstakes winner report — September 8, 2026",
       "scheduled_at": "2026-09-08T15:24:10Z",
@@ -1242,5 +1264,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-08T15:09:10.997112Z"
+  "updated_at": "2026-09-09T15:08:27.379325Z"
 }
