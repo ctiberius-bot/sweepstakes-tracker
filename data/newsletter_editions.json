@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-10",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — September 10, 2026",
+      "scheduled_at": "2026-09-10T15:15:33Z",
+      "display_date": "September 10, 2026",
+      "provider_id": "25853608",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "266149736cbe4ebd71f6eea3",
+          "winner_name": "joshums",
+          "prize": "2 guest list spots for Busch Light One Night Only featuring Nate Smith. The concert is tomorrow night in Salt Lake City so there's no way I can go.",
+          "promotion_name": "Busch Light One Night Only",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/busch-light-one-night-only.105133/",
+          "reported_at": "2026-09-10T06:56:38Z"
+        },
+        {
+          "id": "5be5b136452e8cc2b3630c95",
+          "winner_name": "guitarguarddog",
+          "prize": "I won a Steam code for the new HALLOWEENvideo game that came out yesterday. This is the first time I’ve actually entered and won on this site!",
+          "promotion_name": "New Belgium Brewing/Voodoo Ranger Halloween giveaway",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/new-belgium-brewing-voodoo-ranger-halloween-giveaway.105132/",
+          "reported_at": "2026-09-10T13:27:25Z"
+        },
+        {
+          "id": "8d54b6ecf93d5c19e51649cc",
+          "winner_name": "guitarguarddog",
+          "prize": "The prize package I won arrived today.",
+          "promotion_name": "Mt Dew / Wolverine prize",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/mt-dew-wolverine-prize.105131/",
+          "reported_at": "2026-09-10T13:29:23Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-09",
       "subject": "Winner Signal: 1 new sweepstakes winner report — September 9, 2026",
       "scheduled_at": "2026-09-09T15:23:26Z",
@@ -1264,5 +1306,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-09T15:08:27.379325Z"
+  "updated_at": "2026-09-10T15:00:33.761441Z"
 }
