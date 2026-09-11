@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-11",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — September 11, 2026",
+      "scheduled_at": "2026-09-11T15:18:08Z",
+      "display_date": "September 11, 2026",
+      "provider_id": "25870794",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "6faa5c5677c146a47292fd55",
+          "winner_name": "jgjoyner",
+          "prize": "I won a $100.00 Live Nation Concert Cash from Mountain Dew.",
+          "promotion_name": "Live Nation",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/live-nation.105135/",
+          "reported_at": "2026-09-11T14:50:50Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-10",
       "subject": "Winner Signal: 3 new sweepstakes winner reports — September 10, 2026",
       "scheduled_at": "2026-09-10T15:15:33Z",
@@ -1306,5 +1328,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-10T15:00:33.761441Z"
+  "updated_at": "2026-09-11T15:03:09.722779Z"
 }
