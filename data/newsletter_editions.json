@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-13",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — September 13, 2026",
+      "scheduled_at": "2026-09-13T15:11:22Z",
+      "display_date": "September 13, 2026",
+      "provider_id": "25893281",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "4d778998f8ea5c5b69fae949",
+          "winner_name": "guitarguarddog",
+          "prize": "I won a pizza gift card from A&W at 4am lol .",
+          "promotion_name": "A&W Family Night sweepstakes",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/a-w-family-night-sweepstakes.105140/",
+          "reported_at": "2026-09-13T14:43:15Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-12",
       "subject": "Winner Signal: 1 new sweepstakes winner report — September 12, 2026",
       "scheduled_at": "2026-09-12T14:25:28Z",
@@ -1350,5 +1372,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-12T14:10:29.352587Z"
+  "updated_at": "2026-09-13T14:56:22.966071Z"
 }
