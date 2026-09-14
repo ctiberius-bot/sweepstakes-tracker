@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-14",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — September 14, 2026",
+      "scheduled_at": "2026-09-14T17:13:46Z",
+      "display_date": "September 14, 2026",
+      "provider_id": "25911419",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "5f2b471adb5434dd726c3a8a",
+          "winner_name": "cynlain",
+          "prize": "So I was thrilled to receive an email that I had won a prize from Pixie Lane clothing. The prize is girls clothing, valued at $100.",
+          "promotion_name": "My first win in ages!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/my-first-win-in-ages.105142/",
+          "reported_at": "2026-09-14T13:47:41Z"
+        },
+        {
+          "id": "85d4ba0b471bbe154eade147",
+          "winner_name": "andycal",
+          "prize": "I instantly won Bluetooth speaker from the Sprite Living Tracklist Sweep.",
+          "promotion_name": "Sprite Living Tracklist Sweepstakes",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/sprite-living-tracklist-sweepstakes.105143/",
+          "reported_at": "2026-09-14T13:48:40Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-13",
       "subject": "Winner Signal: 1 new sweepstakes winner report — September 13, 2026",
       "scheduled_at": "2026-09-13T15:11:22Z",
@@ -1372,5 +1404,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-13T14:56:22.966071Z"
+  "updated_at": "2026-09-14T16:58:47.011758Z"
 }
