@@ -1,8 +1,29 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-13T14:56:22.962636Z",
-  "count": 117,
+  "updated_at": "2026-09-14T16:58:44.103470Z",
+  "count": 119,
   "winners": [
+    {
+      "id": "85d4ba0b471bbe154eade147",
+      "title": "Sprite Living Tracklist Sweepstakes",
+      "winner_name": "andycal",
+      "privacy_label": "andycal",
+      "promotion_name": "Sprite Living Tracklist Sweepstakes",
+      "prize": "I instantly won Bluetooth speaker from the Sprite Living Tracklist Sweep.",
+      "operator": "",
+      "drawing_date": null,
+      "published_at": "2026-09-14T13:48:40Z",
+      "source_id": "sweepstakes-advantage-winners-circle",
+      "source_name": "Sweepstakes Advantage Winners Circle",
+      "source_type": "community_report",
+      "url": "https://www.sweepsadvantage.com/forum/threads/sprite-living-tracklist-sweepstakes.105143/",
+      "verification_level": "source_reported",
+      "author": "andycal",
+      "first_seen_at": "2026-09-14T16:58:44.097155Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
+      "sent_at": null,
+      "published_display": "September 14, 2026"
+    },
     {
       "id": "4d778998f8ea5c5b69fae949",
       "title": "A&W Family Night sweepstakes",
@@ -12,7 +33,7 @@
       "prize": "I won a pizza gift card from A&W at 4am lol .",
       "operator": "",
       "drawing_date": null,
-      "published_at": "2026-09-13T14:43:15Z",
+      "published_at": "2026-09-14T13:48:18Z",
       "source_id": "sweepstakes-advantage-winners-circle",
       "source_name": "Sweepstakes Advantage Winners Circle",
       "source_type": "community_report",
@@ -20,9 +41,30 @@
       "verification_level": "source_reported",
       "author": "guitarguarddog",
       "first_seen_at": "2026-09-13T14:56:20.530519Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-13T14:56:22.958667Z",
-      "published_display": "September 13, 2026"
+      "published_display": "September 14, 2026"
+    },
+    {
+      "id": "5f2b471adb5434dd726c3a8a",
+      "title": "My first win in ages!",
+      "winner_name": "cynlain",
+      "privacy_label": "cynlain",
+      "promotion_name": "My first win in ages!",
+      "prize": "So I was thrilled to receive an email that I had won a prize from Pixie Lane clothing. The prize is girls clothing, valued at $100.",
+      "operator": "",
+      "drawing_date": null,
+      "published_at": "2026-09-14T13:47:41Z",
+      "source_id": "sweepstakes-advantage-winners-circle",
+      "source_name": "Sweepstakes Advantage Winners Circle",
+      "source_type": "community_report",
+      "url": "https://www.sweepsadvantage.com/forum/threads/my-first-win-in-ages.105142/",
+      "verification_level": "source_reported",
+      "author": "cynlain",
+      "first_seen_at": "2026-09-14T16:58:44.097155Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
+      "sent_at": null,
+      "published_display": "September 14, 2026"
     },
     {
       "id": "39ebe9dd75988f4edb2c6311",
@@ -41,7 +83,7 @@
       "verification_level": "source_reported",
       "author": "sea2000",
       "first_seen_at": "2026-09-08T15:09:08.373100Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-08T15:09:10.948653Z",
       "published_display": "September 12, 2026"
     },
@@ -62,7 +104,7 @@
       "verification_level": "source_reported",
       "author": "danmantx",
       "first_seen_at": "2026-09-12T14:10:27.019509Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-12T14:10:29.346077Z",
       "published_display": "September 12, 2026"
     },
@@ -83,7 +125,7 @@
       "verification_level": "source_reported",
       "author": "jgjoyner",
       "first_seen_at": "2026-09-11T15:03:07.028652Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-11T15:03:09.715954Z",
       "published_display": "September 12, 2026"
     },
@@ -104,7 +146,7 @@
       "verification_level": "source_reported",
       "author": "shallynd",
       "first_seen_at": "2026-09-09T15:08:25.030174Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-09T15:08:27.372853Z",
       "published_display": "September 11, 2026"
     },
@@ -125,7 +167,7 @@
       "verification_level": "source_reported",
       "author": "vickiburton",
       "first_seen_at": "2026-08-29T15:39:41.728053Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-08-29T15:39:43.889315Z",
       "published_display": "September 11, 2026"
     },
@@ -146,7 +188,7 @@
       "verification_level": "source_reported",
       "author": "isi17",
       "first_seen_at": "2026-09-05T13:52:45.458783Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-05T13:52:47.989905Z",
       "published_display": "September 11, 2026"
     },
@@ -167,7 +209,7 @@
       "verification_level": "source_reported",
       "author": "kluless",
       "first_seen_at": "2026-09-05T13:52:45.458783Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-05T13:52:47.989905Z",
       "published_display": "September 11, 2026"
     },
@@ -188,7 +230,7 @@
       "verification_level": "source_reported",
       "author": "reneed1",
       "first_seen_at": "2026-09-03T15:01:48.664973Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-03T15:01:51.122858Z",
       "published_display": "September 11, 2026"
     },
@@ -209,7 +251,7 @@
       "verification_level": "source_reported",
       "author": "guitarguarddog",
       "first_seen_at": "2026-09-10T15:00:31.016620Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-10T15:00:33.754449Z",
       "published_display": "September 11, 2026"
     },
@@ -230,7 +272,7 @@
       "verification_level": "source_reported",
       "author": "guitarguarddog",
       "first_seen_at": "2026-09-10T15:00:31.016620Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-10T15:00:33.754449Z",
       "published_display": "September 11, 2026"
     },
@@ -251,7 +293,7 @@
       "verification_level": "source_reported",
       "author": "joshums",
       "first_seen_at": "2026-09-10T15:00:31.016620Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-10T15:00:33.754449Z",
       "published_display": "September 10, 2026"
     },
@@ -272,7 +314,7 @@
       "verification_level": "source_reported",
       "author": "nerrivik7",
       "first_seen_at": "2026-09-05T13:52:45.458783Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-05T13:52:47.989905Z",
       "published_display": "September 8, 2026"
     },
@@ -293,7 +335,7 @@
       "verification_level": "source_reported",
       "author": "aprilandjesse2004",
       "first_seen_at": "2026-09-04T14:59:51.873170Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-04T14:59:54.349021Z",
       "published_display": "September 7, 2026"
     },
@@ -314,7 +356,7 @@
       "verification_level": "source_reported",
       "author": "vickiburton",
       "first_seen_at": "2026-09-05T13:52:45.458783Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-05T13:52:47.989905Z",
       "published_display": "September 7, 2026"
     },
@@ -335,7 +377,7 @@
       "verification_level": "source_reported",
       "author": "ceeceesmom",
       "first_seen_at": "2026-09-07T16:29:15.741734Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-07T16:29:17.926814Z",
       "published_display": "September 7, 2026"
     },
@@ -356,7 +398,7 @@
       "verification_level": "source_reported",
       "author": "tigerkitty",
       "first_seen_at": "2026-09-06T14:12:57.591377Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-06T14:13:00.175757Z",
       "published_display": "September 7, 2026"
     },
@@ -377,7 +419,7 @@
       "verification_level": "source_reported",
       "author": "sunluvr",
       "first_seen_at": "2026-09-06T14:12:57.591377Z",
-      "last_seen_at": "2026-09-13T14:56:20.530519Z",
+      "last_seen_at": "2026-09-14T16:58:44.097155Z",
       "sent_at": "2026-09-06T14:13:00.175757Z",
       "published_display": "September 7, 2026"
     },
