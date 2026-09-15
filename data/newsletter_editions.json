@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-15",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — September 15, 2026",
+      "scheduled_at": "2026-09-15T15:50:13Z",
+      "display_date": "September 15, 2026",
+      "provider_id": "25928871",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "e787f7734be5c1f9bb1938ed",
+          "winner_name": "damnyankee2",
+          "prize": "You are the winner of INSP's Gold Rush Sweepstakes! Your prize is a $200 VISA gift card!",
+          "promotion_name": "INSP's Gold Rush Sweepstakes winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/insps-gold-rush-sweepstakes-winner.105146/",
+          "reported_at": "2026-09-15T12:17:31Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-14",
       "subject": "Winner Signal: 2 new sweepstakes winner reports — September 14, 2026",
       "scheduled_at": "2026-09-14T17:13:46Z",
@@ -1404,5 +1426,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-14T16:58:47.011758Z"
+  "updated_at": "2026-09-15T15:35:14.980035Z"
 }
