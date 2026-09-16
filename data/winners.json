@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-16T15:26:29.577131Z",
+  "updated_at": "2026-09-16T15:26:32.803080Z",
   "count": 123,
   "winners": [
     {
@@ -21,7 +21,7 @@
       "author": "sea2000",
       "first_seen_at": "2026-09-16T15:26:29.482657Z",
       "last_seen_at": "2026-09-16T15:26:29.482657Z",
-      "sent_at": null,
+      "sent_at": "2026-09-16T15:26:32.634027Z",
       "published_display": "September 16, 2026"
     },
     {
@@ -42,7 +42,7 @@
       "author": "jse216",
       "first_seen_at": "2026-09-16T15:26:29.482657Z",
       "last_seen_at": "2026-09-16T15:26:29.482657Z",
-      "sent_at": null,
+      "sent_at": "2026-09-16T15:26:32.634027Z",
       "published_display": "September 16, 2026"
     },
     {
@@ -63,7 +63,7 @@
       "author": "sunluvr",
       "first_seen_at": "2026-09-16T15:26:29.482657Z",
       "last_seen_at": "2026-09-16T15:26:29.482657Z",
-      "sent_at": null,
+      "sent_at": "2026-09-16T15:26:32.634027Z",
       "published_display": "September 16, 2026"
     },
     {
