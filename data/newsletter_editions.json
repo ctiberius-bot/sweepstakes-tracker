@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-17",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — September 17, 2026",
+      "scheduled_at": "2026-09-17T15:49:06Z",
+      "display_date": "September 17, 2026",
+      "provider_id": "25963877",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "34e4321e7e3f2e1a430ecd80",
+          "winner_name": "rammstein",
+          "prize": "$50 Venmo!! Been slim pickings lately so this is much appreciated!! Good luck everyone",
+          "promotion_name": "Your Vibe Your Whiskey Instant Winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/your-vibe-your-whiskey-instant-winner.105152/",
+          "reported_at": "2026-09-17T13:30:54Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-16",
       "subject": "Winner Signal: 3 new sweepstakes winner reports — September 16, 2026",
       "scheduled_at": "2026-09-16T15:41:31Z",
@@ -1468,5 +1490,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-16T15:26:32.805571Z"
+  "updated_at": "2026-09-17T15:34:07.995481Z"
 }
