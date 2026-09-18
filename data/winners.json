@@ -1,8 +1,29 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-17T15:34:07.992822Z",
-  "count": 124,
+  "updated_at": "2026-09-18T15:00:48.477665Z",
+  "count": 125,
   "winners": [
+    {
+      "id": "a83eb32a0df78064f9bb9d1f",
+      "title": "Won but do not know where!",
+      "winner_name": "dafferduck",
+      "privacy_label": "dafferduck",
+      "promotion_name": "Won but do not know where!",
+      "prize": "Delivered today a 12 pack of Ghost Enery Drink, Yum Earth Organic Pops, Two boxes Skittles Drink Mixes, Yum Earth Organic Giggles, a large black shirt and Yum Earth 20 Pack Variet Pack. No info on sweeps in package. Anyone have any ideas?",
+      "operator": "",
+      "drawing_date": null,
+      "published_at": "2026-09-18T14:18:17Z",
+      "source_id": "sweepstakes-advantage-winners-circle",
+      "source_name": "Sweepstakes Advantage Winners Circle",
+      "source_type": "community_report",
+      "url": "https://www.sweepsadvantage.com/forum/threads/won-but-do-not-know-where.105154/",
+      "verification_level": "source_reported",
+      "author": "dafferduck",
+      "first_seen_at": "2026-09-18T15:00:48.472719Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
+      "sent_at": null,
+      "published_display": "September 18, 2026"
+    },
     {
       "id": "34e4321e7e3f2e1a430ecd80",
       "title": "Your Vibe Your Whiskey Instant Winner",
@@ -12,7 +33,7 @@
       "prize": "$50 Venmo!! Been slim pickings lately so this is much appreciated!! Good luck everyone",
       "operator": "",
       "drawing_date": null,
-      "published_at": "2026-09-17T13:30:54Z",
+      "published_at": "2026-09-18T08:39:21Z",
       "source_id": "sweepstakes-advantage-winners-circle",
       "source_name": "Sweepstakes Advantage Winners Circle",
       "source_type": "community_report",
@@ -20,9 +41,9 @@
       "verification_level": "source_reported",
       "author": "rammstein",
       "first_seen_at": "2026-09-17T15:34:04.484917Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-17T15:34:07.788154Z",
-      "published_display": "September 17, 2026"
+      "published_display": "September 18, 2026"
     },
     {
       "id": "4999d69774adfcbcb1fc2400",
@@ -41,7 +62,7 @@
       "verification_level": "source_reported",
       "author": "sea2000",
       "first_seen_at": "2026-09-16T15:26:29.482657Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-16T15:26:32.634027Z",
       "published_display": "September 16, 2026"
     },
@@ -62,7 +83,7 @@
       "verification_level": "source_reported",
       "author": "jse216",
       "first_seen_at": "2026-09-16T15:26:29.482657Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-16T15:26:32.634027Z",
       "published_display": "September 16, 2026"
     },
@@ -83,7 +104,7 @@
       "verification_level": "source_reported",
       "author": "sunluvr",
       "first_seen_at": "2026-09-16T15:26:29.482657Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-16T15:26:32.634027Z",
       "published_display": "September 16, 2026"
     },
@@ -104,7 +125,7 @@
       "verification_level": "source_reported",
       "author": "vickiburton",
       "first_seen_at": "2026-08-29T15:39:41.728053Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-08-29T15:39:43.889315Z",
       "published_display": "September 15, 2026"
     },
@@ -125,7 +146,7 @@
       "verification_level": "source_reported",
       "author": "shallynd",
       "first_seen_at": "2026-09-09T15:08:25.030174Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-09T15:08:27.372853Z",
       "published_display": "September 15, 2026"
     },
@@ -146,7 +167,7 @@
       "verification_level": "source_reported",
       "author": "damnyankee2",
       "first_seen_at": "2026-09-15T15:35:11.266317Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-15T15:35:14.973133Z",
       "published_display": "September 15, 2026"
     },
@@ -167,7 +188,7 @@
       "verification_level": "source_reported",
       "author": "guitarguarddog",
       "first_seen_at": "2026-09-13T14:56:20.530519Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-13T14:56:22.958667Z",
       "published_display": "September 15, 2026"
     },
@@ -188,7 +209,7 @@
       "verification_level": "source_reported",
       "author": "andycal",
       "first_seen_at": "2026-09-14T16:58:44.097155Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-14T16:58:47.000141Z",
       "published_display": "September 14, 2026"
     },
@@ -209,7 +230,7 @@
       "verification_level": "source_reported",
       "author": "cynlain",
       "first_seen_at": "2026-09-14T16:58:44.097155Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-14T16:58:47.000141Z",
       "published_display": "September 14, 2026"
     },
@@ -230,7 +251,7 @@
       "verification_level": "source_reported",
       "author": "danmantx",
       "first_seen_at": "2026-09-12T14:10:27.019509Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-12T14:10:29.346077Z",
       "published_display": "September 14, 2026"
     },
@@ -251,7 +272,7 @@
       "verification_level": "source_reported",
       "author": "jgjoyner",
       "first_seen_at": "2026-09-11T15:03:07.028652Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-11T15:03:09.715954Z",
       "published_display": "September 14, 2026"
     },
@@ -272,7 +293,7 @@
       "verification_level": "source_reported",
       "author": "sea2000",
       "first_seen_at": "2026-09-08T15:09:08.373100Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-08T15:09:10.948653Z",
       "published_display": "September 12, 2026"
     },
@@ -293,7 +314,7 @@
       "verification_level": "source_reported",
       "author": "isi17",
       "first_seen_at": "2026-09-05T13:52:45.458783Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-05T13:52:47.989905Z",
       "published_display": "September 11, 2026"
     },
@@ -314,7 +335,7 @@
       "verification_level": "source_reported",
       "author": "kluless",
       "first_seen_at": "2026-09-05T13:52:45.458783Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-05T13:52:47.989905Z",
       "published_display": "September 11, 2026"
     },
@@ -335,7 +356,7 @@
       "verification_level": "source_reported",
       "author": "reneed1",
       "first_seen_at": "2026-09-03T15:01:48.664973Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-03T15:01:51.122858Z",
       "published_display": "September 11, 2026"
     },
@@ -356,7 +377,7 @@
       "verification_level": "source_reported",
       "author": "guitarguarddog",
       "first_seen_at": "2026-09-10T15:00:31.016620Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-10T15:00:33.754449Z",
       "published_display": "September 11, 2026"
     },
@@ -377,7 +398,7 @@
       "verification_level": "source_reported",
       "author": "guitarguarddog",
       "first_seen_at": "2026-09-10T15:00:31.016620Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-10T15:00:33.754449Z",
       "published_display": "September 11, 2026"
     },
@@ -398,7 +419,7 @@
       "verification_level": "source_reported",
       "author": "joshums",
       "first_seen_at": "2026-09-10T15:00:31.016620Z",
-      "last_seen_at": "2026-09-17T15:34:04.484917Z",
+      "last_seen_at": "2026-09-18T15:00:48.472719Z",
       "sent_at": "2026-09-10T15:00:33.754449Z",
       "published_display": "September 10, 2026"
     },
