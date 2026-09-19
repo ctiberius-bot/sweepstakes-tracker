@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-19",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — September 19, 2026",
+      "scheduled_at": "2026-09-19T14:42:35Z",
+      "display_date": "September 19, 2026",
+      "provider_id": "25992427",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "003607f332ed5137aea5b5b2",
+          "winner_name": "carlabono",
+          "prize": "I never want anything I $150 on my venmo today yay",
+          "promotion_name": "Carmella",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/carmella.105158/",
+          "reported_at": "2026-09-19T13:24:56Z"
+        },
+        {
+          "id": "b0aa18b9b7b679e2e724d1f9",
+          "winner_name": "archidis99",
+          "prize": "I started doing mail in sweeps in March -- after 10+ years of online sweeps. I was going to give up, then last night I had to sign for this and I saw it was from one that I entered about 10 times by mail. Very happy and this will keep me…",
+          "promotion_name": "Won a Limited Edition 250th silver coin from Path Made is the USA Sweepstakes",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-a-limited-edition-250th-silver-coin-from-path-made-is-the-usa-sweepstakes.105157/",
+          "reported_at": "2026-09-19T14:19:32Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-18",
       "subject": "Winner Signal: 1 new sweepstakes winner report — September 18, 2026",
       "scheduled_at": "2026-09-18T15:15:50Z",
@@ -1512,5 +1544,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-18T15:00:50.906446Z"
+  "updated_at": "2026-09-19T14:27:36.392958Z"
 }
