@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-20",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — September 20, 2026",
+      "scheduled_at": "2026-09-20T14:58:06Z",
+      "display_date": "September 20, 2026",
+      "provider_id": "26002537",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "65ca569aaa82338f36720e8c",
+          "winner_name": "webbers",
+          "prize": "You’ve won a prize from the Coca-Cola Sweepstakes x QuikTrip U.S.",
+          "promotion_name": "Coca-Cola x QuikTrip U.S. Soccer 2026 Instant Win Game.",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/coca-cola-x-quiktrip-u-s-soccer-2026-instant-win-game.105161/",
+          "reported_at": "2026-09-20T10:33:53Z"
+        },
+        {
+          "id": "563bc47131d0f6b4ea73b66a",
+          "winner_name": "Sarahjo_d22",
+          "prize": "I won the nintendo sweepstakes Switch 2 from Brisk Tea!!",
+          "promotion_name": "Brisk Tea Splatoon Raiders Sweepstakes",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/brisk-tea-splatoon-raiders-sweepstakes.105160/",
+          "reported_at": "2026-09-20T10:34:40Z"
+        },
+        {
+          "id": "a261a8f0cdc6a19a73cdbc7a",
+          "winner_name": "webbers",
+          "prize": "You’ve won a FIFA World Cup™ Replica Match Ball!*",
+          "promotion_name": "Lays",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/lays.105162/",
+          "reported_at": "2026-09-20T14:08:49Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-19",
       "subject": "Winner Signal: 2 new sweepstakes winner reports — September 19, 2026",
       "scheduled_at": "2026-09-19T14:42:35Z",
@@ -1544,5 +1586,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-19T14:27:36.392958Z"
+  "updated_at": "2026-09-20T14:43:07.442895Z"
 }
