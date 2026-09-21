@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-21",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — September 21, 2026",
+      "scheduled_at": "2026-09-21T17:20:32Z",
+      "display_date": "September 21, 2026",
+      "provider_id": "26020829",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "7efa59c7d2a0ae61da6614c9",
+          "winner_name": "suzyq_w",
+          "prize": "You won a $50 digital prepaid card by entering The Sprite® Living Tracklist Sweepstakes Found this in email while on vacation.",
+          "promotion_name": "The Sprite® Living Tracklist Sweepstakes",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/the-sprite%C2%AE-living-tracklist-sweepstakes.105166/",
+          "reported_at": "2026-09-21T12:01:52Z"
+        },
+        {
+          "id": "d4d30ceffd57c90741c23f4b",
+          "winner_name": "suzyq_w",
+          "prize": "Congrats!​ You won $20 cash* for your next round!",
+          "promotion_name": "Jameson 1st Round on Us instant win",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/jameson-1st-round-on-us-instant-win.105165/",
+          "reported_at": "2026-09-21T12:02:18Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-20",
       "subject": "Winner Signal: 3 new sweepstakes winner reports — September 20, 2026",
       "scheduled_at": "2026-09-20T14:58:06Z",
@@ -1586,5 +1618,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-20T14:43:07.442895Z"
+  "updated_at": "2026-09-21T17:05:32.881325Z"
 }
