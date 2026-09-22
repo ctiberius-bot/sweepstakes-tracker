@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-22",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — September 22, 2026",
+      "scheduled_at": "2026-09-22T15:47:16Z",
+      "display_date": "September 22, 2026",
+      "provider_id": "26037436",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "48e25ca36ef60d41b431ce5d",
+          "winner_name": "pvanpatten",
+          "prize": "I received a call that we won concert tickets to the Jimmy Jam concert, hotel stay and airline tickets to Las Vegas (but we live in Vegas).",
+          "promotion_name": "IHEART WIN",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/iheart-win.105168/",
+          "reported_at": "2026-09-22T01:28:02Z"
+        },
+        {
+          "id": "1149a196ec04d46fd03bd979",
+          "winner_name": "tjern",
+          "prize": "Won a Truly World Cup Scarf",
+          "promotion_name": "Won a Truly World Cup Scarf",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-a-truly-world-cup-scarf.105169/",
+          "reported_at": "2026-09-22T01:28:34Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-21",
       "subject": "Winner Signal: 2 new sweepstakes winner reports — September 21, 2026",
       "scheduled_at": "2026-09-21T17:20:32Z",
@@ -1618,5 +1650,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-21T17:05:32.881325Z"
+  "updated_at": "2026-09-22T15:32:17.523417Z"
 }
