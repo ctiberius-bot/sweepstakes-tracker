@@ -2,6 +2,58 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-24",
+      "subject": "Winner Signal: 4 new sweepstakes winner reports — September 24, 2026",
+      "scheduled_at": "2026-09-24T16:05:20Z",
+      "display_date": "September 24, 2026",
+      "provider_id": "26074086",
+      "delivery_provider": "kit",
+      "report_count": 4,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "f070d15aeda67bd903f11945",
+          "winner_name": "damnyankee2",
+          "prize": "YOU WON $20 CASH* FOR YOUR NEXT ROUND!",
+          "promotion_name": "Jameson IW",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/jameson-iw.105176/",
+          "reported_at": "2026-09-24T10:34:24Z"
+        },
+        {
+          "id": "0b540c4b2657a0c8d150fad2",
+          "winner_name": "mratt1",
+          "prize": "Won the$20.00 to be paid via PayPal or Venmo about 2 weeks ago.",
+          "promotion_name": "Jameson Irish Whiskey First Round on US",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/jameson-irish-whiskey-first-round-on-us.105174/",
+          "reported_at": "2026-09-24T10:34:42Z"
+        },
+        {
+          "id": "b9471e76ad34782eb7ba829d",
+          "winner_name": "indian06",
+          "prize": "I won the $20 also!",
+          "promotion_name": "Jameson First Round on Us Sweepstakes",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/jameson-first-round-on-us-sweepstakes.105175/",
+          "reported_at": "2026-09-24T10:34:57Z"
+        },
+        {
+          "id": "9a111379250158145b28402b",
+          "winner_name": "sunnygal414",
+          "prize": "100.00 MLB Gift card already purchased a sweatshirt for the son",
+          "promotion_name": "MLB Ken Griffey Jr.'s MLB Trivia Instant Win",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/mlb-ken-griffey-jr-s-mlb-trivia-instant-win.105177/",
+          "reported_at": "2026-09-24T15:08:25Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-23",
       "subject": "Winner Signal: 1 new sweepstakes winner report — September 23, 2026",
       "scheduled_at": "2026-09-23T15:43:01Z",
@@ -1672,5 +1724,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-23T15:28:02.572335Z"
+  "updated_at": "2026-09-24T15:50:21.492335Z"
 }
