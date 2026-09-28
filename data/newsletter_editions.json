@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-28",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — September 28, 2026",
+      "scheduled_at": "2026-09-28T18:52:04Z",
+      "display_date": "September 28, 2026",
+      "provider_id": "26133646",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "a9a0c695afe8043e7699cb74",
+          "winner_name": "james38",
+          "prize": "Won $300 from Miller Lite!",
+          "promotion_name": "Miller Lite Win!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/miller-lite-win.105186/",
+          "reported_at": "2026-09-28T02:44:16Z"
+        },
+        {
+          "id": "62e6c1b0a0615a4ef51b827f",
+          "winner_name": "christinakane2001",
+          "prize": "won a choice between 3 trips I declined the prizes as they were not for me and I didn't want the tax liability and they didn't offer a cash equivalent which would have been better as I would rather watch golf or tennis from home",
+          "promotion_name": "won grand prize Croc Trip",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-grand-prize-croc-trip.105188/",
+          "reported_at": "2026-09-28T15:40:50Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-26",
       "subject": "Winner Signal: 1 new sweepstakes winner report — September 26, 2026",
       "scheduled_at": "2026-09-26T15:14:45Z",
@@ -1768,5 +1800,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-26T14:59:46.203620Z"
+  "updated_at": "2026-09-28T18:37:05.003581Z"
 }
