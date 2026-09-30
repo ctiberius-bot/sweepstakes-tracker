@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-09-30",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — September 30, 2026",
+      "scheduled_at": "2026-09-30T17:11:23Z",
+      "display_date": "September 30, 2026",
+      "provider_id": "26171247",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "9d5a1b5339a9c3ebaa5df4fc",
+          "winner_name": "archidis99",
+          "prize": "First one was from White Claw that I won a $500 Ticketmaster gift card.",
+          "promotion_name": "Triple win this morning!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/triple-win-this-morning.105194/",
+          "reported_at": "2026-09-30T15:17:42Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-09-29",
       "subject": "Winner Signal: 1 new sweepstakes winner report — September 29, 2026",
       "scheduled_at": "2026-09-29T17:09:53Z",
@@ -1822,5 +1844,5 @@
       ]
     }
   ],
-  "updated_at": "2026-09-29T16:54:54.196354Z"
+  "updated_at": "2026-09-30T16:56:24.585337Z"
 }
