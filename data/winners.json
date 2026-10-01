@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-01T17:24:04.500310Z",
+  "updated_at": "2026-10-01T17:24:07.242912Z",
   "count": 147,
   "winners": [
     {
@@ -21,7 +21,7 @@
       "author": "deparrie",
       "first_seen_at": "2026-10-01T17:24:04.493415Z",
       "last_seen_at": "2026-10-01T17:24:04.493415Z",
-      "sent_at": null,
+      "sent_at": "2026-10-01T17:24:07.239094Z",
       "published_display": "October 1, 2026"
     },
     {
@@ -42,7 +42,7 @@
       "author": "jse216",
       "first_seen_at": "2026-10-01T17:24:04.493415Z",
       "last_seen_at": "2026-10-01T17:24:04.493415Z",
-      "sent_at": null,
+      "sent_at": "2026-10-01T17:24:07.239094Z",
       "published_display": "October 1, 2026"
     },
     {
