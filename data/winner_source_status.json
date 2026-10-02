@@ -1,52 +1,52 @@
 {
-  "checked_at": "2026-10-01T17:23:47.406073Z",
+  "checked_at": "2026-10-02T16:39:05.401761Z",
   "sources": [
     {
       "source_id": "sweepstakes-advantage-winners-circle",
       "source_name": "Sweepstakes Advantage Winners Circle",
       "status": "ok",
       "reports_found": 20,
-      "checked_at": "2026-10-01T17:23:47.406073Z"
+      "checked_at": "2026-10-02T16:39:05.401761Z"
     },
     {
       "source_id": "mondosweeps-winners",
       "source_name": "MondoSweeps",
       "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-10-01T17:23:47.406073Z",
-      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: www.mondosweeps.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a43d2845e8f4f1be Performance and Security by Cloudflare Privacy"
+      "checked_at": "2026-10-02T16:39:05.401761Z",
+      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: www.mondosweeps.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a44524299c319a22 Performance and Security by Cloudflare Privacy"
     },
     {
       "source_id": "winstakes-winners",
       "source_name": "WinStakes",
       "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-10-01T17:23:47.406073Z",
-      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: www.winstakes.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a43d285a6f16f06e Performance and Security by Cloudflare Privacy"
+      "checked_at": "2026-10-02T16:39:05.401761Z",
+      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: www.winstakes.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a445243d5a69ae0d Performance and Security by Cloudflare Privacy"
     },
     {
       "source_id": "prizeloot-winners",
       "source_name": "PrizeLoot",
       "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-10-01T17:23:47.406073Z",
-      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: www.prizeloot.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a43d286edd50367c Performance and Security by Cloudflare Privacy"
+      "checked_at": "2026-10-02T16:39:05.401761Z",
+      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: www.prizeloot.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a4452450ba70f2a5 Performance and Security by Cloudflare Privacy"
     },
     {
       "source_id": "winloot-winners",
       "source_name": "WinLoot",
       "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-10-01T17:23:47.406073Z",
-      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: entries.winloot.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a43d288349299398 Performance and Security by Cloudflare Privacy"
+      "checked_at": "2026-10-02T16:39:05.401761Z",
+      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: entries.winloot.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a44524648bce7067 Performance and Security by Cloudflare Privacy"
     },
     {
       "source_id": "prizecraze-winners",
       "source_name": "PrizeCraze",
       "status": "error",
       "reports_found": 0,
-      "checked_at": "2026-10-01T17:23:47.406073Z",
-      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: www.prizecraze.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a43d2897ad00e591 Performance and Security by Cloudflare Privacy"
+      "checked_at": "2026-10-02T16:39:05.401761Z",
+      "error": "ValueError: Winner page loaded, but no expected records matched. Page excerpt: www.prizecraze.com Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Ray ID: a445247848543496 Performance and Security by Cloudflare Privacy"
     }
   ]
 }
