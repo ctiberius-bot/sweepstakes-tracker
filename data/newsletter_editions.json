@@ -2,6 +2,28 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-10-02",
+      "subject": "Winner Signal: 1 new sweepstakes winner report — October 2, 2026",
+      "scheduled_at": "2026-10-02T16:54:23Z",
+      "display_date": "October 2, 2026",
+      "provider_id": "26210376",
+      "delivery_provider": "kit",
+      "report_count": 1,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "4c382490012b3c6b9b799794",
+          "winner_name": "milic13",
+          "prize": "i got it for submitting the most giveaways in September. yay!",
+          "promotion_name": "Won $25 Amazon GC from SA!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/won-25-amazon-gc-from-sa.105199/",
+          "reported_at": "2026-10-02T13:19:04Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-10-01",
       "subject": "Winner Signal: 2 new sweepstakes winner reports — October 1, 2026",
       "scheduled_at": "2026-10-01T17:39:06Z",
@@ -1876,5 +1898,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-01T17:24:07.247033Z"
+  "updated_at": "2026-10-02T16:39:24.016123Z"
 }
