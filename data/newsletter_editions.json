@@ -2,6 +2,48 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-10-03",
+      "subject": "Winner Signal: 3 new sweepstakes winner reports — October 3, 2026",
+      "scheduled_at": "2026-10-03T15:24:32Z",
+      "display_date": "October 3, 2026",
+      "provider_id": "26222841",
+      "delivery_provider": "kit",
+      "report_count": 3,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "f59d7aa9d6e7cfea8a1c29e5",
+          "winner_name": "danmantx",
+          "prize": "Can you believe it, I won on my very first play! ​ Congratulations!​ You've won a Fandango Promotional Code (up to $20 value) to see Marvel Studios' Avengers: Doomsday in theaters.",
+          "promotion_name": "Smirnoff Assemble Your Night Sweepstakes - $20 Fandango Winner",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/smirnoff-assemble-your-night-sweepstakes-20-fandango-winner.105205/",
+          "reported_at": "2026-10-03T13:16:28Z"
+        },
+        {
+          "id": "1a42ef74cb285f37e22eede0",
+          "winner_name": "quilt1404",
+          "prize": "received my stocking cap from the Fanta instant win .",
+          "promotion_name": "fanta",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/fanta.105204/",
+          "reported_at": "2026-10-03T13:16:57Z"
+        },
+        {
+          "id": "48cb300e91c43eabd12f056c",
+          "winner_name": "providence",
+          "prize": "Thank you Sweepstakes Advantage!!",
+          "promotion_name": "Amazon Gift Card",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/amazon-gift-card.105203/",
+          "reported_at": "2026-10-03T13:47:34Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-10-02",
       "subject": "Winner Signal: 1 new sweepstakes winner report — October 2, 2026",
       "scheduled_at": "2026-10-02T16:54:23Z",
@@ -1898,5 +1940,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-02T16:39:24.016123Z"
+  "updated_at": "2026-10-03T15:09:33.253894Z"
 }

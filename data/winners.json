@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-03T15:09:31.043244Z",
+  "updated_at": "2026-10-03T15:09:33.249754Z",
   "count": 151,
   "winners": [
     {
@@ -42,7 +42,7 @@
       "author": "providence",
       "first_seen_at": "2026-10-03T15:09:31.036864Z",
       "last_seen_at": "2026-10-03T15:09:31.036864Z",
-      "sent_at": null,
+      "sent_at": "2026-10-03T15:09:33.245910Z",
       "published_display": "October 3, 2026"
     },
     {
@@ -63,7 +63,7 @@
       "author": "quilt1404",
       "first_seen_at": "2026-10-03T15:09:31.036864Z",
       "last_seen_at": "2026-10-03T15:09:31.036864Z",
-      "sent_at": null,
+      "sent_at": "2026-10-03T15:09:33.245910Z",
       "published_display": "October 3, 2026"
     },
     {
@@ -84,7 +84,7 @@
       "author": "danmantx",
       "first_seen_at": "2026-10-03T15:09:31.036864Z",
       "last_seen_at": "2026-10-03T15:09:31.036864Z",
-      "sent_at": null,
+      "sent_at": "2026-10-03T15:09:33.245910Z",
       "published_display": "October 3, 2026"
     },
     {
