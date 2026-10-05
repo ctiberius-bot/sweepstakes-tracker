@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-04T17:03:11.849866Z",
+  "last_updated": "2026-10-05T19:18:56.678714Z",
   "sites": [
     {
       "rank": 1,
@@ -23,8 +23,8 @@
         "win_realism": 2,
         "marketing": 2
       },
-      "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "weekly_check_status": "protected",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "PC",
       "mark_hue": 254,
       "favicon_url": "https://www.pch.com/favicon.ico",
@@ -77,7 +77,7 @@
       ],
       "logo_asset": "assets/logos/publishers-clearing-house-pch.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.pch.com/",
         "status": "protected",
         "http_status": 429,
@@ -119,7 +119,7 @@
         "marketing": 2
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "SW",
       "mark_hue": 218,
       "favicon_url": "https://www.swagbucks.com/favicon.ico",
@@ -163,14 +163,14 @@
       ],
       "logo_asset": "assets/logos/swagbucks.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.swagbucks.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.swagbucks.com/",
-        "content_hash": "411bfd56ab44f35669f02f0b4ae9881036b93114403e337ec42a0636036ae14a",
-        "changed": false,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "content_hash": "8c9cd9fe0516cac4203fb333a6f3d34f30f9f18b14c179f659dd17c4c3b012ba",
+        "changed": true,
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "A member account is required for personalized offers, rewards, and member-only promotions.",
@@ -202,7 +202,7 @@
         "marketing": 2.5
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "CG",
       "mark_hue": 86,
       "favicon_url": "https://www.contestgirl.com/favicon.ico",
@@ -247,15 +247,15 @@
       ],
       "logo_asset": "assets/logos/contest-girl.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.contestgirl.com/",
-        "status": "protected",
-        "http_status": 403,
+        "status": "reachable",
+        "http_status": 200,
         "final_url": "https://www.contestgirl.com/",
-        "content_hash": "586a83f16a10fd80ea78f8a1728fc4ed20d8f3a2ac0b01a892dbad07b180cd47",
-        "changed": false,
-        "last_success": "2026-10-03T16:44:55.336206Z",
-        "error": "HTTP 403"
+        "content_hash": "e1c5cbe51a59eaa2f1224104219596ab804b6fa8170885c705382cb5af420c60",
+        "changed": true,
+        "last_success": "2026-10-05T19:18:31.489791Z",
+        "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
       "winner_evidence": "The directory does not fulfill most prizes; verify winners with each outside sponsor.",
@@ -287,7 +287,7 @@
         "marketing": 2.5
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "SA",
       "mark_hue": 306,
       "favicon_url": "https://www.sweepsadvantage.com/favicon.ico",
@@ -332,14 +332,14 @@
       ],
       "logo_asset": "assets/logos/sweepstakes-advantage.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.sweepsadvantage.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.sweepsadvantage.com/",
-        "content_hash": "7d119966b30d2642888dd1e2204e0c3554249e17f32b874240f4b1b69cc8816a",
+        "content_hash": "362c2acf007b2498cdb12993d1abd6a78c91ea9985bcd821882cd8de4b000d86",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -372,7 +372,7 @@
         "marketing": 3
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "IN",
       "mark_hue": 153,
       "favicon_url": "https://www.inboxdollars.com/favicon.ico",
@@ -416,14 +416,14 @@
       ],
       "logo_asset": "assets/logos/inboxdollars.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.inboxdollars.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.inboxdollars.com/",
         "content_hash": "57d792a6e71c1281b4580f55e6f0b69108bf70c485522f0d7ed8241cadb46a20",
         "changed": false,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "A member account is required for personalized offers, rewards, and member-only promotions.",
@@ -457,7 +457,7 @@
         "marketing": 3
       },
       "weekly_check_status": "protected",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "MO",
       "mark_hue": 92,
       "favicon_url": "https://www.mondosweeps.com/favicon.ico",
@@ -602,15 +602,15 @@
       ],
       "logo_asset": "assets/logos/mondosweeps.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.mondosweeps.com/",
         "status": "reachable",
         "http_status": 403,
         "changed": true,
         "error": null,
         "final_url": "https://www.mondosweeps.com/",
-        "content_hash": "5dcd02a9209d39a6ba5970acecbd0f727a0fd6715fb74a21ba349b1d0dd3e02f",
-        "last_success": "2026-10-04T17:02:55.496209Z"
+        "content_hash": "0f754ffb1d8a7e734faae9db194bd5576ae8926789bccd2442defaf70469b938",
+        "last_success": "2026-10-05T19:18:31.489791Z"
       },
       "entry_requirements": "Most drawings accept an email address and permit repeated daily entries; confirm each promotion's limit.",
       "winner_evidence": "The public homepage displays recent dated winners; prize-specific pages and rules remain the controlling sources.",
@@ -641,7 +641,7 @@
         "marketing": 3
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "ON",
       "mark_hue": 30,
       "favicon_url": "https://online-sweepstakes.com/favicon.ico",
@@ -686,14 +686,14 @@
       ],
       "logo_asset": "assets/logos/online-sweepstakes-com.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://online-sweepstakes.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://online-sweepstakes.com/",
-        "content_hash": "5a12b1c19ba4d9480b0a24f6f696f34e4d0d5cecfe386430fe2705176f2f5229",
+        "content_hash": "cccdcd42285713c27753cb0b8a95ee4514877ff5cb4afc9825f139fa7906fd41",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -725,7 +725,7 @@
         "marketing": 3
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "SW",
       "mark_hue": 337,
       "favicon_url": "https://www.sweepstake.com/favicon.ico",
@@ -770,14 +770,14 @@
       ],
       "logo_asset": "assets/logos/sweepstake-com.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.sweepstake.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.sweepstake.com/",
-        "content_hash": "5c5d7ab3b3423d147244f227b77d9769a2240ee7a09537cd8216c91f1337a301",
+        "content_hash": "812bca4ca804b8ab1f514bbb618f38e4cae10f25f96fdf265afbdf3d3474d438",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -809,7 +809,7 @@
         "marketing": 3
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "SW",
       "mark_hue": 64,
       "favicon_url": "https://www.sweepstoday.com/favicon.ico",
@@ -854,14 +854,14 @@
       ],
       "logo_asset": "assets/logos/sweepstoday.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.sweepstoday.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.sweepstoday.com/",
-        "content_hash": "7d2a729db2d95870e90c0290ab43a665ccfd1e871c18987c07e92406f5212032",
+        "content_hash": "5b5f53d755430da7a25beeb8335b96a8e0d6f11e93e9d7b58446efa87e364df3",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -893,7 +893,7 @@
         "marketing": 3.5
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "IL",
       "mark_hue": 198,
       "favicon_url": "https://ilft.com/favicon.ico",
@@ -938,14 +938,14 @@
       ],
       "logo_asset": "assets/logos/i-love-free-things-ilft.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://ilft.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://ilft.com/",
-        "content_hash": "9c6ab2ccef9cd70d4e2e74517201cb06ed0220ae10053ebb0069514a1fd12fb6",
+        "content_hash": "65d70c28f84bfb1835e71f4706afd87b21ee0851808428efb05f00eed1622160",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
@@ -977,7 +977,7 @@
         "marketing": 3.5
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "IL",
       "mark_hue": 47,
       "favicon_url": "https://ilovegiveaways.com/favicon.ico",
@@ -1022,14 +1022,14 @@
       ],
       "logo_asset": "assets/logos/i-love-giveaways.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://ilovegiveaways.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://ilovegiveaways.com/",
-        "content_hash": "99adbc1bb348c527b1b1bb4aa7b1b8fd485caad416f1a5bfaf3340a8b774cfd5",
+        "content_hash": "d3dd4b824d762ea849eaa450bac82fd8768c1718c172888a0a73f322619bf611",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -1060,8 +1060,8 @@
         "win_realism": 3.5,
         "marketing": 3.5
       },
-      "weekly_check_status": "protected",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "weekly_check_status": "reachable",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "MD",
       "mark_hue": 74,
       "favicon_url": "https://www.instagram.com/favicon.ico",
@@ -1105,14 +1105,14 @@
       ],
       "logo_asset": "assets/logos/million-dollar-media.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.instagram.com/milliondollarmedia/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmilliondollarmedia%2F&is_from_rle",
-        "content_hash": "75a9ac4dd98dd5928a3dbcc275ac9047a859dd865d24560a8ddc800d4167da59",
+        "content_hash": "b74d9a343c291362ecaba53ce03913952ece0ca32d4b948608264ecbcf959cf5",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "Requirements vary; verify the official site and promotion rules before providing information.",
@@ -1145,7 +1145,7 @@
         "marketing": 3.5
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "PR",
       "mark_hue": 214,
       "favicon_url": "https://prizegrab.com/favicon.ico",
@@ -1216,14 +1216,14 @@
       ],
       "logo_asset": "assets/logos/prizegrab.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://prizegrab.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://prizegrab.com/",
-        "content_hash": "d6d8388b9efa698e427773f6606321e6b5e1afd54004a2098a5166af268211c8",
+        "content_hash": "bc19834d1ff7b191396448e5265dd6e8e9a1e75069d4d3c103dcb38a6782e271",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "Most drawings accept an email address and permit repeated daily entries; confirm each promotion's limit.",
@@ -1255,7 +1255,7 @@
         "marketing": 3.5
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "SW",
       "mark_hue": 168,
       "favicon_url": "https://www.sweepfeed.com/favicon.ico",
@@ -1300,14 +1300,14 @@
       ],
       "logo_asset": "assets/logos/sweepfeed.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.sweepfeed.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.sweepfeed.com/",
-        "content_hash": "122680b287e175684cf87b66e4c36087133f28320eb8d9509cc35df04707b7e4",
+        "content_hash": "60ff5f355344c7c54577d9440a75d442abe5afae1278c4ad7f3c2ed9757043c8",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -1340,7 +1340,7 @@
         "marketing": 3.5
       },
       "weekly_check_status": "protected",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "WI",
       "mark_hue": 233,
       "favicon_url": "https://www.winstakes.com/favicon.ico",
@@ -1525,15 +1525,15 @@
       ],
       "logo_asset": "assets/logos/winstakes.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.winstakes.com/",
         "status": "reachable",
         "http_status": 403,
         "changed": true,
         "error": null,
         "final_url": "https://www.winstakes.com/",
-        "content_hash": "16df0ca4430893f5b6ef99956ac1e8eb9d86127b492748408f2856ac493698ea",
-        "last_success": "2026-10-04T17:02:55.496209Z"
+        "content_hash": "6d00193eeac00a916ea96ba9ba11e2ef8957dc0d2a9e4e2d8ca74909326c87ab",
+        "last_success": "2026-10-05T19:18:31.489791Z"
       },
       "entry_requirements": "Most drawings accept an email address and permit repeated daily entries; confirm each promotion's limit.",
       "winner_evidence": "The public homepage displays recent dated winners; prize-specific pages and rules remain the controlling sources.",
@@ -1564,7 +1564,7 @@
         "marketing": 4
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "ES",
       "mark_hue": 12,
       "favicon_url": "https://esweeps.com/favicon.ico",
@@ -1609,14 +1609,14 @@
       ],
       "logo_asset": "assets/logos/esweeps.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://esweeps.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://esweeps.com/",
         "content_hash": "3cb87d6ce35f35c6d2e2112404ff241d2079ce5288b381af177a156bd87c13a9",
         "changed": false,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -1648,7 +1648,7 @@
         "marketing": 4
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "LO",
       "mark_hue": 101,
       "favicon_url": "https://localfreebie.com/favicon.ico",
@@ -1693,14 +1693,14 @@
       ],
       "logo_asset": "assets/logos/localfreebie.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://localfreebie.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://localfreebie.com/",
         "content_hash": "ce6644be7d5443da2e7d2d24837d16645d1aa4c0da53b03e5b1b74434efc35ed",
         "changed": false,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "Listings are usually public, but eligibility and entry requirements depend on location and sponsor.",
@@ -1732,7 +1732,7 @@
         "marketing": 4
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "RE",
       "mark_hue": 317,
       "favicon_url": "https://www.retirewhiz.com/favicon.ico",
@@ -1803,14 +1803,14 @@
       ],
       "logo_asset": "assets/logos/retirewhiz.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.retirewhiz.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.retirewhiz.com/",
-        "content_hash": "3fccaa9ba869546d92d549760a49b9bc8048bd1dad157676ae4b152ce47f8c5e",
+        "content_hash": "d922cee204709f932e862f4351f61f123b3c3aa6ae1806a5df1907c62eaff928",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "Email registration or a site account may be required; eligibility can be tailored to the site's audience.",
@@ -1842,7 +1842,7 @@
         "marketing": 4
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "RG",
       "mark_hue": 42,
       "favicon_url": "https://www.therobinapp.com/favicon.ico",
@@ -1887,14 +1887,14 @@
       ],
       "logo_asset": "assets/logos/robin-giveaways.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.therobinapp.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.therobinapp.com/",
         "content_hash": "934a6c8ce209784c84efb1bc236519c19feb66623f4444d57c9eb042a38fbd10",
         "changed": false,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "An app account is usually required. Device permissions, notifications, and sponsor-specific entry terms may also apply.",
@@ -1926,7 +1926,7 @@
         "marketing": 4
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "WI",
       "mark_hue": 112,
       "favicon_url": "https://www.winprizesonline.com/favicon.ico",
@@ -1971,14 +1971,14 @@
       ],
       "logo_asset": "assets/logos/winprizesonline.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.winprizesonline.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.winprizesonline.com/",
-        "content_hash": "e9b924989f11f1c8613cb6ba28448cac67f91065dcd29ae47ea47fb54fae47a2",
+        "content_hash": "672ce688c1bdaec48a7cb2f11a58cb078da826bf3dbe9bb37e068700387079bd",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -2009,8 +2009,8 @@
         "win_realism": 4.5,
         "marketing": 4.5
       },
-      "weekly_check_status": "protected",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "weekly_check_status": "reachable",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "SS",
       "mark_hue": 125,
       "favicon_url": "https://sweetiesweepstakes.com/favicon.ico",
@@ -2055,14 +2055,14 @@
       ],
       "logo_asset": "assets/logos/sweetie-sweepstakes.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://sweetiesweepstakes.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://sweetiesweepstakes.com/",
-        "content_hash": "a71130549c87ebe6641b522a3b9a22ea189223f5031422c1b511d9597101b5e5",
-        "changed": false,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "content_hash": "f7c020ae4798c4b4ecb6fd17edd6117270365ace0e2ac4d6687ea09438e9bc73",
+        "changed": true,
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "The directory is generally public. Each linked sponsor sets its own account, eligibility, and entry requirements.",
@@ -2094,7 +2094,7 @@
         "marketing": 4.5
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "LF",
       "mark_hue": 55,
       "favicon_url": "https://theluckfoundry.com/favicon.ico",
@@ -2139,14 +2139,14 @@
       ],
       "logo_asset": "assets/logos/the-luck-foundry.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://theluckfoundry.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://theluckfoundry.com/",
         "content_hash": "a655a6509120f19132403315ca43ad76167203127629e8a0d09419ee0c8710a6",
-        "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "changed": false,
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "Basic listings may be public; saved searches, alerts, or early listings can require an account or paid membership.",
@@ -2178,7 +2178,7 @@
         "marketing": 5
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "BL",
       "mark_hue": 316,
       "favicon_url": "https://blissxo.com/favicon.ico",
@@ -2240,14 +2240,14 @@
       ],
       "logo_asset": "assets/logos/blissxo.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://blissxo.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://blissxo.com/",
-        "content_hash": "4b3a5edf3e7f506bdd71f22ccd109f7da1780880bfa18c2a951cd6b4b8316d70",
+        "content_hash": "69482137f4e14cc1f5e19d613c7e7c5ae8723d22105178bcc6935c3e76e58c5a",
         "changed": true,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
@@ -2279,7 +2279,7 @@
         "marketing": 5
       },
       "weekly_check_status": "reachable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "PI",
       "mark_hue": 36,
       "favicon_url": "https://www.pinchme.com/favicon.ico",
@@ -2323,14 +2323,14 @@
       ],
       "logo_asset": "assets/logos/pinchme-free-samples.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.pinchme.com/",
         "status": "reachable",
         "http_status": 200,
         "final_url": "https://www.pinchme.com/",
-        "content_hash": "4585e33a7a7c2e495ede8a78f88d8db1d607f9c3b15818a404536c906956bad3",
-        "changed": false,
-        "last_success": "2026-10-04T17:02:55.496209Z",
+        "content_hash": "4a3d31053ccbda233da2f700548e46c278d785232c8d752aaf45035185cddc4a",
+        "changed": true,
+        "last_success": "2026-10-05T19:18:31.489791Z",
         "error": null
       },
       "entry_requirements": "A member profile, demographic qualification, and delivery address may be required; selection is not guaranteed.",
@@ -2363,7 +2363,7 @@
         "marketing": 5.5
       },
       "weekly_check_status": "protected",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "PR",
       "mark_hue": 11,
       "favicon_url": "https://www.prizecraze.com/favicon.ico",
@@ -2425,7 +2425,7 @@
       ],
       "logo_asset": "assets/logos/prizecraze-globalizer.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.prizecraze.com/",
         "status": "protected",
         "http_status": 403,
@@ -2462,7 +2462,7 @@
         "marketing": 5.5
       },
       "weekly_check_status": "protected",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "PR",
       "mark_hue": 248,
       "favicon_url": "https://www.prizeloot.com/favicon.ico",
@@ -2542,7 +2542,7 @@
       ],
       "logo_asset": "assets/logos/prizeloot.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.prizeloot.com/",
         "status": "protected",
         "http_status": 403,
@@ -2579,7 +2579,7 @@
         "marketing": 5.5
       },
       "weekly_check_status": "protected",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "WI",
       "mark_hue": 96,
       "favicon_url": "https://www.winloot.com/favicon.ico",
@@ -2650,7 +2650,7 @@
       ],
       "logo_asset": "assets/logos/winloot-globalizer.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://www.winloot.com/",
         "status": "protected",
         "http_status": 403,
@@ -2686,7 +2686,7 @@
         "marketing": 8.5
       },
       "weekly_check_status": "protected",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "DG",
       "mark_hue": 19,
       "favicon_url": "https://dailygoodiebox.com/favicon.ico",
@@ -2739,7 +2739,7 @@
       ],
       "logo_asset": "assets/logos/daily-goodie-box.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "https://dailygoodiebox.com/",
         "status": "protected",
         "http_status": 403,
@@ -2778,7 +2778,7 @@
         "marketing": 9
       },
       "weekly_check_status": "not_applicable",
-      "last_scored": "2026-09-28T18:10:44.275920Z",
+      "last_scored": "2026-10-05T19:18:48.808285Z",
       "initials": "SE",
       "mark_hue": 256,
       "favicon_url": "",
@@ -2822,7 +2822,7 @@
       ],
       "logo_asset": "assets/logos/selectrewards.png",
       "profile_refresh": {
-        "checked_at": "2026-10-04T17:02:55.496209Z",
+        "checked_at": "2026-10-05T19:18:31.489791Z",
         "source_url": "#",
         "status": "not_applicable",
         "changed": false
@@ -2837,6 +2837,6 @@
     }
   ],
   "live_snippets": {},
-  "last_rescored": "2026-09-28T18:10:44.275920Z",
-  "last_profile_refresh": "2026-10-04T17:02:55.496209Z"
+  "last_rescored": "2026-10-05T19:18:48.808285Z",
+  "last_profile_refresh": "2026-10-05T19:18:31.489791Z"
 }
