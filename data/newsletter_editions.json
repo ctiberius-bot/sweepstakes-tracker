@@ -2,6 +2,68 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-10-05",
+      "subject": "Winner Signal: 5 new sweepstakes winner reports — October 5, 2026",
+      "scheduled_at": "2026-10-05T20:03:45Z",
+      "display_date": "October 5, 2026",
+      "provider_id": "26256290",
+      "delivery_provider": "kit",
+      "report_count": 5,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "28d6f14e92b11ba3ba03fd97",
+          "winner_name": "sweepsadv",
+          "prize": "We will post the winner announcement here!",
+          "promotion_name": "Laptop Winner from SA",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/laptop-winner-from-sa.105210/",
+          "reported_at": "2026-10-05T08:54:46Z"
+        },
+        {
+          "id": "08694f21bc5241d142f2f414",
+          "winner_name": "peacefulangie925",
+          "prize": "I won a Bidet and an Amazon gift card from Sweepstakes Advantage!",
+          "promotion_name": "I won a bidet",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/i-won-a-bidet.105209/",
+          "reported_at": "2026-10-05T14:35:39Z"
+        },
+        {
+          "id": "6b6831a818fab96ff1b616dc",
+          "winner_name": "puddin69",
+          "prize": "Won a very nice set of pots and pans from Cooker King on IG There were only around 400 comments/entries so I'm glad I entered and found the contest on SA Instagram contests list",
+          "promotion_name": "Instagram Win",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/instagram-win.105211/",
+          "reported_at": "2026-10-05T15:08:37Z"
+        },
+        {
+          "id": "fa38b1b44805ef8aee607e87",
+          "winner_name": "tuc18108",
+          "prize": "It has been awhile since I've won an IG contest! You've been selected as a winner in our Bentgo x Cherrypick Afterschool Giveaway!!!!",
+          "promotion_name": "Instagram Win!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/instagram-win.105214/",
+          "reported_at": "2026-10-05T19:26:45Z"
+        },
+        {
+          "id": "18d59f17f7ce35ff658fda9b",
+          "winner_name": "tuc18108",
+          "prize": "Your entry in The Stella Rosa Chill Out & Grill Out Contest has been selected as a Second Prize winner! It is our pleasure to inform you that you have won: A Sponsor-selected cooler (ARV $250) This one feels extra special because it was a…",
+          "promotion_name": "Stella Rosa Chill Out & Grill Out Contest Win",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/stella-rosa-chill-out-grill-out-contest-win.105213/",
+          "reported_at": "2026-10-05T19:27:46Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-10-03",
       "subject": "Winner Signal: 3 new sweepstakes winner reports — October 3, 2026",
       "scheduled_at": "2026-10-03T15:24:32Z",
@@ -1940,5 +2002,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-03T15:09:33.253894Z"
+  "updated_at": "2026-10-05T19:48:46.466731Z"
 }
