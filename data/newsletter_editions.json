@@ -2,6 +2,58 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-10-06",
+      "subject": "Winner Signal: 4 new sweepstakes winner reports — October 6, 2026",
+      "scheduled_at": "2026-10-06T17:33:25Z",
+      "display_date": "October 6, 2026",
+      "provider_id": "26273248",
+      "delivery_provider": "kit",
+      "report_count": 4,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "ab7872842da746542e90cb20",
+          "winner_name": "nerrivik7",
+          "prize": "September Wins. Thanks Sweepstakes Advantage!",
+          "promotion_name": "September Wins",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/september-wins.105216/",
+          "reported_at": "2026-10-06T06:21:04Z"
+        },
+        {
+          "id": "4a5b43698786377db9c3e262",
+          "winner_name": "aprilandjesse2004",
+          "prize": "You won two (2) AMC Theatres® Black Ticket Vouchers* by playing in the Explore America Piece by Piece instant win Game and Sweepstakes!",
+          "promotion_name": "Coca - Cola 250 Instant win",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/coca-cola-250-instant-win.105219/",
+          "reported_at": "2026-10-06T14:43:33Z"
+        },
+        {
+          "id": "0a01cc2e88818eb07522507d",
+          "winner_name": "jse216",
+          "prize": "I won a beach towel from the Mamba Sweepstakes.",
+          "promotion_name": "Surprise Mamba Win",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/surprise-mamba-win.105217/",
+          "reported_at": "2026-10-06T14:44:07Z"
+        },
+        {
+          "id": "c3e3ba375ccfe02a7f0145d9",
+          "winner_name": "aprilandjesse2004",
+          "prize": "Your entry in the Big Branson Vacation Giveaway on VacationBranson.com was selected for two free Branson show tickets! We are excited for your prize and look forward to connecting.",
+          "promotion_name": "Branson Show Tickets",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/branson-show-tickets.105220/",
+          "reported_at": "2026-10-06T14:44:39Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-10-05",
       "subject": "Winner Signal: 5 new sweepstakes winner reports — October 5, 2026",
       "scheduled_at": "2026-10-05T20:03:45Z",
@@ -2002,5 +2054,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-05T19:48:46.466731Z"
+  "updated_at": "2026-10-06T17:18:25.794526Z"
 }
