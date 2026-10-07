@@ -2,6 +2,38 @@
   "schema_version": 1,
   "editions": [
     {
+      "slug": "winner-signal-2026-10-07",
+      "subject": "Winner Signal: 2 new sweepstakes winner reports — October 7, 2026",
+      "scheduled_at": "2026-10-07T18:05:25Z",
+      "display_date": "October 7, 2026",
+      "provider_id": "26294638",
+      "delivery_provider": "kit",
+      "report_count": 2,
+      "source_count": 1,
+      "reports": [
+        {
+          "id": "1460200cd101a9544e53bfbc",
+          "winner_name": "kimchifarts69420",
+          "prize": "I won a beach towel from the Mamba Sweepstakes!",
+          "promotion_name": "Mamba Sweepstakes Beach Towel",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/mamba-sweepstakes-beach-towel.105223/",
+          "reported_at": "2026-10-06T19:37:17Z"
+        },
+        {
+          "id": "808c8027503cfc8dbe8beec8",
+          "winner_name": "kristinedeanna",
+          "prize": "I won a free McGriddle, a choice of free ice cream or small fry, a 2-month premium subscription to Peacock, and a game piece!",
+          "promotion_name": "First day of McDonald's Monopoly... Success!",
+          "source_name": "Sweepstakes Advantage Winners Circle",
+          "source_type": "community_report",
+          "source_url": "https://www.sweepsadvantage.com/forum/threads/first-day-of-mcdonalds-monopoly-success.105225/",
+          "reported_at": "2026-10-07T14:11:26Z"
+        }
+      ]
+    },
+    {
       "slug": "winner-signal-2026-10-06",
       "subject": "Winner Signal: 4 new sweepstakes winner reports — October 6, 2026",
       "scheduled_at": "2026-10-06T17:33:25Z",
@@ -2054,5 +2086,5 @@
       ]
     }
   ],
-  "updated_at": "2026-10-06T17:18:25.794526Z"
+  "updated_at": "2026-10-07T17:50:25.710552Z"
 }
