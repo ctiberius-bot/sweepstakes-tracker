@@ -1,8 +1,29 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-09T17:34:27.797384Z",
+  "updated_at": "2026-10-10T16:15:11.959567Z",
   "count": 164,
   "winners": [
+    {
+      "id": "ca0cf3ba03370f01e8abab9c",
+      "title": "Kraft School Years Eve Sweepstakes: $500 Winner",
+      "winner_name": "danmantx",
+      "privacy_label": "danmantx",
+      "promotion_name": "Kraft School Years Eve Sweepstakes: $500 Winner",
+      "prize": "WOW! Thanks Kraft-Heinz and Sweepstakes Advantage! I was one of ten first place winners for a $500 Walmart gift card. Enter the Kraft-Heinz School Years Eve Sweepstakes for a chance to win exciting prizes from Kraft Heinz Foods Company.…",
+      "operator": "",
+      "drawing_date": null,
+      "published_at": "2026-10-09T22:47:27Z",
+      "source_id": "sweepstakes-advantage-winners-circle",
+      "source_name": "Sweepstakes Advantage Winners Circle",
+      "source_type": "community_report",
+      "url": "https://www.sweepsadvantage.com/forum/threads/kraft-school-years-eve-sweepstakes-500-winner.105227/",
+      "verification_level": "source_reported",
+      "author": "danmantx",
+      "first_seen_at": "2026-10-08T17:53:34.959028Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
+      "sent_at": "2026-10-08T17:53:37.643756Z",
+      "published_display": "October 9, 2026"
+    },
     {
       "id": "b6b3155b971f59268c31c555",
       "title": "IG Seattle Sourdough + Caffevitta win!",
@@ -20,7 +41,7 @@
       "verification_level": "source_reported",
       "author": "deparrie",
       "first_seen_at": "2026-10-09T17:34:25.377979Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-09T17:34:27.794628Z",
       "published_display": "October 9, 2026"
     },
@@ -41,7 +62,7 @@
       "verification_level": "source_reported",
       "author": "tuc18108",
       "first_seen_at": "2026-10-05T19:48:43.503039Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-05T19:48:46.458740Z",
       "published_display": "October 9, 2026"
     },
@@ -62,29 +83,8 @@
       "verification_level": "source_reported",
       "author": "milic13",
       "first_seen_at": "2026-10-02T16:39:21.707027Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-02T16:39:24.007828Z",
-      "published_display": "October 8, 2026"
-    },
-    {
-      "id": "ca0cf3ba03370f01e8abab9c",
-      "title": "Kraft School Years Eve Sweepstakes: $500 Winner",
-      "winner_name": "danmantx",
-      "privacy_label": "danmantx",
-      "promotion_name": "Kraft School Years Eve Sweepstakes: $500 Winner",
-      "prize": "WOW! Thanks Kraft-Heinz and Sweepstakes Advantage! I was one of ten first place winners for a $500 Walmart gift card. Enter the Kraft-Heinz School Years Eve Sweepstakes for a chance to win exciting prizes from Kraft Heinz Foods Company.…",
-      "operator": "",
-      "drawing_date": null,
-      "published_at": "2026-10-08T12:20:02Z",
-      "source_id": "sweepstakes-advantage-winners-circle",
-      "source_name": "Sweepstakes Advantage Winners Circle",
-      "source_type": "community_report",
-      "url": "https://www.sweepsadvantage.com/forum/threads/kraft-school-years-eve-sweepstakes-500-winner.105227/",
-      "verification_level": "source_reported",
-      "author": "danmantx",
-      "first_seen_at": "2026-10-08T17:53:34.959028Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
-      "sent_at": "2026-10-08T17:53:37.643756Z",
       "published_display": "October 8, 2026"
     },
     {
@@ -104,7 +104,7 @@
       "verification_level": "source_reported",
       "author": "kristinedeanna",
       "first_seen_at": "2026-10-07T17:50:23.079532Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-07T17:50:25.702537Z",
       "published_display": "October 7, 2026"
     },
@@ -125,7 +125,7 @@
       "verification_level": "source_reported",
       "author": "archidis99",
       "first_seen_at": "2026-09-30T16:56:22.117226Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-09-30T16:56:24.577335Z",
       "published_display": "October 7, 2026"
     },
@@ -146,7 +146,7 @@
       "verification_level": "source_reported",
       "author": "jse216",
       "first_seen_at": "2026-10-06T17:18:23.148050Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-06T17:18:25.781991Z",
       "published_display": "October 7, 2026"
     },
@@ -167,7 +167,7 @@
       "verification_level": "source_reported",
       "author": "aprilandjesse2004",
       "first_seen_at": "2026-10-06T17:18:23.148050Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-06T17:18:25.781991Z",
       "published_display": "October 7, 2026"
     },
@@ -188,7 +188,7 @@
       "verification_level": "source_reported",
       "author": "nerrivik7",
       "first_seen_at": "2026-10-06T17:18:23.148050Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-06T17:18:25.781991Z",
       "published_display": "October 7, 2026"
     },
@@ -209,7 +209,7 @@
       "verification_level": "source_reported",
       "author": "quilt1404",
       "first_seen_at": "2026-10-03T15:09:31.036864Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-03T15:09:33.245910Z",
       "published_display": "October 7, 2026"
     },
@@ -230,7 +230,7 @@
       "verification_level": "source_reported",
       "author": "providence",
       "first_seen_at": "2026-10-03T15:09:31.036864Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-03T15:09:33.245910Z",
       "published_display": "October 7, 2026"
     },
@@ -251,7 +251,7 @@
       "verification_level": "source_reported",
       "author": "james38",
       "first_seen_at": "2026-09-28T18:37:01.885244Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-09-28T18:37:04.995211Z",
       "published_display": "October 7, 2026"
     },
@@ -272,7 +272,7 @@
       "verification_level": "source_reported",
       "author": "aprilandjesse2004",
       "first_seen_at": "2026-10-06T17:18:23.148050Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-06T17:18:25.781991Z",
       "published_display": "October 6, 2026"
     },
@@ -293,7 +293,7 @@
       "verification_level": "source_reported",
       "author": "kimchifarts69420",
       "first_seen_at": "2026-10-07T17:50:23.079532Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-07T17:50:25.702537Z",
       "published_display": "October 6, 2026"
     },
@@ -314,7 +314,7 @@
       "verification_level": "source_reported",
       "author": "tuc18108",
       "first_seen_at": "2026-10-05T19:48:43.503039Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-05T19:48:46.458740Z",
       "published_display": "October 6, 2026"
     },
@@ -335,7 +335,7 @@
       "verification_level": "source_reported",
       "author": "puddin69",
       "first_seen_at": "2026-10-05T19:48:43.503039Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-05T19:48:46.458740Z",
       "published_display": "October 5, 2026"
     },
@@ -356,7 +356,7 @@
       "verification_level": "source_reported",
       "author": "peacefulangie925",
       "first_seen_at": "2026-10-05T19:48:43.503039Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-05T19:48:46.458740Z",
       "published_display": "October 5, 2026"
     },
@@ -377,7 +377,7 @@
       "verification_level": "source_reported",
       "author": "sweepsadv",
       "first_seen_at": "2026-10-05T19:48:43.503039Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-05T19:48:46.458740Z",
       "published_display": "October 5, 2026"
     },
@@ -398,7 +398,7 @@
       "verification_level": "source_reported",
       "author": "danmantx",
       "first_seen_at": "2026-10-03T15:09:31.036864Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-10-03T15:09:33.245910Z",
       "published_display": "October 3, 2026"
     },
@@ -419,7 +419,7 @@
       "verification_level": "source_reported",
       "author": "christinakane2001",
       "first_seen_at": "2026-09-28T18:37:01.885244Z",
-      "last_seen_at": "2026-10-09T17:34:25.377979Z",
+      "last_seen_at": "2026-10-10T16:15:11.953741Z",
       "sent_at": "2026-09-28T18:37:04.995211Z",
       "published_display": "October 3, 2026"
     },
